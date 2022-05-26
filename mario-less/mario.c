@@ -26,7 +26,7 @@ int main(void)
             printf(".");
         }
         //loop to create collumns, how many times repeats until \n
-        for (int c=0; c<r; c++)
+        for (int c=-1; c<r; c++)
         {
             printf("#");
         }
