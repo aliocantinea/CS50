@@ -20,7 +20,8 @@ int main(void)
     //for creating user defined rows
     for (int r=0; r<n; r++)
     {
-        //placeholder to fill in rows
+        //placeholder d for dots to fill in rows
+        //-1 for # as it has to equal at least 1 per row
         for (int d=n-1; d>r; d--)
         {
             printf(".");
