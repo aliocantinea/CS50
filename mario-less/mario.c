@@ -22,7 +22,7 @@ int main(void)
             printf("#");
         }
         //placeholder to fill in rows
-        for (int ph=(n-1); ph>n; ph--)
+        for (int d=(n-1); d>n; d--)
         {
             printf(".");
         }
