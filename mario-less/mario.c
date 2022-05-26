@@ -20,8 +20,8 @@ int main(void)
     for (int r = 0; r < n; r++)
     {
         //placeholder d for dots to fill in rows
-        //-1 for " " since there should be one "#" per row
-        //compare d to r so as line (r) increases the amount of " " decreases
+        //-1 for (d) since there should be one (c) per row
+        //compare d to r, as line (r) increases the differnce of (d) decreases
         for (int d = n - 1; d > r; d--)
         {
             printf(" ");
