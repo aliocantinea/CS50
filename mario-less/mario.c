@@ -24,11 +24,11 @@ int main(void)
         for (int c=0; c<n; c++)
         {
             printf("#");
-            //placeholder to fill in rows
-            for (int d=n; d>n; d--)
-            {
-                printf(".");
-            }
+        }
+        //placeholder to fill in rows
+        for (int d=n; d>=n; d--)
+        {
+            printf(".");
         }
         //returns after line
         printf("\n");
