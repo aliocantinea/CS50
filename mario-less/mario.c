@@ -21,7 +21,7 @@ int main(void)
     {
         //placeholder d for dots to fill in rows
         //-1 for " " since there should be one "#" per row
-        //
+        //compare d to r so that there are 
         for (int d = n - 1; d > r; d--)
         {
             printf(" ");
