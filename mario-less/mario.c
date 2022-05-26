@@ -21,10 +21,7 @@ int main(void)
     for (int r=0; r<n; r++)
     {
         //loop to create collumns, how many times repeats until \n
-        for (int c=0; c<n; c++)
-        {
-            printf("#");
-        }
+
         //placeholder to fill in rows
         for (int d=n; d>=n; d--)
         {
@@ -34,3 +31,9 @@ int main(void)
         printf("\n");
     }
 }
+
+int hash(int c)
+        for (int c=0; c<n; c++)
+        {
+            printf("#");
+        }
