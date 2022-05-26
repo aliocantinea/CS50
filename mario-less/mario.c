@@ -26,7 +26,7 @@ int main(void)
             printf("#");
         }
         //placeholder to fill in rows
-        for (int d=(n-1); d>n; d--)
+        for (int d=n; d>n; d--)
         {
             printf(".");
         }
