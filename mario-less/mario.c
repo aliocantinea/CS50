@@ -8,9 +8,11 @@ int main(void)
     int n;
     do
     {
+
         n = get_int("Height: ");
+        while (n>8);
     }
-    while (n<1 && n>8 );
+    while (n<1);
 
     //take n var and print # per line until it matches n
     //for creating user defined rows
