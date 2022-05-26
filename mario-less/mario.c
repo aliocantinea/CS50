@@ -4,7 +4,7 @@
 int main(void)
 {
     //get int between 1-8
-    //  **only asking one time** how do I get it to be a valid number
+    //nest one do while inside the other, has to pass both to proceed
     int n;
     do
     {
@@ -16,7 +16,6 @@ int main(void)
     }
     while (n < 1);
 
-    //take n var and print # per line until it matches n
     //for creating user defined rows
     for (int r = 0; r < n; r++)
     {
