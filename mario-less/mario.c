@@ -24,7 +24,7 @@ int main(void)
         //-1 for # as it has to equal at least 1 per row
         for (int d=n-1; d>r; d--)
         {
-            printf(".");
+            printf(" ");
         }
         //loop to create collumns, how many times repeats until \n
         for (int c=0; c<=r; c++)
