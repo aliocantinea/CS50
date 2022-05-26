@@ -24,7 +24,7 @@ int main(void)
         //compare d to r, as line (r) increases the differnce of (d) decreases
         for (int d = n - 1; d > r; d--)
         {
-            printf(" ");
+            printf(".");
         }
         //loop to create collumns, how many times repeats until \n
         //
