@@ -21,12 +21,13 @@ int main(void)
     {
         //placeholder d for dots to fill in rows
         //-1 for " " since there should be one "#" per row
-        //compare d to r so that there are 
+        //compare d to r so as line (r) increases the amount of " " decreases
         for (int d = n - 1; d > r; d--)
         {
             printf(" ");
         }
         //loop to create collumns, how many times repeats until \n
+        //
         for (int c = 0; c <= r; c++)
         {
             printf("#");
