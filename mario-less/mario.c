@@ -27,7 +27,7 @@ int main(void)
             printf(" ");
         }
         //after (d) so tower grows
-        //
+        //(c) compares to (r) so that it increase with rows
         for (int c = 0; c <= r; c++)
         {
             printf("#");
