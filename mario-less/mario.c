@@ -20,15 +20,15 @@ int main(void)
     //for creating user defined rows
     for (int r=0; r<n; r++)
     {
-        //loop to create collumns, how many times repeats until \n
-        for (int c=0; c<n; c++)
-        {
-            printf("#");
-        }
         //placeholder to fill in rows
-        for (int d=n; d>=n; d--)
+        for (int d=n; d>0; d--)
         {
             printf(".");
+        }
+        //loop to create collumns, how many times repeats until \n
+        for (int c=0; c<r; c++)
+        {
+            printf("#");
         }
         //returns after line
         printf("\n");
