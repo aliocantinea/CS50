@@ -10,7 +10,7 @@ int main(void)
     {
         n = get_int("Height: ");
     }
-    while (n>=8);
+    while (n<0 );
 
     //take n var and print # per line until it matches n
     //for creating user defined rows
