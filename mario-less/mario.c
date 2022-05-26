@@ -28,6 +28,7 @@ int main(void)
         }
         //after (d) so tower grows
         //(c) compares to (r) so that it increase with rows
+        // <= so that it matches as row grows
         for (int c = 0; c <= r; c++)
         {
             printf("#");
