@@ -42,7 +42,7 @@ int main(void)
                 printf("%li\n", t);
                 vd = vd + t;
 
-                cn = cn % 10;
+                cn = cn - 10;
 
                 printf("%li\n", cn);
                 vd = vd + cn;
