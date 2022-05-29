@@ -16,18 +16,18 @@ int main(void)
     else
     {
         //do when between 13-16 digits long
-        int cn = n % 1000000000000000;
+        long cn = n / 1000000000000000;
         //check by first number
         if (cn == 4)
         {
-            printf ("VISA");
+            printf ("VISA\n");
         }
         else if (cn == 5)
         {
-        printf ("%i\n", cn);
+        printf ("%li\n", cn);
         }
         else
-        printf ("%i\n", cn);
+        printf ("%li\n", cn);
             //AE 3, MC 5, V 4
     //modulous equation % after / by digits comparaible to 10 so the remainder is 0-10
         //number /10 will get the second to last digit
