@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int v(void);
+
 int main(void)
 {
     //get long input
@@ -22,7 +24,7 @@ int main(void)
             cn = n / d;
             cn = cn % 10;
             printf("%li\n", cn);
-            
+            v = v + cn;
             d = d * 10;
             cn = n / d;
             cn = cn % 10 * 2;
@@ -37,6 +39,12 @@ int main(void)
             else
             printf("%li\n", cn);
         }
+    printf("%i", v);
+
+int v(void)
+{
+    v = 0
+}
 
         //modulous equation % after / by digits comparaible to 10 so the remainder is 0-10
             //number /10 will get the second to last digit
