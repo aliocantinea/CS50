@@ -12,9 +12,9 @@ int main(void)
             n = get_long("Number: ");
         }
         //do when between 13-16
-        while (n < 13);
+        while (n < 3);
     }
-    while (n > 16);
+    while (n > );
     //check by first number
     printf("%li\n", n);
                 //AE 3, MC 5, V 4
