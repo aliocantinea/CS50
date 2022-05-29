@@ -50,6 +50,8 @@ int main(void)
         }
         else
         {
+            int t = 0;
+            t = n /
             //valid
         }
 
