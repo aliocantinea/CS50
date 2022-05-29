@@ -26,8 +26,10 @@ int main(void)
             cn = cn % 10;
 
             printf("%li\n", cn);
-            //v = v + cn;
-
+            v = v + cn;
+        }
+        for (long d = 1; d < n ;d = d * 10)
+        {
             d = d * 10;
             cn = n / d;
             cn = cn % 10 * 2;
@@ -40,15 +42,16 @@ int main(void)
 
                 cn = cn % 10;
 
-                printf("%li\n\n", cn);
+                printf("%li\n", cn);
                 v = v + cn;
 
             }
             else
-            printf("%li\n\n", cn);
+            printf("%li\n", cn);
             v = v + cn;
         }
-        printf("%li\n", v);
+
+        printf("\n%li\n", v);
 
     }
 }
