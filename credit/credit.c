@@ -37,9 +37,9 @@ int main(void)
             cn = cn % 10 * 2;
             if (cn >= 10)
             {
-                int t = cn / 10;
+                long t = cn / 10;
 
-                printf("%i\n", t);
+                printf("%li\n", t);
                 vd = vd + t;
 
                 cn = cn % 10;
