@@ -66,7 +66,6 @@ int main(void)
                         vs();
                     }
             }
-            i();
         }
         else
         {
