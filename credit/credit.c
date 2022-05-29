@@ -44,42 +44,34 @@ int main(void)
         {
             //valid 13
             n = n / 100000000000;
-            if (n == 4)
+            for (int d = 10, n > 0;)
             {
-                //printf("%li\n", n);
-                vs();
-            }
-            else
-            {
-                for (int d = 10, n > 0;)
-                {//valid 14
-                    n = n / d;
-                    if (n == 34 || n == 37)
+                //valid 14
+                n = n / d;
+                if (n == 34 || n == 37)
+                {
+                    //printf("%li\n", n);
+                    am();
+                }
+                else if (n >=51)
+                {
+                    if (n <= 55)
                     {
-                        //printf("%li\n", n);
-                        am();
+                        printf("%li\n", n);
+                        mc();
                     }
-                    else if (n >=51)
+                }
+                else
+                {
+                    //valid 16
+                    n = n / 10;
+                    if (n == 4)
                     {
-                        if (n <= 55)
-                        {
-                            printf("%li\n", n);
-                            mc();
-                        }
+                        vs();
                     }
                     else
                     {
-                        //valid 16
-                        n = n / 10;
-                        if (n == 4)
-                        {
-                            vs();
-                        }
-                        else
-                        {
-                            i();
-                        }
-                    }
+                        i();
                     }
                 }
             }
