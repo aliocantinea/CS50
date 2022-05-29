@@ -23,17 +23,24 @@ int main(void)
         {
             cn = n / d;
             cn = cn % 10;
+
             printf("%li\n", cn);
             v = v + cn;
+
             d = d * 10;
             cn = n / d;
             cn = cn % 10 * 2;
             if (cn >= 10)
             {
                 int t = cn / 10;
+
                 printf("%i^\n", t);
+                v = v + cn;
+
                 cn = cn % 10;
+
                 printf("%li*\n", cn);
+                v = v + cn;
 
             }
             else
