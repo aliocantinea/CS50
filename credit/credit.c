@@ -43,7 +43,7 @@ int main(void)
         if (v == 0)
         {
             //valid 13
-            n = n / 100000000000;
+            n = n / 10000000000;
             for (int d = 10, n > 0;)
             {
                 //valid 14
@@ -57,14 +57,12 @@ int main(void)
                 {
                     if (n <= 55)
                     {
-                        printf("%li\n", n);
+                        //printf("%li\n", n);
                         mc();
                     }
                 }
                 else
                 {
-                    //valid 16
-                    n = n / 10;
                     if (n == 4)
                     {
                         vs();
