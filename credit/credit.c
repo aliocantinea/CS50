@@ -26,7 +26,7 @@ int main(void)
                 printf("%li\n", cn);
             }
             else
-            
+            cn = cn / m;
             printf("%li\n", cn);
             m = m * 10;
         }
