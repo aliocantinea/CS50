@@ -44,7 +44,14 @@ int main(void)
         printf("\n%li\n", v);
         v = v %10;
         printf("mod %li\n", v);
-        //if ( )
+        if (v != 0)
+        {
+            i();
+        }
+        else
+        {
+            //valid
+        }
 
     }
 }
