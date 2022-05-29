@@ -54,22 +54,26 @@ int main(void)
                 n = n / 10;
                 if (n == 34 || n == 37)
                 {
-                    //printf("%li\n", n);
+                    printf("%li\n", n);
                     am();
-                }
-                else if (n >=51)
-                {
-                    if (n <= 55)
-                    {
-                        //printf("%li\n", n);
-                        mc();
-                    }
                 }
                 else
                 {
-                    i();
+                    n = n / 10;
+                    if (n >=51)
+                    {
+                        if (n <= 55)
+                        {
+                            //printf("%li\n", n);
+                            mc();
+                        }
+                    }
+                    else
+                    {
+                        n = n /10;
+                    }
+                    //printf("%li\n", n);
                 }
-                //printf("%li\n", n);
             }
         }
         else
