@@ -12,7 +12,7 @@ int main(void)
             n = get_long("Number: ");
         }
         //do when between 13-16
-        while (n < 3);
+        while (n < 3000000000000);
     }
     while (n > );
     //check by first number
