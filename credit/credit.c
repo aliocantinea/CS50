@@ -2,6 +2,9 @@
 #include <stdio.h>
 
 void i(void);
+void vs(void);
+void mc(void);
+void am(void);
 
 int main(void)
 {
@@ -39,9 +42,9 @@ int main(void)
             //valid 13
             n = n / 1000000000000;
             printf("%li\n", n);
-            if ()
+            if (n == 4)
             {
-
+                vs();
             }
             else
             {
@@ -58,4 +61,22 @@ int main(void)
 void i(void)
 {
     printf("INVALID\n");
+}
+
+
+void vs(void)
+{
+    printf("VISA\n");
+}
+
+
+void mc(void)
+{
+    printf("MASTERCARD\n");
+}
+
+
+void am(void)
+{
+    printf("AMEX\n");
 }
