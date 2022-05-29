@@ -18,12 +18,12 @@ int main(void)
     else
     {
         //do when between 13-16 digits long
-        long cd; //cd = card digit
-        //long v = 0;
+        long v = 0;
         //printf("%li\n\n", v);
 
         for (long d = 1; d < n ;d = d * 10) //d = divisible
         {
+            long cd; //cd = card digit
             cd = n / d; //reduces card length to get mod
             cd = cd % 10;
 
