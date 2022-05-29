@@ -36,14 +36,12 @@ int main(void)
             if (cn >= 10)
             {
                 long t = cn / 10;
-
                 printf("%li\n", t);
-                v = v + t;
 
                 cn = cn - 10;
 
                 printf("%li\n", cn);
-                v = v + cn;
+                v = v + cn++;
 
             }
             else
