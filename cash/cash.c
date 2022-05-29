@@ -43,7 +43,9 @@ int get_cents(void)
         change = get_int("Change owned: ")
     }
     while (change < 1);
+
     printf ("%i\n", change);
+    
     return change;
 }
 
