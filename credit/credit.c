@@ -53,7 +53,7 @@ int main(void)
             }
             else
             printf("%li\n", cn);
-            vd = vd + cn;
+            //vd = vd + cn;
         }
 
         printf("\n%li\n", vd);
