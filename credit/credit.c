@@ -24,7 +24,7 @@ int main(void)
             if (cd >= 10)
             {
                 cd = cd - 10 +1; //removes second digit and adds one for it
-                printf("1+%li\n", cd);
+                printf("(1+)%li\n", cd);
                 v = v + cd;
             }
             else
