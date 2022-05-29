@@ -53,7 +53,7 @@ int main(void)
                 n = n / 100;
                 if (n == 3)
                 {
-                    //printf("%li\n", n);
+                    printf("%li\n", n);
                     am();
                 }
                 else
@@ -62,12 +62,12 @@ int main(void)
                     n = n / 10;
                     if (n == 4)
                     {
-                        //printf("%li\n", n);
+                        printf("%li\n", n);
                         vs();
                     }
                     else if(n == 5)
                     {
-                        //printf("%li\n", n);
+                        printf("%li\n", n);
                         mc();
                     }
                     else
