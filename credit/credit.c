@@ -41,9 +41,12 @@ int main(void)
             printf("%li\n", n);
             if ()
             {
+
+            }
+            else
+            {
                 //valid 14
                 n = n / 10;
-                print
             }
         }
         else
