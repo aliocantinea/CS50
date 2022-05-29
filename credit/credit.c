@@ -25,7 +25,6 @@ int main(void)
         }
         //modulous equation % after / by digits comparaible to 10 so the remainder is 0-10
             //number /10 will get the second to last digit
-            //if you /1000 you will get the 4th digit
         //if >10 /10 and % to get both numbers and add to total
 
         //check by first number
