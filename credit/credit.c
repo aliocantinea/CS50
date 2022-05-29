@@ -27,6 +27,11 @@ int main(void)
         {
             cn = n / m;
             cn = cn % 10;
+            cn = cn * 2;
+            if (cn > 10)
+            {
+                cn
+            }
             printf("%li\n", cn);
         }
         //modulous equation % after / by digits comparaible to 10 so the remainder is 0-10
