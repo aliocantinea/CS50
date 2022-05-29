@@ -40,7 +40,7 @@ int main(void)
 
                 cn = cn % 10;
 
-                printf("%li*\n", cn);
+                printf("%li*\n\n", cn);
                 v = v + cn;
 
             }
