@@ -38,7 +38,7 @@ int main(void)
                 int t = cn / 10;
 
                 printf("%i\n", t);
-                vd = vd + cn;
+                vd = vd + t;
 
                 cn = cn % 10;
 
