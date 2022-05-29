@@ -13,7 +13,6 @@ int main(void)
         }
         //do when between 13-16
         while (n > 5000000000000000);
-        printf ("INVALID");
     }
     while (n > );
     //check by first number
