@@ -44,26 +44,26 @@ int main(void)
         {
             //valid 13
             n = n / 100000000000;
-            printf("%li\n", n);
+            //printf("%li\n", n);
             for (long d = 10; n > 0;)
             {
                 n = n / d;
-                if (n == 34||n == 37)
+                if (n == 34 || n == 37)
                 {
-                    printf("%li\n", n);
+                    //printf("%li\n", n);
                     am();
                 }
                 else if (n >=51)
                 {
                     if (n <= 55)
                     {
-                        printf("%li\n", n);
+                        //printf("%li\n", n);
                         mc();
                     }
                 }
                 else if (n == 4)
                     {
-                        printf("%li\n", n);
+                        //printf("%li\n", n);
                         vs();
                     }
             }
