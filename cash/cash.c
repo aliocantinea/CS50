@@ -38,9 +38,9 @@ int main(void)
 int get_cents(void)
 {
     do {
-        c = get_int("Change owned: ")
+            c = get_int("Change owned: ")
     }
-    while ()
+    while (c > 1)
     return 0;
 }
 
