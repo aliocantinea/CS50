@@ -43,10 +43,10 @@ int main(void)
         if (v == 0)
         {
             //valid 13
-            n = n / 10000000000;
+            n = n / 100000000000;
+            printf("%li\n", n);
             for (long d = 10; n > 0;d = d * 10)
             {
-                //valid 14
                 n = n / d;
                 if (n == 34 || n == 37)
                 {
