@@ -61,12 +61,19 @@ int main(void)
                         mc();
                     }
                 }
-                else if (n == 4)
+                else if (n < 10)
                 {
-                    //printf("%li\n", n);
-                    vs();
+                    if (n == 4)
+                    {
+                        //printf("%li\n", n);
+                        vs();
+                    }
+                    else
+                    {
+                        i();
+                    }
                 }
-                printf("%li\n", n);
+                //printf("%li\n", n);
             }
         }
         else
