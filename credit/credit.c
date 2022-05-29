@@ -20,7 +20,7 @@ int main(void)
         for (long m = 1; m < n*10 ;m = m * 10)
         {
             cn = cn / m;
-            cn = n % m;
+            //cn = n % m;
             printf("%li\n", cn);
         }
         //modulous equation % after / by digits comparaible to 10 so the remainder is 0-10
