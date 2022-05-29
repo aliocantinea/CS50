@@ -65,7 +65,7 @@ int main(void)
                         printf("%li\n", n);
                         vs();
                     }
-                    else if (n == 5)
+                    else if(n == 5)
                     {
                         printf("%li\n", n);
                         mc();
