@@ -1,8 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int v();
-
 int main(void)
 {
     //get long input
@@ -19,6 +17,7 @@ int main(void)
     {
         //do when between 13-16 digits long
         long cn;
+        int v = 0;
         for (long d = 1; d < n ;d = d * 10)
         {
             cn = n / d;
@@ -47,28 +46,6 @@ int main(void)
             printf("%li\n", cn);
         }
     printf("%i", v);
-
-int v();
-{
-    v = 0
-}
-
-        //modulous equation % after / by digits comparaible to 10 so the remainder is 0-10
-            //number /10 will get the second to last digit
-        //if >10 /10 and % to get both numbers and add to total
-
-        //check by first number
-        //if (cn == 1)
-        //{
-            //printf ("VISA\n");
-        //}
-        //else if (cn == 2)
-        //{
-        //printf ("%li\n", cn);
-        //}
-        //else
-        //printf ("%li\n", cn);
-            //AE 3, MC 5, V 4
 
     }
 }
