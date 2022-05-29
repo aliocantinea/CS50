@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int v(void);
+int v();
 
 int main(void)
 {
@@ -48,7 +48,7 @@ int main(void)
         }
     printf("%i", v);
 
-int v(void)
+int v();
 {
     v = 0
 }
