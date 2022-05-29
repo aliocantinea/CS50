@@ -1,19 +1,17 @@
 #include <cs50.h>
 #include <stdio.h>
 
-string i(void);
-
 int main(void)
 {
     //get long input
     long n = get_long("Number: ");
     if (n > 5000000000000000)
     {
-        i();
+        printf ("INVALID\n");
     }
     else if (n < 3000000000000)
     {
-        i();
+        printf ("INVALID\n");
     }
     else
     {
@@ -27,8 +25,4 @@ int main(void)
         //number /10 will get the second to last digit
         //if you /1000 you will get the 4th digit
     //if >10 /10 and % to get both numbers and add to total
-}
-string i(void)
-{
-
 }
