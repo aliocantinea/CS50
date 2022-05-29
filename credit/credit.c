@@ -27,6 +27,7 @@ int main(void)
             cn = cn % 10 * 2;
             if (cn > 10)
             {
+                int t = cn / 10;
                 cn = cn % 10;
                 printf("%li*\n", cn);
 
