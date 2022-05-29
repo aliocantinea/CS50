@@ -48,8 +48,25 @@ int main(void)
             }
             else
             {
-                //valid 14
-                n = n / 10;
+                //valid 15
+                n = n / 100;
+                if (n == 3)
+                {
+                    am();
+                }
+                else
+                {
+                    //valid 16
+                    n = n / 10;
+                    if (n == 4)
+                    {
+                        vs();
+                    }
+                    else if (n == 5)
+                    {
+                        mc();
+                    }
+                }
             }
         }
         else
