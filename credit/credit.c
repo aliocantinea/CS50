@@ -16,7 +16,7 @@ int main(void)
     }
     while (n > 16)
     //check by first number
-    if
+    printf(%l)
                 //AE 3, MC 5, V 4
     //modulous equation % after / by digits comparaible to 10 so the remainder is 0-10
         //number /10 will get the second to last digit
