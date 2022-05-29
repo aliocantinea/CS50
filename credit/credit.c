@@ -17,6 +17,7 @@ int main(void)
     {
         //do when between 13-16 digits long
         long cn;
+        int d;
         for (long m = 10; m < n*10 ;m = m * 10)
         {
             cn = n % m;
@@ -25,8 +26,8 @@ int main(void)
                 //printf("%li\n", cn);
             //}
             //else
-            //cn = cn / m;
-            printf("%li\n", cn);
+            d = cn / m;
+            printf("%i\n", d);
 
         }
         //modulous equation % after / by digits comparaible to 10 so the remainder is 0-10
