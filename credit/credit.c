@@ -51,6 +51,7 @@ int main(void)
             }
             else
             {
+                n = n / 10;
                 if (n == 34 || n == 37)
                 {
                     //printf("%li\n", n);
@@ -64,9 +65,9 @@ int main(void)
                         mc();
                     }
                 }
-                else if (n < 10)
+                else
                 {
-
+                    i();
                 }
                 //printf("%li\n", n);
             }
