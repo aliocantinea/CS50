@@ -17,6 +17,7 @@ int main(void)
     {
         //do when between 13-16 digits long
         long cn = n % 10 / 1; cn++
+        for (int m = 1; ; m++)
         //modulous equation % after / by digits comparaible to 10 so the remainder is 0-10
             //number /10 will get the second to last digit
             //if you /1000 you will get the 4th digit
