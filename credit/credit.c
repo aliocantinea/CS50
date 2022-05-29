@@ -52,30 +52,34 @@ int main(void)
             }
             else
             {
-                //valid 15
-                n = n / 100;
-                if (n == 3)
+                //valid 14
+                n = n / 10;
+                if (n == 34)
                 {
                     printf("%li\n", n);
                     am();
                 }
+                else if (n == 37)
+                {
+                    am();
+                }
                 else
                 {
-                    //valid 16
+                    //valid 15
                     n = n / 10;
-                    if (n == 4)
+                    if (n >=51)
                     {
-                        printf("%li\n", n);
-                        vs();
-                    }
-                    else if(n == 5)
-                    {
-                        printf("%li\n", n);
-                        mc();
+                        if (n <= 55)
+                        {
+                            printf("%li\n", n);
+                            mc();
+                        }
                     }
                     else
                     {
-                        i();
+                        //valid 16
+                        n = n / 10;
+                        
                     }
                 }
             }
