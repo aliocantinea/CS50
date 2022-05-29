@@ -45,7 +45,7 @@ int main(void)
 
             }
             else
-            printf("%li\n", cn);
+            printf("%li\n\n", cn);
             v = v + cn;
         }
         printf("%li\n", v);
