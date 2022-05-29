@@ -51,9 +51,9 @@ int main(void)
                 vd = vd + cn;
 
             }
-            else
+            else 
             printf("%li\n", cn);
-            //vd = vd + cn;
+            vd = vd + cn;
         }
 
         printf("\n%li\n", vd);
