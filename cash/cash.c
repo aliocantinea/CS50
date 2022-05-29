@@ -38,7 +38,7 @@ int main(void)
 int get_cents(void)
 {
     do {
-
+        
     }
     while ()
     return 0;
