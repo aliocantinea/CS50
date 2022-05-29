@@ -31,7 +31,6 @@ int main(void)
 
         printf("\n%li\n\n", v);
 
-        //issue somewhere here where it is adding multiple times
         long vd = 0;
         printf("\n%li\n\n", vd);
         for (long d = 10; d < n ;d = d * 100)
