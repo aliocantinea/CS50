@@ -4,17 +4,17 @@
 int main(void)
 {
     //get long input
-    long n;
-    do
+    long n = n = get_long("Number: ");
+    if (n > 5000000000000000);
     {
-        do
-        {
-            n = get_long("Number: ");
-        }
-        //do when between 13-16
-        while (n > 5000000000000000);
+        printf ("INVALID")
     }
-    while (n > );
+    else if (n < )
+    {
+        printf ("INVALID")
+    }
+    
+        //do when between 13-16
     //check by first number
     //printf ("%li\n", n);
                 //AE 3, MC 5, V 4
