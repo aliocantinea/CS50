@@ -17,8 +17,8 @@ int main(void)
     {
         //do when between 13-16 digits long
         long cn;
-        int d;
-        for (long m = 10; m < n*10 ;m = m * 10)
+        int d = 0
+        for (long m = d*10; m < n*10 ;m = m * 10)
         {
             cn = n % m;
             if (cn < 10)
