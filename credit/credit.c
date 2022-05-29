@@ -4,6 +4,11 @@
 int main(void)
 {
     //get long input
+    long n;
+    do
+    {
+        
+    }
         //do when between 13-16
             //check by first number
                 //AE 3, MC 5, V 4
