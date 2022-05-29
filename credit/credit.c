@@ -4,7 +4,7 @@
 int main(void)
 {
     //get long input
-    long n  = get_long("Number: ");
+    long n = get_long("Number: ");
     if (n > 5000000000000000);
     {
         printf ("INVALID")
@@ -15,7 +15,7 @@ int main(void)
     }
     else
     {
-
+        printf ("%li\n", n)
     }
         //do when between 13-16
     //check by first number
