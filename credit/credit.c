@@ -8,7 +8,7 @@ int main(void)
     long n = get_long("Number: ");
     if (n > 5000000000000000)
     {
-
+        i();
     }
     else if (n < 3000000000000)
     {
