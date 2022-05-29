@@ -16,15 +16,15 @@ int main(void)
     else
     {
         //do when between 13-16 digits long
-        int cn = n / 1000000000000000;
+        int cn = n % 1000000000000000;
         //check by first number
-        if (cn = 4)
+        if (cn == 4)
         {
             printf ("VISA");
         }
-        else if (cn != 4)
+        else if (cn == 5)
         {
-            
+        printf ("%i\n", cn);
         }
         else
         printf ("%i\n", cn);
