@@ -35,12 +35,9 @@ int main(void)
             cn = cn % 10 * 2;
             if (cn >= 10)
             {
-                long t = cn / 10;
-                printf("%li\n", t);
-
                 cn = cn - 10;
 
-                printf("%li\n", cn);
+                printf("1+%li\n", cn);
                 v = v + cn++;
 
             }
