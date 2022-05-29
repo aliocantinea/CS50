@@ -18,6 +18,7 @@ int main(void)
         //do when between 13-16 digits long
         long cn;
         int v = 0;
+        P
         for (long d = 1; d < n ;d = d * 10)
         {
             cn = n / d;
@@ -44,8 +45,9 @@ int main(void)
             }
             else
             printf("%li\n", cn);
+            v = v + cn;
         }
-    printf("%i", v);
+        printf("%i\n", v);
 
     }
 }
