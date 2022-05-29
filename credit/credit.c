@@ -66,10 +66,7 @@ int main(void)
                     //printf("%li\n", n);
                     vs();
                 }
-            }
-            else
-            {
-                i();
+                printf("%li\n", n);
             }
         }
         else
