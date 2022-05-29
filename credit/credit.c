@@ -44,7 +44,7 @@ int main(void)
         {
             //valid 13
             n = n / 10000000000;
-            for (long d = 10, d < 1;)
+            for (long d = 10, d > 100000;d = d * 10)
             {
                 //valid 14
                 n = n / d;
