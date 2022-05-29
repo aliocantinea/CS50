@@ -45,6 +45,7 @@ int main(void)
             //valid 13
             n = n / 1000000000000;
             //printf("%li\n", n);
+            for
             if (n == 4)
             {
                 //printf("%li\n", n);
