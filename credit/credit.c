@@ -42,9 +42,15 @@ int main(void)
         //printf("mod %li\n", v);
         if (v == 0)
         {
-            n = n / 100000000000;
+            n = n / 1000000000000;
             printf("%li\n\n", n);
-                n = n / d;
+            if (n == 4)
+            {
+                //printf("%li\n", n);
+                vs();
+            }
+            else
+            {
                 if (n == 34 || n == 37)
                 {
                     //printf("%li\n", n);
@@ -60,17 +66,10 @@ int main(void)
                 }
                 else if (n < 10)
                 {
-                    if (n == 4)
-                    {
-                        //printf("%li\n", n);
-                        vs();
-                    }
-                    else
-                    {
-                        i();
-                    }
+
                 }
                 //printf("%li\n", n);
+            }
         }
         else
         {
