@@ -26,11 +26,10 @@ int main(void)
         for (long m = 10; m < n*10 ;m = m * 100)
         {
             cn = n / m;
-            cn = cn % 10;
-            cn = cn * 2;
+            cn = cn % 10 * 2;
             if (cn > 10)
             {
-                cn
+                printf("%li*\n", cn);
             }
             printf("%li\n", cn);
         }
