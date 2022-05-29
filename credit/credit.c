@@ -30,7 +30,7 @@ int main(void)
 
             d = d * 10;
             cn = n / d;
-            cn = cn % 10; //* 2;
+            cn = cn % 10 * 2;
             if (cn >= 10)
             {
                 int t = cn / 10;
