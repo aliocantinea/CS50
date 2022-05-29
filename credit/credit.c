@@ -45,10 +45,10 @@ int main(void)
             //valid 13
             n = n / 100000000000;
             printf("%li\n", n);
-            for (long d = 10; n > 0;d = d * 10)
+            for (long d = 10; n > 0;)
             {
                 n = n / d;
-                if (n == 34 || n == 37)
+                if (n == 34||n == 37)
                 {
                     printf("%li\n", n);
                     am();
