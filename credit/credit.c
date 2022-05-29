@@ -7,16 +7,16 @@ int main(void)
 {
     //get long input
     long n = get_long("Number: ");
-    if (n > 6000000000000000)
-    {
-        i();
-    }
-    else if (n < 3000000000000)
-    {
-        i();
-    }
-    else
-    {
+    //if (n > 6000000000000000)
+    //{
+        //i();
+    //}
+    //else if (n < 3000000000000)
+    //{
+        //i();
+    //}
+    //else
+    //{
         //do when between 13-16 digits long
         long v = 0; //v = verifying number, needed outside of mod cal
         //printf("%li\n\n", v);
@@ -53,7 +53,7 @@ int main(void)
             //valid
         }
 
-    }
+    //}
 }
 
 void i(void)
