@@ -45,7 +45,7 @@ int main(void)
             //valid 13
             n = n / 100000000000;
             //printf("%li\n", n);
-            for (long d = 10; n > 0;)
+            for (long d = 10; n > 4;)
             {
                 n = n / d;
                 if (n == 34 || n == 37)
