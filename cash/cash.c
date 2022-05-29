@@ -9,6 +9,7 @@ int calculate_pennies(int cents);
 
 int main(void)
 {
+    int change;
     // Ask how many cents the customer is owed
     int cents = get_cents(change);
 
@@ -37,7 +38,6 @@ int main(void)
 
 int get_cents(void)
 {
-    int change;
     do
     {
         change = get_int("Change owned: ")
@@ -45,7 +45,7 @@ int get_cents(void)
     while (change < 1);
 
     printf ("%i\n", change);
-    
+
     return change;
 }
 
