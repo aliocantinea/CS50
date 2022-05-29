@@ -16,7 +16,7 @@ int main(void)
     else
     {
         //do when between 13-16 digits long
-        long cn = n / 1000000000000000;
+        long cn = n % 1000000000000000;
         //check by first number
         if (cn == 4)
         {
