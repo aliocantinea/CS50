@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_cents(c);
+int get_cents(int c);
 int calculate_quarters(int cents);
 int calculate_dimes(int cents);
 int calculate_nickels(int cents);
@@ -10,7 +10,7 @@ int calculate_pennies(int cents);
 int main(void)
 {
     // Ask how many cents the customer is owed
-    int cents = get_cents(c);
+    int cents = get_cents(int c);
     printf ("%c\n")
 
     // Calculate the number of quarters to give the customer
@@ -36,7 +36,7 @@ int main(void)
     printf("%i\n", coins);
 }
 
-int get_cents(void)
+int get_cents(int c)
 {
     do {
             int c = get_int("Change owned: ")
