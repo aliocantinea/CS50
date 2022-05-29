@@ -41,7 +41,7 @@ int get_cents(void)
             c = get_int("Change owned: ")
     }
     while (c > 1)
-    return 0;
+    return c;
 }
 
 int calculate_quarters(int cents)
