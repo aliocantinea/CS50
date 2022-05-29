@@ -20,7 +20,7 @@ int main(void)
         long v = 0;
         printf("%li\n\n", v);
 
-        for (long d = 1; d < n ;d = d * 10)
+        for (long d = 1; d < n ;d = d * 100)
         {
             cn = n / d;
             cn = cn % 10;
@@ -28,30 +28,31 @@ int main(void)
             printf("%li\n", cn);
             v = v + cn;
         }
-        for (long d = 1; d < n ;d = d * 10)
+        long vd = 0;
+        for (long dd = 10; dd < n ;dd = dd * 100)
         {
-            d = d * 10;
-            cn = n / d;
+            cn = n / dd;
             cn = cn % 10 * 2;
             if (cn >= 10)
             {
                 int t = cn / 10;
 
                 printf("%i\n", t);
-                v = v + cn;
+                vd = vd + cn;
 
                 cn = cn % 10;
 
                 printf("%li\n", cn);
-                v = v + cn;
+                vd = vd + cn;
 
             }
             else
             printf("%li\n", cn);
-            v = v + cn;
+            vd = vd + cn;
         }
 
         printf("\n%li\n", v);
+        printf("%li\n", vd);
 
     }
 }
