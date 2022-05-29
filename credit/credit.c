@@ -66,6 +66,10 @@ int main(void)
                         printf("%li\n", n);
                         vs();
                     }
+                else
+                {
+                    i();
+                }
             }
         }
         else
