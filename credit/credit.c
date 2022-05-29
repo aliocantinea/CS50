@@ -1,17 +1,18 @@
 #include <cs50.h>
 #include <stdio.h>
 
+string i(void)
 int main(void)
 {
     //get long input
     long n = get_long("Number: ");
     if (n > 5000000000000000)
     {
-        printf ("INVALID");
+        
     }
     else if (n < 3000000000000)
     {
-        printf ("INVALID");
+        printf ("INVALID\n");
     }
     else
     {
