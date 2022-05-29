@@ -62,12 +62,13 @@ int main(void)
                     }
                 }
                 else if (n == 4)
-                    {
-                        //printf("%li\n", n);
-                        vs();
-                    }
+                {
+                    //printf("%li\n", n);
+                    vs();
+                }
+                
+
             }
-            i();
         }
         else
         {
