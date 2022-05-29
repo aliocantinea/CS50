@@ -22,6 +22,7 @@ int main(void)
             cn = n / d;
             cn = cn % 10;
             printf("%li\n", cn);
+            
             d = d * 10;
             cn = n / d;
             cn = cn % 10 * 2;
