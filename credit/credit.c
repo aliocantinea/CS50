@@ -20,10 +20,12 @@ int main(void)
         for (long m = 10; m < n*10 ;)
         {
             cn = n % m;
-            if (cn > 10)
+            if (cn < 10)
             {
-                
+                cn = cn / m;
+                printf("%li\n", cn);
             }
+            else
             printf("%li\n", cn);
             m = m * 10;
         }
