@@ -5,7 +5,7 @@ int main(void)
 {
     //get long input
     long n = get_long("Number: ");
-    if (n > 5000000000000000)
+    if (n > 6000000000000000)
     {
         printf ("INVALID\n");
     }
