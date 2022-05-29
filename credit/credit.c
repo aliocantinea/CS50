@@ -33,6 +33,7 @@ int main(void)
                 printf("%li*\n", cn);
 
             }
+            else
             printf("%li\n", cn);
         }
 
