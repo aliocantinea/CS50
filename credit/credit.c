@@ -28,6 +28,8 @@ int main(void)
             printf("%li\n", cn);
             v = v + cn;
         }
+
+        //issue somewhere here where it is adding multiple times
         long vd = 0;
         for (long d = 10; d < n ;d = d * 100)
         {
