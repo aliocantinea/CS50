@@ -40,9 +40,15 @@ int main(void)
         }
         else
         {
-            //valid
+            //valid 13
             n = n / 1000000000000;
             printf("%li\n", n);
+            if
+            {
+                //valid 14
+                n = n / 10;
+                print
+            }
         }
 }
 
