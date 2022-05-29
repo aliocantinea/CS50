@@ -44,7 +44,6 @@ int main(void)
         {
             //valid 13
             n = n / 1000000000000;
-            //printf("%li\n", n);
             if (n == 4)
             {
                 //printf("%li\n", n);
@@ -67,7 +66,6 @@ int main(void)
                 else
                 {
                     //valid 15
-                    n = n / 10;
                     if (n >=51)
                     {
                         if (n <= 55)
