@@ -52,21 +52,14 @@ int main(void)
             else
             {
                 for (int d = 10, n > 0;)
-                //valid 14
-                n = n / d;
-                if (n == 34)
-                {
-                    //printf("%li\n", n);
-                    am();
-                }
-                else if (n == 37)
-                {
-                    am();
-                }
-                else
-                {
-                    //valid 15
-                    if (n >=51)
+                {//valid 14
+                    n = n / d;
+                    if (n == 34 || n == 37)
+                    {
+                        //printf("%li\n", n);
+                        am();
+                    }
+                    else if (n >=51)
                     {
                         if (n <= 55)
                         {
@@ -86,6 +79,7 @@ int main(void)
                         {
                             i();
                         }
+                    }
                     }
                 }
             }
