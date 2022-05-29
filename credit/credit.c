@@ -43,7 +43,7 @@ int main(void)
         if (v == 0)
         {
             //valid 13
-            n = n / 1000000000000;
+            n = n / 100000000000;
             if (n == 4)
             {
                 //printf("%li\n", n);
