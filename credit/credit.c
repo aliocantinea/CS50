@@ -29,8 +29,11 @@ int main(void)
             v = v + cn;
         }
 
+        printf("\n%li\n\n", v);
+
         //issue somewhere here where it is adding multiple times
         long vd = 0;
+        printf("\n%li\n\n", vd);
         for (long d = 10; d < n ;d = d * 100)
         {
             cn = n / d;
@@ -53,8 +56,7 @@ int main(void)
             vd = vd + cn;
         }
 
-        printf("\n%li\n", v);
-        printf("%li\n", vd);
+        printf("\n%li\n", vd);
 
     }
 }
