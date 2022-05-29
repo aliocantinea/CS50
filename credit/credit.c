@@ -29,9 +29,9 @@ int main(void)
             v = v + cn;
         }
         long vd = 0;
-        for (long dd = 10; dd < n ;dd = dd * 100)
+        for (long d = 10; d < n ;d = d * 100)
         {
-            cn = n / dd;
+            cn = n / d;
             cn = cn % 10 * 2;
             if (cn >= 10)
             {
