@@ -34,21 +34,21 @@ int main(void)
         //printf("\n%li\n", v);
         v = v %10;
         //printf("mod %li\n", v);
-        if (v != 0)
-        {
-            i();
-        }
-        else
+        if (v == 0)
         {
             //valid 13
             n = n / 1000000000000;
             printf("%li\n", n);
-            if
+            if ()
             {
                 //valid 14
                 n = n / 10;
                 print
             }
+        }
+        else
+        {
+            i();
         }
 }
 
