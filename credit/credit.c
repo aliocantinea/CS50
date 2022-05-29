@@ -1,7 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
-string i(void)
+string i(void);
+
 int main(void)
 {
     //get long input
@@ -12,7 +13,7 @@ int main(void)
     }
     else if (n < 3000000000000)
     {
-        printf ("INVALID\n");
+        i();
     }
     else
     {
@@ -29,5 +30,5 @@ int main(void)
 }
 string i(void)
 {
-        printf ("INVALID\n");
+
 }
