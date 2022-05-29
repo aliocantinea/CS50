@@ -15,6 +15,7 @@ int main(void)
     }
     else
     {
+        
         //do when between 13-16
         //check by first number
         printf ("%.1li\n", n);
