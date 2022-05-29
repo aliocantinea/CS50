@@ -35,12 +35,12 @@ int main(void)
             {
                 int t = cn / 10;
 
-                printf("%i^\n", t);
+                printf("%i\n", t);
                 v = v + cn;
 
                 cn = cn % 10;
 
-                printf("%li*\n\n", cn);
+                printf("%li\n\n", cn);
                 v = v + cn;
 
             }
