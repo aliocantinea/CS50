@@ -19,7 +19,7 @@ int main(void)
         long cn;
         for (long m = 1; m < n*10 ;m = m * 10)
         {
-            cn = cn / m;
+            //cn = cn / m;
             cn = cn % 10;
             printf("%li\n", cn);
         }
