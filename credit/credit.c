@@ -19,8 +19,8 @@ int main(void)
         long cn;
         for (long m = 1; m < n * 10 ; m++)
         {
-            cn = n % m * 10 / 1;
-            printf("%li\n", cn);
+            cn = n % m;
+            printf("%li\n", cn); // * 10 / 1
         }
         //modulous equation % after / by digits comparaible to 10 so the remainder is 0-10
             //number /10 will get the second to last digit
