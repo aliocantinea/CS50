@@ -35,10 +35,10 @@ int main(void)
             cn = cn % 10 * 2;
             if (cn >= 10)
             {
-                cn = cn - 10;
+                cn = cn - 10 +1;
 
                 printf("1+%li\n", cn);
-                v = v + cn++;
+                v = v + cn;
 
             }
             else
