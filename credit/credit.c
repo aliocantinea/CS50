@@ -24,7 +24,7 @@ int main(void)
         }
         else if (cn != 4)
         {
-
+            
         }
         else
         printf ("%i\n", cn);
