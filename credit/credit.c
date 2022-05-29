@@ -61,18 +61,12 @@ int main(void)
                         mc();
                     }
                 }
-                else
-                {
-                    if (n == 4)
+                else if (n == 4)
                     {
                         vs();
                     }
-                    else
-                    {
-                        i();
-                    }
-                }
             }
+            i();
         }
         else
         {
