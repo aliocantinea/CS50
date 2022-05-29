@@ -56,7 +56,7 @@ int main(void)
                 n = n / 10;
                 if (n == 34)
                 {
-                    printf("%li\n", n);
+                    //printf("%li\n", n);
                     am();
                 }
                 else if (n == 37)
@@ -79,7 +79,14 @@ int main(void)
                     {
                         //valid 16
                         n = n / 10;
-                        
+                        if (n == 4)
+                        {
+                            vs();
+                        }
+                        else
+                        {
+                            i();
+                        }
                     }
                 }
             }
