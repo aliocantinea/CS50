@@ -44,8 +44,6 @@ int main(void)
         {
             n = n / 100000000000;
             printf("%li\n\n", n);
-            for (long d = 10; n > 4;)
-            {
                 n = n / d;
                 if (n == 34 || n == 37)
                 {
@@ -73,7 +71,6 @@ int main(void)
                     }
                 }
                 //printf("%li\n", n);
-            }
         }
         else
         {
