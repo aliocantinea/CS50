@@ -22,21 +22,15 @@ int main(void)
         long v = 0;
         printf("%li\n\n", v);
 
-        for (long d = 1; d < n ;d = d * 100)
+        for (long d = 1; d < n ;d = d * 10)
         {
             cn = n / d;
             cn = cn % 10;
 
             printf("%li\n", cn);
             v = v + cn;
-        }
 
-        printf("\n%li\n\n", v);
-
-        long vd = 0;
-        printf("\n%li\n\n", vd);
-        for (long d = 10; d < n ;d = d * 100)
-        {
+            d = d * 10;
             cn = n / d;
             cn = cn % 10 * 2;
             if (cn >= 10)
@@ -44,21 +38,21 @@ int main(void)
                 long t = cn / 10;
 
                 printf("%li\n", t);
-                vd = vd + t;
+                v = v + t;
 
                 cn = cn - 10;
 
                 printf("%li\n", cn);
-                vd = vd + cn;
+                v = v + cn;
 
             }
             else
             {
                 printf("%li\n", cn);
-                vd = vd + cn;
+                v = v + cn;
             }
         }
-        printf("\n%li\n", vd);
+        printf("\n%li\n\n", v);
 
     }
 }
