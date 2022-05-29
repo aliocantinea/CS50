@@ -42,9 +42,8 @@ int main(void)
         //printf("mod %li\n", v);
         if (v == 0)
         {
-            //valid 13
             n = n / 100000000000;
-            //printf("%li\n", n);
+            printf("%li\n\n", n);
             for (long d = 10; n > 4;)
             {
                 n = n / d;
