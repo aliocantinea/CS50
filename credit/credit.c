@@ -17,13 +17,13 @@ int main(void)
     {
         //do when between 13-16 digits long
         long cn;
-        for (long m = 1; m < n ;m = m * 10)
+        for (long d = 1; d < n ;d = d * 10)
         {
-            cn = n / m;
+            cn = n / d;
             cn = cn % 10;
             printf("%li\n", cn);
-            m = m * 10;
-            cn = n / m;
+            d = d * 10;
+            cn = n / d;
             cn = cn % 10 * 2;
             if (cn > 10)
             {
