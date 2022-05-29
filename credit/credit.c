@@ -25,10 +25,10 @@ int main(void)
             d = d * 10;
             cn = n / d;
             cn = cn % 10 * 2;
-            if (cn > 10)
+            if (cn >= 10)
             {
                 int t = cn / 10;
-                printf("%i\n", t);
+                printf("%i^\n", t);
                 cn = cn % 10;
                 printf("%li*\n", cn);
 
