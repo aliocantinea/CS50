@@ -23,16 +23,16 @@ int main(void)
         //if >10 /10 and % to get both numbers and add to total
 
         //check by first number
-        if (cn == 1)
-        {
-            printf ("VISA\n");
-        }
-        else if (cn == 2)
-        {
-        printf ("%li\n", cn);
-        }
-        else
-        printf ("%li\n", cn);
+        //if (cn == 1)
+        //{
+            //printf ("VISA\n");
+        //}
+        //else if (cn == 2)
+        //{
+        //printf ("%li\n", cn);
+        //}
+        //else
+        //printf ("%li\n", cn);
             //AE 3, MC 5, V 4
 
     }
