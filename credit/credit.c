@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-string i(void);
+void i(void);
 
 int main(void)
 {
@@ -63,7 +63,7 @@ int main(void)
     }
 }
 
-string i(void);
+void i(void)
 {
     printf("INVALID\n");
 }
