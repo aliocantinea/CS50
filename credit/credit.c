@@ -19,17 +19,17 @@ int main(void)
     {
         //do when between 13-16 digits long
         long v = 0; //v = verifying number, needed outside of mod cal
-        //printf("%li\n\n", v);
+        printf("%li\n\n", v);
         for (long d = 1; d < n ;d = d * 10) //d = divisible
         {
             long cd; //cd = card digit
-            cd = n / d; //reduces card length to get mod
-            cd = cd % 10;
-            //printf("%li\n", cd);
+            cd = n / d % 10; //reduces card length to get mod
+            //cd = cd % 10;
+            printf("%li\n", cd);
             v = v + cd; //adds last and every second to v
             d = d * 10; //
-            cd = n / d;
-            cd = cd % 10 * 2;
+            cd = n / d % 10 *2;
+            //cd = cd % 10 * 2;
             if (cd >= 10)
             {
                 cd = cd - 10 +1;
