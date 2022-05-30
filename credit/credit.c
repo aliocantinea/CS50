@@ -69,7 +69,6 @@ int main(void)
                             printf("%li\n", n);
                             mc();
                         }
-
                         else
                         {
                             n = n / 10;
