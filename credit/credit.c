@@ -5,7 +5,7 @@ void i(void);
 void vs(void);
 void mc(void);
 void am(void);
-void sm(long n);
+long sm(long n);
 
 int main(void)
 {
@@ -114,7 +114,7 @@ void am(void)
     printf("AMEX\n");
 }
 
-int sm(long n)
+long sm(long n)
 {
     n = n / 10;
     return n;
