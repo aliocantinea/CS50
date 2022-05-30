@@ -118,9 +118,3 @@ void am(void)
 {
     printf("AMEX\n");
 }
-
-//long sm(long n)
-//{
-//    n = n / 10;
-//    return n;
-//}
