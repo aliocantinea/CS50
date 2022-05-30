@@ -38,6 +38,7 @@ int main(void)
 int get_cents(void)
 {
     int cents;
+    // doesn't matter the name, as long as it all equals the same and returns
     do
     {
         cents = get_int("Change owned: ");
