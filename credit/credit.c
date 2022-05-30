@@ -5,7 +5,7 @@ void i(void);
 void vs(void);
 void mc(void);
 void am(void);
-long sm(long n);
+//long sm(long n);
 
 int main(void)
 {
@@ -52,7 +52,7 @@ int main(void)
             }
             else
             {
-                sm(n);
+                n = n / 10;
                 if (n == 34 || n == 37)
                 {
                     printf("%li\n", n);
@@ -60,7 +60,7 @@ int main(void)
                 }
                 else
                 {
-                    sm(n);
+                    n = n / 10;
                     if (n >=51)
                     {
                         if (n <= 55)
@@ -71,7 +71,7 @@ int main(void)
                     }
                     else
                     {
-                        sm(n);
+                        n = n / 10;
                         if (n == 4)
                         {
                             printf("%li\n", n);
@@ -114,8 +114,8 @@ void am(void)
     printf("AMEX\n");
 }
 
-long sm(long n)
-{
-    n = n / 10;
-    return n;
-}
+//long sm(long n)
+//{
+//    n = n / 10;
+//    return n;
+//}
