@@ -47,6 +47,7 @@ int main(void)
         if (n == 4)
         {
                                 //printf("%li\n", n);
+            //tests for 13 vs
             vs();
         }
         else
@@ -55,15 +56,16 @@ int main(void)
             if (n == 34 || n == 37)
             {
                                 //printf("%li\n", n);
+                //tests for am either 34 or 37
                 am();
             }
             else
             {
                 n = n / 10;
-                if (n >= 51)
+                if (n >= 51) //above min for mc
                 {
                                 //printf("%li\n", n);
-                    if (n <= 55)
+                    if (n <= 55) //if below max inv
                     {
                                 //printf("%li\n", n);
                         mc();
@@ -79,6 +81,7 @@ int main(void)
                     if (n == 4)
                     {
                                 //printf("%li\n", n);
+                        //checks 16 vs or inv
                         vs();
                     }
                     else
@@ -91,6 +94,7 @@ int main(void)
     }
     else
     {
+        //if fails sum total
         i();
     }
 }
