@@ -61,7 +61,7 @@ int main(void)
                 else
                 {
                     n = n / 10;
-                    if (n >=51)
+                    if (n >= 51)
                     {
                         printf("%li\n", n);
                         if (n <= 55)
@@ -69,18 +69,18 @@ int main(void)
                             printf("%li\n", n);
                             mc();
                         }
+                    }
+                    else
+                    {
+                        n = n / 10;
+                        if (n == 4)
+                        {
+                            printf("%li\n", n);
+                            vs();
+                        }
                         else
                         {
-                            n = n / 10;
-                            if (n == 4)
-                            {
-                                printf("%li\n", n);
-                                vs();
-                            }
-                            else
-                            {
-                                i();
-                            }
+                            i();
                         }
                     }
                 }
