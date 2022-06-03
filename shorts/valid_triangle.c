@@ -9,6 +9,7 @@ int main(void)
     int second = get_int("Second side: ");
     int third = get_int("Third side: ");
 
+
     int tf = valid_triangle(first, second, third);
     if(tf = 0)
     {
