@@ -11,7 +11,7 @@ int main(void)
 
 
     int tf = valid_triangle(first, second, third);
-    if(tf = 0)
+    if(tf == 0)
     {
         printf("true\n");
     }
