@@ -10,8 +10,8 @@ int main(void)
     int third = get_int("Third side: ");
 
 
-    int tf = valid_triangle(first, second, third);
-    if(tf == 0)
+    bool tf = valid_triangle(first, second, third);
+    if(tf)
     {
         printf("true\n");
     }
