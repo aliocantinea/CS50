@@ -3,5 +3,8 @@
 
 int main(void)
 {
-    
+    string t = get_string("Text: ");
+
+    printf("%s\n", t);
+
 }
