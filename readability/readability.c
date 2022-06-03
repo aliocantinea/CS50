@@ -9,3 +9,7 @@ int main(void)
 
 }
 
+int count_ketters(string text)
+{
+    
+}
