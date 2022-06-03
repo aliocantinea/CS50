@@ -19,6 +19,10 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
+    if (score1 > score 2)
+    {
+        printf()
+    }
 }
 
 int compute_score(string word)
@@ -30,7 +34,11 @@ int compute_score(string word)
     {
         if (isupper(word[i]))
         {
-            score += POINTS[]
+            score += POINTS[word[i] - 'A'];
+        }
+        else if (islower(word[i]))
+        {
+            score += POINTS[word[i] - 'a'];
         }
     }
 
