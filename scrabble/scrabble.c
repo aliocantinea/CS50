@@ -26,6 +26,6 @@ int compute_score(string word)
     //TODO: Compute and return score for string
     for (i=0;)
     {
-        isupper(word[])
+        isupper(word[n])
     }
 }
