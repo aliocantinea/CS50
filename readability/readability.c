@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int count_letters(string text);
+
 int main(void)
 {
     string t = get_string("Text: ");
@@ -9,7 +11,8 @@ int main(void)
 
 }
 
-int count_ketters(string text)
+int count_letters(string text)
 {
-    
+    int l = 0;
+    for()
 }
