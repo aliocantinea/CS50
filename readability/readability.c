@@ -13,7 +13,9 @@ int main(void)
 
 int count_letters(string text)
 {
-    for(int i = 0, l = strlen(text); i < l; i++)
+    int w = 0;
+
+    for (int i = 0, l = strlen(text); i < l; i++)
     {
         
     }
