@@ -22,13 +22,17 @@ int main(void)
     {
         printf("Before Grade 1\n");
     }
-    else if (i < 16)
-    {
-        printf("Grade %i\n", (int) round(i));
-    }
     else
     {
-        printf("Grade 16+\n");
+        int i = (int) round(i);
+        if (i < 16)
+        {
+            printf("Grade %i\n",i);
+        }
+        else
+        {
+            printf("Grade 16+\n");
+        }
     }
 }
 
