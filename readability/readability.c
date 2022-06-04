@@ -10,9 +10,9 @@ int main(void)
 {
     string t = get_string("Text: ");
     int l = count_letters(t);
-    printf("%i\n", l);
+    printf("%i letters\n", l);
     int w = count_words(t);
-    printf("%i\n", w);
+    printf("%i words\n", w);
 }
 
 int count_letters(string text)
@@ -35,5 +35,12 @@ int count_letters(string text)
 int count_words(string text)
 {
     int w = 1;
-    for (int i = 0, let =)
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        if (text[i] == ' ')
+        {
+            w++;
+        }
+    }
+    return w;
 }
