@@ -24,10 +24,10 @@ int main(void)
     }
     else
     {
-        int i = (int) round(i);
-        if (i < 16)
+        int g = (int) round(i);
+        if (g < 16)
         {
-            printf("Grade %i\n",i);
+            printf("Grade %i\n", g);
         }
         else
         {
