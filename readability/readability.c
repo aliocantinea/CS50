@@ -14,7 +14,7 @@ int main(void)
     int l = count_letters(t);
     float w = count_words(t); //converts to float for implicit floating point conversion
     int s = count_sentances(t);
-    printf("%i letters\n%f words\n%i sentances\n", l, w, s);
+    //printf("%i letters\n%f words\n%i sentances\n", l, w, s);
     //Coleman-Liau index with l = letters, w = words, s = sentances
     float i = (0.0588 * (l / w * 100)) - (0.296 * (s / w * 100)) - 15.8;
     //printf("%f\n", i);
