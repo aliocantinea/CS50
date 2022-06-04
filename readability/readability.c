@@ -15,6 +15,7 @@ int main(void)
     float w = count_words(t); //converts to float for implicit floating point conversion
     int s = count_sentances(t);
     //printf("%i letters\n%f words\n%i sentances\n", l, w, s);
+    //Coleman-Liau index with l = letters, w = words, s = sentances
     float i = (0.0588 * (l / w * 100)) - (0.296 * (s / w * 100)) - 15.8;
     //printf("%f\n", i);
     if (i < 1)
@@ -64,6 +65,7 @@ int count_words(string text)
 int count_sentances(string text)
 {
     int s = 0;
+    //looks for 
     for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (text[i] == '.' || text[i] == '!' || text[i] == '?')
