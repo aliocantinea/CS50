@@ -35,6 +35,7 @@ int main(void)
 int count_letters(string text)
 {
     int l = 0;
+    //looks for lower and upper case letters to count letters
     for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (islower(text[i]))
@@ -52,6 +53,7 @@ int count_letters(string text)
 int count_words(string text)
 {
     int w = 1;
+    //looks for ends of words by the space after, with 1 added for last word
     for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (text[i] == ' ')
@@ -65,7 +67,7 @@ int count_words(string text)
 int count_sentances(string text)
 {
     int s = 0;
-    //looks for 
+    //looks for ends of sentences by counting punctuation
     for (int i = 0, len = strlen(text); i < len; i++)
     {
         if (text[i] == '.' || text[i] == '!' || text[i] == '?')
