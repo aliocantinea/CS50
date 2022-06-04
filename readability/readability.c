@@ -15,7 +15,7 @@ int main(void)
     int w = count_words(t);
     int s = count_sentances(t);
     printf("%i letters\n%i words\n%i sentances\n", l, w, s);
-    float i = 0.0588 * (l / w * 100) - 0.296 * (s / w * 100) - 15.8;
+    float i = (0.0588 * (l / w * 100)) - (0.296 * (s / w * 100)) - 15.8;
     printf ("%f\n", i);
     if (i < 1)
     {
