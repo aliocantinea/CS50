@@ -1,8 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-#include <math.h>
+#include <string.h> //for strlen
+#include <ctype.h>  //for islower && isupper
+#include <math.h>   //for round
 
 int count_letters(string text);
 int count_words(string text);
@@ -12,22 +12,22 @@ int main(void)
 {
     string t = get_string("Text: ");
     int l = count_letters(t);
-    float w = count_words(t);
+    float w = count_words(t); //converts to float for implicit floating point conversion
     int s = count_sentances(t);
-    printf("%i letters\n%f words\n%i sentances\n", l, w, s);
+    //printf("%i letters\n%f words\n%i sentances\n", l, w, s);
     float i = (0.0588 * (l / w * 100)) - (0.296 * (s / w * 100)) - 15.8;
-    printf ("%f\n", i);
+    //printf("%f\n", i);
     if (i < 1)
     {
-        printf ("Before Grade 1\n");
+        printf("Before Grade 1\n");
     }
     else if (i < 16)
     {
-        printf ("Grade %i\n", (int) round(i));
+        printf("Grade %i\n", (int) round(i));
     }
     else
     {
-        printf ("Grade 16+\n");
+        printf("Grade 16+\n");
     }
 }
 
