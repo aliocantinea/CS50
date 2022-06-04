@@ -42,14 +42,11 @@ int count_letters(string text)
     //looks for lower and upper case letters to count letters
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (islower(text[i]))
+        if (isalpha(text[i]))
         {
             l++;
         }
-        if (isupper(text[i]))
-        {
-            l++;
-        }
+
     }
     return l;
 }
