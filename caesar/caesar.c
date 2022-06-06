@@ -39,7 +39,7 @@ int main(int argc, string argv[])
     {
         if (isupper(p[i]))
         {
-            if (p[i] + c > 'Z')
+            if (p[i] + c > 'Z') //loops back to A after Z
             {
                 p[i] = p[i] - 26;
             }
@@ -47,7 +47,7 @@ int main(int argc, string argv[])
         }
         else if (islower(p[i]))
         {
-            if (p[i] + c > 'z')
+            if (p[i] + c > 'z') //loops back to a after z
             {
                 p[i] = p[i] - 26;
             }
