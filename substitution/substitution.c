@@ -16,49 +16,50 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    //key
+    string p = get_string("plaintext:  ");
+
     //if is upper
         //find ascii value - A
     //if is lower
         //find ascii value - a
 
-    //makes cipher reduce down to 26, as any multiple will just wrap around again
-    if (c > 26)
-    {
-        do
+        //makes cipher reduce down to 26, as any multiple will just wrap around again
+        if (c > 26)
         {
-            c = c - 26;
+            do
+            {
+                c = c - 26;
+            }
+            while (c > 26);
         }
-        while (c > 26);
-    }
 
-    //if > z
-    //do while > z loop, - 26, then do the same for Z
-    printf("ciphertext: ");
-    for (int i = 0, l = strlen(p); i < l; i++)
-    {
-        if (isupper(p[i]))
+        //if > z
+        //do while > z loop, - 26, then do the same for Z
+        printf("ciphertext: ");
+        for (int i = 0, l = strlen(p); i < l; i++)
         {
-            if (p[i] + c > 'Z') //loops back to A after Z
+            if (isupper(p[i]))
             {
-                p[i] = p[i] - 26;
+                if (p[i] + c > 'Z') //loops back to A after Z
+                {
+                    p[i] = p[i] - 26;
+                }
+                printf("%c", p[i] + c);
             }
-            printf("%c", p[i] + c);
-        }
-        else if (islower(p[i]))
-        {
-            if (p[i] + c > 'z') //loops back to a after z
+            else if (islower(p[i]))
             {
-                p[i] = p[i] - 26;
+                if (p[i] + c > 'z') //loops back to a after z
+                {
+                    p[i] = p[i] - 26;
+                }
+                printf("%c", p[i] + c);
             }
-            printf("%c", p[i] + c);
+            else
+            {
+                printf("%c", p[i]);
+            }
         }
-        else
-        {
-            printf("%c", p[i]);
-        }
-    }
-    printf("\n");
+        printf("\n");
 
 }
 
