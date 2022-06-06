@@ -4,23 +4,23 @@
 #include <ctype.h>
 #include <stdlib.h>
 
+bool only_letters(string key);
+
 int main(int argc, string argv[])
 {
     //checks 1 command-line prompt, is only digits and is above 0
-    if (argc != 2 || only_digits(argv[1]) == false)
+    if (argc != 2 || strlen(argv[1]) != 26 || only_letters(argv[1]) == false)
     {
         //stop and return if command-line argument isn't correct
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    //convert command-line argument from string to int
-    int c = atoi(argv[1]);
-    if (c < 1)
-    {
-        //stop and return if negative number
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
+
+    //key
+    //if is upper
+        //find ascii value - A
+    //if is lower
+        //find ascii value - a
 
     //makes cipher reduce down to 26, as any multiple will just wrap around again
     if (c > 26)
@@ -31,8 +31,6 @@ int main(int argc, string argv[])
         }
         while (c > 26);
     }
-
-    string p = get_string("plaintext:  ");
 
     //if > z
     //do while > z loop, - 26, then do the same for Z
@@ -64,3 +62,19 @@ int main(int argc, string argv[])
 
 }
 
+bool only_letters(string key)
+{
+    bool r;
+    for (int i = 0, l = strlen(key); i < l; i++)
+    {
+        if (isalpha(key[i]))
+        {
+            r = true;
+        }
+        else
+        {
+            r = false;
+        }
+    }
+    return r;
+}
