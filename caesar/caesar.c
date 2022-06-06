@@ -17,6 +17,12 @@ int main(int argc, string argv[])
     }
         //convert command-line argument from string to int
     int c = atoi(argv[1]);
+    if (c < 1)
+    {
+        //stop and return if command-line argument isn't correct
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
 
     //makes cipher reduce down to 26, as any multiple will just wrap around again
     if (c > 26)
