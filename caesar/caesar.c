@@ -30,9 +30,20 @@ int main(int argc, string argv[])
 
     printf("ciphertext: ");
     if
-    for (int = 0, l = strlen(p); i < l; i++)
+    for (int i = 0, l = strlen(p); i < l; i++)
     {
-        if (isupper)
+        if (isupper(p[i]))
+        {
+            
+        }
+        else if (islower(p[i]))
+        {
+
+        }
+        else
+        {
+            printf(p[i]);
+        }
     }
 
     printf("\n");
