@@ -8,16 +8,15 @@ bool only_digits(string key);
 
 int main(int argc, string argv[])
 {
-    //convert command-line argument from string to int
-    int c = atoi(argv[1]);
-
     //checks 1 command-line prompt, is only digits and is above 0
-    if (argc != 2 || c < 1 || only_digits(argv[1]) == false)
+    if (argc != 2 || only_digits(argv[1]) == false)
     {
         //stop and return if command-line argument isn't correct
         printf("Usage: ./caesar key\n");
         return 1;
     }
+        //convert command-line argument from string to int
+    int c = atoi(argv[1]);
 
     //makes cipher reduce down to 26, as any multiple will just wrap around again
     if (c > 26)
