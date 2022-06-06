@@ -34,7 +34,11 @@ int main(int argc, string argv[])
     {
         if (isupper(p[i]))
         {
-            
+            if (p[i] + c > 'Z')
+            {
+                p[i] = p[i] - 26;
+            }
+                printf("%c", p[i]);
         }
         else if (islower(p[i]))
         {
