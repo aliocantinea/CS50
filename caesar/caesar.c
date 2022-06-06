@@ -12,7 +12,7 @@ int main(int argc, string argv[])
 
     //array with plaintext
 
-    if (argv[])
+    int c = arg
 
     string p = get_string("plaintext:  ");
 
