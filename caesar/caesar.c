@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(int argc, int *argv[])
+int main(int argc, argv[])
 {
     if (argc != 2)
     {
