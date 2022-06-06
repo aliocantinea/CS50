@@ -65,5 +65,8 @@ int main(int argc, string argv[])
 
 bool only_digits(string key)
 {
-
+    for (int i = 0, l = strlen(key); i < l; i++)
+    {
+        if ()
+    }
 }
