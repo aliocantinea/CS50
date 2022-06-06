@@ -3,6 +3,8 @@
 #include <string.h>
 #include <ctype.h>
 
+bool only_digits(string key);
+
 int main(int argc, string argv[])
 {
     if (argc != 2)
@@ -61,3 +63,7 @@ int main(int argc, string argv[])
 
 }
 
+bool only_digits(string key)
+{
+    
+}
