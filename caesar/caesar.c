@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(int argc, string argv[])
+int main(int argc, int *argv[])
 {
     if (argc != 2)
     {
@@ -12,8 +12,8 @@ int main(int argc, string argv[])
         return 1;
     }
     //convert command-line argument from string to int
-    char a = argv[1];
-    int c = a - '0';
+    //char a = argv[1];
+    int c = argv[1];
     //makes cipher reduce down to 26, as any multiple will just wrap around again
     if (c > 26)
     {
