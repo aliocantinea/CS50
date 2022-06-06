@@ -12,11 +12,8 @@ int main(int argc, string argv[])
         return 1;
     }
     //convert command-line argument from string to int
-    string c = argv[1];
-    for (int i = 0, l = strlen(c); i < l; i++)
-    {
-        int cn[i] = c[i];
-    }
+    char a = argv[1];
+    int c = a - '0';
     //makes cipher reduce down to 26, as any multiple will just wrap around again
     if (c > 26)
     {
