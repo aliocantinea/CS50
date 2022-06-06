@@ -12,6 +12,7 @@ int main(int argc, string argv[])
 
     //array with plaintext
 
+    if (argv[])
 
     string p = get_string("plaintext:  ");
 
@@ -21,7 +22,7 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
     for (int = 0, l = strlen(p); i < l; i++)
     {
-        if (p[i] )
+
     }
 
     printf("\n");
