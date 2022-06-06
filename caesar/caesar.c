@@ -8,7 +8,6 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         //stop and return if command-line argument isn't correct
-        
         printf("Usage: ./caesar key\n");
         return 1;
     }
