@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     }
 
     //makes cipher reduce down to 26, as any multiple will just wrap around again
-    int c = argv[1];
+    string c = argv[1];
     if (c > 26)
     {
         do
