@@ -32,7 +32,7 @@ int main(int argc, string argv[])
     if
     for (int = 0, l = strlen(p); i < l; i++)
     {
-        if ()
+        if (isupper)
     }
 
     printf("\n");
