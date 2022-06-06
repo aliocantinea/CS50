@@ -1,11 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(int argc, string argv[])
 {
     if (argc != 2)
     {
+        //stop and return if command-line argument isn't correct
+        
         printf("Usage: ./caesar key\n");
         return 1;
     }
@@ -27,7 +30,7 @@ int main(int argc, string argv[])
     //do while > z loop, - 26, then do the same for Z
 
     printf("ciphertext: ");
-    if 
+    if
     for (int = 0, l = strlen(p); i < l; i++)
     {
 
