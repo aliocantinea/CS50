@@ -13,6 +13,10 @@ int main(int argc, string argv[])
     //array with plaintext
 
     string p = get_string("plaintext:  ");
+
+    //if > z
+    //do while > z loop, - 26, then do the same for Z
+
     printf("ciphertext: %s\n", p);
 
 }
