@@ -4,12 +4,12 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-bool only_letters(string key);
+bool only_let_once(string key);
 
 int main(int argc, string argv[])
 {
     //checks 1 command-line prompt, is only digits and is above 0
-    if (argc != 2 || strlen(argv[1]) != 26 || only_letters(argv[1]) == false)
+    if (argc != 2 || strlen(argv[1]) != 26 || only_let_once(argv[1]) == false)
     {
         //stop and return if command-line argument isn't correct
         printf("Usage: ./caesar key\n");
@@ -63,7 +63,7 @@ int main(int argc, string argv[])
 
 }
 
-bool only_letters(string key)
+bool only_let_once(string key)
 {
     bool r;
     for (int i = 0, l = strlen(key); i < l; i++)
