@@ -19,7 +19,10 @@ int main(int argc, string argv[])
     string p = get_string("plaintext:  ");
 
     //key is new cipher
+        //convert all to upper
+            // - A
     //make  plaintext reference the new cipher
+        //offset plaintext amount cipher is from A
 
         //makes cipher reduce down to 26, as any multiple will just wrap around again
         if (c > 26)
