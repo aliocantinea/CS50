@@ -12,7 +12,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    //array with plaintext
+    //makes cipher reduce down to 26, as any multiple will just wrap around again
     int c = argv[1];
     if (c > 26)
     {
@@ -32,7 +32,7 @@ int main(int argc, string argv[])
     if
     for (int = 0, l = strlen(p); i < l; i++)
     {
-
+        if ()
     }
 
     printf("\n");
