@@ -63,16 +63,17 @@ int main(int argc, string argv[])
 
 bool only_digits(string key)
 {
-    int b = 0
+    bool r = true;
     for (int i = 0, l = strlen(key); i < l; i++)
     {
         if (isdigit(key[i]))
         {
-            b = ;
+            r = true;
         }
         else
         {
-        return 1;
+            r = false;
         }
     }
+    return r;
 }
