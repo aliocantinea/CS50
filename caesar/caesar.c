@@ -17,11 +17,13 @@ int main(int argc, string argv[])
 
     //if > z
     //do while > z loop, - 26, then do the same for Z
+
+    printf("ciphertext: ");
     for (int = 0, l = strlen(p); i < l; i++)
     {
-        
+        if (p[i] )
     }
 
-    printf("ciphertext: %s\n", p);
+    printf("\n");
 
 }
