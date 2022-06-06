@@ -12,6 +12,7 @@ int main(int argc, string argv[])
         return 1;
     }
     //convert command-line argument from string to int
+    string k = argv[1];
 
     //for (int i = 0, l = strlen(argv[1]); i < l; i++)
     //{
@@ -59,3 +60,5 @@ int main(int argc, string argv[])
     printf("\n");
 
 }
+
+int
