@@ -8,12 +8,11 @@ bool only_digits(string key);
 
 int main(int argc, string argv[])
 {
-
     //convert command-line argument from string to int
     int c = atoi(argv[1]);
 
     //checks 1 command-line prompt, is only digits and is above 0
-    if (argc != 2 || only_digits(argv[1]) == false || c < 1)
+    if (argc != 2 || c < 1 || only_digits(argv[1]) == false)
     {
         //stop and return if command-line argument isn't correct
         printf("Usage: ./caesar key\n");
