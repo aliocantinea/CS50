@@ -14,19 +14,16 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    //convert command-line argument from string to int
-    int
 
-    //for (int i = 0, l = strlen(argv[1]); i < l; i++)
-    //{
-    //  ;
-    //}
+    //convert command-line argument from string to int
+    int c = atoi(argv[1]);
+
     //makes cipher reduce down to 26, as any multiple will just wrap around again
     if (c > 26)
     {
         do
         {
-            c = c - 26
+            c = c - 26;
         }
         while (c > 26);
     }
