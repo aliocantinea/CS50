@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 bool only_digits(string key);
 
@@ -14,7 +15,7 @@ int main(int argc, string argv[])
         return 1;
     }
     //convert command-line argument from string to int
-    string k = argv[1];
+    int
 
     //for (int i = 0, l = strlen(argv[1]); i < l; i++)
     //{
