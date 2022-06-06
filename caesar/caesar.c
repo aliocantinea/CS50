@@ -7,7 +7,7 @@ bool only_digits(string key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2)
+    if (argc != 2 || only_digits(argv[1]) == false)
     {
         //stop and return if command-line argument isn't correct
         printf("Usage: ./caesar key\n");
