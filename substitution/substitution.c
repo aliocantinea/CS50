@@ -18,10 +18,8 @@ int main(int argc, string argv[])
 
     string p = get_string("plaintext:  ");
 
-    //if is upper
-        //find ascii value - A
-    //if is lower
-        //find ascii value - a
+    //key is new cipher
+    //make  plaintext reference the new cipher
 
         //makes cipher reduce down to 26, as any multiple will just wrap around again
         if (c > 26)
