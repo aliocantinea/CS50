@@ -15,11 +15,11 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-        //convert command-line argument from string to int
+    //convert command-line argument from string to int
     int c = atoi(argv[1]);
     if (c < 1)
     {
-        //stop and return if command-line argument isn't correct
+        //stop and return if negative number
         printf("Usage: ./caesar key\n");
         return 1;
     }
