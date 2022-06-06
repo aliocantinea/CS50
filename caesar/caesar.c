@@ -38,18 +38,21 @@ int main(int argc, string argv[])
             {
                 p[i] = p[i] - 26;
             }
-                printf("%c", p[i]);
+            printf("%c", p[i] + c);
         }
         else if (islower(p[i]))
         {
-
+            if (p[i] + c > 'z')
+            {
+                p[i] = p[i] - 26;
+            }
+            printf("%c", p[i] + c);
         }
         else
         {
             printf(p[i]);
         }
     }
-
     printf("\n");
 
 }
