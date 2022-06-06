@@ -12,6 +12,7 @@ int main(int argc, string argv[])
     //convert command-line argument from string to int
     int c = atoi(argv[1]);
 
+    //checks 1 command-line prompt, is only digits and is above 0
     if (argc != 2 || only_digits(argv[1]) == false || c < 1)
     {
         //stop and return if command-line argument isn't correct
@@ -33,7 +34,6 @@ int main(int argc, string argv[])
 
     //if > z
     //do while > z loop, - 26, then do the same for Z
-
     printf("ciphertext: ");
     for (int i = 0, l = strlen(p); i < l; i++)
     {
