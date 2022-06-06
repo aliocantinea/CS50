@@ -12,7 +12,7 @@ int main(int argc, string argv[])
         return 1;
     }
     //convert command-line argument from string to int
-    for (int i = 0, l = strlen(argv[]); i < l; i++)
+    for (int i = 0, l = strlen(); i < l; i++)
     {
         int c[i] = argv[i];
     }
