@@ -10,7 +10,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    //array with plaintext
+    //array with plaintext **don't really need since this is default**
 
     string p = get_string("plaintext:  ");
 
