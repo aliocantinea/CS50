@@ -8,5 +8,8 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    string p = get_string("plaintext:  ");
+    printf("ciphertext: %s\n", p);
+    return 0;
     
 }
