@@ -12,9 +12,10 @@ int main(int argc, string argv[])
         return 1;
     }
     //convert command-line argument from string to int
-    for (int i = 0, l = strlen(); i < l; i++)
+    string c = argv[1];
+    for (int i = 0, l = strlen(c); i < l; i++)
     {
-        int c[i] = argv[i];
+        int cn[i] = c[i];
     }
     //makes cipher reduce down to 26, as any multiple will just wrap around again
     if (c > 26)
@@ -32,7 +33,6 @@ int main(int argc, string argv[])
     //do while > z loop, - 26, then do the same for Z
 
     printf("ciphertext: ");
-    if
     for (int i = 0, l = strlen(p); i < l; i++)
     {
         if (isupper(p[i]))
