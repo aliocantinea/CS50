@@ -11,8 +11,15 @@ int main(int argc, string argv[])
     }
 
     //array with plaintext
-
-    int c = arg
+    int c = argv[1];
+    if (c > 26)
+    {
+        do
+        {
+            c = c - 26
+        }
+        while (c > 26);
+    }
 
     string p = get_string("plaintext:  ");
 
@@ -20,6 +27,7 @@ int main(int argc, string argv[])
     //do while > z loop, - 26, then do the same for Z
 
     printf("ciphertext: ");
+    if 
     for (int = 0, l = strlen(p); i < l; i++)
     {
 
