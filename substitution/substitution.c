@@ -71,9 +71,9 @@ bool only_let_once(string key)
     bool r;
     for (int i = 0, l = strlen(key); i < l; i++)
     {
-        if(isalpha(key[i]))
+        if (isalpha(key[i]))
         {
-            if(islower(key[i]))
+            if (islower(key[i]))
             {
                 key[i] = toupper(key[i]);
             }
@@ -81,7 +81,7 @@ bool only_let_once(string key)
             for (int x = i + 1, e = strlen(key); x < e; x++)
             {
                 //char k = key[i];
-                if(k == key[x])
+                if (k == key[x])
                 {
                     return r = false;
                     //printf("false %i\n", i);
