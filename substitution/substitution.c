@@ -43,8 +43,10 @@ int main(int argc, string argv[])
         {
             if (islower(p[i]))
             {
-            int ps = p[i] - 'a';
-            p = c[ps];
+                //get the string of cipher with int of plain - lower a
+                int ps = p[i] - 'a';
+                p[i] = c[ps];
+                
             }
         }
         printf("\n");
