@@ -41,23 +41,10 @@ int main(int argc, string argv[])
         printf("ciphertext: ");
         for (int i = 0, l = strlen(p); i < l; i++)
         {
-            if (isupper(p[i]))
+            if (islower(p[i]))
             {
-                
-            }
-            printf("%c", p[i] + c);
-            }
-            else if (islower(p[i]))
-            {
-                if (p[i] + c > 'z') //loops back to a after z
-                {
-                    p[i] = p[i] - 26;
-                }
-                printf("%c", p[i] + c);
-            }
-            else
-            {
-                printf("%c", p[i]);
+            int ps = p[i] - 'a';
+            p = c[ps];
             }
         }
         printf("\n");
