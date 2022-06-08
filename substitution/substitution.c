@@ -83,18 +83,14 @@ bool only_let_once(string key)
                 //char k = key[i];
                 if(k == key[x])
                 {
-                    //r = false;
                     return r = false;
                     //printf("false %i\n", i);
                 }
                 //printf("%i ", x);
             }
-            //r = true;
-            //printf("pass %i\n", i);
         }
         else
         {
-            //r = false;
             return r = false;
             //printf("false\n");
         }
