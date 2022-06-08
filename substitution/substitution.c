@@ -21,10 +21,11 @@ int main(int argc, string argv[])
         printf("Key must contain 26 characters.");
         return 1;
     }
-    //else if ()
+    //else if (only_let_once(argv[1]) != true)
     //{
         //checks for alpha unique letters
-
+        //printf("Each letter must be only used once.");
+        //return 1;
     //}
 
     string c = argv[1];
