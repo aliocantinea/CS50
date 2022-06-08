@@ -59,11 +59,11 @@ int main(int argc, string argv[])
         }
         else
         {
+            //prints non-alpha
             printf("%c", p[i]);
         }
     }
     printf("\n");
-
 }
 
 bool only_let_once(string key)
