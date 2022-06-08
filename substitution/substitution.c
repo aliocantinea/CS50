@@ -19,13 +19,13 @@ int main(int argc, string argv[])
     else if (strlen(argv[1]) != 26)
     {
         //checks for 26 characters
-        printf("Key must contain 26 characters.");
+        printf("Key must contain 26 characters.\n");
         return 1;
     }
     else if (only_let_once(argv[1]) != true)
     {
         //checks for alpha unique letters
-        printf("Each letter must be only used once.");
+        printf("Each letter must be only used once.\n");
         return 1;
     }
     //gets plaintext
