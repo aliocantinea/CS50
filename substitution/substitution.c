@@ -101,33 +101,3 @@ bool only_let_once(string key)
     }
     return r;
 }
-
-
-
-
-    //bool r = false;
-    //for (int x = 0; x < 26 ; x++)
-    //{
-        //for (int i = 0, l = strlen(key); i < l; i++)
-        //{
-            //if (isalpha(key[i]))
-            //{
-                //if (islower(key[i]))
-                //{
-                    //key[i] = toupper(key[i]);
-                //}
-                //key[i] = key[i] - 'A';
-                // checks that key[] is true
-                //if(key[i] == x)
-                //{
-                    //r = true;
-                //}
-            //}
-            //else
-            //{
-                //return r = false;
-            //}
-        //}
-    //}
-    //return r;
-//}
