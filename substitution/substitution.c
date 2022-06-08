@@ -8,6 +8,7 @@ bool only_let_once(string key);
 
 int main(int argc, string argv[])
 {
+    string c = argv[1];
     //checks for only 1 command-line prompt
     if (argc != 2)
     {
@@ -27,11 +28,8 @@ int main(int argc, string argv[])
         printf("Each letter must be only used once.");
         return 1;
     }
-
-    string c = argv[1];
-
+    //gets plaintext
     string p = get_string("plaintext:  ");
-
     printf("ciphertext: ");
     for (int i = 0, l = strlen(p); i < l; i++)
     {
