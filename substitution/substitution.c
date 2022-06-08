@@ -74,7 +74,7 @@ bool only_let_once(string key)
         {
             if(islower(key[i]))
             {
-                toupper(key[i]);
+                toupper( key[i]);
             }
             char k = key[i];
             for (r = i++; r < strlen(key); r++)
