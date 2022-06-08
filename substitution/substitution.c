@@ -67,6 +67,16 @@ int main(int argc, string argv[])
 
 bool only_let_once(string key)
 {
+    bool r;
+    for (int i = 0, l = strlen(key); i < l; i++)
+    {
+        
+    }
+
+
+
+
+
     bool r = false;
     for (int x = 0; x < 26 ; x++)
     {
