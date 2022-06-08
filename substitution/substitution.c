@@ -44,9 +44,12 @@ int main(int argc, string argv[])
             if (islower(p[i]))
             {
                 //get the string of cipher with int of plain - lower a
-                int ps = p[i] - 'a';
-                p[i] = c[ps];
-                
+                int pi = p[i] - 'a';
+                p[i] = c[pi];
+                if (isupper(p[i]))
+                {
+                    
+                }
             }
         }
         printf("\n");
