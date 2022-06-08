@@ -79,8 +79,13 @@ bool only_let_once(string key)
                 key[i] = toupper(key[i]);
             }
             key[i] = key[i] - 'A';
-            for (int x = o; x <  ; x++)
-            r = true;
+            for (int x = o; x < 26 ; x++)
+            {
+                if(key[i] == x)
+                {
+                    r = true;
+                }
+            }
         }
     }
     return r;
