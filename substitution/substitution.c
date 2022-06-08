@@ -68,7 +68,7 @@ int main(int argc, string argv[])
 
 bool only_let_once(string key)
 {
-    bool r;
+    bool r = false;
     for (int i = 0, l = strlen(key); i < l; i++)
     {
         if (isalpha(key[i]))
@@ -78,13 +78,9 @@ bool only_let_once(string key)
                 key[i] = toupper(key[i]);
             }
             key[i] = key[i] - 'A';
-            
             r = true;
         }
-        else
-        {
-            r = false;
-        }
+
     }
     return r;
 }
