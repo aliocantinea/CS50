@@ -8,7 +8,7 @@ bool only_let_once(string key);
 
 int main(int argc, string argv[])
 {
-    //checks 1 command-line prompt, is only digits and is above 0
+    //checks for only 1 command-line prompt
     if (argc != 2 || only_let_once(argv[1]) == false)
     {
         //stop and return if command-line argument isn't correct
@@ -17,8 +17,14 @@ int main(int argc, string argv[])
     }
     else if (strlen(argv[1]) != 26)
     {
+        //checks for 26 characters
         printf("Key must contain 26 characters.");
         return 1;
+    }
+    else if ()
+    {
+        //checks for alpha unique letters
+        
     }
 
     string p = get_string("plaintext:  ");
