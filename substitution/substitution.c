@@ -79,7 +79,8 @@ bool only_let_once(string key)
             char k = key[i];
             for (r = i++; r < strlen(key); r++)
             {
-                if(char k == key[r])
+                //char k = key[i];
+                if(k == key[r])
                 {
                     return r = false;
                 }
@@ -91,6 +92,7 @@ bool only_let_once(string key)
         }
     }
 
+}
 
 
 
