@@ -75,8 +75,9 @@ bool only_let_once(string key)
         {
             if (islower(key[i]))
             {
-                
+                key[i] = toupper(key[i]);
             }
+            
             r = true;
         }
         else
