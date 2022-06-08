@@ -70,17 +70,18 @@ int main(int argc, string argv[])
 bool only_let_once(string key)
 {
     bool r = false;
-    for (int i = 0, l = strlen(key); i < l; i++)
+    for (int x = 0; x < 26 ; x++)
     {
-        if (isalpha(key[i]))
+        for (int i = 0, l = strlen(key); i < l; i++)
         {
-            if (islower(key[i]))
+            if (isalpha(key[i]))
             {
-                key[i] = toupper(key[i]);
-            }
-            key[i] = key[i] - 'A';
-            for (int x = o; x < 26 ; x++)
-            {
+                if (islower(key[i]))
+                {
+                    key[i] = toupper(key[i]);
+                }
+                key[i] = key[i] - 'A';
+                // checks that key[] is true
                 if(key[i] == x)
                 {
                     r = true;
