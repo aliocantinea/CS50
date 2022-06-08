@@ -86,9 +86,10 @@ bool only_let_once(string key)
                     r = false;
                     printf("false %i\n", i);
                 }
+                printf("%i ", x);
             }
             r = true;
-            printf("true\n");
+            printf("pass %i\n", i);
         }
         else
         {
