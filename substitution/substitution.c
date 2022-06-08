@@ -31,33 +31,38 @@ int main(int argc, string argv[])
 
     string p = get_string("plaintext:  ");
 
-
-    //key is new cipher
-        //convert all to upper
-            // - A
-    //make  plaintext reference the new cipher
-        //offset plaintext amount cipher is from A
-
-        printf("ciphertext: ");
-        for (int i = 0, l = strlen(p); i < l; i++)
+    printf("ciphertext: ");
+    for (int i = 0, l = strlen(p); i < l; i++)
+    {
+        if (islower(p[i]))
         {
-            if (islower(p[i]))
+            //get the string of cipher with int of plain - lower a
+            int pi = p[i] - 'a';
+            p[i] = c[pi];
+            //converts cipher if the wrong case
+            if (isupper(p[i]))
             {
-                //get the string of cipher with int of plain - lower a
-                int pi = p[i] - 'a';
-                p[i] = c[pi];
-                if (isupper(p[i]))
-                {
-                    p[i] = tolower(p[i]);
-                }
-                printf("%c", p[i]);
+                p[i] = tolower(p[i]);
             }
-            if (islower(p[i]))
-            {
-                
-            }
+            printf("%c", p[i]);
         }
-        printf("\n");
+        else if (isupper(p[i]))
+        {
+            int pi = p[i] - 'A';
+            p[i] = c[pi];
+            //converts cipher if wrong case
+            if (islower(p[i]))
+            {
+                p[i] = toupper(p[i]);
+            }
+            printf("%c", p[i]);
+        }
+        else
+        {
+            printf("%c", p[i]);
+        }
+    }
+    printf("\n");
 
 }
 
