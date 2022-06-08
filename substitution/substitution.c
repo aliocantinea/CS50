@@ -27,6 +27,8 @@ int main(int argc, string argv[])
 
     //}
 
+    string c = argv[1];
+
     string p = get_string("plaintext:  ");
 
 
