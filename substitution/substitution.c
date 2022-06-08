@@ -48,8 +48,13 @@ int main(int argc, string argv[])
                 p[i] = c[pi];
                 if (isupper(p[i]))
                 {
-                    
+                    p[i] = tolower(p[i]);
                 }
+                printf("%c", p[i]);
+            }
+            if (islower(p[i]))
+            {
+                
             }
         }
         printf("\n");
