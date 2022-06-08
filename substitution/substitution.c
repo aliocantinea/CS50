@@ -25,14 +25,7 @@ int main(int argc, string argv[])
     else if (only_let_once(argv[1]) != true)
     {
         //checks for alpha unique letters
-        if (bool == 2)
-        {
-            printf("Only letters can be used\n");
-        }
-        else
-        {
-        printf("Each letter must be only used once.\n");
-        }
+        printf("Must only use letters and each one time\n");
         return 1;
     }
     //gets plaintext
@@ -101,9 +94,10 @@ bool only_let_once(string key)
         }
         else
         {
-            r = 2;
+            r = false;
             return r;
             printf("false\n");
         }
     }
+    return r;
 }
