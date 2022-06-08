@@ -74,7 +74,7 @@ bool only_let_once(string key)
         {
             if(islower(key[i]))
             {
-                toupper( key[i]);
+                key[i] = key[1] - 'a' + 'A';
             }
             char k = key[i];
             for (r = i++; r < strlen(key); r++)
@@ -82,17 +82,17 @@ bool only_let_once(string key)
                 //char k = key[i];
                 if(k == key[r])
                 {
-                    return r = false;
+                    r = false;
                 }
             }
-            return r = true;
+            r = true;
         }
         else
         {
-            return r = false;
+            r = false;
         }
     }
-
+    return r;
 }
 
 
