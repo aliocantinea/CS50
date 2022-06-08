@@ -81,7 +81,6 @@ bool only_let_once(string key)
             key[i] = key[i] - 'A';
             r = true;
         }
-
     }
     return r;
 }
