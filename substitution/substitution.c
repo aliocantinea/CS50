@@ -78,10 +78,10 @@ bool only_let_once(string key)
                 key[i] = key[1] - 'a' + 'A';
             }
             char k = key[i];
-            for (int r = i + 1, e = strlen(key); r < e; r++)
+            for (int x = i + 1, e = strlen(key); x < e; x++)
             {
                 //char k = key[i];
-                if(k == key[r])
+                if(k == key[x])
                 {
                     r = false;
                     printf("false %i\n", i);
