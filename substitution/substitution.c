@@ -78,7 +78,7 @@ bool only_let_once(string key)
                 key[i] = key[1] - 'a' + 'A';
             }
             char k = key[i];
-            for (r = i++; r < strlen(key); r++)
+            for (r = i + 1; r < strlen(key); r++)
             {
                 //char k = key[i];
                 if(k == key[r])
