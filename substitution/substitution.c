@@ -9,7 +9,7 @@ bool only_let_once(string key);
 int main(int argc, string argv[])
 {
     //checks for only 1 command-line prompt
-    if (argc != 2 || only_let_once(argv[1]) == false)
+    if (argc != 2)
     {
         //stop and return if command-line argument isn't correct
         printf("Usage: ./substitution key\n");
