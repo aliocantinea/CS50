@@ -76,9 +76,13 @@ bool only_let_once(string key)
             {
                 toupper(key[i]);
             }
-            for (i < strlen(key); i++)
+            char k = key[i];
+            for (r = i++; r < strlen(key); r++)
             {
-                if(key[i])
+                if(char k == key[r])
+                {
+                    return r = false;
+                }
             }
         }
         else
