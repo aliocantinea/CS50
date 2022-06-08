@@ -85,12 +85,12 @@ bool only_let_once(string key)
                 {
                     r = false;
                     return r;
-                    printf("false %i\n", i);
+                    //printf("false %i\n", i);
                 }
-                printf("%i ", x);
+                //printf("%i ", x);
             }
             r = true;
-            printf("pass %i\n", i);
+            //printf("pass %i\n", i);
         }
         else
         {
