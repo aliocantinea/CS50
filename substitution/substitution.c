@@ -72,7 +72,10 @@ bool only_let_once(string key)
     {
         if(isalpha(key[i]))
         {
-            
+            if(islower(key[i]))
+            {
+                toupper
+            }
         }
         else
         {
