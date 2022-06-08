@@ -18,24 +18,13 @@ int main(int argc, string argv[])
 
     string p = get_string("plaintext:  ");
 
+    
     //key is new cipher
         //convert all to upper
             // - A
     //make  plaintext reference the new cipher
         //offset plaintext amount cipher is from A
 
-        //makes cipher reduce down to 26, as any multiple will just wrap around again
-        if (c > 26)
-        {
-            do
-            {
-                c = c - 26;
-            }
-            while (c > 26);
-        }
-
-        //if > z
-        //do while > z loop, - 26, then do the same for Z
         printf("ciphertext: ");
         for (int i = 0, l = strlen(p); i < l; i++)
         {
