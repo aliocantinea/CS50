@@ -85,6 +85,10 @@ bool only_let_once(string key)
                     r = true;
                 }
             }
+            else
+            {
+                return r = false;
+            }
         }
     }
     return r;
