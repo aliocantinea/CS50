@@ -70,7 +70,14 @@ bool only_let_once(string key)
     bool r;
     for (int i = 0, l = strlen(key); i < l; i++)
     {
-        
+        if(isalpha(key[i]))
+        {
+            
+        }
+        else
+        {
+            return r = false;
+        }
     }
 
 
