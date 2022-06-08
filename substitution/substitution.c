@@ -79,6 +79,11 @@ bool only_let_once(string key)
                 key[i] = toupper(key[i]);
             }
             key[i] = key[i] - 'A';
+            do
+            {
+
+            }
+            while (key[i] != i)
             r = true;
         }
     }
