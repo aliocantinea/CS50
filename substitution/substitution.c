@@ -21,11 +21,11 @@ int main(int argc, string argv[])
         printf("Key must contain 26 characters.");
         return 1;
     }
-    else if ()
-    {
+    //else if ()
+    //{
         //checks for alpha unique letters
-        
-    }
+
+    //}
 
     string p = get_string("plaintext:  ");
 
