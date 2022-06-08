@@ -77,6 +77,7 @@ bool only_let_once(string key)
                 toupper(key[i]);
             }
             
+            for (i < strlen(key);)
         }
         else
         {
