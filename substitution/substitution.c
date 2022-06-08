@@ -30,7 +30,7 @@ int main(int argc, string argv[])
     }
     //gets plaintext
     string p = get_string("plaintext:  ");
-    
+
     printf("ciphertext: ");
     for (int i = 0, l = strlen(p); i < l; i++)
     {
@@ -84,13 +84,16 @@ bool only_let_once(string key)
                 if(k == key[r])
                 {
                     r = false;
+                    printf("false %i\n", i);
                 }
             }
             r = true;
+            printf("true\n");
         }
         else
         {
             r = false;
+            printf("false\n");
         }
     }
     return r;
