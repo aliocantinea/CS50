@@ -1,11 +1,11 @@
 sort1 uses: Bubble
 
-How do you know?: random 7 reversed 5 sorted .5
+How do you know?:   random 7    reversed 5  sorted .5
 
 sort2 uses: Merge
 
-How do you know?: random .6 reversed .5 sorted .5
+How do you know?:   random .6   reversed .5 sorted .5
 
 sort3 uses: Selection
 
-How do you know?: random 3 reversed 3 sorted 3
+How do you know?:   random 3    reversed 3  sorted 3
