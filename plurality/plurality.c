@@ -70,8 +70,7 @@ bool vote(string name)
     //if string compare name to candidates[i].name
     //true + 1 candidates[i].vote
     //return true
-    else
-        return false;
+    return false;
 }
 
 // Print the winner (or winners) of the election
@@ -79,6 +78,7 @@ void print_winner(void)
 {
     // TODO
     //sort candidates[i].vote
-    //
+    //find highest
+    //printf candidates[i].name
     return;
 }
