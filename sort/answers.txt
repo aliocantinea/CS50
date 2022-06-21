@@ -6,6 +6,6 @@ sort2 uses: TODO random .6 reversed .5 sorted .5
 
 How do you know?: TODO
 
-sort3 uses: TODO random reversed 3 sorted 3
+sort3 uses: TODO random 3 reversed 3 sorted 3
 
 How do you know?: TODO
