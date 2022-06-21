@@ -79,6 +79,7 @@ void print_winner(void)
     // TODO
     //sort candidates[i].vote
     //find highest
+    //compare to 2nd lowest
     //printf candidates[i].name
     return;
 }
