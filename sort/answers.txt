@@ -2,7 +2,7 @@ sort1 uses: TODO random 7 reversed 5 sorted .5
 
 How do you know?: TODO
 
-sort2 uses: TODO 
+sort2 uses: TODO random .5
 
 How do you know?: TODO
 
