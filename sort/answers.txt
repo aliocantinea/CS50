@@ -7,8 +7,8 @@ How do you know?:   random 7
 sort2 uses: Merge
 
 How do you know?:   random .6
-                    reversed .5
-                    sorted .1, .5
+                    reversed .08, .5
+                    sorted .6, .5
 
 sort3 uses: Selection
 
