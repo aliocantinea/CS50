@@ -1,14 +1,14 @@
 sort1 uses: Bubble
 
-How do you know?:   random 7
+How do you know?:   random .3, 7
                     reversed 5
                     sorted .5
 
 sort2 uses: Merge
 
-How do you know?:   random .6
+How do you know?:   random .07, .6
                     reversed .08, .5
-                    sorted .6, .5
+                    sorted .06, .5
 
 sort3 uses: Selection
 
