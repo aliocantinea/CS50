@@ -1,11 +1,11 @@
-sort1 uses: Bubble TODO random 7 reversed 5 sorted .5
+sort1 uses: Bubble
 
-How do you know?: TODO
+How do you know?: random 7 reversed 5 sorted .5
 
-sort2 uses: Merge TODO random .6 reversed .5 sorted .5
+sort2 uses: Merge
 
-How do you know?: TODO
+How do you know?: random .6 reversed .5 sorted .5
 
-sort3 uses: Selection TODO random 3 reversed 3 sorted 3
+sort3 uses: Selection
 
-How do you know?: TODO
+How do you know?: random 3 reversed 3 sorted 3
