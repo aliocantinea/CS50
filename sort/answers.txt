@@ -7,14 +7,14 @@ How do you know?: significantly faster with sorted, omega(n)
 
 sort2 uses: Merge
 
-How do you know?: 
+How do you know?: theta is quicker than other methods
                     random .07, .6
                     reversed .08, .5
                     sorted .06, .5
 
 sort3 uses: Selection
 
-How do you know?:
+How do you know?: theta is slower than other methods
                     random .2, 3
                     reversed .2, 3
                     sorted .2, 3
