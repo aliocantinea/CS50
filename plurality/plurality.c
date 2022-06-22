@@ -73,7 +73,7 @@ bool vote(string name)
         if (strcasecmp(name, candidates[i].name) == 0)
         {
             //true + 1 candidates[i].vote
-            candidates[i].votes = candidates[i].votes + 1
+            candidates[i].votes = candidates[i].votes + 1;
             //return true
             return true;
         }
