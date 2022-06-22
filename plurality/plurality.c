@@ -84,8 +84,8 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    
     //sort candidates[i].votes
+    
     //find highest
     //compare to 2nd highest
     //if same
