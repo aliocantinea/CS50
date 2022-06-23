@@ -188,9 +188,8 @@ void eliminate(int min)
     {
         if (candidates[i].votes == min)
         {
-            
+            candidates[i].elminated = true;
         }
     }
-    // TODO
     return;
 }
