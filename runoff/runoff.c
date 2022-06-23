@@ -145,7 +145,10 @@ void tabulate(void)
 {
     for (int i = 0; i < voter_count; i++)
     {
-        
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if
+        }
     }
     return;
 }
@@ -163,7 +166,7 @@ int find_min(void)
     int lowest = candidate_count;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated == false)
+        if (!candidates[i].eliminated)
         {
             if (candidates[i].votes < lowest)
             {
@@ -179,7 +182,7 @@ bool is_tie(int min)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated == false)
+        if (!candidates[i].eliminated)
         {
             if (candidates[i].votes > min)
             {
