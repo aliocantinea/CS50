@@ -81,23 +81,22 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // TODO
+    //makes winner var highest in arr
     int winner = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > i)
+        if (candidates[i].votes > winner)
         {
             winner = candidates[i].votes;
         }
     }
+    //compares winner variable to arr, prints any that match (can be multiple)
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        if (candidates[i].votes == winner)
+        {
+            printf("%s\n", candidate[i].name);
+        }
     }
-    //find highest
-    //compare to 2nd highest
-    //if same
-    //else
-    //printf candidates[i].name
     return;
 }
