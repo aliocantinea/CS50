@@ -159,7 +159,7 @@ int find_min(void)
             }
         }
     }
-    return lowest
+    return lowest;
     // TODO
     return 0;
 }
