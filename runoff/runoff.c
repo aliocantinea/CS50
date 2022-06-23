@@ -129,7 +129,13 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcasecmp(name, candidates[i].name) == 0)
+        {
+            pre
+        }
+    }
     return false;
 }
 
@@ -162,8 +168,6 @@ int find_min(void)
         }
     }
     return lowest;
-    // TODO
-    return 0;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
@@ -179,7 +183,6 @@ bool is_tie(int min)
             }
         }
     }
-    else
     return true;
 }
 
