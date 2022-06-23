@@ -72,9 +72,7 @@ bool vote(string name)
         //if string compare name to candidates[i].name
         if (strcasecmp(name, candidates[i].name) == 0)
         {
-            //true + 1 candidates[i].vote
-            candidates[i].votes = candidates[i].votes + 1;
-            //return true
+            candidates[i].votes++;
             return true;
         }
     return false;
@@ -84,8 +82,11 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    //sort candidates[i].votes
-    
+    int w = 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
     //find highest
     //compare to 2nd highest
     //if same
