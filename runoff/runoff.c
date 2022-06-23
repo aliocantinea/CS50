@@ -170,6 +170,7 @@ bool print_winner(void)
     {
         if (candidates[i].votes > majority)
         {
+            //not printing... why?
             printf("%s\n", candidates[i].name);
             return true;
         }
@@ -189,6 +190,7 @@ int find_min(void)
             {
                 lowest = candidates[i].votes;
                 return lowest;
+                //not retur
             }
         }
     }
