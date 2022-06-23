@@ -183,7 +183,7 @@ int find_min(void)
     {
         if (!candidates[i].eliminated)
         {
-            if (candidates[i].votes < lowest)
+            if (candidates[i].votes <= lowest)
             {
                 lowest = candidates[i].votes;
             }
