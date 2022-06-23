@@ -190,7 +190,8 @@ int find_min(void)
             {
                 lowest = candidates[i].votes;
                 return lowest;
-                //not retur
+                //not returning when all candidates are tied
+                //not ignoring eliminated
             }
         }
     }
