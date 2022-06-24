@@ -153,7 +153,7 @@ void tabulate(void)
             if (!candidates[preferences[i][j]].eliminated)
             {
                 //update candidate vote with int sotred in voter rank arr
-                candidates[preferences[i][j]].votes = candidates[preferences[i][j]].votes + 1;
+                candidates[preferences[i][j]].votes++;
                 break;
             }
         }
