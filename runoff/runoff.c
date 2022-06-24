@@ -149,12 +149,12 @@ void tabulate(void)
         //for each rank
         for (int j = 0; j < candidate_count; ++j)
         {
-            int pref = preferences[i][j];
+            //int pref = preferences[i][j];
             //if the jth preferences for voter ith is not eliminated
-            if (!candidates[pref].eliminated)
+            if (!candidates[preferences[i][j]].eliminated)
             {
                 //update candidate vote with int sotred in voter rank arr
-                candidates[pref].votes = candidates[pref].votes + 1;
+                candidates[preferences[i][j]].votes = candidates[preferences[i][j]].votes + 1;
                 break;
             }
         }
