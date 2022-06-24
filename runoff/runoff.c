@@ -173,9 +173,11 @@ bool print_winner(void)
             //not printing... why?
             printf("%s\n", candidates[i].name);
             return true;
+            break;
         }
     }
     return false;
+
 }
 
 // Return the minimum number of votes any remaining candidate has
