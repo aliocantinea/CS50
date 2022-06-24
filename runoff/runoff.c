@@ -173,7 +173,6 @@ bool print_winner(void)
             //not printing... why?
             printf("%s\n", candidates[i].name);
             return true;
-            break;
         }
     }
     return false;
@@ -191,7 +190,6 @@ int find_min(void)
             if (candidates[i].votes <= lowest)
             {
                 lowest = candidates[i].votes;
-
                 //not returning when all candidates are tied
                 //not ignoring eliminated
             }
