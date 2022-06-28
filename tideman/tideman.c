@@ -103,7 +103,11 @@ bool vote(int rank, string name, int ranks[])
 {
     for (int i = 0; i < candidate_count; ++i)
     {
-        if(strcasecmp(name, candidates[i]))
+        if(strcasecmp(name, candidates[i]) == 0)
+        {
+            ranks[rank] = i;
+            
+        }
     }
     // TODO
     return false;
