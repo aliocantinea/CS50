@@ -10,8 +10,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             int temp = image[i][j].rgbtBLUE + image[i][j].rgbtGREEN + image[i][j].rgbtRED / 3.0;
             if (temp > 255)
             {
-                
+                temp = 255;
             }
+            image[i][j].rgbtBLUE = image[i][j].rgbtGREEN = image[i][j].rgbtRED = temp;
         }
     }
     return;
