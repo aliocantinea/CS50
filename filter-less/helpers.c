@@ -28,17 +28,24 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
+            // store original value in tmp var
             int B = image[i][j].rgbtBlue;
-            if (B > 255)
-            {
-                B = 255;
-            }
             int G = image[i][j].rgbtGreen;
+            int R = image[i][j].rgbtRed;
+
+            // cal change to var
+
+            // if value ends up above max, set to max
             if (B > 255)
             {
                 B = 255;
             }
-            int R = image[i][j].rgbtRed;
+
+            if (B > 255)
+            {
+                B = 255;
+            }
+
             if (R > 255)
             {
                 R = 255;
