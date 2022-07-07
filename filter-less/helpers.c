@@ -12,7 +12,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             {
                 temp = 0xFF;
             }
-            RGBTRIPLE.rgbtBLUE
+            *RGBTRIPLE.rgbtBLUE = *RGBTRIPLE.rgbtGREEN = *RGBTRIPLE.rgbtRED = temp;
         }
     }
     return;
