@@ -75,5 +75,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    // take pixel and compare it to +1, =, -1 height and +1, =, -1 width and average it
+    
     return;
 }
