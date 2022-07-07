@@ -7,9 +7,12 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
+            // adds together all 3 values and averages them
+            // not sure why it has to be 3.0 vs 3
             int temp = image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed / 3.0;
             if (temp > 255)
             {
+                // if over max value 255 set to max
                 temp = 255;
             }
             image[i][j].rgbtBlue = image[i][j].rgbtGreen = image[i][j].rgbtRed = temp;
@@ -26,11 +29,19 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
             int B = image[i][j].rgbtBlue;
-            int G = image[i][j].rgbtGreen;
-            int R = image[i][j].rgbtRed;
-            for(int k = 0; k < 3; k++)
+            if (B > 255)
             {
-                
+                B = 255;
+            }
+            int G = image[i][j].rgbtGreen;
+            if (B > 255)
+            {
+                B = 255;
+            }
+            int R = image[i][j].rgbtRed;
+            if (R > 255)
+            {
+                R = 255;
             }
         }
     }
