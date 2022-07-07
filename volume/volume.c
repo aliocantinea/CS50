@@ -34,9 +34,42 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
+    // assigning dynamic memory to heap for copy var
+    uint8_t *header = malloc(sizeof(uint8_t) * HEADER_SIZE);
+    // check to make sure memory was allocated
+    if (header == NULL)
+    {
+        printf("Out of memory.\n");
+        fclose(input);
+        fclose(output);
+        return 2;
+    }
+    // reads and writes HEADER_SIZE amount of uint8_t at one time
+    fread(header, sizeof(uint8_t), HEADER_SIZE, input);
+    fwrite(header, sizeof(uint8_t), HEADER_SIZE, output);
+    // freeing heap var
+    free(header);
 
     // TODO: Read samples from input file and write updated data to output file
-
+    // dynamic heap memory that will release after finished
+    int16_t *sample = malloc(sizeof(int16_t));
+    // check to make sure memory was allocated
+    if (sample == NULL)
+    {
+        printf("Out of memory.\n");
+        fclose(input);
+        fclose(output);
+        return 2;
+    }
+    //remembers in order the last position of the read file, so starts after HEADER_SIZE
+    // loop to read and write each int16_t
+    while (fread(sample, sizeof(int16_t), 1, input))
+    {
+        *sample *= factor;
+        fwrite(sample, sizeof(int16_t), 1, output);
+    }
+    // freeing dynamic var
+    free(sample);
     // Close files
     fclose(input);
     fclose(output);
