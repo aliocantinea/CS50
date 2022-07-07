@@ -28,28 +28,30 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-            // store original value in tmp var
-            int B = image[i][j].rgbtBlue;
-            int G = image[i][j].rgbtGreen;
-            int R = image[i][j].rgbtRed;
+            //create tmp sepia var
+            int SB, SG, SR;
 
             // cal change to var
+            SB = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;
+            SG = .349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue;
+            SR = .393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue;
 
             // if value ends up above max, set to max
-            if (B > 255)
+            if (SB > 255)
             {
-                B = 255;
+                SB = 255;
             }
-
-            if (B > 255)
+            if (SG > 255)
             {
-                B = 255;
+                SG = 255;
             }
-
-            if (R > 255)
+            if (SR > 255)
             {
-                R = 255;
+                SR = 255;
             }
+            image[i][j].rgbtBlue = SB;
+            image[i][j].rgbtGreen = SG;
+            image[i][j].rgbtRed = SR;
         }
     }
     return;
