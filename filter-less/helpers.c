@@ -10,7 +10,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         {
             // adds together all 3 values and averages them
             // not sure why it has to be 3.0 vs 3
-            int temp = trunc(image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3.0;
+            int temp = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3.0;
             if (temp > 255)
             {
                 // if over max value 255 set to max
