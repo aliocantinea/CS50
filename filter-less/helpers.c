@@ -74,7 +74,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // take pixel and compare it to +1, =, -1 height and +1, =, -1 width and average it
-    //take a for loop and compare using 'r' as blur radius, where 
+    //take a for loop and compare using 'r' as blur radius, where i - r; i < i + r: i++
 
     return;
 }
