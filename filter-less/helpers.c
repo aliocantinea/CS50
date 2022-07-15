@@ -80,7 +80,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         fclose(tmp);
         return 8;
     }
-    int blur = 1
+    int blur = 1;
     // copy input into duplicate array
     for(int i = 0; i < height; i++)
     {
@@ -94,7 +94,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-            for(int k = ; i)
+            for(int k = 0 - blur;  )
         }
     }
     // take a for loop and compare using 'r' as blur radius, where i - r; i < i + r: i++ and same for j
