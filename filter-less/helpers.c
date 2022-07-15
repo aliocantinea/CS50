@@ -94,8 +94,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-
-            RGBTRIPLE temp;
             int sampsize, SB, SG, SR = 0;
             for(int k = 0 - blur; k = 0 + blur; k++)
             {
@@ -125,7 +123,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     SR = SR + imgcpy[i + k][j + l].rgbtRed;
                 }
             }
-            
+
         }
     }
     // take a for loop and compare using 'r' as blur radius, where i - r; i < i + r: i++ and same for j
