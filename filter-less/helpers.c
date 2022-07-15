@@ -95,10 +95,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
             RGBTRIPLE temp;
-            int
+            int sampsize;
             for(int k = 0 - blur; k = 0 + blur; k++)
             {
-                for(int l = 0 - blur; l = 0 + blur; l++, )
+                for(int l = 0 - blur; l = 0 + blur; l++)
                 {
                     if(i + k < 0)
                     {
@@ -116,6 +116,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         break;
                     }
+
+                    sampsize++;
+                    
 
                 }
             }
