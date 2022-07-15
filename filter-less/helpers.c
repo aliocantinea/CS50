@@ -115,7 +115,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         break;
                     }
-
                     sampsize++;
 
                     SB = SB + imgcpy[i + k][j + l].rgbtBlue;
@@ -123,7 +122,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     SR = SR + imgcpy[i + k][j + l].rgbtRed;
                 }
             }
-
+            image[i][j].rbgtBlue = round(SB/sampsize);
+            image[i][j].rbgtGreen = round(SG/sampsize);
+            image[i][j].rbgtRed = round(SR/sampsize);
         }
     }
     // take a for loop and compare using 'r' as blur radius, where i - r; i < i + r: i++ and same for j
