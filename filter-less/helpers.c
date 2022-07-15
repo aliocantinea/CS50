@@ -97,7 +97,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             RGBTRIPLE temp;
             for(int k = 0 - blur; k = 0 + blur; k++)
             {
-                for(int l = )
+                for(int l = 0 - blur; l = 0 + blur; l++)
+                {
+                    
+                }
             }
         }
     }
