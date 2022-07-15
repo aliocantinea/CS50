@@ -99,10 +99,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
+                    else
+                    {
                     SB += imgcpy[i + k][j + l].rgbtBlue;
                     SG += imgcpy[i + k][j + l].rgbtGreen;
                     SR += imgcpy[i + k][j + l].rgbtRed;
                     smpsize++;
+                    }
                 }
             }
             image[i][j].rgbtBlue = round(SB/smpsize);
