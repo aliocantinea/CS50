@@ -73,8 +73,25 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE tmp[height][width] = calloc(height, width * sizeof(RGBTRIPLE));
+    if (tmp == NULL)
+    {
+        printf("Not enough memory to store image.\n");
+        fclose(tmp);
+        return 8;
+    }
+    // copy input into duplicate array
+    for(int i = 0; i < height; i++)
+    {
+        for(int j = 0; j < width; j++)
+        {
+            tmp[i][j] = image[i][j];
+        }
+    }
     // take pixel and compare it to +1, =, -1 height and +1, =, -1 width and average it
-    //take a for loop and compare using 'r' as blur radius, where i - r; i < i + r: i++
+    
+    // take a for loop and compare using 'r' as blur radius, where i - r; i < i + r: i++ and same for j
 
+    fclose(tmp);
     return;
 }
