@@ -94,8 +94,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
+
             RGBTRIPLE temp;
-            int sampsize;
+            int sampsize, SB, SG, SR = 0;
             for(int k = 0 - blur; k = 0 + blur; k++)
             {
                 for(int l = 0 - blur; l = 0 + blur; l++)
@@ -119,12 +120,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                     sampsize++;
 
-                    image[i][j].rgbtBlue = SB;
-            image[i][j].rgbtGreen = SG;
-            image[i][j].rgbtRed = SR;
-
+                    SB = SB + image[i + k][j + l].rgbtBlue;
+                    SG = SG + image[i + k][j + l].rgbtGreen;
+                    SR = SR + image[i + k][j + l].rgbtRed;
                 }
             }
+            
         }
     }
     // take a for loop and compare using 'r' as blur radius, where i - r; i < i + r: i++ and same for j
