@@ -95,14 +95,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for(int l = (0 - blur); l == (0 + blur); l++)
                 {
-                    if(i + k < 0 || i + k > height)
+                    if(i + k < 0 || i + k > height || j + l < 0 || j + l > width)
                     {
                         break;
                     }
-                    if(j + l < 0 || j + l > width)
-                    {
-                        break;
-                    }
+                    //if(j + l < 0 || j + l > width)
+                    //{
+                    //    break;
+                    //}
                     SB = SB + imgcpy[i + k][j + l].rgbtBlue;
                     SG = SG + imgcpy[i + k][j + l].rgbtGreen;
                     SR = SR + imgcpy[i + k][j + l].rgbtRed;
