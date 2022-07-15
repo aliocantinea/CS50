@@ -90,9 +90,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
             int sampsize, SB, SG, SR = 0;
-            for(int k = 0 - blur; k = 0 + blur; k++)
+            for(int k = (0 - blur); k = (0 + blur); k++)
             {
-                for(int l = 0 - blur; l = 0 + blur; l++)
+                for(int l = (0 - blur); l = (0 + blur); l++)
                 {
                     if(i + k < 0 || i + k > height)
                     {
