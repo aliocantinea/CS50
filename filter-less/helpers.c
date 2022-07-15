@@ -90,9 +90,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
             int sampsize, SB, SG, SR = 0;
-            for(int k = (0 - blur); k = (0 + blur); k++)
+            for(int k = (0 - blur); k == (0 + blur); k++)
             {
-                for(int l = (0 - blur); l = (0 + blur); l++)
+                for(int l = (0 - blur); l == (0 + blur); l++)
                 {
                     if(i + k < 0 || i + k > height)
                     {
@@ -102,16 +102,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         break;
                     }
-                    sampsize++;
+                    sampsize = sampsize++;
 
                     SB = SB + imgcpy[i + k][j + l].rgbtBlue;
                     SG = SG + imgcpy[i + k][j + l].rgbtGreen;
                     SR = SR + imgcpy[i + k][j + l].rgbtRed;
                 }
             }
-            image[i][j].rbgtBlue = round(SB/sampsize);
-            image[i][j].rbgtGreen = round(SG/sampsize);
-            image[i][j].rbgtRed = round(SR/sampsize);
+            image[i][j].rgbtBlue = round(SB/sampsize);
+            image[i][j].rgbtGreen = round(SG/sampsize);
+            image[i][j].rgbtRed = round(SR/sampsize);
         }
     }
     //free(tmp);
