@@ -97,7 +97,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //samplesize var that adds up each time a pixel is used in average
             float smpsize = 0;
             //take pixel from above and compare it to +1, =, -1 height and +1, =, -1 width
-            // 1 here is equal to blur value of var at start of function
+            //'1' here is equal to blur value of var at start of function
             for(int k = (0 - blur); k < (0 + blur) + 1; k++)
             {
                 for(int l = (0 - blur); l < (0 + blur) + 1; l++)
@@ -107,15 +107,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         //if outside of picture ignores pixel comparison by contining loop
                         continue;
                     }
+                    //samples impcpy so that as variables change on image it doesn't change blur
+                    //SB += x; is the same as SB = SB + x;
                     SB += imgcpy[i + k][j + l].rgbtBlue;
                     SG += imgcpy[i + k][j + l].rgbtGreen;
                     SR += imgcpy[i + k][j + l].rgbtRed;
                     smpsize++;
                 }
             }
+            //copy average from temp var to image
             image[i][j].rgbtBlue = round(SB/smpsize);
             image[i][j].rgbtGreen = round(SG/smpsize);
             image[i][j].rgbtRed = round(SR/smpsize);
+            //loops back to next pixel
         }
     }
     return;
