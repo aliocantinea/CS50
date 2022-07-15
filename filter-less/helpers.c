@@ -94,7 +94,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-            for(int k = 0 - blur;  )
+            RGBTRIPLE temp;
+            for(int k = 0 - blur; k = 0 + blur; k++)
+            {
+                for(int l = )
+            }
         }
     }
     // take a for loop and compare using 'r' as blur radius, where i - r; i < i + r: i++ and same for j
