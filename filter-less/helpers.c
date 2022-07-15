@@ -74,13 +74,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE imgcpy[height][width] = calloc(height, width * sizeof(RGBTRIPLE));
-    if (imgcpy == NULL)
-    {
-        printf("Not enough memory to store image.\n");
-        fclose(imgcpy);
-        return 8;
-    }
+    RGBTRIPLE imgcpy[height][width];
     int blur = 1;
     // copy input into duplicate array
     for(int i = 0; i < height; i++)
@@ -120,6 +114,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rbgtRed = round(SR/sampsize);
         }
     }
-    free(tmp);
+    //free(tmp);
     return;
 }
