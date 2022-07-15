@@ -73,11 +73,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE tmp[height][width] = calloc(height, width * sizeof(RGBTRIPLE));
-    if (tmp == NULL)
+    RGBTRIPLE imgcpy[height][width] = calloc(height, width * sizeof(RGBTRIPLE));
+    if (imgcpy == NULL)
     {
         printf("Not enough memory to store image.\n");
-        fclose(tmp);
+        fclose(imgcpy);
         return 8;
     }
     int blur = 1;
@@ -86,7 +86,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-            tmp[i][j] = image[i][j];
+            imgcpy[i][j] = image[i][j];
         }
     }
     // take pixel and compare it to +1, =, -1 height and +1, =, -1 width and average it
@@ -120,9 +120,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                     sampsize++;
 
-                    SB = SB + image[i + k][j + l].rgbtBlue;
-                    SG = SG + image[i + k][j + l].rgbtGreen;
-                    SR = SR + image[i + k][j + l].rgbtRed;
+                    SB = SB + imgcpy[i + k][j + l].rgbtBlue;
+                    SG = SG + imgcpy[i + k][j + l].rgbtGreen;
+                    SR = SR + imgcpy[i + k][j + l].rgbtRed;
                 }
             }
             
