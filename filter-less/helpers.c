@@ -89,7 +89,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     // take pixel and compare it to +1, =, -1 height and +1, =, -1 width and average it
-    
+    for(int i = 0; i < height; i++)
+    {
+        for(int j = 0; j < width; j++)
+        {
+            
+        }
+    }
     // take a for loop and compare using 'r' as blur radius, where i - r; i < i + r: i++ and same for j
 
     fclose(tmp);
