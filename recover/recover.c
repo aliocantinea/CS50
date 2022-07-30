@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
                 fclose(file);
                 return 3;
             }
-            fwrite(img, )
+            fwrite(buffer, 1, blocksize, img);
         }
 
 
