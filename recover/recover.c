@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     int *buffer = malloc(block_size * sizeof(uint8_t));
     if (buffer == NULL)
     {
-        printf("Not enough memory for buffer.\n")
+        printf("Not enough memory for buffer.\n");
         fclose(file);
         return 2;
     }
