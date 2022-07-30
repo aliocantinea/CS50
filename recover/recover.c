@@ -8,6 +8,12 @@ int main(int argc, char *argv[])
     //check to see file can be opened
 
 
-    //read fole looking for 
+    //read fole looking for jpeg header '0xff 0xd8 oxff'
+
+    //open new file
+
+    //when found copy block size of 512 bytes under new jpeg header found
+
+    
 
 }
