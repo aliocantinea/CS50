@@ -6,7 +6,8 @@ int main(int argc, char *argv[])
     //check for argc < 2
     if (argc > 1)
     {
-        
+        printf ("Usage: ./recover file\n");
+        return 1;
     }
 
     //check to see file can be opened
