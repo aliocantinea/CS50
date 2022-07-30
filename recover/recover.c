@@ -20,9 +20,15 @@ int main(int argc, char *argv[])
     }
     //var for FAT
     int block_size = 512;
-    
+
     //create buffer
-    uint8_t buffer = malloc(block_size * sizeof(uint8_t));
+    int *buffer = malloc(block_size * sizeof(uint8_t));
+    if (buffer == NULL)
+    {
+        printf("Not enough memory for buffer.\n")
+        fclose(file);
+        return 2;
+    }
 
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
     //fread
@@ -33,6 +39,7 @@ int main(int argc, char *argv[])
 
 
     //close file
+    free(buffer);
     fclose(file);
     return 0;
 }
