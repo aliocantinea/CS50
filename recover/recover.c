@@ -44,11 +44,13 @@ int main(int argc, char *argv[])
             FILE *img = fopen(filename, "w");
             if (img == NULL)
             {
-                printf("Not enough memory for recovered file.\n")
+                printf("Not enough memory for recovered file.\n");
                 free(buffer);
+                fclose(img);
                 fclose(file);
                 return 3;
             }
+            fwrite(img, )
         }
 
 
