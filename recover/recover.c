@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[])
 {
-    //check for argc < 2
+    //check for argc > 1
     if (argc > 1)
     {
         printf ("Usage: ./recover file\n");
