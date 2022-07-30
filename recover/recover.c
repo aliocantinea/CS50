@@ -40,8 +40,6 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
         (buffer[3] & 0xf0) == 0xe0)
         {
-            //add 1 to filename
-            ++i;
             //create 3 digit filename
             sprintf(filename, "%03i.jpg", i);
             //open filename and return if unsuccessful
@@ -54,6 +52,12 @@ int main(int argc, char *argv[])
                 fclose(file);
                 return 3;
             }
+            if (i  > 0)
+            {
+                fclose(img);
+            }
+            //add 1 to filename
+            ++i;
         }
         //write to file
         fwrite(buffer, 1, blocksize, img);
