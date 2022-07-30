@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
+// #include <stdint.h>
 
-typedef uint8_t BYTE;
+// typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     //create buffer
-
+    
 
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
     //fread
