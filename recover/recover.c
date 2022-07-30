@@ -19,8 +19,7 @@ int main(int argc, char *argv[])
     }
 
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
-
-    //fread
+    fread 
 
     //open new file
 
