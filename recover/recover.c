@@ -36,11 +36,15 @@ int main(int argc, char *argv[])
         //counter for files recovered
         int i = 0;
 
+        //if jpeg header found open file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
         (buffer[3] & 0xf0) == 0xe0)
         {
+            //add 1 to filename
             ++i;
+            //create 3 digit filename
             sprintf(filename, "%03i.jpg", i);
+            //open filename and return if unsuccessful
             FILE *img = fopen(filename, "w");
             if (img == NULL)
             {
@@ -50,8 +54,9 @@ int main(int argc, char *argv[])
                 fclose(file);
                 return 3;
             }
-            fwrite(buffer, 1, blocksize, img);
         }
+        //write to file
+        fwrite(buffer, 1, blocksize, img);
 
 
 
