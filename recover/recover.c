@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         printf ("Could not open %s.\n", argv[1]);
         return 1;
     }
-    //var for FAT 
+    //var for FAT
     int block_size = 512;
     //create buffer
     uint8_t (*buffer)[block_size] = calloc(block_size);
