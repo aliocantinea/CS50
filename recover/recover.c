@@ -7,6 +7,7 @@ int main(int argc, char *argv[])
 
     //check to see file can be opened
 
-    
+
+    //read fole looking for 
 
 }
