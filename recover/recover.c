@@ -28,6 +28,6 @@ int main(int argc, char *argv[])
 
 
     //close file
-    fclose(argv[1]);
+    fclose(file);
     return 0;
 }
