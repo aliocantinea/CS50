@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     //check to see file can be opened
 
 
-    //read fole looking for jpeg header '0xff 0xd8 oxff'
+    //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
 
     //open new file
 
