@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-int block_size = 512;
-
 int main(int argc, char *argv[])
 {
     //check for argc > 1
@@ -20,6 +18,8 @@ int main(int argc, char *argv[])
         printf ("Could not open %s.\n", argv[1]);
         return 1;
     }
+    //var for FAT 
+    int block_size = 512;
     //create buffer
     uint8_t (*buffer)[block_size] = calloc(block_size);
 
