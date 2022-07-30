@@ -26,5 +26,6 @@ int main(int argc, char *argv[])
 
     //when found copy block size of 512 bytes under new jpeg header found
 
+    
 
 }
