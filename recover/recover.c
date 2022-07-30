@@ -17,9 +17,10 @@ int main(int argc, char *argv[])
         printf ("Could not open %s.\n", argv[1]);
         return 1;
     }
-
+    //create buffer
+    
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
-    fread 
+    fread
 
     //open new file
 
