@@ -6,7 +6,11 @@ int main(int argc, char *argv[])
     //check for argc < 2
 
     //check to see file can be opened
-
+    FILE *file = fopen(argv[1], "r");
+    if (file == NULL)
+    {
+        printf()
+    }
 
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
 
