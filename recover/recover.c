@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
             ++i;
             sprintf(filename, "%03i.jpg", i);
         }
+        
 
 
     //open new file
