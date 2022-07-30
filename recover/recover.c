@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 int main(int argc, char *argv[])
 {
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     //create buffer
-    
+
 
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
     //fread
