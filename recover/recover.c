@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     //var for FAT
     int block_size = 512;
     //create buffer
-    uint8_t (*buffer)[block_size] = calloc(block_size);
+    uint8_t *buffer = malloc(block_size * sizeof(uint8_t));
 
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
     //fread
