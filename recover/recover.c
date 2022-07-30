@@ -19,10 +19,10 @@ int main(int argc, char *argv[])
         return 1;
     }
     //var for FAT
-    int block_size = 512;
+    int blocksize = 512;
 
     //create buffer
-    int *buffer = malloc(block_size * sizeof(uint8_t));
+    int *buffer = malloc(blocksize * sizeof(uint8_t));
     if (buffer == NULL)
     {
         printf("Not enough memory for buffer.\n");
