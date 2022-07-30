@@ -10,6 +10,8 @@ int main(int argc, char *argv[])
 
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
 
+    //fread
+
     //open new file
 
     //when found copy block size of 512 bytes under new jpeg header found
