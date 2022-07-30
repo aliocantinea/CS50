@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
     while (fread(buffer, 1, blocksize, file) == blocksize)
     {
-
+        if ()
 
 
     //open new file
