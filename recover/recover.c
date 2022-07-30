@@ -41,8 +41,10 @@ int main(int argc, char *argv[])
         {
             ++i;
             sprintf(filename, "%03i.jpg", i);
+            FILE *img = fopen(filename, "w");
+            
         }
-        
+
 
 
     //open new file
