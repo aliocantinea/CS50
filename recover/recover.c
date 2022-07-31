@@ -66,7 +66,6 @@ int main(int argc, char *argv[])
                 }
             }
             //if file already open, close and open new
-            else
             {
                 fclose(img);
                 //add 1 to filename
