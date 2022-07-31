@@ -40,13 +40,13 @@ int main(int argc, char *argv[])
         return 3;
     }
 
+    //counter for files recovered
+    int i = 0;
+
+
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
     while (fread(buffer, 1, blocksize, file) == blocksize)
     {
-
-        //counter for files recovered
-        int i = 0;
-
         //create file if first
         sprintf(filename, "%03i.jpg", i);
 
