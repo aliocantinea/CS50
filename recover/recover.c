@@ -58,6 +58,7 @@ int main(int argc, char *argv[])
                 fclose(img);
                 //add 1 to filename
                 ++i;
+                break;
             }
         }
         //write to file
