@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
             //set filename
             sprintf(filename, "%03i.jpg", images);
 
-            //open filename and return if unsuccessful
+            //open filename
             recovered = fopen(filename, "w");
             // if (recovered == NULL)
             // {
