@@ -43,6 +43,9 @@ int main(int argc, char *argv[])
     //counter for files recovered
     int images = 0;
 
+    //create output file globally
+    FILE *recovered;
+
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
     while (fread(buffer, 1, blocksize, file) == blocksize)
     {
@@ -54,17 +57,17 @@ int main(int argc, char *argv[])
             sprintf(filename, "%03i.jpg", images);
 
             //open filename and return if unsuccessful
-            FILE *img = fopen(filename, "w");
-            if (img == NULL)
+            recovered = fopen(filename, "w");
+            if (recovered == NULL)
             {
                     printf("Not enough memory for recovered file.\n");
                     free(buffer);
-                    fclose(img);
+                    fclose(recovered);
                     fclose(file);
                     return 4;
             }
             //write to file
-            fwrite(buffer, 1, blocksize, img);
+            fwrite(buffer, 1, blocksize, recovered);
 
 
         }
