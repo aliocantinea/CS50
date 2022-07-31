@@ -52,27 +52,33 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
         (buffer[3] & 0xf0) == 0xe0)
         {
-
+            //if file already open, close and open new
             if (i  > 0)
             {
                 fclose(img);
                 //add 1 to filename
                 ++i;
-                break;
+                sprintf(filename, "%03i.jpg", i);
+                //open filename and return if unsuccessful
+                FILE *img = fopen(filename, "w");
+                if (img == NULL)
+                {
+                    printf("Not enough memory for recovered file.\n");
+                    free(buffer);
+                    fclose(img);
+                    fclose(file);
+                    return 3;
+                }
+
             }
         }
         //write to file
         fwrite(buffer, 1, blocksize, img);
-
-
-
-    //open new file
-
-    //when found copy block size of 512 bytes under new jpeg header found
     }
 
     //close file
     free(buffer);
+    fclose(img);
     fclose(file);
     return 0;
 }
