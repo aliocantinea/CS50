@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
     FILE *recovered;
 
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
-    while (fread(buffer, 1, blocksize, file) == blocksize)
+    while (fread(buffer, sizeof(uint8_t), blocksize, file) == blocksize)
     {
         //if jpeg header found open file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
@@ -70,16 +70,14 @@ int main(int argc, char *argv[])
             //add to image counter
             ++images;
         }
-
         //write to file
-        fwrite(buffer, 1, blocksize, recovered);
-
-
-
+        fwrite(buffer, sizeof(uint8_t), blocksize, recovered);
     }
 
     //close file
     free(buffer);
+    free(filename);
+    fclose(recovered);
     fclose(file);
     return 0;
 }
