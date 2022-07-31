@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 
         //create file if first
         sprintf(filename, "%03i.jpg", i);
-        
+
         //open filename and return if unsuccessful
         FILE *img = fopen(filename, "w");
         if (img == NULL)
@@ -86,11 +86,11 @@ int main(int argc, char *argv[])
         }
         //write to file
         fwrite(buffer, 1, blocksize, img);
+        fclose(img);
     }
 
     //close file
     free(buffer);
-    fclose(img);
     fclose(file);
     return 0;
 }
