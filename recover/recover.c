@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     int blocksize = 512;
 
     //create buffer
-    uint8_t *buffer = malloc(blocksize * sizeof(uint8_t));
+    uint8_t *buffer[blocksize] = malloc(blocksize * sizeof(uint8_t));
     if (buffer == NULL)
     {
         printf("Not enough memory for buffer.\n");
