@@ -58,14 +58,15 @@ int main(int argc, char *argv[])
 
             //open filename and return if unsuccessful
             recovered = fopen(filename, "w");
-            if (recovered == NULL)
-            {
-                    printf("Not enough memory for recovered file.\n");
-                    free(buffer);
-                    fclose(recovered);
-                    fclose(file);
-                    return 4;
-            }
+            // if (recovered == NULL)
+            // {
+            //         printf("Not enough memory for recovered file.\n");
+            //         free(buffer);
+            //         fclose(recovered);
+            //         fclose(file);
+            //         return 4;
+            // }
+            
             //write to file
             fwrite(buffer, 1, blocksize, recovered);
 
