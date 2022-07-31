@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
         }
         //write to file
         fwrite(buffer, 1, blocksize, img);
-        fclose(img);
+
     }
 
     //close file
