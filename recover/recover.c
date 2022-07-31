@@ -35,23 +35,24 @@ int main(int argc, char *argv[])
     {
         //counter for files recovered
         int i = 0;
-        
+        //create 3 digit filename
+        sprintf(filename, "%03i.jpg", i);
+        //open filename and return if unsuccessful
+        FILE *img = fopen(filename, "w");
+        if (img == NULL)
+        {
+            printf("Not enough memory for recovered file.\n");
+            free(buffer);
+            fclose(img);
+            fclose(file);
+            return 3;
+        }
+
         //if jpeg header found open file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
         (buffer[3] & 0xf0) == 0xe0)
         {
-            //create 3 digit filename
-            sprintf(filename, "%03i.jpg", i);
-            //open filename and return if unsuccessful
-            FILE *img = fopen(filename, "w");
-            if (img == NULL)
-            {
-                printf("Not enough memory for recovered file.\n");
-                free(buffer);
-                fclose(img);
-                fclose(file);
-                return 3;
-            }
+
             if (i  > 0)
             {
                 fclose(img);
