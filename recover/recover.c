@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
     //counter for files recovered
     int i = 0;
 
+    char *filename = malloc()
     //create file if first
     sprintf(filename, "%03i.jpg", i);
     //open filename and return if unsuccessful
