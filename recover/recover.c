@@ -56,9 +56,9 @@ int main(int argc, char *argv[])
             if (i  > 0)
             {
                 fclose(img);
+                //add 1 to filename
+                ++i;
             }
-            //add 1 to filename
-            ++i;
         }
         //write to file
         fwrite(buffer, 1, blocksize, img);
