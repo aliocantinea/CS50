@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
         {
             //set filename
             sprintf(filename, "%03i.jpg", images);
+
             //open filename and return if unsuccessful
             FILE *img = fopen(filename, "w");
             if (img == NULL)
@@ -62,9 +63,12 @@ int main(int argc, char *argv[])
                     fclose(file);
                     return 4;
             }
+            //write to file
+            fwrite(buffer, 1, blocksize, img);
+
+
         }
-        //write to file
-        fwrite(buffer, 1, blocksize, img);
+
 
     }
 
