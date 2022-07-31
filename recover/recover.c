@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     int blocksize = 512;
 
     //create buffer
-    int *buffer = malloc(blocksize * sizeof(uint8_t));
+    uint8_t *buffer = malloc(blocksize * sizeof(uint8_t));
     if (buffer == NULL)
     {
         printf("Not enough memory for buffer.\n");
@@ -42,7 +42,6 @@ int main(int argc, char *argv[])
 
     //counter for files recovered
     int i = 0;
-
 
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
     while (fread(buffer, 1, blocksize, file) == blocksize)
