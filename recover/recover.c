@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
         printf ("Could not open %s.\n", argv[1]);
         return 1;
     }
-    //var for FAT
+    
+    //var for FAT blocksize
     int blocksize = 512;
 
     //create buffer
@@ -32,7 +33,15 @@ int main(int argc, char *argv[])
     //counter for files recovered
     int i = 0;
 
-    char *filename = malloc()
+    //assigns pointer for filename and returns in NULL
+    char *filename = malloc(7 * sizeof(char));
+    if (filename == NULL)
+    {
+        printf("Not enough memory for filename.\n");
+        fclose(file);
+        return 3;
+    }
+
     //create file if first
     sprintf(filename, "%03i.jpg", i);
     //open filename and return if unsuccessful
@@ -43,7 +52,7 @@ int main(int argc, char *argv[])
         free(buffer);
         fclose(img);
         fclose(file);
-        return 3;
+        return 4;
     }
 
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
