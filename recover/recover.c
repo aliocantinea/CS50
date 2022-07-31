@@ -68,18 +68,18 @@ int main(int argc, char *argv[])
                 fclose(img);
                 //add 1 to filename
                 ++i;
-                sprintf(filename, "%03i.jpg", i);
-                //open filename and return if unsuccessful
-                FILE *img = fopen(filename, "w");
-                if (img == NULL)
-                {
-                    printf("Not enough memory for recovered file.\n");
-                    free(buffer);
-                    fclose(img);
-                    fclose(file);
-                    return 4;
-                }
-
+                // sprintf(filename, "%03i.jpg", i);
+                // //open filename and return if unsuccessful
+                // FILE *img = fopen(filename, "w");
+                // if (img == NULL)
+                // {
+                //     printf("Not enough memory for recovered file.\n");
+                //     free(buffer);
+                //     fclose(img);
+                //     fclose(file);
+                //     return 4;
+                // }
+                break;
             }
         }
         //write to file
