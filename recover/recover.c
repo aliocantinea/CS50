@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         printf ("Could not open %s.\n", argv[1]);
         return 1;
     }
-    
+
     //var for FAT blocksize
     int blocksize = 512;
 
