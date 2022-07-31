@@ -66,12 +66,14 @@ int main(int argc, char *argv[])
             //         fclose(file);
             //         return 4;
             // }
-            
-            //write to file
-            fwrite(buffer, 1, blocksize, recovered);
 
-
+            //add to image counter
+            ++images;
         }
+
+        //write to file
+        fwrite(buffer, 1, blocksize, recovered);
+
 
 
     }
