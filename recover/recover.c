@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
         (buffer[3] & 0xf0) == 0xe0)
         {
             //set filename
-            sprintf(filename, "%03i.jpg", i);
+            sprintf(filename, "%03i.jpg", images);
             //open filename and return if unsuccessful
             FILE *img = fopen(filename, "w");
             if (img == NULL)
