@@ -40,25 +40,25 @@ int main(int argc, char *argv[])
         return 3;
     }
 
-    //counter for files recovered
-    int i = 0;
-
-    //create file if first
-    sprintf(filename, "%03i.jpg", i);
-    //open filename and return if unsuccessful
-    FILE *img = fopen(filename, "w");
-    if (img == NULL)
-    {
-        printf("Not enough memory for recovered file.\n");
-        free(buffer);
-        fclose(img);
-        fclose(file);
-        return 4;
-    }
-
     //read fole looking for jpeg header '0xff 0xd8 oxff 0xe...'
     while (fread(buffer, 1, blocksize, file) == blocksize)
     {
+        //counter for files recovered
+        int i = 0;
+
+        //create file if first
+        sprintf(filename, "%03i.jpg", i);
+        //open filename and return if unsuccessful
+        FILE *img = fopen(filename, "w");
+        if (img == NULL)
+        {
+            printf("Not enough memory for recovered file.\n");
+            free(buffer);
+            fclose(img);
+            fclose(file);
+            return 4;
+        }
+
         //if jpeg header found open file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
         (buffer[3] & 0xf0) == 0xe0)
