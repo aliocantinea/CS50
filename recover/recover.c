@@ -30,8 +30,6 @@ int main(int argc, char *argv[])
         fclose(file);
         return 2;
     }
-    //counter for files recovered
-    int i = 0;
 
     //assigns pointer for filename and returns in NULL
     char *filename = malloc(7 * sizeof(char));
@@ -41,6 +39,9 @@ int main(int argc, char *argv[])
         fclose(file);
         return 3;
     }
+
+    //counter for files recovered
+    int i = 0;
 
     //create file if first
     sprintf(filename, "%03i.jpg", i);
@@ -77,7 +78,7 @@ int main(int argc, char *argv[])
                     free(buffer);
                     fclose(img);
                     fclose(file);
-                    return 3;
+                    return 4;
                 }
 
             }
