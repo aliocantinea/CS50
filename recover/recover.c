@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
     int images = 0;
 
     //create output file globally
-    FILE *recovered = ;
+    FILE *recovered = NULL;
 
     //read file looking for jpg header '0xff 0xd8 oxff 0xe...'
     while (fread(buffer, sizeof(uint8_t), blocksize, file) == blocksize)
