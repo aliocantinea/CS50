@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     }
 
     //assigns pointer for filename and returns in NULL
-    char *filename = malloc(7 * sizeof(char));
+    char *filename = malloc(8 * sizeof(char));
     if (filename == NULL)
     {
         printf("Not enough memory for filename.\n");
@@ -58,14 +58,15 @@ int main(int argc, char *argv[])
 
             //open filename
             recovered = fopen(filename, "w");
-            // if (recovered == NULL)
-            // {
-            //         printf("Not enough memory for recovered file.\n");
-            //         free(buffer);
-            //         fclose(recovered);
-            //         fclose(file);
-            //         return 4;
-            // }
+            if (recovered == NULL)
+            {
+                    printf("Not enough memory for recovered file.\n");
+                    free(buffer);
+                    free(filename);
+                    fclose(recovered);
+                    fclose(file);
+                    return 4;
+            }
 
             //add to image counter
             ++images;
