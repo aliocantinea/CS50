@@ -75,9 +75,10 @@ int main(int argc, char *argv[])
         fwrite(buffer, sizeof(uint8_t), blocksize, recovered);
     }
 
-    //close file
+    //free pointers
     free(buffer);
     free(filename);
+    //close files
     fclose(recovered);
     fclose(file);
     return 0;
