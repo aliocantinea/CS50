@@ -23,13 +23,13 @@ int main(int argc, char *argv[])
     int blocksize = 512;
 
     //create buffer
-    uint8_t buffer[blocksize] = malloc(blocksize * sizeof(uint8_t));
-    if (buffer == NULL)
-    {
-        printf("Not enough memory for buffer.\n");
-        fclose(file);
-        return 2;
-    }
+    uint8_t buffer[blocksize]; //= malloc(blocksize * sizeof(uint8_t))
+    // if (buffer == NULL)
+    // {
+    //     printf("Not enough memory for buffer.\n");
+    //     fclose(file);
+    //     return 2;
+    // }
 
     //assigns pointer for filename and returns in NULL
     char *filename = malloc(8 * sizeof(char));
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
             if (recovered != NULL)
             {
                     printf("Not enough memory for recovered file.\n");
-                    free(buffer);
+                    // free(buffer);
                     free(filename);
                     fclose(recovered);
                     fclose(file);
@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
     }
 
     //free pointers
-    free(buffer);
+    // free(buffer);
     free(filename);
     //close files
     fclose(recovered);
