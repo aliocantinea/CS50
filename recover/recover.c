@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 
             //open filename
             recovered = fopen(filename, "w");
-            if (recovered == NULL)
+            if (recovered != NULL)
             {
                     printf("Not enough memory for recovered file.\n");
                     free(buffer);
