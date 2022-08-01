@@ -7,15 +7,15 @@ int main(int argc, char *argv[])
     //check for argc > 1
     if (argc != 2)
     {
-        printf ("Usage: ./recover file\n");
+        printf("Usage: ./recover file\n");
         return 1;
     }
 
     //check to see file can be opened
-    FILE *file = fopen (argv[1], "r");
+    FILE *file = fopen(argv[1], "r");
     if (file == NULL)
     {
-        printf ("Could not open %s.\n", argv[1]);
+        printf("Could not open %s.\n", argv[1]);
         return 1;
     }
 
@@ -54,11 +54,11 @@ int main(int argc, char *argv[])
             recovered = fopen(filename, "w");
             if (recovered == NULL)
             {
-                    printf("Not enough memory for recovered file.\n");
-                    free(filename);
-                    fclose(recovered);
-                    fclose(file);
-                    return 4;
+                printf("Not enough memory for recovered file.\n");
+                free(filename);
+                fclose(recovered);
+                fclose(file);
+                return 4;
             }
             //add to image counter
             ++images;
