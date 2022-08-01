@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
     //read file looking for jpg header '0xff 0xd8 oxff 0xe...'
     while (fread(buffer, sizeof(uint8_t), blocksize, file) == blocksize)
     {
+        
         //if jpg header found open file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
         (buffer[3] & 0xf0) == 0xe0)
