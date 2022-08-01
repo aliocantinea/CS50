@@ -60,11 +60,10 @@ int main(int argc, char *argv[])
                     fclose(file);
                     return 4;
             }
-            
             //add to image counter
             ++images;
         }
-
+        
         //write to file
         fwrite(buffer, sizeof(uint8_t), blocksize, recovered);
     }
