@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
             //add to image counter
             ++images;
         }
-
+        
         //write to file
         fwrite(buffer, sizeof(uint8_t), blocksize, recovered);
     }
