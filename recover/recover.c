@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-typedef uint8_t BYTE;
-
 int main(int argc, char *argv[])
 {
     //check for argc > 1
@@ -25,7 +23,7 @@ int main(int argc, char *argv[])
     int blocksize = 512;
 
     //create buffer
-    BYTE *buffer = malloc(blocksize * sizeof(BYTE));
+    uint8_t *buffer = malloc(blocksize * sizeof(uint8_t));
     if (buffer == NULL)
     {
         printf("Not enough memory for buffer.\n");
@@ -49,9 +47,9 @@ int main(int argc, char *argv[])
     FILE *recovered = NULL;
 
     //read file looking for jpg header '0xff 0xd8 oxff 0xe...'
-    while (fread(buffer, 1, blocksize, file) != 0)
+    while (fread(buffer, sizeof(uint8_t), blocksize, file) != 0)
     {
-        fread(buffer, 1, blocksize, file);
+        fread(buffer, sizeof(uint8_t), blocksize, file);
         //if jpg header found open file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
         (buffer[3] & 0xf0) == 0xe0)
@@ -75,7 +73,7 @@ int main(int argc, char *argv[])
             ++images;
         }
         //write to file
-        fwrite(buffer, 1, blocksize, recovered);
+        fwrite(buffer, sizeof(uint8_t), blocksize, recovered);
     }
 
     //free pointers
