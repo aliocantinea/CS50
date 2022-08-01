@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
     FILE *recovered = NULL;
 
     //read file looking for jpg header '0xff 0xd8 oxff 0xe...'
-    while (fread(buffer, sizeof(uint8_t), blocksize, file) == blocksize)
+    while (fread(buffer, sizeof(uint8_t), blocksize, file) != 0)
     {
         fread(buffer, sizeof(uint8_t), blocksize, file);
         //if jpg header found open file
