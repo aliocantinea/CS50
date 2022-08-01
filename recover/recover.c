@@ -46,9 +46,13 @@ int main(int argc, char *argv[])
         //if jpg header found open file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
+            //if file opened already
+            if (images > 0)
+            {
+                fclose(recovered);
+            }
             //set filename
             sprintf(filename, "%03i.jpg", images);
-
             //open filename
             recovered = fopen(filename, "w");
             if (recovered == NULL)
