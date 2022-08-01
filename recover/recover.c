@@ -63,6 +63,7 @@ int main(int argc, char *argv[])
             //add to image counter
             ++images;
         }
+        //if file is open to write to
         
         //write to file
         fwrite(buffer, sizeof(uint8_t), blocksize, recovered);
