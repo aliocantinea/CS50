@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
             ++images;
         }
         //if file is open to write to
-        
+        if (recovered != NULL)
         //write to file
         fwrite(buffer, sizeof(uint8_t), blocksize, recovered);
     }
