@@ -23,13 +23,13 @@ int main(int argc, char *argv[])
     int blocksize = 512;
 
     //create buffer
-    uint8_t buffer[blocksize]; //= malloc(blocksize * sizeof(uint8_t))
-    // if (buffer == NULL)
-    // {
-    //     printf("Not enough memory for buffer.\n");
-    //     fclose(file);
-    //     return 2;
-    // }
+    char *buffer = malloc(blocksize * sizeof(uint8_t));
+    if (buffer == NULL)
+    {
+        printf("Not enough memory for buffer.\n");
+        fclose(file);
+        return 2;
+    }
 
     //assigns pointer for filename and returns in NULL
     char *filename = malloc(8 * sizeof(char));
@@ -47,9 +47,9 @@ int main(int argc, char *argv[])
     FILE *recovered = NULL;
 
     //read file looking for jpg header '0xff 0xd8 oxff 0xe...'
-    while (fread(buffer, 1, blocksize, file) != 0)
+    while (fread(buffer, sizeof(uint8_t), blocksize, file) != 0)
     {
-        fread(buffer, 1, blocksize, file);
+        fread(buffer, sizeof(uint8_t), blocksize, file);
         //if jpg header found open file
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
         (buffer[3] & 0xf0) == 0xe0)
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
             if (recovered != NULL)
             {
                     printf("Not enough memory for recovered file.\n");
-                    // free(buffer);
+                    free(buffer);
                     free(filename);
                     fclose(recovered);
                     fclose(file);
@@ -73,11 +73,11 @@ int main(int argc, char *argv[])
             ++images;
         }
         //write to file
-        fwrite(buffer, 1, blocksize, recovered);
+        fwrite(buffer, sizeof(uint8_t), blocksize, recovered);
     }
 
     //free pointers
-    // free(buffer);
+    free(buffer);
     free(filename);
     //close files
     fclose(recovered);
