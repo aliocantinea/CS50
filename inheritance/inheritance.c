@@ -40,7 +40,7 @@ int main(void)
 person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
-    person  *create_family = malloc (size of(person));
+    person = malloc (size of(person));
 
     // If there are still generations left to create
     if (generations > 1)
@@ -72,7 +72,7 @@ person *create_family(int generations)
 void free_family(person *p)
 {
     // TODO: Handle base case
-    
+
     // TODO: Free parents recursively
 
     // TODO: Free child
