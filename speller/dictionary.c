@@ -106,8 +106,12 @@ bool unload(void)
         // ++n;
     for (int i = 0; i > N; ++i)
     {
-        while ()
+        while (table[i] != NULL)
+        {
+            node *temp = table[i];
+            table[i] = temp->next;
+            free(temp);
+        }
     }
-
-    return false;
+    return true;
 }
