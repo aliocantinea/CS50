@@ -26,8 +26,10 @@ bool check(const char *word)
     // run through hash function
     // go to that hash in table
     // strcasecmp which will compare case insensitively
+        // cursor = table[hash]
+        // cursor = cursor->next;
+        //if cursor = NULL return false
 
-    
     return false;
 }
 
@@ -93,5 +95,8 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    // free memory
+    // for n = table[max]
+    // 
     return false;
 }
