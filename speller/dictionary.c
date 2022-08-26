@@ -31,11 +31,11 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     // output should be between 0 and N - 1, inclusively
-    
 
 
 
 
+    // 
     // returns 0 so that other functions work and for testing
     return toupper(word[0]) - 'A';
 }
