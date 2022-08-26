@@ -58,6 +58,8 @@ bool load(const char *dictionary)
 
 
     //add to table
+        //node->next = table[hash];
+        //table[hash] = *node;
 
 
 
