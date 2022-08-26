@@ -44,7 +44,8 @@ bool load(const char *dictionary)
             //malloc
         //else if word->next == NULL
 
-        
+        //recursively look for NULL in node->next
+
             //malloc    node*n = malloc(sizeof(node));
         //strcpy(n->word, "Hello");
         //n->next = NULL;
