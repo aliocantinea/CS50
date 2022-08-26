@@ -39,6 +39,8 @@ bool load(const char *dictionary)
     //open read file
     //hash word
     //add to table
+        //is word->next == NULL
+        //
     // TODO
     return false;
 }
