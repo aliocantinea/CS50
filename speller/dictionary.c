@@ -48,7 +48,14 @@ bool load(const char *dictionary)
 
 
     //copy word to new node
+            //malloc    node *n = malloc(sizeof(node));
+            //check for NULL return false
+            //strcpy(n->word, "Hello");
+            //n->next = NULL;
+
     //hash temp node
+
+    
     //add to table
 
 
@@ -62,9 +69,8 @@ bool load(const char *dictionary)
 
         //recursively look for NULL in node->next
 
-            //malloc    node *n = malloc(sizeof(node));
-        //strcpy(n->word, "Hello");
-        //n->next = NULL;
+
+
 
     // TODO
     return false;
