@@ -35,7 +35,7 @@ unsigned int hash(const char *word)
 
 
 
-    // 
+    //
     // returns 0 so that other functions work and for testing
     return toupper(word[0]) - 'A';
 }
@@ -75,6 +75,8 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    // count how many words in table
+    // either scan and count or add to counter when you add a word**
     return 0;
 }
 
