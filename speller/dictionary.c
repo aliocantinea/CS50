@@ -30,6 +30,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    // output should be between 0 and N - 1, inclusively
     
 
 
