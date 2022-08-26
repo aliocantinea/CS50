@@ -40,9 +40,11 @@ bool load(const char *dictionary)
     //copy word to temp
     //hash temp
     //add to table
-        //if table[hash] != NULL;
-            //
-        //if word->next == NULL
+        //if table[hash] == NULL;
+            //malloc
+        //else if word->next == NULL
+
+        
             //malloc    node*n = malloc(sizeof(node));
         //strcpy(n->word, "Hello");
         //n->next = NULL;
