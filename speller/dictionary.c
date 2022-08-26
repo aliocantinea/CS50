@@ -96,7 +96,7 @@ bool unload(void)
 {
     // TODO
     // free memory
-    // for n = table[max]
+    // for n = N(table[max])
     //do while (table[n] != NULL)
     //{
     //  temp = table[n]
