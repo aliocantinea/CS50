@@ -23,6 +23,11 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    // run through hash function
+    // go to that hash in table
+    // strcasecmp which will compare case insensitively
+
+    
     return false;
 }
 
@@ -67,6 +72,8 @@ bool load(const char *dictionary)
         //node->next = table[hash];
         //table[hash] = *node;
 
+        // call size function to add counter
+
     // TODO
     return false;
 }
@@ -77,6 +84,8 @@ unsigned int size(void)
     // TODO
     // count how many words in table
     // either scan and count or add to counter when you add a word**
+        //this would have to be a global var so it can keep track and since nothing is passed into this function
+
     return 0;
 }
 
