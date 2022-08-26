@@ -51,15 +51,17 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     //open read file
-    fopen;
+    fopen(dictionary);
     if (NULL)
     {
-        fclose;
+        fclose(dictionary);
         return false;
     }
-    do while (EOF);
+    do
+    {
     fscanf(file, "%s", word);
-
+    }
+    while (word != EOF);
 
     //copy word to new node
             //malloc    node *n = malloc(sizeof(node));
