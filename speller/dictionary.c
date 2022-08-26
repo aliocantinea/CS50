@@ -99,7 +99,7 @@ bool unload(void)
     // for n = N(table[max])
     //do while (table[n] != NULL)
     //{
-    //  node *temp->next = table[n];
+    //  temp = table[n]->next;
     //  table[n] = temp->next;
     //  free(temp);
     //}
