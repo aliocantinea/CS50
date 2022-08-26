@@ -37,10 +37,16 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     //open read file
-    //hash word
+    //copy word to temp
+    //hash temp
     //add to table
-        //is word->next == NULL
-        //
+        //if table[hash] != NULL;
+            //
+        //if word->next == NULL
+            //malloc    node*n = malloc(sizeof(node));
+        //strcpy(n->word, "Hello");
+        //n->next = NULL;
+
     // TODO
     return false;
 }
