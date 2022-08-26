@@ -37,16 +37,32 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     //open read file
-    //copy word to temp
-    //hash temp
+    fopen;
+    if (NULL)
+    {
+        fclose;
+        return false;
+    }
+    do while (EOF);
+    fscanf(file, "%s", word);
+
+
+    //copy word to new node
+    //hash temp node
     //add to table
+
+
+
+
+
+
         //if table[hash] == NULL;
             //malloc
         //else if word->next == NULL
 
         //recursively look for NULL in node->next
 
-            //malloc    node*n = malloc(sizeof(node));
+            //malloc    node *n = malloc(sizeof(node));
         //strcpy(n->word, "Hello");
         //n->next = NULL;
 
