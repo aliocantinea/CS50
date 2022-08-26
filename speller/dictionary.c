@@ -30,6 +30,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    // returns 0 so that other functions work and for testing
     return toupper(word[0]) - 'A';
 }
 
@@ -55,7 +56,7 @@ bool load(const char *dictionary)
 
     //hash temp node
 
-    
+
     //add to table
 
 
