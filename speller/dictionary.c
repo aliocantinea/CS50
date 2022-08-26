@@ -88,6 +88,9 @@ unsigned int size(void)
     // either scan and count or add to counter when you add a word**
         //this would have to be a global var so it can keep track and since nothing is passed into this function
 
+
+    //when does this get called? if it happens in speller.c it doesn't make sense to add it in each word in load
+
     return 0;
 }
 
