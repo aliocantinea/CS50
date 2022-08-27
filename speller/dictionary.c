@@ -78,7 +78,7 @@ bool load(const char *dictionary)
     //streams char * into temp until EOF
     while (fscanf(dict, "%s",temp) != EOF);
     {
-        //copy word to new node
+        //malloc node and get pointer for node
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
@@ -87,6 +87,7 @@ bool load(const char *dictionary)
             return false;
         }
 
+        //copy word from temp to node->word and set next to null
         strcpy(n->word, temp);
         n->next = NULL;
 
