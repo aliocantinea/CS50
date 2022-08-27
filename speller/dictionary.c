@@ -46,7 +46,7 @@ unsigned int hash(const char *word)
     // find length of word
     int len = strlen(word);
     int first = tolower(word[0]);
-    // if first letter 'a' add 1 
+    // if first letter 'a' add 1 to times by len
     if (first == 0)
     {
     first++;
