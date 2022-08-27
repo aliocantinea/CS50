@@ -63,8 +63,8 @@ bool load(const char *dictionary)
     while (fscanf(dict, "%s",temp) != EOF);
     {
         //copy word to new node
-        node *word = malloc(sizeof(node));
-        if (word == NULL)
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
         {
             printf ("Could not load word.\n");
             fclose(dictionary);
