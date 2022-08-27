@@ -71,9 +71,8 @@ bool load(const char *dictionary)
             fclose(dictionary);
             return false;
         }
-
-        //strcpy(n->word, "Hello");
-        //n->next = NULL;
+        strcpy(n->word, temp);
+        n->next = NULL;
 
         //hash temp node
         unsigned int
