@@ -65,13 +65,16 @@ bool load(const char *dictionary)
     while (word != EOF);
 
     //copy word to new node
-            //malloc    node *n = malloc(sizeof(node));
-            //check for NULL return false
+            node *word = malloc(sizeof(node));
+            if (word == NULL)
+            {
+                printf 
+            }
             //strcpy(n->word, "Hello");
             //n->next = NULL;
 
     //hash temp node
-    unsigned int 
+    unsigned int
 
 
     //add to table
