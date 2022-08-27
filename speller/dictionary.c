@@ -45,9 +45,9 @@ unsigned int hash(const char *word)
 
     // find length of word
     int len = strlen(word);
-    // number value of first letter + 1 so multiplication doesn't = 0 for all of 'a'
-    int first = tolower(word[0]) - 'b';
-    //remove 1 for 
+    // ascii first char
+    int first = tolower(word[0]);
+    //remove 1 for
     unsigned int hash = (first * len) - 1;
 
     // returns 0 so that other functions work and for testing
