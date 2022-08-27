@@ -55,7 +55,7 @@ unsigned int hash(const char *word)
 
     //smallest word possible 'a'
     // 1 * 1 = 1
-    //longest z^45
+    //longest z
     // 26(z) * 45(length) = 1170
 
 
