@@ -116,6 +116,7 @@ unsigned int size(void)
     // count how many words in table
     // either scan and count or add to counter when you add a word**
         //this would have to be a global var so it can keep track and since nothing is passed into this function
+
     return wordcount;
 }
 
@@ -124,7 +125,7 @@ bool unload(void)
 {
     // TODO
     // free memory
-    for (int n = 0; n >= N; ++n)
+    // for n = N(table[max])
         //do while (table[n] != NULL)
         //{
             //temp = table[n];
