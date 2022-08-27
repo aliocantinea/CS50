@@ -49,11 +49,14 @@ unsigned int hash(const char *word)
     // if first letter 'a' add 1 to times by len
     if (first == 0)
     {
-    first++;
-    unsigned int hash = (first * len) - 1;
+        first++;
     }
+    unsigned int hash = (first * len);
 
-
+    //smallest word possible 'a'
+    // 1 * 1 = 1
+    //longest
+    // 26()
 
 
     // returns 0 so that other functions work and for testing
