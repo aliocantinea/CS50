@@ -73,9 +73,9 @@ bool load(const char *dictionary)
 
         strcpy(n->word, temp);
         n->next = NULL;
-
+        
         //hash temp node
-        unsigned int
+        // unsigned int
 
 
         //add to table
