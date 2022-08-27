@@ -55,12 +55,13 @@ unsigned int hash(const char *word)
 
     //smallest word possible 'a'
     // 1 * 1 = 1
-    //longest
+    //longest z^45
     // 26(z) * 45(length) = 1170
 
 
     // returns 0 so that other functions work and for testing
     // return toupper(word[0]) - 'A';
+
     return hash;
 }
 
