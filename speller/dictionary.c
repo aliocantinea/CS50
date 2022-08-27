@@ -82,6 +82,7 @@ bool load(const char *dictionary)
         table[h] = *n;
 
         // call size function to add counter
+        size;
     }
     fclose(dictionary)
     return true;
@@ -96,10 +97,11 @@ unsigned int size(void)
     // either scan and count or add to counter when you add a word**
         //this would have to be a global var so it can keep track and since nothing is passed into this function
 
+    unsigned int size++;
 
     //when does this get called? if it happens in speller.c it doesn't make sense to add it in each word in load
 
-    return 0;
+    return size;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
