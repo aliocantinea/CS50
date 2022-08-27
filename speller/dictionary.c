@@ -84,12 +84,9 @@ bool load(const char *dictionary)
 
     // call size function to add counter
     }
-    if (feof(temp))
-    {
     fclose(dictionary)
     return true;
-    }
-    return 0;
+
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
