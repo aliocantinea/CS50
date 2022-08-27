@@ -101,7 +101,7 @@ bool load(const char *dictionary)
         table[h]->next = n;
 
         //not sure if I have to
-        // free(n);
+        free(n);
 
         //add to global var for wordcount
         ++wordcount;
