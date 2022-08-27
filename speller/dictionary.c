@@ -62,27 +62,27 @@ bool load(const char *dictionary)
     fscanf(dictionary, "%s",temp);
     while (temp != EOF)
     {
-    //copy word to new node
-    node *word = malloc(sizeof(node));
-    if (word == NULL)
-    {
-        printf ("Could not load word.\n");
-        fclose(dictionary);
-        return false;
-    }
+        //copy word to new node
+        node *word = malloc(sizeof(node));
+        if (word == NULL)
+        {
+            printf ("Could not load word.\n");
+            fclose(dictionary);
+            return false;
+        }
 
-    //strcpy(n->word, "Hello");
-    //n->next = NULL;
+        //strcpy(n->word, "Hello");
+        //n->next = NULL;
 
-    //hash temp node
-    unsigned int
+        //hash temp node
+        unsigned int
 
 
-    //add to table
-    //node->next = table[hash];
-    //table[hash] = *node;
+        //add to table
+        //node->next = table[hash];
+        //table[hash] = *node;
 
-    // call size function to add counter
+        // call size function to add counter
     }
     fclose(dictionary)
     return true;
