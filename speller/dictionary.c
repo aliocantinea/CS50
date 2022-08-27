@@ -52,7 +52,7 @@ bool load(const char *dictionary)
 {
     //open read file
     FILE *dict = fopen(dictionary, "r");
-    if (NULL)
+    if (dict == NULL)
     {
         fclose(dictionary);
         return false;
