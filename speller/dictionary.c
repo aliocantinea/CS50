@@ -20,6 +20,9 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+// Word count
+unsigned int wordcount = 0;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -81,8 +84,8 @@ bool load(const char *dictionary)
         n->next = table[h]->next;
         table[h] = *n;
 
-        // call size function to add counter
-        size;
+        // add to global var for wordcount
+        wordcount++;
     }
     fclose(dictionary)
     return true;
@@ -97,11 +100,9 @@ unsigned int size(void)
     // either scan and count or add to counter when you add a word**
         //this would have to be a global var so it can keep track and since nothing is passed into this function
 
-    unsigned int size++;
-
     //when does this get called? if it happens in speller.c it doesn't make sense to add it in each word in load
 
-    return size;
+    return wordcount;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
