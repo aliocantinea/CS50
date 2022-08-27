@@ -83,7 +83,7 @@ bool load(const char *dictionary)
         if (n == NULL)
         {
             printf ("Could not load word.\n");
-            fclose(dictionary);
+            fclose(dict);
             return false;
         }
 
