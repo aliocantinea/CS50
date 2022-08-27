@@ -71,6 +71,7 @@ bool load(const char *dictionary)
             //n->next = NULL;
 
     //hash temp node
+    unsigned int 
 
 
     //add to table
