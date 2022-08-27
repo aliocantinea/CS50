@@ -97,7 +97,9 @@ bool load(const char *dictionary)
         n->next = table[h]->next;
         table[h] = *n;
 
-        // add to global var for wordcount
+        //free n for next word
+        free(n);
+        //add to global var for wordcount
         wordcount++;
     }
     fclose(dictionary)
