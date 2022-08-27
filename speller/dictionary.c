@@ -60,7 +60,7 @@ bool load(const char *dictionary)
     }
     char *temp;
     //streams char * into temp until EOF
-    while (fscanf(dict, "%s",temp));
+    while (fscanf(dict, "%s",temp) != EOF);
     {
         //copy word to new node
         node *word = malloc(sizeof(node));
