@@ -68,8 +68,11 @@ bool load(const char *dictionary)
             node *word = malloc(sizeof(node));
             if (word == NULL)
             {
-                printf 
+                printf ("not enough memory to load word \n");
+                fclose(dictionary);
+                return false;
             }
+
             //strcpy(n->word, "Hello");
             //n->next = NULL;
 
