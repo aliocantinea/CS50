@@ -58,6 +58,7 @@ bool load(const char *dictionary)
         return false;
     }
 
+    
     do
     {
         fscanf(dictionary, "%s", word);
