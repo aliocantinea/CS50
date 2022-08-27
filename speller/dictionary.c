@@ -45,10 +45,16 @@ unsigned int hash(const char *word)
 
     // find length of word
     int len = strlen(word);
-    // ascii first char
     int first = tolower(word[0]);
-    //remove 1 for
+    // if first letter 'a' add 1 
+    if (first == 0)
+    {
+    first++;
     unsigned int hash = (first * len) - 1;
+    }
+
+
+
 
     // returns 0 so that other functions work and for testing
     // return toupper(word[0]) - 'A';
