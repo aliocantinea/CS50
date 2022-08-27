@@ -60,6 +60,11 @@ bool load(const char *dictionary)
     char *temp;
     //streams char * into *temp
     fscanf(dictionary, "%s",temp);
+    if (feof(temp))
+    {
+    fclose(dictionary)
+    return true;
+    }
     //copy word to new node
     node *word = malloc(sizeof(node));
     if (word == NULL)
@@ -82,10 +87,7 @@ bool load(const char *dictionary)
 
     // call size function to add counter
 
-    
-    // TODO
-    fclose(dictionary)
-    return true;
+    return false;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
