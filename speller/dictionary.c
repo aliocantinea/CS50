@@ -47,7 +47,7 @@ unsigned int hash(const char *word)
     int len = strlen(word);
     // first - 'grave' so that a = 1 not 0 when multiplying
     int first = tolower(word[0] - '`');
-    // - 1 so 'a' falls into hash 0
+    // - 1 so 'a' is 0-indexed
     unsigned int hash = (first * len) - 1;
 
     //smallest word possible 'a'
