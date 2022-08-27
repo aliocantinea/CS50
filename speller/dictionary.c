@@ -60,7 +60,8 @@ bool load(const char *dictionary)
     char *temp;
     //streams char * into temp
     fscanf(dictionary, "%s",temp);
-
+    while (temp != EOF)
+    {
     //copy word to new node
     node *word = malloc(sizeof(node));
     if (word == NULL)
@@ -82,6 +83,7 @@ bool load(const char *dictionary)
     //table[hash] = *node;
 
     // call size function to add counter
+    }
     if (feof(temp))
     {
     fclose(dictionary)
