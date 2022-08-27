@@ -42,6 +42,8 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     // output should be between 0 and N - 1, inclusively
+    int len = strlen(word);
+    int first = tolower(word[0] - 'a');
     
 
 
