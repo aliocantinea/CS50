@@ -98,7 +98,7 @@ bool load(const char *dictionary)
 
         //add to table
         n->next = table[h]->next;
-        table[h]->next = n;
+        table[h]->next = n->next;
 
         //not sure if I have to
         free(n);
