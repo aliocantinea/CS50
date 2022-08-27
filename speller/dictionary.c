@@ -68,7 +68,7 @@ bool load(const char *dictionary)
             node *word = malloc(sizeof(node));
             if (word == NULL)
             {
-                printf ("not enough memory to load word \n");
+                printf ("Could not load word.\n");
                 fclose(dictionary);
                 return false;
             }
