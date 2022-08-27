@@ -58,12 +58,11 @@ bool load(const char *dictionary)
         return false;
     }
 
-    
+
     do
     {
         fscanf(dictionary, "%s", word);
-    }
-    while (word != EOF);
+
 
     //copy word to new node
             node *word = malloc(sizeof(node));
@@ -86,9 +85,10 @@ bool load(const char *dictionary)
         //table[hash] = *node;
 
         // call size function to add counter
-
+    }
+    while (word != EOF);
     // TODO
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
