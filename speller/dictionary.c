@@ -124,7 +124,7 @@ bool unload(void)
 {
     // TODO
     // free memory
-    // for n = N(table[max])
+    for (int n = 0; n >= N; )
         //do while (table[n] != NULL)
         //{
             //temp = table[n];
