@@ -45,18 +45,15 @@ unsigned int hash(const char *word)
 
     // find length of word
     int len = strlen(word);
-    int first = tolower(word[0]);
-    // if first letter 'a' add 1 to times by len
-    if (first == 0)
-    {
-        first++;
-    }
-    unsigned int hash = (first * len);
+    // first - 'grave' so that a = 1 not 0 when multiplying
+    int first = tolower(word[0] - '`');
+    // - 1 so 'a' falls into hash 0
+    unsigned int hash = (first * len) - 1;
 
     //smallest word possible 'a'
-    // 1 * 1 = 1
+    // 1(a) * 1(length) = 1 - 1 = 0
     //longest z
-    // 26(z) * 45(length) = 1170
+    // 26(z) * 45(length) = 1170 - 1 = 1169
 
 
     // returns 0 so that other functions work and for testing
