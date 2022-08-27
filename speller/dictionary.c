@@ -78,7 +78,7 @@ bool load(const char *dictionary)
     }
     char temp[LENGTH + 1];
     //streams char * into temp until EOF
-    while (fscanf(dict, "%s",temp) != EOF);
+    while (fscanf(dict, "%s",temp) != EOF)
     {
         //malloc node and get pointer for node
         node *n = malloc(sizeof(node));
@@ -106,7 +106,7 @@ bool load(const char *dictionary)
         //add to global var for wordcount
         ++wordcount;
     }
-    fclose(dictionary)
+    fclose(dictionary);
     return true;
 
 }
