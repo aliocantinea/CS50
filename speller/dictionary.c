@@ -51,10 +51,10 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     //open read file
-    fopen(dictionary, "r");
+    FILE *dictionary = fopen(dictionary, "r");
     if (NULL)
     {
-        fclose(dictionary);
+        fclose(dic);
         return false;
     }
     do
