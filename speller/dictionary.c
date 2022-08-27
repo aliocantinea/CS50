@@ -75,12 +75,11 @@ bool load(const char *dictionary)
         n->next = NULL;
 
         //hash temp node
-        // unsigned int
-
+        unsigned int h = hash(temp);
 
         //add to table
-        //node->next = table[hash];
-        //table[hash] = *node;
+        //n->next = table[hash];
+        //table[h] = *node;
 
         // call size function to add counter
     }
