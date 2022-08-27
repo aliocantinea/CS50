@@ -98,8 +98,9 @@ bool load(const char *dictionary)
         n->next = table[h]->next;
         table[h] = *n;
 
-        //free n for next word
-        free(n);
+        //not sure if I have to
+        // free(n);
+
         //add to global var for wordcount
         wordcount++;
     }
@@ -115,9 +116,6 @@ unsigned int size(void)
     // count how many words in table
     // either scan and count or add to counter when you add a word**
         //this would have to be a global var so it can keep track and since nothing is passed into this function
-
-    //when does this get called? if it happens in speller.c it doesn't make sense to add it in each word in load
-
     return wordcount;
 }
 
