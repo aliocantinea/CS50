@@ -58,7 +58,7 @@ bool load(const char *dictionary)
         fclose(dict);
         return false;
     }
-    char *temp;
+    char temp[LENGTH + 1];
     //streams char * into temp until EOF
     while (fscanf(dict, "%s",temp) != EOF);
     {
@@ -73,7 +73,7 @@ bool load(const char *dictionary)
 
         strcpy(n->word, temp);
         n->next = NULL;
-        
+
         //hash temp node
         // unsigned int
 
