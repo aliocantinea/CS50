@@ -51,39 +51,38 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     //open read file
-    FILE *dictionary = fopen(dictionary, "r");
+    fopen(dictionary, "r");
     if (NULL)
     {
-        fclose(dic);
+        fclose(dictionary);
         return false;
     }
-    do
-    {
-        char temp;
-        fscanf(dictionary, "%s",temp);
+    char *temp;
+    //streams char * into *temp
+    fscanf(dictionary, "%s",temp);
     //copy word to new node
-            node *word = malloc(sizeof(node));
-            if (word == NULL)
-            {
-                printf ("Could not load word.\n");
-                fclose(dictionary);
-                return false;
-            }
+    node *word = malloc(sizeof(node));
+    if (word == NULL)
+    {
+        printf ("Could not load word.\n");
+        fclose(dictionary);
+        return false;
+    }
 
-            //strcpy(n->word, "Hello");
-            //n->next = NULL;
+    //strcpy(n->word, "Hello");
+    //n->next = NULL;
 
     //hash temp node
     unsigned int
 
 
     //add to table
-        //node->next = table[hash];
-        //table[hash] = *node;
+    //node->next = table[hash];
+    //table[hash] = *node;
 
-        // call size function to add counter
-    }
-    while (dictionary != EOF);
+    // call size function to add counter
+
+    
     // TODO
     fclose(dictionary)
     return true;
