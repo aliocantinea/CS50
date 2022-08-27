@@ -42,15 +42,16 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     // output should be between 0 and N - 1, inclusively
+
+    // find length of word
     int len = strlen(word);
-    int first = tolower(word[0] - 'a');
+    // number value of first letter + 1 so multiplication doesn't = 0 for all of 'a'
+    int first = toupper(word[0] - 'B');
+    unsigned int hash = first * len;
 
-
-
-
-    //
     // returns 0 so that other functions work and for testing
-    return toupper(word[0]) - 'A';
+    // return toupper(word[0]) - 'A';
+    return hash;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
