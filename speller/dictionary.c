@@ -102,7 +102,7 @@ bool load(const char *dictionary)
         // free(n);
 
         //add to global var for wordcount
-        wordcount++;
+        ++wordcount;
     }
     fclose(dictionary)
     return true;
@@ -124,7 +124,7 @@ bool unload(void)
 {
     // TODO
     // free memory
-    for (int n = 0; n >= N; )
+    for (int n = 0; n >= N; ++n)
         //do while (table[n] != NULL)
         //{
             //temp = table[n];
