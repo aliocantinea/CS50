@@ -88,6 +88,7 @@ bool load(const char *dictionary)
     }
     while (word != EOF);
     // TODO
+    fclose(dictionary)
     return true;
 }
 
