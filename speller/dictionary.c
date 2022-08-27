@@ -58,7 +58,7 @@ bool load(const char *dictionary)
         return false;
     }
     char *temp;
-    //streams char * into *temp
+    //streams char * into temp
     fscanf(dictionary, "%s",temp);
 
     //copy word to new node
