@@ -30,6 +30,7 @@ bool check(const char *word)
 {
     // TODO
     // run through hash function
+    
     // go to that hash in table
     // strcasecmp which will compare case insensitively
         // cursor = table[hash]
