@@ -60,7 +60,7 @@ bool load(const char *dictionary)
 
     do
     {
-        fscanf(file, "%s", word);
+        fscanf(dictionary, "%s", word);
     }
     while (word != EOF);
 
