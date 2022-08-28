@@ -37,7 +37,14 @@ bool check(const char *word)
         // cursor = table[hash]
         // cursor = cursor->next;
         //if cursor = NULL return false
-
+    while (check->next != NULL)
+    {
+        if (strcasecmp(check->word, word) == 0)
+        {
+            return true;
+        }
+        check = check->next;
+    }
     return false;
 }
 
