@@ -32,7 +32,7 @@ bool check(const char *word)
     // run through hash function
     unsigned int h = hash(word);
     // go to that hash in table
-    
+    node *check = table[h];
     // strcasecmp which will compare case insensitively
         // cursor = table[hash]
         // cursor = cursor->next;
