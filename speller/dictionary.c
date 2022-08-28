@@ -150,7 +150,7 @@ bool unload(void)
         while (table[i]->next != NULL)
         {
             node *temp = table[i]->next;
-            table[i]->next = temp->next;
+            table[i] = temp->next;
             free(temp);
         }
 
