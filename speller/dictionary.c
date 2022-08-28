@@ -86,7 +86,7 @@ bool load(const char *dictionary)
         fclose(dict);
         return false;
     }
-    char temp[LENGTH + 1];
+    char *temp[LENGTH + 1];
     //streams char * into temp until EOF
     while (fscanf(dict, "%s",temp) != EOF)
     {
