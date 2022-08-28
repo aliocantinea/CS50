@@ -86,7 +86,7 @@ bool load(const char *dictionary)
         fclose(dict);
         return false;
     }
-    char temp[LENGTH + 1];
+    char *temp = malloc(LENGTH + 1);
     //streams char * into temp until EOF
     while (fscanf(dict, "%s",temp) != EOF)
     {
@@ -112,6 +112,7 @@ bool load(const char *dictionary)
 
         //not sure if I have to
         free(n);
+        free(temp);
 
         //add to global var for wordcount
         ++wordcount;
