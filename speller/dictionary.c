@@ -153,6 +153,7 @@ bool unload(void)
             table[i] = temp->next;
             free(temp);
         }
+        
     }
     return true;
 }
