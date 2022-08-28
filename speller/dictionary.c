@@ -145,7 +145,7 @@ bool unload(void)
             //free(temp);
         //}
         // ++n;
-    for (int i = 0; i > N; ++i)
+    for (int i = 0; i < N; ++i)
     {
         while (table[i] != NULL)
         {
