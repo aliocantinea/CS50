@@ -30,8 +30,9 @@ bool check(const char *word)
 {
     // TODO
     // run through hash function
-    
+    unsigned int h = hash(word);
     // go to that hash in table
+    
     // strcasecmp which will compare case insensitively
         // cursor = table[hash]
         // cursor = cursor->next;
