@@ -147,13 +147,13 @@ bool unload(void)
         // ++n;
     for (int i = 0; i < N; ++i)
     {
-        while (table[i] != NULL)
+        while (table[i]->next != NULL)
         {
             node *temp = table[i];
-            table[i] = temp->next;
+            table[i] = temp;
             free(temp);
         }
-        
+
     }
     return true;
 }
