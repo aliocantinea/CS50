@@ -86,7 +86,13 @@ bool load(const char *dictionary)
         fclose(dict);
         return false;
     }
+    //malloc space for stream to write into
     char *temp = malloc(LENGTH + 1);
+    if (temp == NULL)
+    {
+        fclose(dict);
+        return false;
+    }
     //streams char * into temp until EOF
     while (fscanf(dict, "%s",temp) != EOF)
     {
@@ -94,7 +100,6 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
-            printf ("Could not load word.\n");
             fclose(dict);
             return false;
         }
