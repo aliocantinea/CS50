@@ -29,23 +29,44 @@ unsigned int wordcount = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    //printf("Word: %s... ", word);
+
     // TODO
     // run through hash function
     unsigned int h = hash(word);
+    //printf("Hash: %i... \n", h);
     // go to that hash in table
-    node *check = table[h];
+    char *check = table[h];
+    printf("Check is: %s", check->word);
+
+    //testing
     // strcasecmp which will compare case insensitively
         // cursor = table[hash]
         // cursor = cursor->next;
         //if cursor = NULL return false
-    while (check->next != NULL)
+
+    // hash doesn't already exist
+    if (check == NULL)
     {
-        if (strcasecmp(check->word, word) == 0)
+        printf("Not in hash\n\n");
+        return false;
+    }
+    do
+    {
+        //printf("testing against: %s\n", check->word);
+        if (strcasecmp(word, check->word) == 0)
         {
             return true;
         }
+        else
+        {
+        //printf("Moving node in list\n");
         check = check->next;
+        }
     }
+    while (check != NULL);
+
+    //printf("Check == NULL\n\n");
     return false;
 }
 
@@ -69,9 +90,8 @@ unsigned int hash(const char *word)
     // 0-indexed -1 = between 0 and 1169
     //const unsigned int n = 1170
 
-
-    // returns 0 so that other functions work and for testing
-    // return toupper(word[0]) - 'A';
+    //testing
+    printf("hash for %s: %i...\n", word, hash);
 
     return hash;
 }
@@ -80,9 +100,11 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     //open read file
-    FILE *dict = fopen(dictionary, "r");
+    FILE *dict;
+    dict = fopen(dictionary, "r");
     if (dict == NULL)
     {
+        printf("Could not open dictionary\n");
         fclose(dict);
         return false;
     }
@@ -94,12 +116,13 @@ bool load(const char *dictionary)
         return false;
     }
     //streams char * into temp until EOF
-    while (fscanf(dict, "%s",temp) != EOF)
+    while (fscanf(dict, "%s", temp) != EOF)
     {
         //malloc node and get pointer for node
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
+            printf("Could not create node\n");
             fclose(dict);
             return false;
         }
@@ -108,21 +131,33 @@ bool load(const char *dictionary)
         strcpy(n->word, temp);
         n->next = NULL;
 
+        //testing
+        printf("temp loaded '%s' to node->word '%s'\n", temp, n->word);
+
         //hash temp node
         unsigned int h = hash(temp);
 
         //add to table
-        n->next = table[h]->next;
-        table[h]->next = n;
+        n->next = table[h];
+        //testing
+        //printf("node attached to list\n");
 
-        //not sure if I have to
+        table[h] = n;
+        //testing
+        printf("table attached to node->: %s\n", table[h]->word);
+
         free(n);
-        free(temp);
 
         //add to global var for wordcount
         ++wordcount;
+        //testing
+        //printf("add word count\n");
     }
+    free(temp);
     fclose(dict);
+
+    //testing
+    //printf("Loaded and closed dictionary...\n");
     return true;
 
 }
