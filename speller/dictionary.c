@@ -43,7 +43,7 @@ bool check(const char *word)
         return false;
     }
     check = table[h];
-    //printf("Check is: %s", check->word);
+    printf("Check is: %s\n", check->word);
 
     //testing
     // strcasecmp which will compare case insensitively
@@ -59,7 +59,7 @@ bool check(const char *word)
     }
     do
     {
-        //printf("testing against: %s\n", check->word);
+        printf("comparing word: %s to check->word %s\n", word, check->word);
         if (strcasecmp(word, check->word) == 0)
         {
             return true;
