@@ -43,7 +43,7 @@ bool check(const char *word)
         return false;
     }
     check = table[h];
-    printf("Check is: %s", check->word);
+    //printf("Check is: %s", check->word);
 
     //testing
     // strcasecmp which will compare case insensitively
@@ -54,7 +54,7 @@ bool check(const char *word)
     // hash doesn't already exist
     if (check == NULL)
     {
-        printf("\nNot in hash\n\n");
+        //printf("\nNot in hash\n\n");
         return false;
     }
     do
@@ -98,7 +98,7 @@ unsigned int hash(const char *word)
     //const unsigned int n = 1170
 
     //testing
-    printf("\nhash for %s: %i...\n", word, hash);
+    //printf("\nhash for %s: %i...\n", word, hash);
 
     return hash;
 }
