@@ -138,14 +138,24 @@ bool load(const char *dictionary)
         unsigned int h = hash(temp);
 
         //add to table
-        n->next = table[h];
-        //testing
-        //printf("node attached to list\n");
+        //if empty
+        if (table[h] == NULL)
+        {
+            //make table = node
+            table[h] = n;
+        }
+        //if full
+        else
+        {
+            //node-> looks at table 
+            n->next = table[h];
+            //testing
+            //printf("node attached to list\n");
 
-        table[h] = n;
-        //testing
-        printf("table attached to node->: %s\n", table[h]->word);
-
+            table[h] = n;
+            //testing
+            printf("table attached to node->: %s\n", table[h]->word);
+        }
         free(n);
 
         //add to global var for wordcount
