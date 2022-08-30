@@ -143,7 +143,6 @@ bool load(const char *dictionary)
 
         //hash temp node
         unsigned int h = hash(temp);
-        printf("Hash->word: %s\n", table[h]->word);
 
         //add to table
         //if empty
@@ -151,6 +150,7 @@ bool load(const char *dictionary)
         {
             //make table = node
             table[h] = n;
+            printf("new table->word: %s\n", table[h]->word);
         }
         //if full
         else
