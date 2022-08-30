@@ -43,7 +43,7 @@ bool check(const char *word)
         return false;
     }
     check = table[h];
-    printf("Check is: %s\n", check->word);
+    //printf("table is: %s\n", table[h]->word);
 
     //testing
     // strcasecmp which will compare case insensitively
@@ -59,7 +59,7 @@ bool check(const char *word)
     }
     do
     {
-        printf("comparing word: %s to check->word %s\n", word, check->word);
+        //printf("comparing word: %s to check->word %s\n", word, check->word);
         if (strcasecmp(word, check->word) == 0)
         {
             return true;
@@ -150,7 +150,7 @@ bool load(const char *dictionary)
         {
             //make table = node
             table[h] = n;
-            //printf("new table->word: %s\n", table[h]->word);
+            printf("new table->word: %s\n", table[h]->word);
         }
         //if full
         else
@@ -162,8 +162,10 @@ bool load(const char *dictionary)
 
             table[h] = n;
             //testing
-            //printf("table attached to node->: %s\n", table[h]->word);
+            printf("table attached to node->: %s\n", table[h]->word);
         }
+
+
         free(n);
 
         //add to global var for wordcount
