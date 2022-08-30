@@ -149,7 +149,7 @@ bool load(const char *dictionary)
         else
         {
             //node-> looks at table
-            n->next = table[h];
+            n->next = table[h]->word;
             //testing
             //printf("node attached to list\n");
 
