@@ -136,6 +136,7 @@ bool load(const char *dictionary)
 
         //hash temp node
         unsigned int h = hash(temp);
+        printf("Hash->word: %s\n", table[h]->word);
 
         //add to table
         //if empty
