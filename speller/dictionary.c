@@ -139,7 +139,7 @@ bool load(const char *dictionary)
         n->next = NULL;
 
         //testing
-        printf("temp loaded '%s' to node->word '%s'\n", temp, n->word);
+        //printf("temp loaded '%s' to node->word '%s'\n", temp, n->word);
 
         //hash temp node
         unsigned int h = hash(temp);
@@ -150,7 +150,7 @@ bool load(const char *dictionary)
         {
             //make table = node
             table[h] = n;
-            printf("new table->word: %s\n", table[h]->word);
+            //printf("new table->word: %s\n", table[h]->word);
         }
         //if full
         else
@@ -162,7 +162,7 @@ bool load(const char *dictionary)
 
             table[h] = n;
             //testing
-            printf("table attached to node->: %s\n", table[h]->word);
+            //printf("table attached to node->: %s\n", table[h]->word);
         }
         free(n);
 
