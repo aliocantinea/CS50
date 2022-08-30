@@ -48,7 +48,7 @@ bool check(const char *word)
     // hash doesn't already exist
     if (check == NULL)
     {
-        printf("Not in hash\n\n");
+        printf("\nNot in hash\n\n");
         return false;
     }
     do
