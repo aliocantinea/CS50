@@ -36,7 +36,7 @@ bool check(const char *word)
     unsigned int h = hash(word);
     //printf("Hash: %i... \n", h);
     // go to that hash in table
-    char *check = table[h];
+    node *check = table[h];
     printf("Check is: %s", check->word);
 
     //testing
@@ -148,7 +148,7 @@ bool load(const char *dictionary)
         else
         {
             //node-> looks at table
-            n->next = *table[h];
+            n->next = table[h];
             //testing
             //printf("node attached to list\n");
 
