@@ -59,15 +59,15 @@ bool check(const char *word)
     }
     do
     {
-        //printf("testing against: %s\n", check);
-        if (strcasecmp(word, check) == 0)
+        //printf("testing against: %s\n", check->word);
+        if (strcasecmp(word, check->word) == 0)
         {
             return true;
         }
         else
         {
         //printf("Moving node in list\n");
-        int *tmp = table[h]->next;
+        check = check->next;
         }
     }
     while (check != NULL);
