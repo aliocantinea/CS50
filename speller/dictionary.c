@@ -70,7 +70,6 @@ bool check(const char *word)
         {
         //printf("Moving node in list\n");
         int *tmp = table[h]->next;
-        check =
         }
     }
     while (check != NULL);
