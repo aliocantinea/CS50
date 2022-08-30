@@ -147,8 +147,8 @@ bool load(const char *dictionary)
         //if full
         else
         {
-            //node-> looks at table 
-            n->next = table[h];
+            //node-> looks at table
+            n->next = *table[h];
             //testing
             //printf("node attached to list\n");
 
