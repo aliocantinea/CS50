@@ -73,6 +73,7 @@ bool check(const char *word)
     while (check != NULL);
 
     //printf("Check == NULL\n\n");
+    free(check);
     return false;
 }
 
