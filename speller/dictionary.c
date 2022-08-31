@@ -43,7 +43,7 @@ bool check(const char *word)
         return false;
     }
     check = table[h];
-    //printf("table is: %s\n", table[h]->word);
+    printf("table is: %s\n", table[h]->word);
 
     //testing
     // strcasecmp which will compare case insensitively
