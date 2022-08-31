@@ -188,7 +188,9 @@ unsigned int size(void)
     // either scan and count or add to counter when you add a word**
         //this would have to be a global var so it can keep track and since nothing is passed into this function
 
-    return wordcount;
+    unsigned int cnt = wordcount;
+
+    return ;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
