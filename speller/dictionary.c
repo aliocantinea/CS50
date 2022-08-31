@@ -164,6 +164,7 @@ bool load(const char *dictionary)
         //testing
         //printf("add word count\n");
     }
+    n = NULL;
     free(n);
     fclose(dict);
 
