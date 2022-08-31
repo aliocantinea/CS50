@@ -102,13 +102,6 @@ unsigned int hash(const char *word)
     //0-index shortest word 'a'
     hash = hash * len;
 
-    //smallest word possible 'a'
-    // 1(a) * 1(length) = 1
-    //longest z
-    // 26(z) * 45(length) x 3(first 3 letters) = 3510
-    // 0-indexed -1 = between 0 and 3509
-    //const unsigned int n = 3510
-
     //testing
     //printf("\nhash for %s: %i...\n", word, hash);
 
