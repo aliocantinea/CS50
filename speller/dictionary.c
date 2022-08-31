@@ -205,6 +205,7 @@ bool unload(void)
     {
         while (table[i]->next != NULL)
         {
+            printf("checking table[%i]\n", i);
             node *temp = table[i]->next;
             table[i] = temp->next;
             free(temp);
