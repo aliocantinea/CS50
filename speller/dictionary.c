@@ -43,6 +43,8 @@ bool check(const char *word)
     }
     check = table[h];
 
+    printf("table->word %s\n", table[h]->word);
+
     // strcasecmp which will compare case insensitively
         // cursor = table[hash]
         // cursor = cursor->next;
@@ -145,7 +147,7 @@ bool load(const char *dictionary)
 
             n->next = NULL;
             //table[h] = n;
-            //printf("new table->word: %s\n", table[h]->word);
+            printf("new table->word: %s\n", table[h]->word);
         }
         //if full
         else
@@ -153,7 +155,7 @@ bool load(const char *dictionary)
             //node-> looks at table
             n->next = table[h];
             //testing
-            //printf("node attached to list\n");
+            printf("node attached to list\n");
         }
 
         table[h] = n;
