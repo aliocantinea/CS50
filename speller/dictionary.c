@@ -134,7 +134,7 @@ bool load(const char *dictionary)
 
         //copy word from temp to node->word and set next to null
         strcpy(n->word, temp);
-        //n->next = NULL;
+        n->next = NULL;
 
         //testing
         //printf("temp loaded '%s' to node->word '%s'\n", temp, n->word);
