@@ -158,10 +158,8 @@ bool load(const char *dictionary)
         }
 
         table[h] = n;
-            //testing
-            printf("table attached to node->: %s\n", table[h]->word);
-
-
+        //testing
+        printf("table attached to node->: %s\n", table[h]->word);
         free(n);
 
         //add to global var for wordcount
