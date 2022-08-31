@@ -29,7 +29,7 @@ unsigned int wordcount = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    printf("\nchecking word: %s... ", word);
+    //printf("\nchecking word: %s... ", word);
 
     // TODO
     // run through hash function
@@ -38,12 +38,12 @@ bool check(const char *word)
     node *check = malloc(sizeof(node));
     if (check == NULL)
     {
-        printf("Could not create node\n");
+        //printf("Could not create node\n");
         return false;
     }
     check = table[h];
 
-    printf("table->word %s\n", table[h]->word);
+    //printf("table->word %s\n", table[h]->word);
 
     // strcasecmp which will compare case insensitively
         // cursor = table[hash]
@@ -53,12 +53,12 @@ bool check(const char *word)
     // hash doesn't already exist
     if (check == NULL)
     {
-        printf("not in hash\n");
+        //printf("not in hash\n");
         return false;
     }
     do
     {
-        printf("comparing word: %s to check->word %s\n", word, check->word);
+        //printf("comparing word: %s to check->word %s\n", word, check->word);
         if (strcasecmp(word, check->word) == 0)
         {
             return true;
@@ -66,13 +66,13 @@ bool check(const char *word)
         else
         {
         check = check->next;
-        printf("check->next->word is: %s\n", check->word);
+        //printf("check->next->word is: %s\n", check->word);
         }
     }
     while (check != NULL);
 
     free(check);
-    printf("Check ended\n\n");
+    //printf("Check ended\n\n");
     return false;
 }
 
@@ -97,7 +97,7 @@ unsigned int hash(const char *word)
     //const unsigned int n = 1170
 
     //testing
-    printf("\nhash for %s: %i...\n", word, hash);
+    //printf("\nhash for %s: %i...\n", word, hash);
 
     return hash;
 }
@@ -151,7 +151,7 @@ bool load(const char *dictionary)
         {
             n->next = table[h];
             //testing
-            printf("node attached to list\n");
+            //printf("node attached to list\n");
         }
 
         table[h] = n;
@@ -159,7 +159,7 @@ bool load(const char *dictionary)
         //clear n for next word
         //n = NULL;
         //testing
-        printf("n->word: %s added to table->word: %s\n", n->word, table[h]->word);
+        //printf("n->word: %s added to table->word: %s\n", n->word, table[h]->word);
 
         n = NULL;
         free(n);
@@ -171,7 +171,7 @@ bool load(const char *dictionary)
     fclose(dict);
 
     //testing
-    printf("Loaded and closed dictionary...\n");
+    //printf("Loaded and closed dictionary...\n");
     return true;
 
 }
