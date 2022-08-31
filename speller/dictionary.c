@@ -85,7 +85,7 @@ unsigned int hash(const char *word)
     // find length of word
     int len = strlen(word);
     // first - 'grave' so that a = 1 not 0 when multiplying
-    int first = tolower(word[0] - '`');
+    int first = tolower(word[0] - ('A' - 1));
     // - 1 so 'a' is 0-indexed
     unsigned int hash = (first * len) - 1;
 
@@ -97,7 +97,7 @@ unsigned int hash(const char *word)
     //const unsigned int n = 1170
 
     //testing
-    //printf("\nhash for %s: %i...\n", word, hash);
+    printf("\nhash for %s: %i...\n", word, hash);
 
     return hash;
 }
