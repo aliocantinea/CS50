@@ -18,7 +18,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 1170;
+const unsigned int N = 3510;
 
 // Hash table
 node *table[N];
@@ -86,26 +86,32 @@ unsigned int hash(const char *word)
     // find length of word
     int len = strlen(word);
 
+    //first 3 letters
     for (int i = 0, j=0; i > 3; ++i)
     {
+        //if word is at least i long (max 3)
         if (word[i] != NULL)
         {
-            j = tolower(word[i]) - 'a';
+            // - b so that a is 1 and can be multiplied
+            j = tolower(word[i]) - 'b';
             if (j > 0)
             {
                 //ignores numbers and symbols
                 j = 0;
             }
+            //letter * word length for each letter
             hash = hash + (j * len);
         }
     }
+    //0-index shortest word 'a'
+    hash = hash - 1;
 
     //smallest word possible 'a'
     // 1(a) * 1(length) = 1
     //longest z
-    // 26(z) * 45(length) = 1170
-    // 0-indexed -1 = between 0 and 1169
-    //const unsigned int n = 1170
+    // 26(z) * 45(length) x 3(first 3 letters) = 3510
+    // 0-indexed -1 = between 0 and 3509
+    //const unsigned int n = 3510
 
     //testing
     //printf("\nhash for %s: %i...\n", word, hash);
