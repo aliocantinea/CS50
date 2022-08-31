@@ -99,7 +99,7 @@ unsigned int hash(const char *word)
     //const unsigned int n = 1170
 
     //testing
-    //printf("\nhash for %s: %i...\n", word, hash);
+    printf("\nhash for %s: %i...\n", word, hash);
 
     return hash;
 }
