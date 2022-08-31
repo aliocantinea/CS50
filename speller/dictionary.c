@@ -203,13 +203,11 @@ bool unload(void)
     printf("unloading table\n");
     for (int i = 0; i < N; ++i)
     {
-        while (table[i]->next != NULL)
-        {
-            printf("checking table[%i]\n", i);
-            node *temp = table[i]->next;
-            table[i] = temp->next;
-            free(temp);
-        }
+        printf("checking table[%i]\n", i);
+        node *temp = table[i];
+        table[i] = temp->next;
+        free(temp);
+    }
 
     }
     return true;
