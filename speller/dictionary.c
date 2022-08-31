@@ -35,13 +35,7 @@ bool check(const char *word)
     // run through hash function
     unsigned int h = hash(word);
     // go to that hash in table
-    node *check = malloc(sizeof(node));
-    if (check == NULL)
-    {
-        //printf("Could not create node\n");
-        return false;
-    }
-    check = table[h];
+    node *check = table[h];
 
     //printf("table->word %s\n", table[h]->word);
 
@@ -71,7 +65,7 @@ bool check(const char *word)
     }
     while (check != NULL);
 
-    free(check);
+    //free(check);
     //printf("Check ended\n\n");
     return false;
 }
