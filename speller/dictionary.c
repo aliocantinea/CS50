@@ -85,12 +85,10 @@ unsigned int hash(const char *word)
     unsigned int hash = 0;
     // find length of word
     int len = strlen(word);
-    int mod = len % 3;
-    
+
     //first 3 letters
-    for (int i = 0, j = 0; i > 3; ++i)
+    for (int i = 0, j < len; i > 3; ++i)
     {
-        //if word is at least i long (max 3)
         // - b so that a is 1 and can be multiplied
         j = tolower(word[i]) - 'b';
         if (j < 0)
