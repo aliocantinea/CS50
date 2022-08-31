@@ -210,12 +210,10 @@ bool unload(void)
     printf("unloading table\n");
     for (int i = 0; i < N; ++i)
     {
+
         printf("checking table[%i]\n", i);
         temp = table[i];
         table[i] = temp->next;
-        free(temp);
-    }
-
     }
     return true;
 }
