@@ -93,6 +93,7 @@ unsigned int hash(const char *word)
             j = tolower(word[i]) - 'a';
             if (j > 0)
             {
+                //ignores numbers and symbols
                 j = 0;
             }
             hash = hash + (j * len);
