@@ -143,8 +143,10 @@ bool load(const char *dictionary)
         if (table[h] == NULL)
         {
             //make table = node
-            table[h] = n;
-            printf("new table->word: %s\n", table[h]->word);
+
+            n->next = NULL;
+            //table[h] = n;
+            //printf("new table->word: %s\n", table[h]->word);
         }
         //if full
         else
