@@ -184,7 +184,7 @@ unsigned int size(void)
     // either scan and count or add to counter when you add a word**
         //this would have to be a global var so it can keep track and since nothing is passed into this function
 
-    printf("give wordcount %i\n", wordcount);
+    //printf("give wordcount %i\n", wordcount);
     return wordcount;
 }
 
@@ -203,7 +203,7 @@ bool unload(void)
         // ++n;
 
 
-    printf("unloading table\n");
+    //printf("unloading table\n");
     for (int i = 0; i < N; ++i)
     {
         while (table[i] != NULL)
@@ -214,7 +214,7 @@ bool unload(void)
                 return false;
             }
 
-            printf("checking table[%i]\n", i);
+            //printf("checking table[%i]\n", i);
             temp = table[i];
             table[i] = temp->next;
             free(temp);
