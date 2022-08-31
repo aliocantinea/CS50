@@ -29,7 +29,7 @@ unsigned int wordcount = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    printf("checking word: %s... ", word);
+    printf("\nchecking word: %s... ", word);
 
     // TODO
     // run through hash function
@@ -53,7 +53,7 @@ bool check(const char *word)
     // hash doesn't already exist
     if (check == NULL)
     {
-        printf("not in hash\n\n");
+        printf("not in hash\n");
         return false;
     }
     do
