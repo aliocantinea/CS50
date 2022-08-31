@@ -135,7 +135,7 @@ bool load(const char *dictionary)
         //n->next = NULL;
 
         //testing
-        //printf("temp loaded '%s' to node->word '%s'\n", temp, n->word);
+        printf("temp loaded '%s' to node->word '%s'\n", temp, n->word);
 
         //hash temp node
         unsigned int h = hash(temp);
