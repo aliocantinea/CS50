@@ -60,14 +60,14 @@ bool check(const char *word)
     }
     do
     {
-        //printf("comparing word: %s to check->word %s\n", word, check->word);
+        printf("comparing word: %s to check->word %s\n", word, check->word);
         if (strcasecmp(word, check->word) == 0)
         {
             return true;
         }
         else
         {
-        //printf("Moving node in list\n");
+        printf("Moving node in list\n");
         check = check->next;
         printf("check->next->word is: %s\n", check->word);
         }
