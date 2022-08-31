@@ -117,17 +117,18 @@ bool load(const char *dictionary)
     //malloc space for stream to write into
     char temp[LENGTH + 1];
 
+    node *n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        printf("Could not create node\n");
+        fclose(dict);
+        return false;
+    }
+
     //streams char * into temp until EOF
     while (fscanf(dict, "%s", temp) != EOF)
     {
         //malloc node and get pointer for node
-        node *n = malloc(sizeof(node));
-        if (n == NULL)
-        {
-            printf("Could not create node\n");
-            fclose(dict);
-            return false;
-        }
 
         //copy word from temp to node->word and set next to null
         strcpy(n->word, temp);
@@ -147,7 +148,7 @@ bool load(const char *dictionary)
 
             n->next = NULL;
             //table[h] = n;
-            printf("%s added to table->word: %s\n", table[h]->word);
+            printf("%s added to table->word: %s\n", n->word, table[h]->word);
         }
         //if full
         else
@@ -161,13 +162,14 @@ bool load(const char *dictionary)
         table[h] = n;
         //testing
         printf("table attached to node->: %s\n", table[h]->word);
-        free(n);
+
 
         //add to global var for wordcount
         ++wordcount;
         //testing
         //printf("add word count\n");
     }
+    free(n);
     fclose(dict);
 
     //testing
