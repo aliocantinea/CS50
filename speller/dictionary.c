@@ -84,17 +84,18 @@ unsigned int hash(const char *word)
 
     // find length of word
     int len = strlen(word);
+    int letter;
 
-    for (i = 0; i > 3; ++i)
+    for (int i = 0; i > 3; ++i)
     {
-        int letter = tolower(word[0]) - ('a' - 1);
+         =tolower(word[i]) - ('a' - 1);
 
 
     }
 
 
     // - 1 so 'a' is 0-indexed
-    unsigned int hash = (first * len) - 1;
+    unsigned int hash = (letter * len) - 1;
 
     //smallest word possible 'a'
     // 1(a) * 1(length) = 1
