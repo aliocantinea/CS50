@@ -200,11 +200,18 @@ bool unload(void)
             //free(temp);
         //}
         // ++n;
+
+    node *temp = malloc(sizeof(node));
+    if (temp == NULL)
+    {
+        return false;
+    }
+
     printf("unloading table\n");
     for (int i = 0; i < N; ++i)
     {
         printf("checking table[%i]\n", i);
-        node *temp = table[i];
+        temp = table[i];
         table[i] = temp->next;
         free(temp);
     }
