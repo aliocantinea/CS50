@@ -208,14 +208,15 @@ bool unload(void)
     {
         while (table[i] != NULL)
         {
-            node *temp = malloc(sizeof(node));
-            if (temp == NULL)
-            {
-                return false;
-            }
+            node *temp = table[i];
+            //malloc(sizeof(node));
+            //if (temp == NULL)
+            //{
+            //    return false;
+            //}
 
             //printf("checking table[%i]\n", i);
-            temp = table[i];
+            //temp = table[i];
             table[i] = temp->next;
             free(temp);
         }
