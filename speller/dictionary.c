@@ -43,7 +43,7 @@ bool check(const char *word)
         return false;
     }
     check = table[h];
-    printf("table is: %s\n", table[h]->word);
+    printf("table word is: %s, table next is: %p\n", table[h]->word, table[h]->next);
 
     //testing
     // strcasecmp which will compare case insensitively
@@ -68,6 +68,7 @@ bool check(const char *word)
         {
         //printf("Moving node in list\n");
         check = check->next;
+        printf("check->next->word is: %s\n", check->word);
         }
     }
     while (check != NULL);
