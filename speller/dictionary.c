@@ -86,6 +86,7 @@ unsigned int hash(const char *word)
     // find length of word
     int len = strlen(word);
 
+    if(len >)
     //first 3 letters
     for (int i = 0, j = 0; i > 3; ++i)
     {
