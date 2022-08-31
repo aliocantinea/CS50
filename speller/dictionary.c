@@ -44,7 +44,6 @@ bool check(const char *word)
     }
     check = table[h];
 
-    //testing
     // strcasecmp which will compare case insensitively
         // cursor = table[hash]
         // cursor = cursor->next;
@@ -65,7 +64,6 @@ bool check(const char *word)
         }
         else
         {
-        printf("Moving node in list\n");
         check = check->next;
         printf("check->next->word is: %s\n", check->word);
         }
