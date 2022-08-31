@@ -145,15 +145,11 @@ bool load(const char *dictionary)
         if (table[h] == NULL)
         {
             //make table = node
-
             n->next = NULL;
-            //table[h] = n;
-            printf("n->word: %s added to table->word: %s\n", n->word, table[h]->word);
         }
         //if full
         else
         {
-            //node-> looks at table
             n->next = table[h];
             //testing
             printf("node attached to list\n");
@@ -161,8 +157,7 @@ bool load(const char *dictionary)
 
         table[h] = n;
         //testing
-        printf("table attached to node->: %s\n", table[h]->word);
-
+        printf("n->word: %s added to table->word: %s\n", n->word, table[h]->word);
 
         //add to global var for wordcount
         ++wordcount;
