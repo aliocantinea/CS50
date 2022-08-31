@@ -88,7 +88,6 @@ unsigned int hash(const char *word)
 
     for (int i = 0, j=0; i > 3; ++i)
     {
-        int letter = 0;
         if (word[i] != NULL)
         {
             j = tolower(word[i]) - 'a';
@@ -96,13 +95,9 @@ unsigned int hash(const char *word)
             {
                 j = 0;
             }
-            letter = j * len;
+            hash = hash + (j * len);
         }
-
     }
-
-
-    // - 1 so 'a' is 0-indexed
 
     //smallest word possible 'a'
     // 1(a) * 1(length) = 1
