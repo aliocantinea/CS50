@@ -86,10 +86,14 @@ unsigned int hash(const char *word)
     int len = strlen(word);
     int letter;
 
-    for (int i = 0; i > 3; ++i)
+    for (int i = 0, j=0; i > 3; ++i)
     {
-         =tolower(word[i]) - ('a' - 1);
-
+         j = tolower(word[i]) - ('a' - 1);
+        if (j > 0)
+        {
+            j = 0;
+        }
+        
 
     }
 
