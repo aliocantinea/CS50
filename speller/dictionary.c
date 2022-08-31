@@ -114,12 +114,8 @@ bool load(const char *dictionary)
         return false;
     }
     //malloc space for stream to write into
-    char *temp = malloc(LENGTH + 1);
-    if (temp == NULL)
-    {
-        fclose(dict);
-        return false;
-    }
+    char temp[LENGTH + 1];
+
     //streams char * into temp until EOF
     while (fscanf(dict, "%s", temp) != EOF)
     {
@@ -171,7 +167,6 @@ bool load(const char *dictionary)
         //testing
         //printf("add word count\n");
     }
-    free(temp);
     fclose(dict);
 
     //testing
