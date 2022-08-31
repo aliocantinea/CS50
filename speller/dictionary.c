@@ -205,7 +205,7 @@ bool unload(void)
             //free(temp);
         //}
         // ++n;
-    printf("unloading table");
+    printf("unloading table\n");
     for (int i = 0; i < N; ++i)
     {
         while (table[i]->next != NULL)
