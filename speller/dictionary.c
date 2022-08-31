@@ -36,15 +36,13 @@ bool check(const char *word)
     unsigned int h = hash(word);
     //printf("Hash: %i... \n", h);
     // go to that hash in table
-    node *check = table[h];
-
-    ///check = malloc(sizeof(node));
-    //if (check == NULL)
-    //{
-    //    printf("Could not create node\n");
-    //    return false;
-    //}
-    //check = table[h];
+    node *check = malloc(sizeof(node));
+    if (check == NULL)
+    {
+        printf("Could not create node\n");
+        return false;
+    }
+    check = table[h];
 
     //testing
     // strcasecmp which will compare case insensitively
