@@ -93,7 +93,7 @@ unsigned int hash(const char *word)
         //if word is at least i long (max 3)
         // - b so that a is 1 and can be multiplied
         j = tolower(word[i]) - 'b';
-        if (j > 0)
+        if (j < 0)
         {
             //ignores numbers and symbols
             j = 0;
