@@ -148,7 +148,7 @@ bool load(const char *dictionary)
 
             n->next = NULL;
             //table[h] = n;
-            printf("%s added to table->word: %s\n", n->word, table[h]->word);
+            printf("n->word: %s added to table->word: %s\n", n->word, table[h]->word);
         }
         //if full
         else
