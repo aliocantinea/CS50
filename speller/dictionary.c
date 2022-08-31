@@ -162,6 +162,7 @@ bool load(const char *dictionary)
         //testing
         //printf("n->word: %s added to table->word: %s\n", n->word, table[h]->word);
 
+        //so that you don't free the table
         n = NULL;
         free(n);
         //add to global var for wordcount
