@@ -155,11 +155,11 @@ bool load(const char *dictionary)
             n->next = table[h];
             //testing
             //printf("node attached to list\n");
+        }
 
-            table[h] = n;
+        table[h] = n;
             //testing
             printf("table attached to node->: %s\n", table[h]->word);
-        }
 
 
         free(n);
