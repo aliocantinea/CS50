@@ -29,7 +29,7 @@ unsigned int wordcount = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    //printf("Word: %s... ", word);
+    printf("checking word: %s... ", word);
 
     // TODO
     // run through hash function
@@ -178,7 +178,7 @@ bool load(const char *dictionary)
     fclose(dict);
 
     //testing
-    //printf("Loaded and closed dictionary...\n");
+    printf("Loaded and closed dictionary...\n");
     return true;
 
 }
