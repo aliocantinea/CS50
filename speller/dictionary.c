@@ -1,4 +1,5 @@
 // Implements a dictionary's functionality
+// this was one of the hardest ones yet, but the comparison between student and staff was fun!!
 
 #include <ctype.h>
 #include <stdbool.h>
@@ -40,9 +41,9 @@ bool check(const char *word)
     //printf("table->word %s\n", table[h]->word);
 
     // strcasecmp which will compare case insensitively
-        // cursor = table[hash]
-        // cursor = cursor->next;
-        //if cursor = NULL return false
+    // cursor = table[hash]
+    // cursor = cursor->next;
+    //if cursor = NULL return false
 
     // hash doesn't already exist
     if (check == NULL)
@@ -59,8 +60,8 @@ bool check(const char *word)
         }
         else
         {
-        check = check->next;
-        //printf("check->next->word is: %s\n", check->word);
+            check = check->next;
+            //printf("check->next->word is: %s\n", check->word);
         }
     }
     while (check != NULL);
@@ -182,7 +183,7 @@ unsigned int size(void)
     // TODO
     // count how many words in table
     // either scan and count or add to counter when you add a word**
-        //this would have to be a global var so it can keep track and since nothing is passed into this function
+    //this would have to be a global var so it can keep track and since nothing is passed into this function
 
     //printf("give wordcount %i\n", wordcount);
     return wordcount;
@@ -194,13 +195,13 @@ bool unload(void)
     // TODO
     // free memory
     // for n = N(table[max])
-        //do while (table[n] != NULL)
-        //{
-            //temp = table[n];
-            //table[n] = temp->next;
-            //free(temp);
-        //}
-        // ++n;
+    //do while (table[n] != NULL)
+    //{
+    //temp = table[n];
+    //table[n] = temp->next;
+    //free(temp);
+    //}
+    // ++n;
 
 
     //printf("unloading table\n");
