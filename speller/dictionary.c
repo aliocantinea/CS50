@@ -90,18 +90,15 @@ unsigned int hash(const char *word)
     for (int i = 0, j = 0; i > 3; ++i)
     {
         //if word is at least i long (max 3)
-        if (word[i] != NULL)
+        // - b so that a is 1 and can be multiplied
+        j = tolower(word[i]) - 'b';
+        if (j > 0)
         {
-            // - b so that a is 1 and can be multiplied
-            j = tolower(word[i]) - 'b';
-            if (j > 0)
-            {
-                //ignores numbers and symbols
-                j = 0;
-            }
-            //letter * word length for each letter
-            hash = hash + (j * len);
+            //ignores numbers and symbols
+            j = 0;
         }
+        //letter * word length for each letter
+        hash = hash + (j * len);
     }
     //0-index shortest word 'a'
     hash = hash - 1;
