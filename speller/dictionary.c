@@ -156,6 +156,9 @@ bool load(const char *dictionary)
         }
 
         table[h] = n;
+
+        //clear n for next word
+        n = NULL;
         //testing
         printf("n->word: %s added to table->word: %s\n", n->word, table[h]->word);
 
@@ -164,7 +167,6 @@ bool load(const char *dictionary)
         //testing
         //printf("add word count\n");
     }
-    n = NULL;
     free(n);
     fclose(dict);
 
