@@ -34,7 +34,6 @@ bool check(const char *word)
     // TODO
     // run through hash function
     unsigned int h = hash(word);
-    //printf("Hash: %i... \n", h);
     // go to that hash in table
     node *check = table[h];
     //malloc(sizeof(node));
