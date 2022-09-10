@@ -20,8 +20,8 @@ def main():
         fieldnames = ['team' , 'score']
         teams = csv.DictReader(file, fieldnames=fieldanmes)
         for row in teams:
+            # Use the .append() fuction to convert str to int
             teams.append(int('score'))
-    # Use the .append() fuction to add to teams list
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
