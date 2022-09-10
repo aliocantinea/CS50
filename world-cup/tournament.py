@@ -35,6 +35,7 @@ def main():
             counts[winning_team] += 1
         else:
             counts.append(winning_team)
+            
 
 
 
