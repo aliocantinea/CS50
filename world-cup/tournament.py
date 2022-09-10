@@ -35,9 +35,7 @@ def main():
             counts[winning_team] += 1
         else:
             counts.append(winning_team)
-            
-
-
+            counts[winning_team] = 1
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
