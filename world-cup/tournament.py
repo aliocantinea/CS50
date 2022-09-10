@@ -20,7 +20,7 @@ def main():
         fieldnames = ['team' , 'score']
         teams = csv.DictReader(file, fieldnames=fieldanmes)
         for row in teams:
-            teams.append()
+            teams.append(int('score'))
     # Use the .append() fuction to add to teams list
 
     counts = {}
