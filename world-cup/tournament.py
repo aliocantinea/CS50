@@ -18,7 +18,7 @@ def main():
     # TODO: Read teams into memory from file
     with open(sys.argv[1]) as file:
         fieldnames = ['team' , 'score']
-        teams = csv.DictReader(file, fieldnames=fieldanmes)
+        teams.append = csv.DictReader(file, fieldnames=fieldanmes)
         for row in teams:
             # Use the .append() fuction to convert str to int
             teams.append(int('score'))
