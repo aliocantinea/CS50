@@ -33,6 +33,7 @@ def main():
         winning_team = simulate_tournament(teams)
         if winning_team in counts
             counts[winning_team] += 1
+        else
 
 
 
