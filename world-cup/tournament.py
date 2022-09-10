@@ -19,13 +19,15 @@ def main():
     with open(sys.argv[1]) as file:
         # fieldnames = ["team" , "rating"]
         loader = csv.DictReader(file)
-        for row in loader:
+        # You have to interact with the fieldnames not loader or you get a DictReader error
+        for team in loader:
+            # Convert rating from str to int before loading
+            team["rating"] = int(team["rating"])
             # Use the .append() fuction to load into list
-            teams.append(loader)
+            teams.append(team)
 
-        # Convert rating from str to int before loading
-        # for team, rating in loader():
-            # rating = int(rating)
+
+
 
 
     counts = {}
