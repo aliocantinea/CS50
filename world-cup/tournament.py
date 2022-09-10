@@ -61,7 +61,7 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
     winners = []
-    tournament_winner = []
+    winner = []
 
     winners = simulate_round(teams)
 
@@ -69,7 +69,7 @@ def simulate_tournament(teams):
     # This should work for any amount of even teams
     # A single winner should be returned
 
-    return tournament_winner
+    return winner
 
 if __name__ == "__main__":
     main()
