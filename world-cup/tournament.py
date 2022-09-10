@@ -58,7 +58,7 @@ def simulate_tournament(teams):
     # TODO
     # Keep simulating until you have no more teams
     # This should work for any amount of even teams
-    # A single winnder should be returned
+    # A single winner should be returned
 
 
 if __name__ == "__main__":
