@@ -17,8 +17,8 @@ def main():
     teams = []
     # TODO: Read teams into memory from file
     with open(sys.argv[1]) as file:
-        # fieldnames = ["team" , "rating"]
-        loader = csv.DictReader(file)
+        fieldnames = ["team" , "rating"]
+        loader = csv.DictReader(file, fieldnames=fieldnames)
         # You have to interact with the fieldnames not loader or you get a DictReader error
         for team in loader:
             # Convert rating from str to int before loading
