@@ -16,6 +16,9 @@ def main():
 
     teams = []
     # TODO: Read teams into memory from file
+    with open(sys.argv[1]) as file:
+        reader = csv.DictReader(file)
+    # Use the .append() fuction to add to teams list
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
@@ -50,6 +53,9 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
+    # Keep simulating until you have no more teams
+    # This should work for any amount of even teams
+    # A single winnder should be returned
 
 
 if __name__ == "__main__":
