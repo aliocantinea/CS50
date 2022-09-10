@@ -60,9 +60,10 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
+    winners = []
     tournament_winner = []
 
-    for 
+    winners = simulate_round(teams)
 
     # Keep simulating until you have no more teams
     # This should work for any amount of even teams
