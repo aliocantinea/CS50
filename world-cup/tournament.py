@@ -18,8 +18,8 @@ def main():
     # TODO: Read teams into memory from file
     with open(sys.argv[1]) as file:
         fieldnames = ['team' , 'score']
-        reader = csv.DictReader(file)
-        for row in reader:
+        teams = csv.DictReader(file)
+        for row in teams:
             teams.append()
     # Use the .append() fuction to add to teams list
 
