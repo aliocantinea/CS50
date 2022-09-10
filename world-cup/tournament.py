@@ -21,7 +21,7 @@ def main():
         loader = csv.DictReader(file, fieldnames=fieldanmes)
         for row in loader:
             # Convert rating from str to int before loading
-            for team, rating in teams():
+            for team, rating in loader():
                 rating = int(rating)
             # Use the .append() fuction to load into list
             teams.append(loader)
