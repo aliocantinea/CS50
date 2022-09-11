@@ -1,7 +1,7 @@
 # TODO
 
 def main ():
-    name
+    name =
     try:
         name = name.isalpha(input("What's your name? "))
     except ValueError:
