@@ -26,10 +26,6 @@ def main():
             # Use the .append() fuction to load into list
             teams.append(team)
 
-
-
-
-
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range (N):
