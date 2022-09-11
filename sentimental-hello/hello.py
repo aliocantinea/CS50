@@ -2,7 +2,7 @@
 
 def main ():
     try:
-        name = input("What's your name? ")
+        name = name.isalpha(input("What's your name? "))
     except ValueError:
         print("Is that your real name though?")
         exit()
