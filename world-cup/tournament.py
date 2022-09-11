@@ -66,10 +66,12 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    # Keep simulating until you have no more teams
+    # Keep simulating until you have only 1 team left
     while len(winner) > 1:
         teams = simulate_round(teams)
     # A single winner should be returned
+    # Return first line in teams with [0]
+    # Since teams is a dict, ["team"] to just return the name
     return teams[0]["team"]
 
 if __name__ == "__main__":
