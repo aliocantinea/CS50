@@ -1,3 +1,5 @@
 # TODO
 
-n = int(input("Height: "))
+height = int(input("Height: "))
+while height < 1:
+    height = int(input(""))
