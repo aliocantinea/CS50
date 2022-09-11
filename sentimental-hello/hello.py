@@ -6,7 +6,7 @@ def main ():
     except ValueError:
         print("Is that your real name though?")
         exit()
-    print("Hello, {name}!")
+    print(f"Hello, {name}!")
 
 if __name__ == "__main__":
     main()
