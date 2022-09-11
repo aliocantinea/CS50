@@ -17,7 +17,7 @@ def main():
     teams = []
     # TODO: Read teams into memory from file
     with open(sys.argv[1]) as file:
-        # fieldnames = ["team" , "rating"]
+        # Because file has fieldnames, leave DictReader fieldnames default, None
         loader = csv.DictReader(file)
         # You have to interact with the fieldnames not loader or you get a DictReader error
         for team in loader:
@@ -28,10 +28,12 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-    for i in range (N):
+    for i in range(N):
         winning_team = simulate_tournament(teams)
+        # If already won, add to score
         if winning_team in counts:
             counts[winning_team] += 1
+        # If first time winning, add to counts with score of 1
         else:
             counts[winning_team] = 1
 
@@ -72,6 +74,7 @@ def simulate_tournament(teams):
     # Return first line in teams with [0]
     # Since teams is a dict, ["team"] to just return the name
     return teams[0]["team"]
+
 
 if __name__ == "__main__":
     main()
