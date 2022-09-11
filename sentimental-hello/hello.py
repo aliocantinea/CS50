@@ -1,7 +1,8 @@
 # TODO
 
 def main ():
-    name = input("What's your name? ")
+    try:
+        name = input("What's your name? ")
 
 
 if __name__ == "__main__":
