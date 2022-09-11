@@ -17,8 +17,8 @@ def main():
     teams = []
     # TODO: Read teams into memory from file
     with open(sys.argv[1]) as file:
-        fieldnames = ["team" , "rating"]
-        loader = csv.DictReader(file, fieldnames=fieldnames)
+        # fieldnames = ["team" , "rating"]
+        loader = csv.DictReader(file)
         # You have to interact with the fieldnames not loader or you get a DictReader error
         for team in loader:
             # Convert rating from str to int before loading
@@ -66,7 +66,7 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
     # Keep simulating until you have only 1 team left
-    while len(winner) > 1:
+    while len(teams) > 1:
         teams = simulate_round(teams)
     # A single winner should be returned
     # Return first line in teams with [0]
