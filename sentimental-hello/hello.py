@@ -1,12 +1,7 @@
 # TODO
 
 def main ():
-    name =
-    try:
-        name = name.isalpha(input("What's your name? "))
-    except ValueError:
-        print("Is that your real name though?")
-        exit()
+    name = input("What's your name? ")
     print(f"Hello, {name}!")
 
 if __name__ == "__main__":
