@@ -1,6 +1,3 @@
 # TODO
 
-try:
-    n = int(input("Height: "))
-except ValueError:
-    print
+n = int(input("Height: "))
