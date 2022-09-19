@@ -15,15 +15,11 @@ coins = [
 try:
     change = float(input("How much changed is owed: "))
 except ValueError:
-    change = float(input("A : "))
+    change = float(input("A positive floating point number please: "))
 while not float(change):
     change = float(input("A positive number please: "))
-
-
-
-cents = GetChange()
 for coin, amount in coins:
-    counter = cents / coins.cents()
+    counter = change / coins.amount()
     print(counter)
 
 
