@@ -3,7 +3,7 @@ from cs50 import get_float
 
 
 # Define Change in Tuple
-Coin = [
+Coins = [
     ("Quarter", 25),
     ("Dime", 10),
     ("Nickle", 5),
@@ -25,7 +25,8 @@ def GetChange()
 
 Cents = GetChange()
 # Calculates amount of quaters\
-
+for coin, amount in Coins
+    Cents 
 
 
 # Calculates amount of quaters
