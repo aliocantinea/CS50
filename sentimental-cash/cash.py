@@ -1,6 +1,4 @@
 # TODO
-from cs50 import get_float
-
 
 # Define Coins and their value in tuple
 coins = [
@@ -40,5 +38,3 @@ for coin, value in coins:
 
 # Return int
 print(total_change)
-
-
