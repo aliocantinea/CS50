@@ -24,7 +24,7 @@ def GetChange():
 
 cents = GetChange()
 for coin, value in coins:
-    counter = cents / int(coins.value())
+    counter = cents / int(value)
     print(counter)
 
 
