@@ -13,12 +13,10 @@ coins = [
 
 # Get amount of change from user
 change = float(input("How much changed is owed: "))
-# Make sure it is a positive float
+except ValueError:
+    print("Please input change formated like eg: 9 or 9.75")
 while not float(change):
     change = float(input("A positive number please: "))
-except ValueError:
-# Recursively calls function if not a float
-print("Please input change formated like eg: 9 or 9.75")
 
 
 
