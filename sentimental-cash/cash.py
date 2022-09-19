@@ -9,8 +9,8 @@ def GetChange()
         # Make sure it is a possitive float
         while Cents > 0
     except ValueError:
-        print("")
+        print("Please input change formated like eg: 9 or 9.75")
         Cents = GetChange()
     return Cents
-# Make sure it is a positive float
-# Print minimum amount of coins to make change as an int
+
+
