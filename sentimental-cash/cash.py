@@ -3,7 +3,7 @@ from cs50 import get_float
 
 
 # Define Coins and their value in tuple
-Coins = [
+coins = [
     ("Quarter", .25),
     ("Dime", .10),
     ("Nickle", .05),
@@ -26,7 +26,7 @@ def get_change():
 #
 cents = get_change()
 total_change = 0
-for coin, value in Coins:
+for coin, value in coins:
     counter = int(cents / float(value))
     cents = cents - counter * float(value)
     total_change += counter
