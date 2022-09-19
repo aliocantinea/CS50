@@ -3,15 +3,13 @@ from cs50 import get_float
 
 
 # Define Change in Tuple
-change = [
+Coin = [
     ("Quarter", 25),
     ("Dime", 10),
     ("Nickle", 5),
     ("Penny", 1),
 ]
 
-class Change():
-    def __init__(self, )
 
 # Get amount of change from user
 def GetChange()
@@ -26,9 +24,8 @@ def GetChange()
     return Change
 
 Cents = GetChange()
-# Calculates amount of quaters
-Quaters = Cents / 25
-Coins = Cents - Quaters * 25
+# Calculates amount of quaters\
+
 
 
 # Calculates amount of quaters
