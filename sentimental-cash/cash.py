@@ -28,7 +28,8 @@ cents = get_change()
 total_change = 0
 for coin, value in coins:
     counter = int(cents / float(value))
-    cents = cents - counter * float(value)
+    print(counter)
+    cents = cents - (counter * float(value))
     total_change += counter
 print(total_change)
 
