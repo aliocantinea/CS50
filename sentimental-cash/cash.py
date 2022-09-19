@@ -34,7 +34,5 @@ for coin, value in coins:
     cents = round(cents - (counter * float(value)), 2)
     # Add to how many coins are need before going to next key in tuple
     total_change += counter
-
-
 # Return int
 print(total_change)
