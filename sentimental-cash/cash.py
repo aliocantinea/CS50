@@ -10,6 +10,7 @@ change = [
     ("Penny", 1),
 ]
 
+class
 
 # Get amount of change from user
 def GetChange()
