@@ -1,4 +1,4 @@
-#include <cs50.h>
+cd#include <cs50.h>
 #include <stdio.h>
 
 void i(void);
