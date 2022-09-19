@@ -12,7 +12,7 @@ coins = [
 
 
 # Get amount of change from user
-def GetChange():
+def get_change():
     try:
         change = float(input("How much changed is owed: "))
         while float(change) <= 0:
@@ -22,7 +22,7 @@ def GetChange():
     return change
 
 
-cents = GetChange()
+cents = get_change()
 TotalChange = 0
 for coin, value in coins:
     counter = int(cents / float(value))
