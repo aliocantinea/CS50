@@ -28,6 +28,6 @@ for coin, value in coins:
     counter = cents / float(value)
     cents = cents - counter * float(value)
     TotalChange += counter
-print(int(TotalChange))
+print(TotalChange)
 
 
