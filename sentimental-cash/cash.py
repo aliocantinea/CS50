@@ -2,8 +2,8 @@
 from cs50 import get_float
 
 
-# Define Change in Tuple
-coins = [
+# Define Coins and their value in tuple
+Coins = [
     ("Quarter", .25),
     ("Dime", .10),
     ("Nickle", .05),
@@ -18,16 +18,18 @@ def get_change():
         while float(change) <= 0:
             change = float(input("A positive floating point number please: "))
     except ValueError:
-        change = GetChange()
+        # Recursively ask for float
+        change = get_change()
     return change
 
 
+
 cents = get_change()
-TotalChange = 0
-for coin, value in coins:
+total_change = 0
+for coin, value in Coins:
     counter = int(cents / float(value))
     cents = cents - counter * float(value)
-    TotalChange += counter
-print(TotalChange)
+    total_change += counter
+print(total_change)
 
 
