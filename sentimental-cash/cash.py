@@ -6,8 +6,8 @@ from cs50 import get_float
 coins = [
     ("Quarter", .25),
     ("Dime", .10),
-    ("Nickle", .5),
-    ("Penny", .1),
+    ("Nickle", .05),
+    ("Penny", .01),
 ]
 
 
@@ -25,6 +25,8 @@ def GetChange():
 cents = GetChange()
 for coin, value in coins:
     counter = cents / float(value)
-    print(counter)
+    cents = cents - counter * float(value)
+    change += counter
+print(change)
 
 
