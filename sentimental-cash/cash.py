@@ -27,7 +27,7 @@ TotalChange
 for coin, value in coins:
     counter = cents / float(value)
     cents = cents - counter * float(value)
-    TotalChange += counter
+    TotalChange =+ counter
 print(TotalChange)
 
 
