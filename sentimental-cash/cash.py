@@ -10,7 +10,8 @@ change = [
     ("Penny", 1),
 ]
 
-class
+class Change():
+    def __init__(self, )
 
 # Get amount of change from user
 def GetChange()
