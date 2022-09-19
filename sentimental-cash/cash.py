@@ -12,9 +12,10 @@ coins = [
 
 
 # Get amount of change from user
-change = float(input("How much changed is owed: "))
+try:
+    change = float(input("How much changed is owed: "))
 except ValueError:
-    print("Please input change formated like eg: 9 or 9.75")
+    change = float(input("A : "))
 while not float(change):
     change = float(input("A positive number please: "))
 
