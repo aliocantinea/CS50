@@ -23,11 +23,11 @@ def GetChange():
 
 
 cents = GetChange()
-TotalChange
+TotalChange = 0
 for coin, value in coins:
     counter = cents / float(value)
     cents = cents - counter * float(value)
-    TotalChange =+ counter
-print(TotalChange)
+    TotalChange += counter
+print(int(TotalChange))
 
 
