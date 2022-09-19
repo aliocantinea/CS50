@@ -4,10 +4,10 @@ from cs50 import get_float
 
 # Define Change in Tuple
 coins = [
-    ("Quarter", 25),
-    ("Dime", 10),
-    ("Nickle", 5),
-    ("Penny", 1),
+    ("Quarter", .25),
+    ("Dime", .10),
+    ("Nickle", .5),
+    ("Penny", .1),
 ]
 
 
@@ -24,7 +24,7 @@ def GetChange():
 
 cents = GetChange()
 for coin, value in coins:
-    counter = cents / int(value)
+    counter = cents / float(value)
     print(counter)
 
 
