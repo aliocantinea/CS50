@@ -2,6 +2,15 @@
 from cs50 import get_float
 
 
+# Define Change in Tuple
+change = [
+    ("Quarter", 25),
+    ("Dime", 10),
+    ("Nickle", 5),
+    ("Penny", 1),
+]
+
+
 # Get amount of change from user
 def GetChange()
     try:
