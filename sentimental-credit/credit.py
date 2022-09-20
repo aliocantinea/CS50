@@ -53,13 +53,14 @@ card = get_cardnumber()
 
 # Maybe a tuple with VISA, MASTERCARD, AMEX with values for patterns
 cards = [
-  'VISA': '[4][.{12}|.{15}]',
-  'MASTERCARD': '[5-1][5-5].{14}',
-  'AMEX': '[34|37].{13}'
+
+    'VISA': '[4][.{12}|.{15}]',
+    'MASTERCARD': '[5-1][5-5].{14}',
+    'AMEX': '[34|37].{13}'
 ]
 
 for card, pattern in cards
-    test = recomplie(cards.value)
+    test = re.complie(cards.value)
     if test is not None
         test = cards.name()
         break
