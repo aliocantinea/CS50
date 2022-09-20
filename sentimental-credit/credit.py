@@ -5,8 +5,8 @@
 cards = {
     "inv": INVALID,
     "vs": VISA,
-    "mc": MASTERCARD,
-    "am": AMEX
+    "MASTERCARD": 16,
+    "AMEX": 15
 }
 
 
