@@ -41,9 +41,23 @@ amex = re.compile('[34|37].{13}')
 
 card = get_cardnumber()
 
-
+# Getting lengthy
 # Do I set a dict with visa, mcrd, amex and use that to prefix .match(card)
-# Or do I loop while True and break if .match(card) is not None
+# Or do I loop while True and break if .match(card) is not None??
+# Maybe a tuple with VISA, MASTERCARD, AMEX with values for patterns
+# Then for key, value in cards
+# test = recomplie(value)
+# 
+
+if visa.match(card):
+    print("VISA")
+elif mcrd.match(card):
+    print("MASTERCARD")
+elif amex.match(card):
+    print("AMEX")
+else:
+    print("INVALID")
+
 
 
 print(f"{card}")
