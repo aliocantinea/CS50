@@ -29,5 +29,5 @@ def get_cardnumber():
     return(cardnum)
 
 
-card = int(get_cardnumber())
+card = get_cardnumber()
 print(f"{card}")
