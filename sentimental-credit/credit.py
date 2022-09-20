@@ -13,7 +13,7 @@ MINCARD = 13
 
 # Get user input for card number
 # While Try loop from v.coder https://stackoverflow.com/questions/46454254/python-while-true-loop-not-reaching-except-valueerror
-def get_cardnumber()
+def get_cardnumber():
     while True:
         try:
             cardnum = int(input("Card number: "))
@@ -23,3 +23,6 @@ def get_cardnumber()
             print(f"Please enter a card number between {MINCARD} - {MAXCARD} long")
             continue
     return(cardnum)
+
+card = get_cardnumber()
+print(f"{card}")
