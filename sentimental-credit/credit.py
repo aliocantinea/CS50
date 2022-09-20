@@ -48,10 +48,10 @@ card = get_cardnumber()
 
 # Getting lengthy
 # Do I set a dict with visa, mcrd, amex and use that to prefix .match(card)
-
 # Or do I loop while True and break if .match(card) is not None??
-
 # Maybe a tuple with VISA, MASTERCARD, AMEX with values for patterns
+
+# Dict of card types and the patterns used for re.match to compare
 cards = [
     # Visa: starts with 4, 13 or 16 digits long
     ('VISA': '[4][.{12}|.{15}]'),
