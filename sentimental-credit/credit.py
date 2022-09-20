@@ -4,4 +4,5 @@
 # TODO
 def get_cardnumber()
     cardnum = int(input("Card number: "))
-    
+    while True:
+        
