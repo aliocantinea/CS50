@@ -12,7 +12,9 @@ class CardType():
         print(f"{self.type}")
 
 inv = CardType("Invalid", INVALID)
-visa =
+visa = CardType("Visa", VISA)
+mc = CardType("Mastercard", MASTERCARD)
+
 
 def get_cardnumber()
     cardnum = int(input("Card number: "))
