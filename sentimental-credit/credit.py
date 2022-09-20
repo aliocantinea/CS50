@@ -22,3 +22,4 @@ def get_cardnumber()
         except ValueError:
             print(f"Please enter a card number between {MINCARD} - {MAXCARD} long")
             continue
+    return(cardnum)
