@@ -39,7 +39,7 @@ def get_cardnumber():
 # amex = re.compile('[34|37].{13}')
 
 
-card = get_cardnumber()
+cardnum = get_cardnumber()
 
 
 # Put in Luhn's Algorithm
@@ -51,7 +51,7 @@ card = get_cardnumber()
 # Or do I loop while True and break if .match(card) is not None??
 # Maybe a tuple with VISA, MASTERCARD, AMEX with values for patterns
 
-# Dict of card types and the patterns used for re.match to compare
+# Dict of card type and the pattern used for re.match to compare
 cards = [
     # Visa: starts with 4, 13 or 16 digits long
     ('VISA': '[4][.{12}|.{15}]'),
@@ -61,15 +61,15 @@ cards = [
     ('AMEX': '[34|37].{13}')
 ]
 
-for type, pattern in cards
-    test = re.match(pattern, card)
-    if test is not None
+for type, pattern in cards:
+    test = re.match(pattern, cardnum)
+    if test is not None:
         test = type
         break
 
-if test == None
+if test == None:
   print('INVALID')
-else
+else:
   print(f'{test}')
 
 # if visa.match(card):
