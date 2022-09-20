@@ -29,5 +29,10 @@ def get_cardnumber():
     return(cardnum)
 
 
+visa = re.compile()
+mcrd = re.compile()
+amex = re.compile()
+
+
 card = get_cardnumber()
 print(f"{card}")
