@@ -11,7 +11,8 @@ class CardType():
     def print(self):
         print(f"{self.type}")
 
-invalid = CardType("i")
+inv = CardType("Invalid", INVALID)
+visa =
 
 def get_cardnumber()
     cardnum = int(input("Card number: "))
