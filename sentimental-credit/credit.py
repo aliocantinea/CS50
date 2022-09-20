@@ -17,7 +17,7 @@ def get_cardnumber():
     while True:
         try:
             cardnum = int(input("Card number: "))
-            if(len(cardnum) > MINCARD and len(cardnum) < MAXCARD):
+            if(len(str(cardnum)) >= MINCARD and len(str(cardnum)) <= MAXCARD):
                 break
         except ValueError:
             print(f"Please enter a card number between {MINCARD} - {MAXCARD} long")
