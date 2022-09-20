@@ -2,7 +2,7 @@
 # https://docs.python.org/3/library/re.html
 
 # TODO
-class CardTypes():
+class CardType():
 
     def __init__(self, card, type):
         self.card = card
@@ -10,6 +10,8 @@ class CardTypes():
 
     def print(self):
         print(f"{self.type}")
+
+invalid = CardType("i")
 
 def get_cardnumber()
     cardnum = int(input("Card number: "))
