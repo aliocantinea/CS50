@@ -59,8 +59,8 @@ cards = [
     'AMEX': '[34|37].{13}'
 ]
 
-for card, pattern in cards
-    test = re.complie(cards.value)
+for type, pattern in cards
+    test = re.match(cards.pattern, card)
     if test is not None
         test = cards.name()
         break
