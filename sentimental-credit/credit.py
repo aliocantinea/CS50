@@ -40,7 +40,7 @@ amex = re.compile('[34|37].{13}')
 
 
 card = get_cardnumber()
-if:
+while type == None:
     type = visa.match(card)
 
 
