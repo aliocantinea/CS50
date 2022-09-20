@@ -30,8 +30,8 @@ def get_cardnumber():
 
 
 visa = re.compile('')
-mcrd = re.compile('[5-1][5-5]')
-amex = re.compile('')
+mcrd = re.compile('[5-1][5-5]*16')
+amex = re.compile('*15')
 
 
 card = get_cardnumber()
