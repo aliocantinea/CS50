@@ -11,10 +11,13 @@ class CardType():
     def print(self):
         print(f"{self.type}")
 
+
 inv = CardType("Invalid", INVALID)
 visa = CardType("Visa", VISA)
 mc = CardType("Mastercard", MASTERCARD)
+am = CardType("American_Express", AMEX)
 
 
 def get_cardnumber()
     cardnum = int(input("Card number: "))
+    
