@@ -41,6 +41,11 @@ def get_cardnumber():
 
 card = get_cardnumber()
 
+
+# Put in Luhn's Algorithm
+
+
+
 # Getting lengthy
 # Do I set a dict with visa, mcrd, amex and use that to prefix .match(card)
 
@@ -60,9 +65,9 @@ for card, pattern in cards
         break
 
 if test == None
-  print("INVALID")
+  print('INVALID')
 else
-  print(f"{test}")
+  print(f'{test}')
 
 # if visa.match(card):
 #     print("VISA")
@@ -75,4 +80,4 @@ else
 
 
 
-print(f"{card}")
+print(f'{card}')
