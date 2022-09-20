@@ -3,8 +3,6 @@
 
 
 # TODO
-
-
 # Global constants outside of CS50 create a constant.py and place in var
 # Include import constant and reference them as constant.MAXCARD or constant.MINCARD
 MAXCARD = 16
