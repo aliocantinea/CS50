@@ -64,7 +64,7 @@ cards = [
 for type, pattern in cards
     test = re.match(pattern, card)
     if test is not None
-        test = cards.name()
+        test = type
         break
 
 if test == None
