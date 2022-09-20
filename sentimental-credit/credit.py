@@ -15,23 +15,23 @@ MINCARD = 13
 def get_cardnumber():
     while True:
         try:
-            cardnum = int(input("Card number: "))
+            cardnum = int(input('Card number: '))
             # Confirms valid min/max lengths reprompts if outside of parameters including ValueError
             # Using len(str( )) instead fo math.log because of floating point imprecision
             if(len(str(cardnum)) >= MINCARD and len(str(cardnum)) <= MAXCARD):
                 # Leaves While loop if successful
                 break
             else:
-                print(f"Please enter a card number between {MINCARD} - {MAXCARD} long")
+                print(f'Please enter a card number between {MINCARD} - {MAXCARD} long')
         except ValueError:
-            print(f"Please enter a card number between {MINCARD} - {MAXCARD} long")
+            print(f'Please enter a card number between {MINCARD} - {MAXCARD} long')
             continue
     return(cardnum)
 
 
-visa = re.compile()
-mcrd = re.compile()
-amex = re.compile()
+visa = re.compile('')
+mcrd = re.compile('[5-1][5-5]')
+amex = re.compile('')
 
 
 card = get_cardnumber()
