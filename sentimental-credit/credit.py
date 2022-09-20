@@ -19,7 +19,7 @@ def get_cardnumber():
         try:
             cardnum = int(input("Card number: "))
             # Confirms valid min/max lengths reprompts if outside of parameters including ValueError
-            # Using len(str( )) instead fo math.log because of floating point number inpercision 
+            # Using len(str( )) instead fo math.log because of floating point imprecision
             if(len(str(cardnum)) >= MINCARD and len(str(cardnum)) <= MAXCARD):
                 # Leaves While loop if successful
                 break
