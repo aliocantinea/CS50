@@ -40,9 +40,10 @@ amex = re.compile('[34|37].{13}')
 
 
 card = get_cardnumber()
-while type == None:
-    type = visa.match(card)
 
+
+# Do I set a dict with visa, mcrd, amex and use that to prefix .match(card)
+# Or do I loop while True and break if .match(card) is not None
 
 
 print(f"{card}")
