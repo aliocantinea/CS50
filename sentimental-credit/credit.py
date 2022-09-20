@@ -12,17 +12,24 @@ MINCARD = 13
 
 
 # Get user input for card number
-# While Try loop from v.coder https://stackoverflow.com/questions/46454254/python-while-true-loop-not-reaching-except-valueerror
+# While Try loop from v.coder
+# https://stackoverflow.com/questions/46454254/python-while-true-loop-not-reaching-except-valueerror
 def get_cardnumber():
     while True:
         try:
             cardnum = int(input("Card number: "))
+            # Confirms valid min/max lengths reprompts if outside of parameters including ValueError
+            # Using len(str( )) instead fo math.log because of floating point number inpercision 
             if(len(str(cardnum)) >= MINCARD and len(str(cardnum)) <= MAXCARD):
+                # Leaves While loop if successful
                 break
+            else:
+                print(f"Please enter a card number between {MINCARD} - {MAXCARD} long")
         except ValueError:
             print(f"Please enter a card number between {MINCARD} - {MAXCARD} long")
             continue
     return(cardnum)
 
-card = get_cardnumber()
+
+card = int(get_cardnumber())
 print(f"{card}")
