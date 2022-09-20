@@ -32,31 +32,46 @@ def get_cardnumber():
 
 # Setting re patterns
 # Visa: starts with 4, 13 or 16 digits long
-visa = re.compile('[4][.{12}|.{15}]')
+# visa = re.compile('[4][.{12}|.{15}]')
 # Mastercard: starts with 51-55, 16 digits long
-mcrd = re.compile('[5-1][5-5].{14}')
+# mcrd = re.compile('[5-1][5-5].{14}')
 # Amex: starts with 34 or 37, 15 digits long
-amex = re.compile('[34|37].{13}')
+# amex = re.compile('[34|37].{13}')
 
 
 card = get_cardnumber()
 
 # Getting lengthy
 # Do I set a dict with visa, mcrd, amex and use that to prefix .match(card)
-# Or do I loop while True and break if .match(card) is not None??
-# Maybe a tuple with VISA, MASTERCARD, AMEX with values for patterns
-# Then for key, value in cards
-# test = recomplie(value)
-# 
 
-if visa.match(card):
-    print("VISA")
-elif mcrd.match(card):
-    print("MASTERCARD")
-elif amex.match(card):
-    print("AMEX")
-else:
-    print("INVALID")
+# Or do I loop while True and break if .match(card) is not None??
+
+# Maybe a tuple with VISA, MASTERCARD, AMEX with values for patterns
+cards = [
+  'VISA': '[4][.{12}|.{15}]',
+  'MASTERCARD': '[5-1][5-5].{14}',
+  'AMEX': '[34|37].{13}'
+]
+
+for card, pattern in cards
+    test = recomplie(cards.value)
+    if test is not None
+        test = cards.name()
+        break
+
+if test == None
+  print("INVALID")
+else
+  print(f"{test}")
+
+# if visa.match(card):
+#     print("VISA")
+# elif mcrd.match(card):
+#     print("MASTERCARD")
+# elif amex.match(card):
+#     print("AMEX")
+# else:
+#     print("INVALID")
 
 
 
