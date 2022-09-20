@@ -53,8 +53,11 @@ card = get_cardnumber()
 
 # Maybe a tuple with VISA, MASTERCARD, AMEX with values for patterns
 cards = [
+    # Visa: starts with 4, 13 or 16 digits long
     ('VISA': '[4][.{12}|.{15}]'),
+    # Mastercard: starts with 51-55, 16 digits long
     ('MASTERCARD': '[5-1][5-5].{14}'),
+    # Amex: starts with 34 or 37, 15 digits long
     ('AMEX': '[34|37].{13}')
 ]
 
