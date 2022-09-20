@@ -29,7 +29,7 @@ def get_cardnumber():
     return(cardnum)
 
 
-visa = re.compile('')
+visa = re.compile('[4]')
 mcrd = re.compile('[5-1][5-5].{14}')
 amex = re.compile('.{15}')
 
