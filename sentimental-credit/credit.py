@@ -14,8 +14,10 @@ MINCARD = 13
 # Get user input for card number
 def get_cardnumber()
     while True:
-        cardnum = int(input("Card number: "))
-        if(len(cardnum) < MAXCARD and len(cardnum) > MINCARD):
-            break
-        else:
+        try:
+            cardnum = int(input("Card number: "))
+            if(len(cardnum) < MAXCARD and len(cardnum) > MINCARD):
+                break
+        except ValueError:
             
+
