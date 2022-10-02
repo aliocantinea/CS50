@@ -23,20 +23,12 @@ def get_cardnumber():
                 # Leaves While loop if successful
                 break
             else:
-                print(f'Please enter a card number between {MINCARD} - {MAXCARD} long')
+                print(f'INVALID')
+                exit()
         except ValueError:
-            print(f'Please enter a card number between {MINCARD} - {MAXCARD} long')
+            print(f'Please enter a card number between {MINCARD}-{MAXCARD} numbers long')
             continue
     return(cardnum)
-
-
-# Setting re patterns
-# Visa: starts with 4, 13 or 16 digits long
-# visa = re.compile('[4][.{12}|.{15}]')
-# Mastercard: starts with 51-55, 16 digits long
-# mcrd = re.compile('[5-1][5-5].{14}')
-# Amex: starts with 34 or 37, 15 digits long
-# amex = re.compile('[34|37].{13}')
 
 
 cardnum = get_cardnumber()
@@ -51,36 +43,33 @@ cardnum = get_cardnumber()
 # Or do I loop while True and break if .match(card) is not None??
 # Maybe a tuple with VISA, MASTERCARD, AMEX with values for patterns
 
+
 # Dict of card type and the pattern used for re.match to compare
 cards = [
     # Visa: starts with 4, 13 or 16 digits long
-    ('VISA': '[4][.{12}|.{15}]'),
-    # Mastercard: starts with 51-55, 16 digits long
-    ('MASTERCARD': '[5-1][5-5].{14}'),
+    ('VISA', '4(\d{12}|\d{15})'),
     # Amex: starts with 34 or 37, 15 digits long
-    ('AMEX': '[34|37].{13}')
+    ('AMEX', '3(4|7)\d{13}'),
+    # Mastercard: starts with 51-55, 16 digits long
+    ('MASTERCARD', '5[1-5]\d{14}')
 ]
 
+
 for type, pattern in cards:
-    test = re.match(pattern, cardnum)
-    if test is not None:
-        test = type
+    cardmatch = re.match(f'{pattern}', str(cardnum))
+    # print(f'testing {type}')
+    if cardmatch is not None:
+        # print('valid')
+        card = type
         break
+    else:
+        card = None
+        # print('invalid')
 
-if test == None:
-  print('INVALID')
+
+if card is not None:
+    print(f'{card}')
 else:
-  print(f'{test}')
-
-# if visa.match(card):
-#     print("VISA")
-# elif mcrd.match(card):
-#     print("MASTERCARD")
-# elif amex.match(card):
-#     print("AMEX")
-# else:
-#     print("INVALID")
+    print('INVALID')
 
 
-
-print(f'{card}')
