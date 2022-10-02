@@ -11,7 +11,7 @@ MINCARD = 13
 
 
 # Get user input for card number
-# While Try loop from v.coder
+# ** Credit ** While Try loop from v.coder
 # https://stackoverflow.com/questions/46454254/python-while-true-loop-not-reaching-except-valueerror
 def get_cardnumber():
     while True:
@@ -35,7 +35,16 @@ cardnum = get_cardnumber()
 
 
 # Put in Luhn's Algorithm
-
+# ** Credit **
+# https://stackoverflow.com/a/29208349/20140866
+# if cardnum len == even:
+    #1st, 3rd... added together, then 2nd, 4th...
+    # double = sum((cardnum[1::2])*2)
+    # single = sum(cardnum[::2])
+# else:
+    # double = sum((cardnum[::2])*2)
+    # single = sum(cardnum[1::2])
+# Luhn = 
 
 
 # Getting lengthy
