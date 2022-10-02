@@ -56,7 +56,6 @@ cards = [
 
 
 for type, pattern in cards:
-    
     cardmatch = re.match(f'{pattern}', str(cardnum))
     # print(f'testing {type}')
     if cardmatch is not None:
