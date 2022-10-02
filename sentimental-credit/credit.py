@@ -10,6 +10,11 @@ MAXCARD = 16
 MINCARD = 13
 
 
+def invalid():
+    print(f'INVALID')
+    exit()
+
+
 # Get user input for card number
 # ** Credit ** While Try loop from v.coder
 # https://stackoverflow.com/questions/46454254/python-while-true-loop-not-reaching-except-valueerror
@@ -23,8 +28,7 @@ def get_cardnumber():
                 # Leaves While loop if successful
                 break
             else:
-                print(f'INVALID')
-                exit()
+                invalid
         except ValueError:
             print(f'Please enter a card number between {MINCARD}-{MAXCARD} numbers long')
             continue
@@ -44,7 +48,9 @@ cardnum = get_cardnumber()
 # else:
     # double = sum((cardnum[::2])*2)
     # single = sum(cardnum[1::2])
-# Luhn = double + single
+# luhn = double + single
+    # if lunh % 10 is not 0
+        # invalid
 
 
 # Getting lengthy
@@ -79,6 +85,6 @@ for type, pattern in cards:
 if card is not None:
     print(f'{card}')
 else:
-    print('INVALID')
+    invalid
 
 
