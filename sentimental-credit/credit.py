@@ -39,18 +39,17 @@ cardnum = get_cardnumber()
 
 
 # Put in Luhn's Algorithm
+# Starting from 2nd to last number, doubling and adding sum to remaining number is modulo of 0 valid card
 # ** Credit **
 # https://stackoverflow.com/a/29208349/20140866
 # if cardnum len == even:
     #1st, 3rd... added together, then 2nd, 4th...
-    # double = sum((cardnum[1::2])*2)
-    # single = sum(cardnum[::2])
+    # lunh = sum((cardnum[1::2]*2),(cardnum[::2]))
 # else:
-    # double = sum((cardnum[::2])*2)
-    # single = sum(cardnum[1::2])
-# luhn = double + single
-    # if lunh % 10 is not 0
-        # invalid
+    # lunh = sum((cardnum[::2]*2), (cardnum[1::2]))
+# exit if lunh fails
+# if lunh % 10 is not 0
+    # invalid
 
 
 # Getting lengthy
