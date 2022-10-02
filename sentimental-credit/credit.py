@@ -44,7 +44,7 @@ cardnum = get_cardnumber()
 # else:
     # double = sum((cardnum[::2])*2)
     # single = sum(cardnum[1::2])
-# Luhn = 
+# Luhn = double + single
 
 
 # Getting lengthy
