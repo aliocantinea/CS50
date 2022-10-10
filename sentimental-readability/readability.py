@@ -79,9 +79,9 @@ def find_letter (text):
 
 
 def coleman_liau(letters, words, sentances):
-# Coleman-Liau index with l = letters, w = words, s = sentances
+    # Coleman-Liau index
     grade = (0.0588 * (letters / words * 100)) - (0.296 * (sentances / words * 100)) - 15.8
-    return(grade)
+    return (grade)
 
 
 if __name__ == '__main__':
