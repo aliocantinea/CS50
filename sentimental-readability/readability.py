@@ -23,6 +23,9 @@ def get_text():
     return (text)
 
 
+# Maybe do dict with find condition instead
+
+
 # Sentence find
     # findall sentence endings
 def find_sentence (text):
