@@ -4,11 +4,11 @@ import re
 
 def main():
     text = get_text()
-    print('thanks')
     sentences = find_sentence(text)
     words = find_word(text)
     letters = find_letter(text)
     grade = coleman_liau(letters, words, sentences)
+    print(f'{grade}')
 
 
 # Get string from user
@@ -30,9 +30,12 @@ def get_text():
     # findall sentence endings
 def find_sentence (text):
     sentences = 0
-    match = re.findall(r'.', text):
+    # finds all raw . to indicate sentence end
+    match = re.findall(r'.', text)
     if match:
+        print(f'Sentences:', end=' ')
         for match in match:
+            print(f'{match}', end= )
             sentences += 1
     print(f'{sentences}')
     return(sentences)
@@ -42,10 +45,12 @@ def find_sentence (text):
     # finaall spaces add sentence endings
 def find_word (text):
     words = 0
-    # \b boundry between words
-    match = re.findall(r'\b', text):
+    # \b to find boundry between words
+    match = re.findall(r'\b', text)
     if match:
+        print(f'Letters:', end==' ')
         for match in match:
+            print(f'{match}')
             words += 1
     print(f'{words}')
     return(words)
@@ -55,9 +60,12 @@ def find_word (text):
     # finadall alpha letters, doesn't include non-alpha such as '
 def find_letter (text):
     letters = 0
-    match = re.findall(r'\w', text):
+    # \w for any alphanumeric character
+    match = re.findall(r'\w', text)
     if match:
+        print(f'Letters:', end==' ')
         for match in match:
+            print(f'{match}', end==' ')
             letters += 1
     print(f'{letters}')
     return(letters)
