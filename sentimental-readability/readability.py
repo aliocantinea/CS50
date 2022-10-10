@@ -7,7 +7,7 @@ def main():
     sentences = find_sentence(text)
     words = find_word(text)
     letters = find_letter(text)
-    # performs Coleman Liau index and rounds to nearest grade
+    # Performs Coleman Liau index and rounds to nearest grade
     grade = round(coleman_liau(letters, words, sentences))
     if grade < 1:
         print(f'Before Grade 1')
@@ -29,13 +29,10 @@ def get_text():
     return (text)
 
 
-# Maybe do dict with find condition instead
-
-
 # Findall sentence endings
-def find_sentence (text):
+def find_sentence(text):
     sentences = 0
-    # finds all raw . to indicate sentence end
+    # finds all raw .!?: to indicate sentence end
     match = re.findall(r'[.!?:]', text)
     if match:
         # print(f'Sentences:', end=' ')
@@ -44,11 +41,11 @@ def find_sentence (text):
             sentences += 1
         # print()
     print(f'{sentences} sentences')
-    return(sentences)
+    return (sentences)
 
 
 # Finaall spaces add sentence endings
-def find_word (text):
+def find_word(text):
     # words start at 1 for the first work with no leading whitespace
     words = 1
     # \s\w to indentify the beginning of a word(\w) with whitespace(\s) in front of it
@@ -60,11 +57,11 @@ def find_word (text):
             words += 1
         # print()
     print(f'{words} words')
-    return(words)
+    return (words)
 
 
 # Finadall alpha letters, doesn't include non-alpha such as '
-def find_letter (text):
+def find_letter(text):
     letters = 0
     # \w for any alphanumeric character
     match = re.findall(r'\w', text)
@@ -75,11 +72,11 @@ def find_letter (text):
             letters += 1
         # print()
     print(f'{letters} letters')
-    return(letters)
+    return (letters)
 
 
 def coleman_liau(letters, words, sentances):
-    # Coleman-Liau index
+    # Coleman-Liau index https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index
     grade = (0.0588 * (letters / words * 100)) - (0.296 * (sentances / words * 100)) - 15.8
     return (grade)
 
