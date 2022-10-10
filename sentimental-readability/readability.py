@@ -53,11 +53,11 @@ def find_word (text):
     # \b to find boundry between words
     match = re.findall(r'\w\b', text)
     if match:
-        # print(f'Words:', end=' ')
+        print(f'Words:', end=' ')
         for match in match:
-            # print(f'{match}', end=' ')
+            print(f'{match}', end=' ')
             words += 1
-        # print()
+        print()
     print(f'{words} words')
     return(words)
 
