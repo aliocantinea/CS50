@@ -50,6 +50,7 @@ def find_word (text):
     print(f'{words}')
     return(words)
 
+
 # Letters find
     # finadall alpha letters, doesn't include non-alpha such as '
 def find_letter (text):
