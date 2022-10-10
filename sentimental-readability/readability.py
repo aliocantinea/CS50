@@ -36,7 +36,7 @@ def get_text():
 def find_sentence (text):
     sentences = 0
     # finds all raw . to indicate sentence end
-    match = re.findall(r'[.!?]', text)
+    match = re.findall(r'[.!?:]', text)
     if match:
         # print(f'Sentences:', end=' ')
         for match in match:
