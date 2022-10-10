@@ -49,8 +49,9 @@ def find_sentence (text):
 
 # Finaall spaces add sentence endings
 def find_word (text):
-    words = 0
-    # \b to find boundry between words
+    # words start at 1 for the first work with no leading whitespace
+    words = 1
+    # \s\w to indentify the beginning of a word(\w) with whitespace(\s) in front of it
     match = re.findall(r'\s\w', text)
     if match:
         print(f'Words:', end=' ')
