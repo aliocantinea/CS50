@@ -29,9 +29,9 @@ def get_text():
 # Sentence find
     # findall sentence endings
 def find_sentence (text):
+    sentences = 0
     match = re.findall('[.]', text):
     if match:
-        sentences = 0
         for match in match:
             sentences += 1
     print(f'{sentences}')
@@ -41,10 +41,10 @@ def find_sentence (text):
 # Words find
     # finaall spaces add sentence endings
 def find_word (text):
+    words = 0
     # \b boundry between words
     match = re.findall(r'\b', text):
     if match:
-        words = 1
         for match in match:
             words += 1
     print(f'{words}')
@@ -53,6 +53,13 @@ def find_word (text):
 # Letters find
     # finadall alpha letters, doesn't include non-alpha such as '
 def find_letter (text):
+    letters = 0
+    match = re.findall(r'\b', text):
+    if match:
+        for match in match:
+            letters += 1
+    print(f'{letters}')
+    return(letters)
 
 
 def coleman_liau(letters, words, sentances):
