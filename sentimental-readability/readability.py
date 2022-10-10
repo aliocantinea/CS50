@@ -29,9 +29,9 @@ def get_text():
 # Sentence find
     # findall sentence endings
 def find_sentence (text):
-    match = re.findall(r'', text):
+    match = re.findall(r'.', text):
     if match:
-        sentences = 
+        sentences =
 
 # Words find
     # finaall spaces add sentence endings
