@@ -47,7 +47,7 @@ def find_sentence (text):
 def find_word (text):
     words = 0
     # \b to find boundry between words
-    match = re.findall(r'.\b', text)
+    match = re.findall(r'\w\b', text)
     if match:
         print(f'Words:', end=' ')
         for match in match:
