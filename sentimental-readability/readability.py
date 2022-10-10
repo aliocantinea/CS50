@@ -38,12 +38,12 @@ def find_sentence (text):
     # finds all raw . to indicate sentence end
     match = re.findall(r'[.!?;]', text)
     if match:
-        print(f'Sentences:', end=' ')
+        # print(f'Sentences:', end=' ')
         for match in match:
-            print(f'{match}', end=' ')
+            # print(f'{match}', end=' ')
             sentences += 1
-        print()
-    print(f'{sentences}')
+        # print()
+    print(f'{sentences} sentences')
     return(sentences)
 
 
@@ -53,12 +53,12 @@ def find_word (text):
     # \b to find boundry between words
     match = re.findall(r'\w\b', text)
     if match:
-        print(f'Words:', end=' ')
+        # print(f'Words:', end=' ')
         for match in match:
-            print(f'{match}', end=' ')
+            # print(f'{match}', end=' ')
             words += 1
-        print()
-    print(f'{words}')
+        # print()
+    print(f'{words} words')
     return(words)
 
 
@@ -68,12 +68,12 @@ def find_letter (text):
     # \w for any alphanumeric character
     match = re.findall(r'\w', text)
     if match:
-        print(f'Letters:', end=' ')
+        # print(f'Letters:', end=' ')
         for match in match:
-            print(f'{match}', end=' ')
+            # print(f'{match}', end=' ')
             letters += 1
-        print()
-    print(f'{letters}')
+        # print()
+    print(f'{letters} letters')
     return(letters)
 
 
