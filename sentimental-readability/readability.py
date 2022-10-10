@@ -29,7 +29,6 @@ def get_text():
     return (text)
 
 
-# Findall sentence endings
 def find_sentence(text):
     sentences = 0
     # finds all raw .!?: to indicate sentence end
@@ -44,7 +43,6 @@ def find_sentence(text):
     return (sentences)
 
 
-# Finaall spaces add sentence endings
 def find_word(text):
     # words start at 1 for the first work with no leading whitespace
     words = 1
@@ -60,7 +58,6 @@ def find_word(text):
     return (words)
 
 
-# Finadall alpha letters, doesn't include non-alpha such as '
 def find_letter(text):
     letters = 0
     # \w for any alphanumeric character
@@ -75,8 +72,8 @@ def find_letter(text):
     return (letters)
 
 
+# Coleman-Liau index https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index
 def coleman_liau(letters, words, sentances):
-    # Coleman-Liau index https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index
     grade = (0.0588 * (letters / words * 100)) - (0.296 * (sentances / words * 100)) - 15.8
     return (grade)
 
