@@ -34,7 +34,7 @@ def find_sentence (text):
         sentences = 0
         for match in match:
             sentences += 1
-    print(f'sentences')
+    print(f'{sentences}')
     return(sentences)
 
 
@@ -42,6 +42,13 @@ def find_sentence (text):
     # finaall spaces add sentence endings
 def find_word (text):
     # \b boundry between words
+    match = re.findall(r'\b', text):
+    if match:
+        words = 1
+        for match in match:
+            words += 1
+    print(f'{words}')
+    return(words)
 
 # Letters find
     # finadall alpha letters, doesn't include non-alpha such as '
