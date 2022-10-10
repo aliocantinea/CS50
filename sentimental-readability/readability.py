@@ -55,7 +55,7 @@ def find_word (text):
     # finadall alpha letters, doesn't include non-alpha such as '
 def find_letter (text):
     letters = 0
-    match = re.findall('.', text):
+    match = re.findall(r'\w', text):
     if match:
         for match in match:
             letters += 1
