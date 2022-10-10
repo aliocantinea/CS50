@@ -5,6 +5,10 @@ import re
 def main():
     text = get_text()
     print('thanks')
+    sentences = find_sentence(text)
+    words = find_word(text)
+    letters = find_letter(text)
+    grade = coleman_liau(letters, words, sentences)
 
 
 # Get string from user
@@ -21,14 +25,17 @@ def get_text():
 
 # Sentence find
     # findall sentence endings
+def find_sentence (text):
 
 
 # Words find
     # finaall spaces add sentence endings
+def find_sentence (text):
 
 
 # Letters find
     # finadall alpha letters, doesn't include non-alpha such as '
+def find_sentence (text):
 
 
 def coleman_liau(letters, words, sentances):
