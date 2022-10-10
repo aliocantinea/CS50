@@ -31,7 +31,7 @@ def get_text():
 def find_sentence (text):
     sentences = 0
     # finds all raw . to indicate sentence end
-    match = re.findall(r'.', text)
+    match = re.findall(r'[.!?]', text)
     if match:
         print(f'Sentences:', end=' ')
         for match in match:
@@ -47,7 +47,7 @@ def find_sentence (text):
 def find_word (text):
     words = 0
     # \b to find boundry between words
-    match = re.findall(r'\b', text)
+    match = re.findall(r'.\b', text)
     if match:
         print(f'Words:', end=' ')
         for match in match:
