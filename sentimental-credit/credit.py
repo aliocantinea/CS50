@@ -1,61 +1,55 @@
 import re
-# Referenced docs.python.org as suggested
-# https://docs.python.org/3/library/re.html
-
-
-# TODO
+# Referenced Regular Expression docs.python.org as suggested https://docs.python.org/3/library/re.html
 # Global constants outside of CS50 create a constant.py and place in var
 # Include import constant and reference them as constant.MAXCARD or constant.MINCARD
 MAXCARD = 16
 MINCARD = 13
 
 
+# Fail function to exit if card is invalid
 def invalid():
     print(f'INVALID')
     exit()
 
 
 # Get user input for card number
-# ** Credit ** While Try loop from v.coder
-# https://stackoverflow.com/questions/46454254/python-while-true-loop-not-reaching-except-valueerror
+# ** Credit ** https://stackoverflow.com/questions/46454254/python-while-true-loop-not-reaching-except-valueerror
 def get_cardnumber():
     while True:
         try:
             cardnum = int(input('Card number: '))
-            # Confirms valid min/max lengths reprompts if outside of parameters including ValueError
-            # Using len(str( )) instead fo math.log because of floating point imprecision
-            if(len(str(cardnum)) >= MINCARD and len(str(cardnum)) <= MAXCARD):
+            # Confirms valid min/max lengths reprompts if ValueError
+            # Using len(str( )) instead of math.log because of floating point imprecision
+            if (len(str(cardnum)) >= MINCARD and len(str(cardnum)) <= MAXCARD):
                 # Leaves While loop if successful
                 break
             else:
-                invalid
+                invalid()
         except ValueError:
             print(f'Please enter a card number between {MINCARD}-{MAXCARD} numbers long')
             continue
-    return(cardnum)
+    return (cardnum)
 
 
 cardnum = get_cardnumber()
-
-
-# Put in Luhn's Algorithm
-# Starting from 2nd to last number, doubling and adding sum to remaining number is modulo of 0 valid card
-# ** Credit **
-# https://stackoverflow.com/a/29208349/20140866
-# if cardnum len == even:
-    #1st, 3rd... added together, then 2nd, 4th...
-    # lunh = sum((cardnum[1::2]*2),(cardnum[::2]))
-# else:
-    # lunh = sum((cardnum[::2]*2), (cardnum[1::2]))
-# exit if lunh fails
-# if lunh % 10 is not 0
-    # invalid
-
-
-# Getting lengthy
-# Do I set a dict with visa, mcrd, amex and use that to prefix .match(card)
-# Or do I loop while True and break if .match(card) is not None??
-# Maybe a tuple with VISA, MASTERCARD, AMEX with values for patterns
+# Luhn's Algorithm
+# Doubling every other number from 2nd to last, adding together (double digits split to individual ), if mod10 is 0 it's valid card
+# ** Credit ** https://stackoverflow.com/a/29208349/20140866
+# Convert int to list
+listcard = [int(i) for i in str(cardnum)]
+# Create 2 lists last is every other number starting from last, second every other starting second to last
+last = listcard[-1::-2]
+second = listcard[-2::-2]
+# Double second list items if over 9, convert to single int + 1
+for i in range(len(second)):
+    second[i] = second[i] * 2
+    if second[i] > 9:
+        second[i] -= 9
+# Adds each half of the list after modifying
+lunh = sum(second) + sum(last)
+# exit if lunh fails, no else condition as it will just continue
+if lunh % 10 != 0:
+    invalid()
 
 
 # Dict of card type and the pattern used for re.match to compare
@@ -69,21 +63,18 @@ cards = [
 ]
 
 
+# Test card against each type of card in dict of cards
 for type, pattern in cards:
     cardmatch = re.match(f'{pattern}', str(cardnum))
-    # print(f'testing {type}')
+    # If match is found, dict key is added as type
     if cardmatch is not None:
-        # print('valid')
         card = type
         break
+    # If match is not found, set type to none
     else:
         card = None
-        # print('invalid')
-
-
-if card is not None:
-    print(f'{card}')
+# Prints results, if matched Type is printed, if not exit function to close program
+if card is None:
+    invalid()
 else:
-    invalid
-
-
+    print(f'{card}')
