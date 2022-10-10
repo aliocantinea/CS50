@@ -31,7 +31,7 @@ def get_text():
 def find_sentence (text):
     match = re.findall(r'[.]', text):
     if match:
-        sentences =
+        for match in match:
 
 # Words find
     # finaall spaces add sentence endings
