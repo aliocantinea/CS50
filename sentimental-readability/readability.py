@@ -7,8 +7,14 @@ def main():
     sentences = find_sentence(text)
     words = find_word(text)
     letters = find_letter(text)
-    grade = coleman_liau(letters, words, sentences)
-    print(f'{grade}')
+    # performs Coleman Liau index and rounds to nearest grade
+    grade = round(coleman_liau(letters, words, sentences))
+    if grade < 1:
+        print(f'Before Grade 1')
+    elif grade >= 16:
+        print(f'Grade 16+')
+    else:
+        print(f'Grade {grade}')
 
 
 # Get string from user
