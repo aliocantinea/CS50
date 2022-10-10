@@ -29,7 +29,8 @@ def get_text():
 # Sentence find
     # findall sentence endings
 def find_sentence (text):
-    
+    re.findall(, text)
+
 
 # Words find
     # finaall spaces add sentence endings
