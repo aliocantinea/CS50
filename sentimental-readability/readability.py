@@ -29,7 +29,7 @@ def get_text():
 # Sentence find
     # findall sentence endings
 def find_sentence (text):
-    match = re.findall(r'[.]', text):
+    match = re.findall('[.]', text):
     if match:
         sentences = 0
         for match in match:
