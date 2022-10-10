@@ -19,11 +19,14 @@ def get_text():
     return (text)
 
 
-
 # Sentence find
     # findall sentence endings
+
+
 # Words find
     # finaall spaces add sentence endings
+
+
 # Letters find
     # finadall alpha letters, doesn't include non-alpha such as '
 
