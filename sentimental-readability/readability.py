@@ -29,17 +29,18 @@ def get_text():
 # Sentence find
     # findall sentence endings
 def find_sentence (text):
-    re.findall(, text)
-
+    match = re.findall(r'', text):
+    if match:
+        sentences = 
 
 # Words find
     # finaall spaces add sentence endings
-def find_sentence (text):
-
+def find_word (text):
+    # \b boundry between words
 
 # Letters find
     # finadall alpha letters, doesn't include non-alpha such as '
-def find_sentence (text):
+def find_letter (text):
 
 
 def coleman_liau(letters, words, sentances):
