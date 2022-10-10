@@ -24,5 +24,6 @@ print('thanks')
     # finadall alpha letters, doesn't include non-alpha such as '
 
 
+def coleman_liau(letters, words, sentances)
 # Coleman-Liau index with l = letters, w = words, s = sentances
-    ## (0.0588 * (l / w * 100)) - (0.296 * (s / w * 100)) - 15.8
+return() = (0.0588 * (letters / words * 100)) - (0.296 * (sentances / words * 100)) - 15.8
