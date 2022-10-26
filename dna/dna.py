@@ -5,14 +5,35 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
+    # sys.argv is equal to 3 because it includes program and two commnad line arguments (data and sequence)
+    if len(sys.argv) != 3:
+        print('Please follow this usage: python dna.py data.csv sequence.txt')
+        sys.exit(1)
 
     # TODO: Read database file into a variable
+    with open('sys.argv[1]', 'r') as csvfile:
+        # Reads first command line argument into a dict with header
+        str_values = csv.DictReader(csvfile)
+        # Takes header and puts it into a list to compare
+        # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
+        list_of_strs = list(str_values)[0]
+        # Remove first value from header list, since it is the key for 'name'
+        del list_of_strs[0]
 
     # TODO: Read DNA sequence file into a variable
+    sequence = open('sys.argv[2]', 'r')
 
     # TODO: Find longest match of each STR in DNA sequence
+    result = []
+    # for each STR in list call longest_match function
+    for subsequence in list_of_strs:
+        match = longest_match(sequence, subsequence)
+        # add longest_match result to result list
+        result.append(match)
 
     # TODO: Check database for matching profiles
+    # regex?? str_values with result list to find match,
+    # then print key to dict line that matches??
 
     return
 
