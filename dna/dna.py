@@ -21,9 +21,9 @@ def main():
         # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
 
         strs = csvreader.fieldnames
-    #     # print(f'list_of_strs')
-    #     # Remove first value from header list, since it is the header for key 'name'
-    # # del list_of_strs[0]
+        # Remove first value from header list, since it is the header for key 'name'
+        del strs[0]
+        print(f'{strs}')
 
     # # TODO: Read DNA sequence file into a variable
     # sequence = open(sys.argv[2], 'r')
