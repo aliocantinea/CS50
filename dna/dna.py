@@ -32,14 +32,14 @@ def main():
             tandrpts[tandrpt] = longest_match(dna, tandrpt)
         # print(strs)
         # TODO: Check database for matching profiles
+        match = 0
         for row in dict_strs:
             for item in tandrpts:
                 if str(tandrpts[item]) == str(row[item]):
                     print(f'{tandrpts[item]}, {row[item]}')
-                else:
-                    print(f'not found')
-    # regex?? str_values with result list to find match,
-    # then print key to dict line that matches??
+                    match += 1
+                # else:
+                    # print(f'not found')
     return
 
 
