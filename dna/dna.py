@@ -36,9 +36,11 @@ def main():
         for str in strs:
             if strs[str] == dict_str[str]:
                 print(row[name])
+            else:
+                print(f'not found')
     # regex?? str_values with result list to find match,
     # then print key to dict line that matches??
-    close(csvfile)
+    csvfile.close()
     return
 
 
