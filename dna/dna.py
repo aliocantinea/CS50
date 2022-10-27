@@ -43,6 +43,7 @@ def main():
                     print(f'{tandrpts[item]}, {row[item]}')
                     match += 1
                 # Totalmatch is -1 because firts key is 'name' header taken from csv file
+                # If every value matches total number of STRs print name
                 if (totalmatch - 1) == match:
                     print(row['name'])
 
