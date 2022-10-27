@@ -17,30 +17,33 @@ def main():
         dict_strs = csv.DictReader(csvfile)
         # for row in dict_str:
             # print(row)
+        # first key in dict is name, remove 1 vallue for total matches
         tandrpts = dict.fromkeys(dict_strs.fieldnames)
-
 
         # TODO: Read DNA sequence file into a variable
         with open(sys.argv[2]) as txtfile:
             dna = txtfile.read()
 
         # TODO: Find longest match of each STR in DNA sequence
-        # for each STR in list call longest_match function
+        # For each STR in list call longest_match function
         totalmatch = 0
         for tandrpt in tandrpts:
+            # Keep track of total STR values to compare when finding a match
             totalmatch += 1
             tandrpts[tandrpt] = longest_match(dna, tandrpt)
-        # print(strs)
+            # print(strs)
+
         # TODO: Check database for matching profiles
-        match = 0
+        # Compare values for each row in csv file to longest found STRs in tandrpt dict
         for row in dict_strs:
+            # Keep track of how many matches there are found
+            match = 0
             for item in tandrpts:
                 if str(tandrpts[item]) == str(row[item]):
                     print(f'{tandrpts[item]}, {row[item]}')
                     match += 1
-                else:
-                    print(f'not found')
-                #if totalmatch == match:
+                # Totalmatch is -1 because firts key is 'name' header taken from csv file
+                if (totalmatch - 1) == match:
                     print(row['name'])
 
     return
