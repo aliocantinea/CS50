@@ -32,6 +32,11 @@ def main():
         strs[str] = longest_match(dna, str)
     print(strs)
     # TODO: Check database for matching profiles
+    for row in dict_str:
+        for str in strs:
+            if strs[str] == dict_str[str]
+                print(row[name])
+                break
     # regex?? str_values with result list to find match,
     # then print key to dict line that matches??
 
