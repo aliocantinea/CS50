@@ -14,13 +14,13 @@ def main():
 
     with open(sys.argv[1]) as csvfile:
         # Reads first command line argument into a dict with header
-        csvreader = csv.DictReader(csvfile)
-        for row in csvreader:
+        dna = csv.DictReader(csvfile)
+        for row in dna:
             print(row)
         # Takes header and puts it into a list to compare
         # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
 
-        headers = csvreader.fieldnames
+        headers = dna.fieldnames
         # Remove first value from header list, since it is the header for key 'name'
         del headers[0]
         strs = dict.fromkeys(headers)
