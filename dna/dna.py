@@ -20,7 +20,7 @@ def main():
         # Takes header and puts it into a list to compare
         # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
 
-    #     list_of_strs = csvreader[0]
+        strs = csvreader.fieldnames
     #     # print(f'list_of_strs')
     #     # Remove first value from header list, since it is the header for key 'name'
     # # del list_of_strs[0]
