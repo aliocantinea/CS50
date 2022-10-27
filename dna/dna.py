@@ -12,37 +12,36 @@ def main():
 
     # TODO: Read database file into a variable
 
-    csvfile = open(sys.argv[1], 'r')
+    with open(sys.argv[1], 'r') as csvfile:
         # Reads first command line argument into a dict with header
-    dict_str = csv.DictReader(csvfile)
-    # for row in dict_str:
-        # print(row)
-    headers = dict_str.fieldnames
+        dict_str = csv.DictReader(csvfile)
+        # for row in dict_str:
+            # print(row)
+        headers = dict_str.fieldnames
         # Remove first value from header list, since it is the header for key 'name'
-    del headers[0]
-    strs = dict.fromkeys(headers)
+        del headers[0]
+        strs = dict.fromkeys(headers)
 
-    # TODO: Read DNA sequence file into a variable
-    with open(sys.argv[2]) as txtfile:
-        dna = txtfile.read()
+        # TODO: Read DNA sequence file into a variable
+        with open(sys.argv[2]) as txtfile:
+            dna = txtfile.read()
 
-    # TODO: Find longest match of each STR in DNA sequence
-    # for each STR in list call longest_match function
-    for str in strs:
-        strs[str] = longest_match(dna, str)
-    # print(strs)
-    # TODO: Check database for matching profiles
-    for row in dict_str:
-        print(dict)
+        # TODO: Find longest match of each STR in DNA sequence
+        # for each STR in list call longest_match function
         for str in strs:
-            print(strs)
-            if strs[str] == dict_str[str]:
-                print(row[name])
-            else:
-                print(f'not found')
+            strs[str] = longest_match(dna, str)
+        # print(strs)
+        # TODO: Check database for matching profiles
+        for row in dict_str:
+            print(dict)
+            for str in strs:
+                print(strs)
+                if strs[str] == dict_str[str]:
+                    print(row[name])
+                else:
+                    print(f'not found')
     # regex?? str_values with result list to find match,
     # then print key to dict line that matches??
-    csvfile.close()
     return
 
 
