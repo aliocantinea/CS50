@@ -34,12 +34,17 @@ def main():
         # TODO: Check database for matching profiles
         match = 0
         for row in dict_strs:
+            totalmatch = 0
             for item in tandrpts:
+                totalmatch += 1
                 if str(tandrpts[item]) == str(row[item]):
                     print(f'{tandrpts[item]}, {row[item]}')
                     match += 1
-                # else:
-                    # print(f'not found')
+                else:
+                    print(f'not found')
+            if totalmatch == match:
+                print(row['name'])
+
     return
 
 
