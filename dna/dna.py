@@ -17,7 +17,6 @@ def main():
         csvreader = csv.DictReader(csvfile)
         for row in csvreader
             
-    print(f'str_values')
         # Takes header and puts it into a list to compare
         # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
     list_of_strs = str_values[0]
