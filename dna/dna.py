@@ -34,12 +34,8 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     # for each STR in list call longest_match function
     for str in strs:
-        print(str)
         strs[str] = longest_match(dna, str)
-    #     match = longest_match(sequence, subsequence)
-    #     # add longest_match result to result list
-    #     result.append(match)
-
+    print(strs)
     # TODO: Check database for matching profiles
     # regex?? str_values with result list to find match,
     # then print key to dict line that matches??
