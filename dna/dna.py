@@ -33,10 +33,8 @@ def main():
         # print(strs)
         # TODO: Check database for matching profiles
         for row in dict_str:
-            print(dict)
             for str in strs:
-                print(strs)
-                if strs[str] == dict_str[str]:
+                if strs[str] == row[str]:
                     print(row[name])
                 else:
                     print(f'not found')
