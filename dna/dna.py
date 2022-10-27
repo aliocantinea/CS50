@@ -15,8 +15,6 @@ def main():
     with open(sys.argv[1], 'r') as csvfile:
         # Reads first command line argument into a dict with header
         dict_strs = csv.DictReader(csvfile)
-        # for row in dict_str:
-            # print(row)
         # first key in dict is name, remove 1 vallue for total matches
         tandrpts = dict.fromkeys(dict_strs.fieldnames)
 
@@ -31,7 +29,6 @@ def main():
             # Keep track of total STR values to compare when finding a match
             totalmatch += 1
             tandrpts[tandrpt] = longest_match(dna, tandrpt)
-            # print(strs)
 
         # TODO: Check database for matching profiles
         # Compare values for each row in csv file to longest found STRs in tandrpt dict
@@ -40,7 +37,7 @@ def main():
             match = 0
             for item in tandrpts:
                 if str(tandrpts[item]) == str(row[item]):
-                    print(f'{tandrpts[item]}, {row[item]}')
+                    # TESTING print(f'{tandrpts[item]}, {row[item]}')
                     match += 1
                 # Totalmatch is -1 because firts key is 'name' header taken from csv file
                 # If every value matches total number of STRs print name
