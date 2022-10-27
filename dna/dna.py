@@ -42,10 +42,11 @@ def main():
                 # Totalmatch is -1 because firts key is 'name' header taken from csv file
                 # If every value matches total number of STRs print name
                 if (totalmatch - 1) == match:
-                    print(row['name'])
-                    sys.exit(3)
-
-
+                    foundmatch = row['name']
+        if foundmatch:
+            print(foundmatch)
+        else:
+            print('No match')
     return
 
 
