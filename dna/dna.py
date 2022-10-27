@@ -34,7 +34,7 @@ def main():
         # TODO: Check database for matching profiles
         for row in dict_str:
             for str in strs:
-                if int(strs[str]) == int(row[str]):
+                if str(strs[str]) == str(row[str]):
                     print(f'{strs[str]}, {row[str]}')
                 else:
                     print(f'not found')
