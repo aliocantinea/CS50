@@ -11,7 +11,6 @@ def main():
         sys.exit(1)
 
     # TODO: Read database file into a variable
-
     with open(sys.argv[1], 'r') as csvfile:
         # Reads first command line argument into a dict with header
         dict_strs = csv.DictReader(csvfile)
@@ -23,7 +22,6 @@ def main():
             dna = txtfile.read()
 
         # TODO: Find longest match of each STR in DNA sequence
-        # For each STR in list call longest_match function
         totalmatch = 0
         for tandrpt in tandrpts:
             # Keep track of total STR values to compare when finding a match
