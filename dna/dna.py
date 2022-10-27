@@ -15,17 +15,17 @@ def main():
     with open(sys.argv[1]) as csvfile:
         # Reads first command line argument into a dict with header
         csvreader = csv.DictReader(csvfile)
-        for row in csvreader
-            str_values = 
+        for row in csvreader:
+            print({row})
         # Takes header and puts it into a list to compare
         # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
-    list_of_strs = str_values[0]
-    print(f'list_of_strs')
+        list_of_strs = str_values[0]
+        # print(f'list_of_strs')
         # Remove first value from header list, since it is the header for key 'name'
-    del list_of_strs[0]
+    # del list_of_strs[0]
 
     # TODO: Read DNA sequence file into a variable
-    sequence = open('sys.argv[2]', 'r')
+    sequence = open(sys.argv[2], 'r')
 
     # TODO: Find longest match of each STR in DNA sequence
     result = []
