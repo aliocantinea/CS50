@@ -32,6 +32,7 @@ def main():
 
         # TODO: Check database for matching profiles
         # Compare values for each row in csv file to longest found STRs in tandrpt dict
+        foundmatch = None
         for row in dict_strs:
             # Keep track of how many matches there are found
             match = 0
@@ -43,7 +44,7 @@ def main():
                 # If every value matches total number of STRs print name
                 if (totalmatch - 1) == match:
                     foundmatch = row['name']
-        if foundmatch != NULL:
+        if foundmatch:
             print(foundmatch)
         else:
             print('No match')
