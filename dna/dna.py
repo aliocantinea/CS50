@@ -15,13 +15,13 @@ def main():
     with open(sys.argv[1]) as csvfile:
         # Reads first command line argument into a dict with header
         str_values = csv.DictReader(csvfile)
-        print(f'str_values')
+    print(f'str_values')
         # Takes header and puts it into a list to compare
         # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
-        list_of_strs = csv.DictReader(csvfile[0])
-        print(f'list_of_strs')
+    list_of_strs = str_values[0]
+    print(f'list_of_strs')
         # Remove first value from header list, since it is the header for key 'name'
-        del list_of_strs[0]
+    del list_of_strs[0]
 
     # TODO: Read DNA sequence file into a variable
     sequence = open('sys.argv[2]', 'r')
