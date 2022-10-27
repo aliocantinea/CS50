@@ -28,8 +28,8 @@ def main():
         print(f'{strs}')
 
     # TODO: Read DNA sequence file into a variable
-     with open(sys.argv[2]):
-        dna = 
+    with open(sys.argv[2]) as txtfile:
+        dna = txtfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
     result = []
