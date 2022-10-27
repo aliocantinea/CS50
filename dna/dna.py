@@ -35,7 +35,7 @@ def main():
         for row in dict_str:
             for str in strs:
                 # if strs[str] == row[str]:
-                print(f'{strs[str]}, {row[str]}')
+                print(f'{strs[str]}, {row[str + 1]}')
                 # else:
                     # print(f'not found')
     # regex?? str_values with result list to find match,
