@@ -25,8 +25,6 @@ def main():
         del headers[0]
         strs = dict.fromkeys(headers)
 
-        print(f'{strs}')
-
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as txtfile:
         dna = txtfile.read()
