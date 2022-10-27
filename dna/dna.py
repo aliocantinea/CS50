@@ -23,7 +23,7 @@ def main():
         headers = csvreader.fieldnames
         # Remove first value from header list, since it is the header for key 'name'
         del headers[0]
-        strs = dict.fromkey(headers)
+        strs = dict.fromkeys(headers)
 
         print(f'{strs}')
 
