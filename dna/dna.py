@@ -42,8 +42,8 @@ def main():
                     match += 1
                 else:
                     print(f'not found')
-            if totalmatch == match:
-                print(row['name'])
+                if totalmatch == match:
+                    print(row['name'])
 
     return
 
