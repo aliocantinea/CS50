@@ -43,7 +43,7 @@ def main():
                 # If every value matches total number of STRs print name
                 if (totalmatch - 1) == match:
                     foundmatch = row['name']
-        if foundmatch:
+        if foundmatch != NULL:
             print(foundmatch)
         else:
             print('No match')
