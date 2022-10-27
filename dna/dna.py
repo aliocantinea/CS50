@@ -25,13 +25,13 @@ def main():
         del strs[0]
         print(f'{strs}')
 
-    # # TODO: Read DNA sequence file into a variable
-    # sequence = open(sys.argv[2], 'r')
-
-    # # TODO: Find longest match of each STR in DNA sequence
-    # result = []
-    # # for each STR in list call longest_match function
-    # for subsequence in list_of_strs:
+    # TODO: Read DNA sequence file into a variable
+    with open(sys.argv[2]):
+        
+    # TODO: Find longest match of each STR in DNA sequence
+        result = []
+    # for each STR in list call longest_match function
+        for subsequence in strs:
     #     match = longest_match(sequence, subsequence)
     #     # add longest_match result to result list
     #     result.append(match)
