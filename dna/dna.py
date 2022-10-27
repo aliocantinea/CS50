@@ -12,7 +12,7 @@ def main():
 
     # TODO: Read database file into a variable
 
-    csvfile = open(sys.argv[1])
+    csvfile = open(sys.argv[1], 'r')
         # Reads first command line argument into a dict with header
     dict_str = csv.DictReader(csvfile)
     for row in dict_str:
