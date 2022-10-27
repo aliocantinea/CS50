@@ -16,24 +16,25 @@ def main():
         # Reads first command line argument into a dict with header
         csvreader = csv.DictReader(csvfile)
         for row in csvreader:
-            print({row})
+            print(row)
         # Takes header and puts it into a list to compare
         # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
-        list_of_strs = str_values[0]
-        # print(f'list_of_strs')
-        # Remove first value from header list, since it is the header for key 'name'
-    # del list_of_strs[0]
 
-    # TODO: Read DNA sequence file into a variable
-    sequence = open(sys.argv[2], 'r')
+    #     list_of_strs = csvreader[0]
+    #     # print(f'list_of_strs')
+    #     # Remove first value from header list, since it is the header for key 'name'
+    # # del list_of_strs[0]
 
-    # TODO: Find longest match of each STR in DNA sequence
-    result = []
-    # for each STR in list call longest_match function
-    for subsequence in list_of_strs:
-        match = longest_match(sequence, subsequence)
-        # add longest_match result to result list
-        result.append(match)
+    # # TODO: Read DNA sequence file into a variable
+    # sequence = open(sys.argv[2], 'r')
+
+    # # TODO: Find longest match of each STR in DNA sequence
+    # result = []
+    # # for each STR in list call longest_match function
+    # for subsequence in list_of_strs:
+    #     match = longest_match(sequence, subsequence)
+    #     # add longest_match result to result list
+    #     result.append(match)
 
     # TODO: Check database for matching profiles
     # regex?? str_values with result list to find match,
