@@ -34,10 +34,10 @@ def main():
         # TODO: Check database for matching profiles
         for row in dict_str:
             for str in strs:
-                if strs[str] == row[str]:
-                    print(row[name])
-                else:
-                    print(f'not found')
+                # if strs[str] == row[str]:
+                print(f'{strs[str]}, {row[str]}')
+                # else:
+                    # print(f'not found')
     # regex?? str_values with result list to find match,
     # then print key to dict line that matches??
     return
