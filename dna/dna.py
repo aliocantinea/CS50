@@ -16,7 +16,7 @@ def main():
         # Reads first command line argument into a dict with header
         csvreader = csv.DictReader(csvfile)
         for row in csvreader
-            
+            str_values = 
         # Takes header and puts it into a list to compare
         # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
     list_of_strs = str_values[0]
