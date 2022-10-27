@@ -14,13 +14,13 @@ def main():
 
     with open(sys.argv[1]) as csvfile:
         # Reads first command line argument into a dict with header
-        dna = csv.DictReader(csvfile)
-        for row in dna:
+        dict_str = csv.DictReader(csvfile)
+        for row in dict_str:
             print(row)
         # Takes header and puts it into a list to compare
         # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
 
-        headers = dna.fieldnames
+        headers = dict_str.fieldnames
         # Remove first value from header list, since it is the header for key 'name'
         del headers[0]
         strs = dict.fromkeys(headers)
@@ -28,14 +28,15 @@ def main():
         print(f'{strs}')
 
     # TODO: Read DNA sequence file into a variable
-    with open(sys.argv[2]):
+     with open(sys.argv[2]):
+        dna = 
 
     # TODO: Find longest match of each STR in DNA sequence
-        result = []
+    result = []
     # for each STR in list call longest_match function
-        for str in strs:
-            print(str)
-            # result[str] = longest_match(dna, str)
+    for str in strs:
+        print(str)
+        result[str] = longest_match(dna, str)
     #     match = longest_match(sequence, subsequence)
     #     # add longest_match result to result list
     #     result.append(match)
