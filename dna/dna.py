@@ -20,9 +20,11 @@ def main():
         # Takes header and puts it into a list to compare
         # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
 
-        strs = dict.fromkeys(csvreader.fieldnames)
+        headers = csvreader.fieldnames
         # Remove first value from header list, since it is the header for key 'name'
-        del strs[0]
+        del headers[0]
+        strs = dict.fromkey(headers)
+
         print(f'{strs}')
 
     # TODO: Read DNA sequence file into a variable
