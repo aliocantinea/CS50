@@ -34,7 +34,8 @@ def main():
         result = []
     # for each STR in list call longest_match function
         for str in strs:
-            result[str] = longest_match(dna, str)
+            print(str)
+            # result[str] = longest_match(dna, str)
     #     match = longest_match(sequence, subsequence)
     #     # add longest_match result to result list
     #     result.append(match)
