@@ -17,9 +17,6 @@ def main():
         dict_str = csv.DictReader(csvfile)
         for row in dict_str:
             print(row)
-        # Takes header and puts it into a list to compare
-        # https://www.geeksforgeeks.org/get-column-names-from-csv-using-python/
-
         headers = dict_str.fieldnames
         # Remove first value from header list, since it is the header for key 'name'
         del headers[0]
