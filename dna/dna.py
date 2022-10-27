@@ -32,11 +32,10 @@ def main():
         dna = txtfile.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    result = []
     # for each STR in list call longest_match function
     for str in strs:
         print(str)
-        result[str] = longest_match(dna, str)
+        strs[str] = longest_match(dna, str)
     #     match = longest_match(sequence, subsequence)
     #     # add longest_match result to result list
     #     result.append(match)
