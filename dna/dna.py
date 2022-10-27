@@ -26,6 +26,7 @@ def main():
         for tandrpt in tandrpts:
             # Keep track of total STR values to compare when finding a match
             totalmatch += 1
+            # For each STR in list call longest_match function
             tandrpts[tandrpt] = longest_match(dna, tandrpt)
 
         # TODO: Check database for matching profiles
