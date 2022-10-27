@@ -14,13 +14,13 @@ def main():
 
     with open(sys.argv[1], 'r') as csvfile:
         # Reads first command line argument into a dict with header
-        dict_str = csv.DictReader(csvfile)
+        dict_strs = csv.DictReader(csvfile)
         # for row in dict_str:
             # print(row)
-        headers = dict_str.fieldnames
+        headers = dict_strs.fieldnames
         # Remove first value from header list, since it is the header for key 'name'
         # del headers[0]
-        strs = dict.fromkeys(headers)
+        tandrpts = dict.fromkeys(headers)
 
         # TODO: Read DNA sequence file into a variable
         with open(sys.argv[2]) as txtfile:
@@ -28,14 +28,14 @@ def main():
 
         # TODO: Find longest match of each STR in DNA sequence
         # for each STR in list call longest_match function
-        for str in strs:
-            strs[str] = longest_match(dna, str)
+        for tandrpt in tandrpts:
+            tandrpts[tandrpt] = longest_match(dna, tandrpt)
         # print(strs)
         # TODO: Check database for matching profiles
-        for row in dict_str:
-            for str in strs:
-                if str(strs[str]) == str(row[str]):
-                    print(f'{strs[str]}, {row[str]}')
+        for row in dict_strs:
+            for item in tandrpts:
+                if str(tandrpts[item]) == str(row[item]):
+                    print(f'{tandrpts[item]}, {row[item]}')
                 else:
                     print(f'not found')
     # regex?? str_values with result list to find match,
