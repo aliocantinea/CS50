@@ -12,15 +12,15 @@ def main():
 
     # TODO: Read database file into a variable
 
-    with open(sys.argv[1]) as csvfile:
+    csvfile = open(sys.argv[1])
         # Reads first command line argument into a dict with header
-        dict_str = csv.DictReader(csvfile)
-        for row in dict_str:
-            print(row)
-        headers = dict_str.fieldnames
+    dict_str = csv.DictReader(csvfile)
+    for row in dict_str:
+        print(row)
+    headers = dict_str.fieldnames
         # Remove first value from header list, since it is the header for key 'name'
-        del headers[0]
-        strs = dict.fromkeys(headers)
+    del headers[0]
+    strs = dict.fromkeys(headers)
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as txtfile:
@@ -38,7 +38,7 @@ def main():
                 print(row[name])
     # regex?? str_values with result list to find match,
     # then print key to dict line that matches??
-
+    close(csvfile)
     return
 
 
