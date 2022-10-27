@@ -19,7 +19,7 @@ def main():
             # print(row)
         headers = dict_str.fieldnames
         # Remove first value from header list, since it is the header for key 'name'
-        del headers[0]
+        # del headers[0]
         strs = dict.fromkeys(headers)
 
         # TODO: Read DNA sequence file into a variable
@@ -34,10 +34,10 @@ def main():
         # TODO: Check database for matching profiles
         for row in dict_str:
             for str in strs:
-                # if strs[str] == row[str]:
-                print(f'{strs[str]}, {row[str + 1]}')
-                # else:
-                    # print(f'not found')
+                if int(strs[str]) == int(row[str]):
+                    print(f'{strs[str]}, {row[str]}')
+                else:
+                    print(f'not found')
     # regex?? str_values with result list to find match,
     # then print key to dict line that matches??
     return
