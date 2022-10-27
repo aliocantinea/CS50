@@ -33,8 +33,8 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
         result = []
     # for each STR in list call longest_match function
-        for subsequence in strs:
-            result
+        for str in strs:
+            result[str] = longest_match(dna, str)
     #     match = longest_match(sequence, subsequence)
     #     # add longest_match result to result list
     #     result.append(match)
