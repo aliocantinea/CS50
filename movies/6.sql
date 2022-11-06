@@ -3,4 +3,4 @@ SELECT AVG(rating)
  WHERE movie_id =
        (SELECT id
           FROM movies
-         WHERE year = 2012);
+         WHERE year = 2012);.exit
