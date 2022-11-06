@@ -1,4 +1,4 @@
-SELECT COUNT(rating)
+SELECT ROUND(AVG(rating))
   FROM ratings
  WHERE movie_id =
        (SELECT id
