@@ -12,7 +12,7 @@
                 var triggerObject = event.srcElement;
                 if (triggerObject.id.match("Correct!")) {
                     triggerObject.className = "correct";
-                    document.getElementById()
+                    node.parentNode.id = "correct";
                 }
                 else {
                     triggerObject.className = "wrong";
@@ -27,7 +27,7 @@
         </div>
 
         <div class="container">
-            <div class="section">
+            <div class="section" id="none">
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
