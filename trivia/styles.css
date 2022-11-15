@@ -43,7 +43,7 @@ body {
     background-color: red;
 }
 
-button::after {
+h3::after {
     content: attr(id);
     postion: absolute;
     display: block;
