@@ -43,8 +43,8 @@ body {
     background-color: red;
 }
 
-.correct::after,
-.wrong::after {
+button::after.correct,
+button::after.wrong {
     content: attr(id);
     postion: relative;
     display: block;
