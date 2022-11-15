@@ -43,9 +43,10 @@ body {
     background-color: red;
 }
 
-button::after {
+button:after {
     content: attr(id);
     postion: absolute;
+    display: block;
     transition: opacity 50 ease;
 }
 
