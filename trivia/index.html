@@ -9,7 +9,8 @@
         <script>
             // TODO: Add code to check answers to questions
             function checkAnswer(event) {
-                if (element.getElementById("correct")) {
+                var triggerObject = event.srcElement;
+                if (triggerObject.getElementById("correct")) {
                     triggerObject.className = "correct";
                 }
                 else {
