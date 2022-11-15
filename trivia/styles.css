@@ -43,7 +43,7 @@ body {
     background-color: red;
 }
 
-h3::after {
+div.correct h3::after {
     content: attr(class);
     postion: absolute;
     display: block;

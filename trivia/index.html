@@ -10,9 +10,9 @@
             // TODO: Add code to check answers to questions
             function checkAnswer(event) {
                 var triggerObject = event.srcElement;
-                if (triggerObject.className.match("Correct!")) {
+                if (triggerObject.className.match("correct")) {
                     triggerObject.id = "correct";
-                    triggerObject.parentElement.id = "Correct!";
+                    triggerObject.parentElement.className = "correct";
                 }
                 else {
                     triggerObject.id = "wrong";
@@ -28,16 +28,18 @@
         </div>
 
         <div class="container">
-            <div class="section" id="none">
+            <div class="section">
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
-                <h3 class="none" id="question1">
-                    Would you take other CS50 courses?
-                </h3>
-                <button class="Incorrect" id="none" onclick="checkAnswer(event)">No</button>
-                <button class="Incorrect" id="none" onclick="checkAnswer(event)">Maybe</button>
-                <button class="Correct!" id="none" onclick="checkAnswer(event)">Yes</button>
+                <div class="none">
+                    <h3>
+                        Would you take other CS50 courses?
+                    </h3>
+                    <button class="wrong" id="none" onclick="checkAnswer(event)">No</button>
+                    <button class="wrong" id="none" onclick="checkAnswer(event)">Maybe</button>
+                    <button class="correct" id="none" onclick="checkAnswer(event)">Yes</button>
+                </div>
             </div>
 
             <div class="section">
