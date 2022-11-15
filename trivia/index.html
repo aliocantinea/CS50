@@ -10,13 +10,14 @@
             // TODO: Add code to check answers to questions
             function checkAnswer(event) {
                 var triggerObject = event.srcElement;
-                if (triggerObject.id.match("Correct!")) {
-                    triggerObject.className = "correct";
-                    node.parentNode.id = "correct";
+                if (triggerObject.className.match("Correct!")) {
+                    triggerObject.id = "correct";
+                    triggerObject.parentNode.id = "correct";
                 }
                 else {
-                    triggerObject.className = "wrong";
-                    setTimeout(function() {triggerObject.className = "none"}, 5000);
+                    triggerObject.id = "wrong";
+                    triggerObject.parentNode.id = "wrong"
+                    setTimeout(function() {triggerObject.id = "none"}, 5000);
                 }
             }
         </script>
@@ -34,9 +35,9 @@
                 <h3 class="none" id="question1">
                     Would you take other CS50 courses?
                 </h3>
-                <button class="none" id="Incorrect" onclick="checkAnswer(event)">No</button>
-                <button class="none" id="Incorrect" onclick="checkAnswer(event)">Maybe</button>
-                <button class="none" id="Correct!" onclick="checkAnswer(event)">Yes</button>
+                <button class="Incorrect" id="none" onclick="checkAnswer(event)">No</button>
+                <button class="Incorrect" id="none" onclick="checkAnswer(event)">Maybe</button>
+                <button class="Correct!" id="none" onclick="checkAnswer(event)">Yes</button>
             </div>
 
             <div class="section">
