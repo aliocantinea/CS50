@@ -12,7 +12,7 @@
                 var triggerObject = event.srcElement;
                 if (triggerObject.className.match("correct")) {
                     triggerObject.id = "correct";
-                    triggerObject.parentElement.className = "correct";
+                    triggerObject.parentNode.firstChild.className = "correct";
                 }
                 else {
                     triggerObject.id = "wrong";
