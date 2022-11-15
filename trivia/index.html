@@ -16,7 +16,7 @@
                 }
                 else {
                     triggerObject.id = "wrong";
-                    triggerObject.parentNode.id = "Incorrect"
+                    triggerObject.firstSibling.className = "Incorrect"
                     setTimeout(function() {triggerObject.id = "none"}, 5000);
                 }
             }
