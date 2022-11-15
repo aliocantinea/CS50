@@ -46,8 +46,8 @@ body {
 button.correct::after,
 button.wrong::after {
     content: attr(id);
-    postion: relative;
-    display: inline-block;
+    postion: absolute;
+    float: bottom;
     left: 50%;
     top: 50%;
     transform: translateY(-2rem) translateX(-50%);
