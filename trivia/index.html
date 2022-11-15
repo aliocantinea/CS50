@@ -8,9 +8,9 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <script>
             // TODO: Add code to check answers to questions
-            function changeButtonColor(event) {
+            function changeClass() {
                 var triggerObject = event.srcElement;
-                document.getElementById("colorDiv").bgcolor = triggerObject.();
+                triggerObject.className = triggerObject.();
             }
         </script>
     </head>
@@ -27,7 +27,7 @@
                     <h3>
 
                     </h3>
-                    <button class="wrong">No</button>
+                    <button onclick="changeClass(wrong)">No</button>
                     <button class="wrong">Maybe</button>
                     <button class="correct">Yes</button>
             </div>
