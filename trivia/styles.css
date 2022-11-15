@@ -33,20 +33,23 @@ body {
 }
 
 #correct {
-    position: relative;
     background-color: green;
 }
 
 
 #wrong {
-    position: relative;
     background-color: red;
+}
+
+h3 {
+    padding-bottom: 10px;
+    position: relative;
 }
 
 div.correct h3::after {
     content: "Correct!";
-    postion: absolute;
-    display: block;
+    postion: fixed;
+    left: 0%;
 }
 
 h1 {
