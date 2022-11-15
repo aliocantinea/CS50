@@ -48,9 +48,6 @@ button.wrong::after {
     content: attr(id);
     postion: absolute;
     float: bottom;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-2rem) translateX(-50%);
     transition: opacity 50 ease;
 }
 
