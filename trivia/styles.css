@@ -43,8 +43,8 @@ body {
     background-color: red;
 }
 
-button.correct::after,
-button.wrong::after {
+button.correct:after,
+button.wrong:after {
     content: attr(id);
     postion: absolute;
     transition: opacity 50 ease;
