@@ -43,7 +43,7 @@ body {
 
 .correct::after,
 .wrong::after {
-    content:
+    content: ()
 }
 
 h1 {
