@@ -8,7 +8,7 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <script>
             // TODO: Add code to check answers to questions
-            function changeClass(answer) {
+            function changeClass() {
                 var triggerObject = event.srcElement;
                 if (triggerObject.getElementById("correct")) {
                     triggerObject.className = "correct";
@@ -32,9 +32,9 @@
                     <h3>
 
                     </h3>
-                    <button class="none" onclick="changeClass(wrong)">No</button>
-                    <button class="none" onclick="changeClass(wrong)">Maybe</button>
-                    <button class="none" onclick="changeClass(correct)">Yes</button>
+                    <button class="none" id="wrong" onclick="changeClass()">No</button>
+                    <button class="none" id="wrong" onclick="changeClass()">Maybe</button>
+                    <button class="none" id="correct" onclick="changeClass()">Yes</button>
             </div>
 
             <div class="section">
