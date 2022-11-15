@@ -41,15 +41,14 @@ body {
     background-color: red;
 }
 
-/* h3 {
-    padding-bottom: 10px;
-    position: relative;
-} */
-
 div.correct h3::after {
     content: "Correct!";
     display: block;
-    left: 0%;
+}
+
+div.wrong h3::after {
+    content: "Incorrect";
+    display: block;
 }
 
 h1 {
