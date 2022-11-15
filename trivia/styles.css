@@ -43,7 +43,7 @@ body {
     background-color: red;
 }
 
-.correct::after,
+/* .correct::after,
 .wrong::after {
     content: attr(id);
     postion: absolute;
@@ -51,7 +51,7 @@ body {
     top: 50%;
     transform: translateY(2rem) translateX(-50%);
     transition: opacity 50 ease;
-}
+} */
 
 h1 {
     font-family: 'Montserrat', sans-serif;
