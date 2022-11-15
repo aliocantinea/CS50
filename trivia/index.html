@@ -14,7 +14,8 @@
                     triggerObject.className = "correct";
                 }
                 else {
-                    setTimeout(function() {triggerObject.className = "wrong"}, 5000);
+                    triggerObject.className = "wrong";
+                    setTimeout(function() {triggerObject.className = "none"}, 5000);
                 }
             }
         </script>
