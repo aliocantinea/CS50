@@ -41,6 +41,11 @@ body {
     background-color: red;
 }
 
+.correct:after,
+.wrong:after {
+    content: 
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;

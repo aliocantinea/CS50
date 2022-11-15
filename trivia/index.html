@@ -12,12 +12,11 @@
                 var triggerObject = event.srcElement;
                 if (triggerObject.getElementById("correct")) {
                     triggerObject.className = "correct";
-                    
                 }
                 else {
                     triggerObject.className = "wrong";
+                    setTimeout(triggerObject.className = "none", 2000);
                 }
-
             }
         </script>
     </head>
