@@ -10,6 +10,7 @@
             // TODO: Add code to check answers to questions
             function changeClass() {
                 var triggerObject = event.srcElement;
+
                 triggerObject.className = triggerObject.();
             }
         </script>
@@ -27,9 +28,9 @@
                     <h3>
 
                     </h3>
-                    <button onclick="changeClass(wrong)">No</button>
-                    <button class="wrong">Maybe</button>
-                    <button class="correct">Yes</button>
+                    <button class="none" onclick="changeClass(wrong)">No</button>
+                    <button class="none" onclick="changeClass(wrong)">Maybe</button>
+                    <button class="none" onclick="changeClass(correct)">Yes</button>
             </div>
 
             <div class="section">
