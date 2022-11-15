@@ -41,9 +41,9 @@ body {
     background-color: red;
 }
 
-.correct:after,
-.wrong:after {
-    content: 
+.correct::after,
+.wrong::after {
+    content:
 }
 
 h1 {
