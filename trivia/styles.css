@@ -43,10 +43,10 @@ body {
     background-color: red;
 }
 
-.correct::before {
+button::after {
     content: attr(id);
     postion: absolute;
-    display: inline-block;
+    display: block;
 }
 
 h1 {
