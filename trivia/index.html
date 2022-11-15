@@ -12,11 +12,11 @@
                 var triggerObject = event.srcElement;
                 if (triggerObject.className.match("Correct!")) {
                     triggerObject.id = "correct";
-                    triggerObject.parentNode.id = "correct";
+                    triggerObject.parentNode.id = "Correct!";
                 }
                 else {
                     triggerObject.id = "wrong";
-                    triggerObject.parentNode.id = "wrong"
+                    triggerObject.parentNode.id = "Incorrect"
                     setTimeout(function() {triggerObject.id = "none"}, 5000);
                 }
             }
