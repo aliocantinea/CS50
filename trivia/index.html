@@ -12,6 +12,7 @@
                 var triggerObject = event.srcElement;
                 if (triggerObject.id.match("Correct!")) {
                     triggerObject.className = "correct";
+                    document.getElementById()
                 }
                 else {
                     triggerObject.className = "wrong";
@@ -30,7 +31,7 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
-                    <h3 class="none">
+                    <h3 class="none" id="question1">
                         Would you take other CS50 courses?
                     </h3>
                     <button class="none" id="Incorrect" onclick="checkAnswer(event)">No</button>
