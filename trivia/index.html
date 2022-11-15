@@ -8,17 +8,17 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <script>
             // TODO: Add code to check answers to questions
-            function checkAnswer(correct) {
-                var triggerObject = correct.srcElement;
-                triggerObject.id = "correct";
-                triggerObject.previousElemntSibling.id = "Correct!";
-            }
-            function checkAnswer(wrong) {
-                var triggerObject = wrong.srcElement;
-                triggerObject.id = "wrong";
-                triggerObject.parentNode.id = "Incorrect"
-                setTimeout(function() {triggerObject.id = "none"}, 5000);
-
+            function checkAnswer(event) {
+                var triggerObject = event.srcElement;
+                if (triggerObject.className.match("Correct!")) {
+                    triggerObject.id = "correct";
+                    triggerObject.previousElemntSibling.id = "Correct!";
+                }
+                else {
+                    triggerObject.id = "wrong";
+                    triggerObject.parentNode.id = "Incorrect"
+                    setTimeout(function() {triggerObject.id = "none"}, 5000);
+                }
             }
         </script>
     </head>
@@ -35,9 +35,9 @@
                 <h3 class="none" id="question1">
                     Would you take other CS50 courses?
                 </h3>
-                <button class="Incorrect" id="none" onclick="checkAnswer(wrong)">No</button>
-                <button class="Incorrect" id="none" onclick="checkAnswer(wrong)">Maybe</button>
-                <button class="Correct!" id="none" onclick="checkAnswer(correct)">Yes</button>
+                <button class="Incorrect" id="none" onclick="checkAnswer(event)">No</button>
+                <button class="Incorrect" id="none" onclick="checkAnswer(event)">Maybe</button>
+                <button class="Correct!" id="none" onclick="checkAnswer(event)">Yes</button>
             </div>
 
             <div class="section">
