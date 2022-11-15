@@ -16,7 +16,7 @@
                 }
                 else {
                     triggerObject.id = "wrong";
-                    triggerObject.firstSibling.className = "Incorrect"
+                    triggerObject.parentNode.firstChild.class = "Incorrect"
                     setTimeout(function() {triggerObject.id = "none"}, 5000);
                 }
             }
@@ -33,7 +33,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <div class="none">
-                    <h3>
+                    <h3 class="none">
                         Would you take other CS50 courses?
                     </h3>
                     <button class="wrong" id="none" onclick="checkAnswer(event)">No</button>
