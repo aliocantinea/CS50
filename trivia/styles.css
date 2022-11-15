@@ -43,11 +43,11 @@ body {
     background-color: red;
 }
 
-button::after.correct,
-button::after.wrong {
+button.correct::after,
+button.wrong::after {
     content: attr(id);
     postion: relative;
-    display: block;
+    display: inline-block;
     left: 50%;
     top: 50%;
     transform: translateY(-2rem) translateX(-50%);
