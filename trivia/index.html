@@ -12,7 +12,7 @@
                 var triggerObject = event.srcElement;
                 if (triggerObject.className.match("correct")) {
                     triggerObject.id = "correct";
-                    triggerObject.parentNode.firstChild.className = "correct";
+                    triggerObject.parentElement.className = "correct";
                 }
                 else {
                     triggerObject.id = "wrong";
@@ -33,7 +33,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <div class="none">
-                    <h3 class="none">
+                    <h3>
                         Would you take other CS50 courses?
                     </h3>
                     <button class="wrong" id="none" onclick="checkAnswer(event)">No</button>

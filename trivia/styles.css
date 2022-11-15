@@ -44,7 +44,7 @@ body {
 }
 
 div.correct h3::after {
-    content: attr(class);
+    content: "Correct!";
     postion: absolute;
     display: block;
 }
