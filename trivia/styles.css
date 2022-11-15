@@ -33,17 +33,22 @@ body {
 }
 
 .correct {
+    position: relative;
     background-color: green;
 }
 
 
 .wrong {
+    position: relative;
     background-color: red;
 }
 
 .correct::after,
 .wrong::after {
-    content: attr(id)
+    content: attr(id);
+    postion: absolute;
+    
+
 }
 
 h1 {
