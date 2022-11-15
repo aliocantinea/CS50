@@ -10,7 +10,12 @@
             // TODO: Add code to check answers to questions
             function changeClass(answer) {
                 var triggerObject = event.srcElement;
-                triggerObject.className = "answer";
+                if (triggerObject.getElementById("correct")) {
+                    triggerObject.className = "answer";
+                }
+                else {
+                    triggerObject.className = "answer";
+                }
             }
         </script>
     </head>
