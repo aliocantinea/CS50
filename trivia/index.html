@@ -14,8 +14,8 @@
                     triggerObject.className = "correct";
                 }
                 else {
-                    setTimeout(triggerObject.className = "wrong", 2000);
-                    triggerObject.className = "none";
+                    fade = setInterval(triggerObject.className = "wrong", 5000);
+                    clearInterval(fade, 5000);
                 }
             }
         </script>
