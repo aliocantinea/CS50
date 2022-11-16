@@ -8,9 +8,6 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <script>
             // TODO: Add code to check answers to questions
-            const answers = document.querySelectorAll("button[data-active='1']");
-            console.log(answers);
-
             function checkAnswer(event) {
                 var triggerObject = event.srcElement;
                 if(triggerObject.className.match("correct")) {
@@ -38,13 +35,13 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
-                <div>
-                    <h3 class="question1" id="none">
+                <div class="none">
+                    <h3 id="question1">
                         Would you take other CS50 courses?
                     </h3>
-                    <button class="answer1" id="none" data-active="0" onclick="checkAnswer(event)">No</button>
-                    <button class="answer1" id="none" data-active="0" onclick="checkAnswer(event)">Maybe</button>
-                    <button class="answer1" id="none" data-active="1" onclick="checkAnswer(event)">Yes</button>
+                    <button class="wrong answer1" id="none" onclick="checkAnswer(event)">No</button>
+                    <button class="wrong answer1" id="none" onclick="checkAnswer(event)">Maybe</button>
+                    <button class="correct answer1" id="none" onclick="checkAnswer(event)">Yes</button>
                 </div>
             </div>
 
