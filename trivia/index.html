@@ -11,7 +11,7 @@
             function checkAnswer(event) {
                 var triggerObject = event.srcElement;
                 if (triggerObject.className.match("answer1")) {
-                    document.getElementsByClassName("answer1").id = "none";
+                    document.querySelectorAll(button)
                 }
                 if (triggerObject.className.match("correct")) {
                     triggerObject.id = "correct";
