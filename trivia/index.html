@@ -8,10 +8,13 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <script>
             // TODO: Add code to check answers to questions
+            const score = []
+
             function checkAnswer(event) {
                 var triggerObject = event.srcElement;
                 if(triggerObject.className.match("correct")) {
                     triggerObject.id = "correct";
+                    triggerObject.pointEvents = "none";
                     triggerObject.parentElement.className = "correct";
                 }
                 else {
