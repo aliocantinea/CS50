@@ -1,6 +1,7 @@
 :root {
     --correct: green;
     --background: #fff;
+    --button: #d9edff;
     --highlight: #477bff;
     --maintext: #212529;
     --questionbg: #f5f5f5;
@@ -76,7 +77,7 @@ h1 {
 }
 
 button, input[type="submit"] {
-    background-color: #d9edff;
+    background-color: var(--button);
     border: 1px solid transparent;
     border-radius: 0.25rem;
     font-size: 0.95rem;
