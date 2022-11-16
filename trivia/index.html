@@ -21,11 +21,11 @@
                 }
                 else {
                     triggerObject.id = "wrong";
-                    setTimeout(function() {triggerObject.id = "none"}, 3000);
+                    setTimeout(function() {triggerObject.id = "none"}, 2000);
                     let parent = triggerObject.parentElement;
                     if(!parent.className.match("correct")) {
                         triggerObject.parentElement.className = "wrong"
-                        setTimeout(function() {triggerObject.parentElement.className = "again"}, 3000);
+                        setTimeout(function() {triggerObject.parentElement.className = "again"}, 2000);
                     }
                 }
             }
