@@ -1,6 +1,7 @@
 :root {
     --correct: green;
     --background: #fff;
+    --questionbg: #f5f5f5;
     --wrong: red;
 }
 
@@ -34,7 +35,7 @@ body {
 }
 
 .section:hover {
-    background-color: #f5f5f5;
+    background-color: var(--questionbg);
     transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
 }
 
@@ -48,15 +49,18 @@ body {
 }
 
 div h3::after{
-    content: "";
+    color: transparent;
+    content: "select answer";
     display: block;
 }
 
 div.correct h3::after {
+    color: var(--correct);
     content: "Correct!";
 }
 
 div.wrong h3::after {
+    color: var(--wrong);
     content: "Incorrect";
 }
 
