@@ -53,7 +53,7 @@ body {
 
 div h3::after{
     color: transparent;
-    content: "select correct answer";
+    content: "try again";
     display: block;
 }
 
