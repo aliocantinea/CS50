@@ -1,5 +1,11 @@
+:root {
+    --correct: green;
+    --background: #fff;
+    --wrong: red;
+}
+
 body {
-    background-color: #fff;
+    background-color: var(--background);
     color: #212529;
     font-size: 1rem;
     font-weight: 400;
