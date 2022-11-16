@@ -11,7 +11,7 @@
             function checkAnswer(event) {
                 var triggerObject = event.srcElement;
                 if (triggerObject.className.match("answer1")) {
-                    var sibling = document.getElementByClassName("answer1");
+                    var sibling = document.getElementsByClassName("answer1");
                     sibling.id = "none";
                 }
                 if (triggerObject.className.match("correct")) {
