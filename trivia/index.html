@@ -16,9 +16,11 @@
                 }
                 else {
                     triggerObject.id = "wrong";
-                    if(triggerObject.parentElement.className.match()) = "wrong"
                     setTimeout(function() {triggerObject.id = "none"}, 3000);
-                    setTimeout(function() {triggerObject.parentElement.className = "again"}, 3000);
+                    if(triggerObject.parentElement.className.match(!"correct")) {
+                        triggerObject.parentElement.className = "wrong"
+                        setTimeout(function() {triggerObject.parentElement.className = "again"}, 3000);
+                    }
                 }
             }
         </script>
