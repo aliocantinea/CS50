@@ -41,7 +41,7 @@ body {
     background-color: red;
 }
 
-h3::after{
+div h3::after{
     content: "";
     display: block;
 }
