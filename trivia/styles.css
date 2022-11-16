@@ -50,8 +50,12 @@ body {
 
 div h3::after{
     color: transparent;
-    content: "select answer";
+    content: "select correct answer";
     display: block;
+}
+
+div.agaib h3::after{
+    color: ;
 }
 
 div.correct h3::after {
