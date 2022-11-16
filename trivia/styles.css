@@ -40,16 +40,18 @@ body {
 #wrong {
     background-color: red;
 }
-h3
+
+h3::after{
+    content: "";
+    display: block;
+}
 
 div.correct h3::after {
     content: "Correct!";
-    display: block;
 }
 
 div.wrong h3::after {
     content: "Incorrect";
-    display: block;
 }
 
 h1 {
