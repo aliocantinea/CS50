@@ -1,13 +1,16 @@
 :root {
     --correct: green;
     --background: #fff;
+    --highlight: #477bff;
+    --maintext: #212529;
     --questionbg: #f5f5f5;
+    --subtext: lightgrey;
     --wrong: red;
 }
 
 body {
     background-color: var(--background);
-    color: #212529;
+    color: var(--maintext);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -23,8 +26,8 @@ body {
 }
 
 .header {
-    background-color: #477bff;
-    color: #fff;
+    background-color: var(--highlight);
+    color: var(--background);
     margin-bottom: 2rem;
     padding: 2rem 1rem;
     text-align: center;
@@ -40,12 +43,11 @@ body {
 }
 
 #correct {
-    background-color: green;
+    background-color: var(--correct);
 }
 
-
 #wrong {
-    background-color: red;
+    background-color: var(--wrong);
 }
 
 div h3::after{
@@ -54,8 +56,8 @@ div h3::after{
     display: block;
 }
 
-div.agaib h3::after{
-    color: ;
+div.again h3::after{
+    color: var(--subtext);
 }
 
 div.correct h3::after {
