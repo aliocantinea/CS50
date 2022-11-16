@@ -10,13 +10,13 @@
             // TODO: Add code to check answers to questions
             function checkAnswer(event) {
                 var triggerObject = event.srcElement;
-                if (triggerObject.className.match("correct")) {
+                if(triggerObject.className.match("correct")) {
                     triggerObject.id = "correct";
                     triggerObject.parentElement.className = "correct";
                 }
                 else {
                     triggerObject.id = "wrong";
-                    triggerObject.parentElement.className = "wrong"
+                    if(triggerObject.parentElement.className.match()) = "wrong"
                     setTimeout(function() {triggerObject.id = "none"}, 3000);
                     setTimeout(function() {triggerObject.parentElement.className = "again"}, 3000);
                 }
