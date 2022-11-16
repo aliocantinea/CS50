@@ -17,7 +17,8 @@
                 else {
                     triggerObject.id = "wrong";
                     setTimeout(function() {triggerObject.id = "none"}, 3000);
-                    if(triggerObject.parentElement.className.match(!"correct")) {
+                    let parent = triggerObject.parentElement;
+                    if(!parent.className.match("correct")) {
                         triggerObject.parentElement.className = "wrong"
                         setTimeout(function() {triggerObject.parentElement.className = "again"}, 3000);
                     }
@@ -41,7 +42,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <div class="none">
-                    <h3 id="question1">
+                    <h3 class="question1">
                         Would you take other CS50 courses?
                     </h3>
                     <button class="wrong answer1" id="none" onclick="checkAnswer(event)">No</button>
