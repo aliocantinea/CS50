@@ -9,7 +9,9 @@
         <script>
             // TODO: Add code to check answers to questions
             const questions = document.querySelectorAll("button");
-            consol.log(questions)
+            console.log(questions);
+            const correct = questions.querySelectorAll("button[data-active='1']");
+            console.log(correct);
 
             function checkAnswer(event) {
                 var triggerObject = event.srcElement;
