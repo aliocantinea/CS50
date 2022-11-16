@@ -15,9 +15,9 @@
                 var triggerObject = event.srcElement;
                 if(triggerObject.className.match("correct")) {
                     triggerObject.id = "correct";
-                    triggerObject.pointEvents = "none";
                     triggerObject.parentElement.className = "correct";
-                    score ++;
+                    score +1;
+                    //triggerObject.stlye.pointEvents = "none";
                 }
                 else {
                     triggerObject.id = "wrong";
