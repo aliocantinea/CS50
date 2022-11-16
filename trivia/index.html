@@ -8,7 +8,8 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <script>
             // TODO: Add code to check answers to questions
-            const score = []
+            const score = 0;
+            const total = document.querySelectorAll(".question");
 
             function checkAnswer(event) {
                 var triggerObject = event.srcElement;
@@ -16,6 +17,7 @@
                     triggerObject.id = "correct";
                     triggerObject.pointEvents = "none";
                     triggerObject.parentElement.className = "correct";
+                    score ++;
                 }
                 else {
                     triggerObject.id = "wrong";
@@ -32,6 +34,7 @@
     <body>
         <div class="header">
             <h1>Trivia!</h1>
+            <p>Score: <span class="currentScore">0</span></p>
         </div>
 
         <div class="container">
@@ -40,7 +43,7 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <div class="none">
-                    <h3 class="question1">
+                    <h3 class="question">
                         Would you take other CS50 courses?
                     </h3>
                     <button class="wrong" id="none" onclick="checkAnswer(event)">No</button>
