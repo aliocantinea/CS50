@@ -8,10 +8,8 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <script>
             // TODO: Add code to check answers to questions
-            const questions = document.querySelectorAll("button");
-            console.log(questions);
-            const correct = questions.querySelectorAll("button[data-active='1']");
-            console.log(correct);
+            const answers = document.querySelectorAll("button[data-active='1']");
+            console.log(answers);
 
             function checkAnswer(event) {
                 var triggerObject = event.srcElement;
