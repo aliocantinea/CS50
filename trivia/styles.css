@@ -83,6 +83,11 @@ button, input[type="submit"] {
     vertical-align: middle;
 }
 
+button#correct,
+button#wrong {
+    color: var(--background);
+}
+
 
 input[type="text"] {
     line-height: 1.8;
