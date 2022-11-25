@@ -90,6 +90,14 @@ button, input[type="submit"] {
     vertical-align: middle;
 }
 
+div.correct input {
+    backgroud-color: var(--correct);
+}
+
+div.wrong input {
+    background-color: var(--wrong);
+}
+
 button#correct,
 button#wrong {
     color: var(--background);

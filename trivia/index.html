@@ -8,17 +8,42 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <script>
             // TODO: Add code to check answers to questions
-            const score = 0;
-            const total = document.querySelectorAll(".question");
+            // Super clunky, but I am feeling frustrated and spending too much time on this, should have function calls for similar actions
 
+            // All multiple choice questions
             function checkAnswer(event) {
+                // Hold selected button
                 var triggerObject = event.srcElement;
+                // Changes parent div to correct which allows CSS to show ::after with result
                 if(triggerObject.className.match("correct")) {
                     triggerObject.id = "correct";
                     triggerObject.parentElement.className = "correct";
-                    score +1;
-                    // Not sure if po
-                    triggerObject.stlye.pointerEvents = "none";
+                    triggerObject.style.pointerEvents = "none";
+                }
+                // Wrong answers revert parent div to again to show CSS try again text
+                else {
+                    triggerObject.id = "wrong";
+                    // Clears style to default for another attempt
+                    setTimeout(function() {triggerObject.id = "none"}, 2000);
+                    const parent = triggerObject.parentElement;
+                    // If already answered correctly, does not change CSS ::after text
+                    if(!parent.className.match("correct")) {
+                        triggerObject.parentElement.className = "wrong"
+                        setTimeout(function() {triggerObject.parentElement.className = "again"}, 2000);
+                    }
+                }
+            }
+
+            // For fill in the blank (not well designed as it works for only one question), should be remade
+            function checkSubmit(event) {
+                var triggerObject = event.srcElement;
+                const alpha = document.querySelector("#alpha");
+                const submit = document.querySelector("input").value.toLowerCase();
+                if(submit == "alpha") {
+                    triggerObject.id = "correct";
+                    triggerObject.parentElement.className = "correct";
+                    triggerObject.style.pointerEvents = "none";
+                    alpha.style.pointerEvents = "none";
                 }
                 else {
                     triggerObject.id = "wrong";
@@ -35,7 +60,6 @@
     <body>
         <div class="header">
             <h1>Trivia!</h1>
-            <p>Score: <span class="currentScore">0</span></p>
         </div>
 
         <div class="container">
@@ -45,11 +69,28 @@
                 <!-- TODO: Add multiple choice question here -->
                 <div class="none">
                     <h3 class="question">
-                        Would you take other CS50 courses?
+                        What does HTML stand for?
                     </h3>
-                    <button class="wrong" id="none" onclick="checkAnswer(event)">No</button>
-                    <button class="wrong" id="none" onclick="checkAnswer(event)">Maybe</button>
-                    <button class="correct" id="none" onclick="checkAnswer(event)">Yes</button>
+                    <button class="wrong" id="none" onclick="checkAnswer(event)">Hyperlinks and Text Markup Language</button>
+                    <button class="wrong" id="none" onclick="checkAnswer(event)">Home Tool Markup Language</button>
+                    <button class="correct" id="none" onclick="checkAnswer(event)">Hyper Text Markup Language</button>
+                </div>
+                <div class="none">
+                    <h3 class="question">
+                        Choose the correct HTML element for the largest heading:
+                    </h3>
+                    <button class="correct" id="none" onclick="checkAnswer(event)">&lt;h1&gt;</button>
+                    <button class="wrong" id="none" onclick="checkAnswer(event)">&lt;heading&gt;</button>
+                    <button class="wrong" id="none" onclick="checkAnswer(event)">&lt;h6&gt;</button>
+                    <button class="wrong" id="none" onclick="checkAnswer(event)">&lt;head&gt;</button>
+                </div>
+                <div class="none">
+                    <h3 class="question">
+                        What is the correct HTML for referring to an external style sheet?
+                    </h3>
+                    <button class="wrong" id="none" onclick="checkAnswer(event)">&lt;stylesheet&gt;mystyle.css&lt;/stylesheet&gt;</button>
+                    <button class="correct" id="none" onclick="checkAnswer(event)">&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;</button>
+                    <button class="wrong" id="none" onclick="checkAnswer(event)">&lt;style src="mystyle.css"&gt;</button>
                 </div>
             </div>
 
@@ -57,11 +98,13 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
-                <h3>
-                    What would you say has been the most challenging part of the CS50 class so far?
-                </h3>
-                <input placeholder="Lab or PSet" type="text">
-                <button>Submit</button>
+                <div class="none">
+                    <h3 class="question">
+                        What does the a stand for in RGBa?
+                    </h3>
+                    <input placeholder="Answer" type="text" id="alpha">
+                    <button onclick="checkSubmit(event)">Submit</button>
+                </div>
             </div>
         </div>
     </body>
