@@ -2,6 +2,7 @@ footer {
     display: flex;
 }
 
-#socials li {
-    display: flex;
+#socials {
+    width: 1em;
+    display: inline-block;
 }
