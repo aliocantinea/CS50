@@ -2,12 +2,18 @@ body {
     background-color: grey;
 }
 
+.page {
+    background-color: white;
+    min-height: 185vh;
+    margin-bottom: 15vh;
+}
+
 footer {
     align-items: center;
     bottom: 10px;
     display: flex;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     }
 
 address {
