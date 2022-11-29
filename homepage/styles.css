@@ -1,8 +1,10 @@
+
+
 footer {
     align-items: center;
     bottom: 10px;
     display: flex;
-    postion: fixed;
+    position: absolute;
     z-index: -1;
 }
 
