@@ -1,4 +1,6 @@
-
+body {
+    background-color: grey;
+}
 
 footer {
     align-items: center;
@@ -10,7 +12,7 @@ footer {
 
 address {
     font-size: .75em;
-    padding-right: 1em;
+    padding-right: 2em;
     text-align: right;
     }
 
