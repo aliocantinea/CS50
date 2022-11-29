@@ -14,7 +14,7 @@ body {
 
 footer {
     align-items: center;
-    bottom: 0;
+    bottom: .5em;
     display: flex;
     height: 5em;
     position: absolute;
