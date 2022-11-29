@@ -4,12 +4,14 @@ footer {
 }
 
 address {
-    align: right
+    text-align: right;
+    margin-right: 1em;
+    font-weight: light;
 }
 
 .socials li{
     width: 2em;
     height: 2em;
-    margin: 0 10px 0 10px;
+    margin: 0 1em 0 1em;
     display: inline-block;
 }
