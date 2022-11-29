@@ -2,7 +2,9 @@ footer {
     display: flex;
 }
 
-#socials svg{
-    width: 1em;
+.socials li{
+    width: 2em;
+    height: 2em;
+    margin: 0 100 0 100;
     display: inline-block;
 }
