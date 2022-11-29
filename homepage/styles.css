@@ -1,4 +1,7 @@
 footer {
     display: flex;
+}
 
+#socials li {
+    display: flex;
 }
