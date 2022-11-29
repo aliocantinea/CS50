@@ -3,8 +3,8 @@ footer {
     align-items: center;
 }
 
-.address {
-    align-items: right;
+address {
+    align: right
 }
 
 .socials li{
