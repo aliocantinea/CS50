@@ -1,16 +1,20 @@
+:root {
+    position: relative;
+}
+
 body {
     background-color: grey;
 }
 
 .page {
     background-color: white;
-    min-height: 185vh;
-    margin-bottom: 15vh;
+    min-height: 85vh;
+    margin-bottom: 6em;
 }
 
 footer {
     align-items: center;
-    bottom: 10px;
+    bottom: .25em;
     display: flex;
     position: absolute;
     z-index: 1;
