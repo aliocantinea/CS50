@@ -32,6 +32,7 @@ body {
 }
 
 .card {
+    background-color: SlateGrey;
     border: none;
     height: 400px;
     margin: .5em .125em .5em .125em;
@@ -63,7 +64,6 @@ body {
 }
 
 .card p {
-    background-color: white;
     bottom: 0;
     height: 50%;
     z-index: 10;
