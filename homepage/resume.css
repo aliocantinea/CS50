@@ -13,11 +13,8 @@
 }
 
 .imgBorder {
-    border-radius: ;
-    height: 50%;
     overflow: hidden;
     padding: 4px;
-    z-index: 5;
 }
 
 .card img {
