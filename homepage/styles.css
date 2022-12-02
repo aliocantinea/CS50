@@ -44,8 +44,9 @@ body {
 }
 
 .card img {
-    filter: grayscale(1);
+    background-color: grey;
     border-radius: 5px;
+    filter: grayscale(1);
     transition: all 1000ms;
     width: 100%;
 }
