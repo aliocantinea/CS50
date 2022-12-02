@@ -14,7 +14,7 @@ body {
     min-height: 85vh;
     margin-top: .5em;
     margin-bottom: 6em;
-    padding-top: .125em;
+    padding-top: 1px;
 }
 
 .navbar {
