@@ -7,7 +7,7 @@
 
 .card {
     height: 400px;
-    margin: .25em;
+    margin: .5em .125em .5em .125em;
     overflow: hidden;
     position: relative;
     width: 300px;
@@ -15,6 +15,7 @@
 
 .card img {
     border-radius: 5px;
+    box-shadow: 5px 5px white inset;
     transition: transform 200ms;
 }
 
@@ -26,6 +27,7 @@
     background-color: white;
     bottom: 0;
     height: 50%;
+    padding: 5px;
     position: absolute;
     z-index: 10;
 }
