@@ -64,7 +64,13 @@ body {
     position: absolute;
     text-align: center;
     transform: translate(-19px, -70%);
+    transition: transform 1000ms;
     width: 107%;
+}
+
+.card:hover h4 {
+    transform: translate(-19px, -50%);
+
 }
 
 .card img {
