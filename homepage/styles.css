@@ -22,15 +22,16 @@ body {
 
 footer {
     align-items: center;
+    animation: fadeIn ease-in-out 2000ms;
     bottom: .5em;
     display: flex;
     height: 5em;
     position: absolute;
-    transition: opacity 1000ms ease-in-out 1000ms;
     z-index: 1;
     }
 
 address {
+    color: lightgrey;
     font-size: .75em;
     padding-right: 2em;
     text-align: right;
@@ -41,4 +42,15 @@ address {
     height: 2em;
     margin: 0 1em 0 1em;
     width: 2em;
+    
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
     }
+    100% {
+        opacity: 1;
+    }
+}
