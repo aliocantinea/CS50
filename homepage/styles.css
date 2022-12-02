@@ -9,7 +9,8 @@ body {
 .page {
     background-color: white;
     border-radius: 25px;
-    box-shadow: 20px 5px 10px -20px;
+    box-shadow: 10px 0 30px -10px,
+                -10px 0 20px -10px;
     min-height: 85vh;
     margin-bottom: 6em;
 }
