@@ -20,6 +20,11 @@ body {
     margin-top: 10px;
 }
 
+main {
+    align-items: center;
+    text-align: center;
+}
+
 footer {
     align-items: center;
     animation: fadeIn ease-in-out 2000ms;
