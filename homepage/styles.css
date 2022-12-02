@@ -42,7 +42,10 @@ address {
     height: 2em;
     margin: 0 1em 0 1em;
     width: 2em;
-    
+}
+
+.socials li:hover {
+    color: lightgrey;
 }
 
 
