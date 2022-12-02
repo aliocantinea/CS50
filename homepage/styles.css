@@ -57,10 +57,12 @@ body {
 }
 
 .card h4 {
+    background-color: dimgrey;
+    bottom: 50%;
     color: Gainsboro;
     position: absolute;
-    right: 50%;
-    transform: translate(50%, 50%);
+    transform: translate(0, -50%);
+    width: 100%;
 }
 
 .card img {
