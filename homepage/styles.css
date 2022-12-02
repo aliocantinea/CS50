@@ -46,7 +46,7 @@ body {
 .card img {
     filter: grayscale(1);
     border-radius: 5px;
-    transition: transform 1000ms;
+    transition: all 1000ms;
     width: 100%;
 }
 
