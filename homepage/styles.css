@@ -49,11 +49,6 @@ body {
     width: 300px;
 }
 
-.card:hover {
-    transform: scale(1.1);
-    z-index: 5;
-}
-
 .imgBorder {
     border-radius: 5px;
     height: 50%;
