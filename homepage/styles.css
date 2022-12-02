@@ -31,7 +31,11 @@ footer {
     }
 
 footer a {
-    color: grey;
+    color: Gainsboro;
+}
+
+footer a:hover {
+    color: white;
 }
 
 address {
