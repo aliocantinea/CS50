@@ -8,6 +8,7 @@ body {
 
 .page {
     background-color: white;
+    border-radius: 25px;
     min-height: 85vh;
     margin-bottom: 6em;
 }
