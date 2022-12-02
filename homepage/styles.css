@@ -35,8 +35,8 @@ body {
     background-color: FloralWhite;
     border: solid 5px FloralWhite;
     border-radius: 5px;
-    box-shadow: inset 3px 3px 3px dimgray,
-                3px 3px 3px grey;
+    box-shadow: inset 4px 4px 3px dimgray,
+                4px 4px 3px grey;
     height: 400px;
     margin: .5em .15em .5em .15em;
     padding: 10px;
