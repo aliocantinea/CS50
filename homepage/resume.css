@@ -16,6 +16,8 @@
 .imgBorder {
     border-radius: 3px;
     padding: 4px;
+    position: absolute;
+    top: 0;
 }
 
 .card img {
