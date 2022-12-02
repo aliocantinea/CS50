@@ -36,9 +36,9 @@ body {
     border: 5px solid Gainsboro;
     border-radius: 10px;
     box-shadow: inset 4px 4px 6px -2px grey,
-                inset -2px -2px 3px white,
-                4px 4px 3px grey,
-                -2px -2px 3px white;
+                inset -2px -2px 6px -2px white,
+                4px 4px 6px -2px grey,
+                -2px -2px 6px -2px white;
     height: 400px;
     margin: .5em .15em .5em .15em;
     padding: 10px;
