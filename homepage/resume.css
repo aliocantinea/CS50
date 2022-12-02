@@ -8,16 +8,15 @@
 .card {
     height: 400px;
     margin: .5em .125em .5em .125em;
-    overflow: hidden;
     position: relative;
     width: 300px;
 }
 
 .imgBorder {
     border-radius: 3px;
+    overflow: hidden;
     padding: 4px;
-    position: absolute;
-    top: 0;
+    z-index: 5;
 }
 
 .card img {
