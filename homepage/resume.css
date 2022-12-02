@@ -6,19 +6,26 @@
 }
 
 .card {
-    
     height: 400px;
     overflow: hidden;
     width: 300px;
 }
 
 .card img {
-    position: ;
     transition: transform 200ms;
-    z-index: 1;
+}
+
+.card img:after {
+    content: '';
+    height:
 }
 
 .card:hover img {
     transform: scale(1.2);
+}
+
+.card p {
+
+    z-index: 10;
 }
 
