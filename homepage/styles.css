@@ -37,9 +37,7 @@ body {
     background-color: Gainsboro;
     border: 5px solid Gainsboro;
     border-radius: 10px;
-    box-shadow: inset 4px 4px 6px -2px grey,
-                inset -2px -2px 6px -2px white,
-                4px 4px 6px -2px grey,
+    box-shadow: 4px 4px 6px -2px grey,
                 -2px -2px 6px -2px white;
     height: 400px;
     margin: .5em .15em .5em .15em;
@@ -54,7 +52,15 @@ body {
     height: 50%;
     overflow: hidden;
     padding: 4px;
+    position: relative;
     width: 100%;
+}
+
+.card h4 {
+    color: Gainsboro;
+    position: absolute;
+    right: 50%;
+    transform: translate(50% 50%);
 }
 
 .card img {
@@ -74,7 +80,6 @@ body {
 .card p {
     bottom: 0;
     height: 50%;
-    z-index: 10;
 }
 
 /* footer */
