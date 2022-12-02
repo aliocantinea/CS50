@@ -1,3 +1,4 @@
+/* global */
 :root {
     position: relative;
 }
@@ -22,6 +23,46 @@ body {
     margin-top: 10px;
 }
 
+/* resume */
+.cards {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    height: 400px;
+    margin: .5em .125em .5em .125em;
+    position: relative;
+    width: 300px;
+}
+
+.imgBorder {
+    overflow: hidden;
+    padding: 4px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 1000ms;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+}
+
+.card p {
+    background-color: white;
+    bottom: 0;
+    height: 50%;
+    padding: 5px;
+    position: absolute;
+    z-index: 10;
+}
+
+/* footer */
 footer {
     align-items: center;
     animation: fadeIn ease-in-out 2000ms;
@@ -59,7 +100,7 @@ address {
     transition: fill 500ms;
 }
 
-
+/* animations */
 @keyframes fadeIn {
     0% {
         opacity: 0;
