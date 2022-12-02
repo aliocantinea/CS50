@@ -44,12 +44,14 @@ body {
 }
 
 .card img {
-    width: 100%;
+    filter: grayscale(1);
     border-radius: 5px;
     transition: transform 1000ms;
+    width: 100%;
 }
 
 .card:hover img {
+    filter: grayscale(0);
     transform: scale(1.2);
 }
 
