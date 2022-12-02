@@ -33,7 +33,7 @@ body {
 }
 
 .card {
-    animation: fadeIn ease-in-out 1000ms;
+    animation: fadeIn ease-in-out calc(nth-child * 1000ms);
     background-color: Gainsboro;
     border: 5px solid Gainsboro;
     border-radius: 10px;
