@@ -16,6 +16,7 @@ body {
 }
 
 .navbar {
+    backgroud-color: SlateGrey;
     border-radius: 25px;
     margin-top: 10px;
 }
@@ -31,7 +32,7 @@ footer {
     }
 
 address {
-    color: lightgrey;
+    color: darkgrey;
     font-size: .75em;
     padding-right: 2em;
     text-align: right;
