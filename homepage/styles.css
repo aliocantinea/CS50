@@ -33,7 +33,7 @@ body {
 }
 
 .card {
-    animation: fadeIn ease-in-out calc(nth-child * 1000ms);
+    animation: fadeIn ease-in-out calc(var(--i) * 500ms);
     background-color: Gainsboro;
     border: 5px solid Gainsboro;
     border-radius: 10px;
@@ -45,7 +45,13 @@ body {
     margin: .5em .15em .5em .15em;
     padding: 10px;
     position: relative;
+    transition: all 200ms;
     width: 300px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 5;
 }
 
 .imgBorder {
