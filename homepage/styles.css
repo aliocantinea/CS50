@@ -34,6 +34,7 @@ body {
 .card {
     height: 400px;
     margin: .5em .125em .5em .125em;
+    padding: 10px;
     position: relative;
     width: 300px;
 }
@@ -47,6 +48,7 @@ body {
     background-color: grey;
     border-radius: 5px;
     filter: grayscale(1);
+    height: 100%;
     transition: all 1000ms;
     width: 100%;
 }
