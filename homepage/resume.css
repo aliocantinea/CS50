@@ -1,4 +1,7 @@
 .cards {
     display: flex;
-    justify-content: center;
+}
+
+.cards p {
+    align-text: left;
 }
