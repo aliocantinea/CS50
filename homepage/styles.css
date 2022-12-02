@@ -30,6 +30,10 @@ footer {
     z-index: 1;
     }
 
+footer a {
+    color: grey;
+}
+
 address {
     color: lightgrey;
     font-size: .75em;
