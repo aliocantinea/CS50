@@ -59,10 +59,11 @@ body {
 .card h4 {
     background-color: dimgrey;
     bottom: 50%;
+    box-shadow: 1px 3px 6px -2px black;
     color: Gainsboro;
     position: absolute;
     text-align: center;
-    transform: translate(-20px, -50%);
+    transform: translate(-19px, -70%);
     width: 107%;
 }
 
