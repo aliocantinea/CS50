@@ -45,7 +45,7 @@ address {
 }
 
 .socials li:hover {
-    color: lightgrey;
+    display: none;
 }
 
 
