@@ -64,12 +64,12 @@ body {
     position: absolute;
     text-align: center;
     transform: translate(-19px, -70%);
-    transition: transform 1000ms;
+    transition: transform 500ms;
     width: 107%;
 }
 
 .card:hover h4 {
-    transform: translate(-19px, -50%);
+    transform: translate(-19px, -40%);
 
 }
 
