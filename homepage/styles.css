@@ -44,10 +44,6 @@ address {
     width: 2em;
 }
 
-.socials li:hover {
-    display: none;
-}
-
 
 @keyframes fadeIn {
     0% {
