@@ -8,7 +8,7 @@ body {
 }
 
 .page {
-    background-color: FloralWhite;
+    background-color: Gainsboro;
     border-radius: 25px;
     box-shadow: 10px 0 30px -10px,
                 -10px 0 30px -10px;
@@ -32,11 +32,13 @@ body {
 }
 
 .card {
-    background-color: FloralWhite;
-    border: solid 5px FloralWhite;
-    border-radius: 5px;
-    box-shadow: inset 4px 4px 3px dimgray,
-                4px 4px 3px grey;
+    background-color: Gainsboro;
+    border: 5px solid Gainsboro;
+    border-radius: 10px;
+    box-shadow: inset 4px 4px 6px -2px grey,
+                inset -2px -2px 3px white,
+                4px 4px 3px grey,
+                -2px -2px 3px white;
     height: 400px;
     margin: .5em .15em .5em .15em;
     padding: 10px;
