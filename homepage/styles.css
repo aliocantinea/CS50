@@ -16,7 +16,6 @@ body {
 }
 
 .navbar {
-    backgroud-color: SlateGrey;
     border-radius: 25px;
     margin-top: 10px;
 }
@@ -32,7 +31,7 @@ footer {
     }
 
 address {
-    color: darkgrey;
+    color: lightgrey;
     font-size: .75em;
     padding-right: 2em;
     text-align: right;
@@ -43,6 +42,11 @@ address {
     height: 2em;
     margin: 0 1em 0 1em;
     width: 2em;
+}
+
+.socials li:hover svg {
+    fill: lightgrey;
+    transition: fill 500ms;
 }
 
 
