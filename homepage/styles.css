@@ -26,6 +26,7 @@ footer {
     display: flex;
     height: 5em;
     position: absolute;
+    transition:  1000ms ease-in-out;
     z-index: 1;
     }
 
