@@ -95,6 +95,17 @@ body {
     height: 50%;
 }
 
+@media (max-width: ) {
+    .card img {
+        filter: grayscale(0);
+    }
+
+    .card h4 {
+        transform: translate(-19px, -40%);
+    }
+}
+
+
 /* footer */
 footer {
     align-items: center;
