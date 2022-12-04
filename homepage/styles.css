@@ -70,7 +70,8 @@ body {
 
 
 
-.card:hover h4 {
+.card:hover h4,
+.card:focus h4 {
     transform: translate(-19px, -40%);
 }
 
@@ -83,7 +84,8 @@ body {
     width: 100%;
 }
 
-.card:hover img {
+.card:hover img,
+.card:focus img {
     filter: grayscale(0);
     transform: scale(1.2);
 }
@@ -108,7 +110,8 @@ footer a {
     color: Gainsboro;
 }
 
-footer a:hover {
+footer a:hover,
+footer a:focus {
     color: white;
 }
 
@@ -126,7 +129,8 @@ address {
     width: 2em;
 }
 
-.socials li:hover svg {
+.socials li:hover svg,
+.socials li:focus svg {
     fill: lightgrey;
     transition: fill 500ms;
 }
