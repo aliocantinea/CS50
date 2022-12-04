@@ -95,7 +95,7 @@ body {
     height: 50%;
 }
 
-@media (max-width: ) {
+@media (max-width: 1368px) {
     .card img {
         filter: grayscale(0);
     }
