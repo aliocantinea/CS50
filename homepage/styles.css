@@ -14,7 +14,7 @@ body {
                 -10px 0 30px -10px;
     min-height: 97vh;
     margin-top: .5em;
-    margin-bottom: 6em;
+    margin-bottom: 7em;
     padding-top: 1px;
     padding-bottom: 1em;
 }
@@ -121,7 +121,7 @@ address {
 .socials li {
     display: inline-block;
     height: 2em;
-    margin: 0 1em 0 1em;
+    margin: 0 0 0 1em;
     width: 2em;
 }
 
