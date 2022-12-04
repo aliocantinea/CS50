@@ -68,9 +68,10 @@ body {
     width: 107%;
 }
 
+
+
 .card:hover h4 {
     transform: translate(-19px, -40%);
-
 }
 
 .card img {
