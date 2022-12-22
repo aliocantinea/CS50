@@ -145,7 +145,7 @@ def register():
             return render_template("login.html")
 
         # Register user
-        elif 
+        
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
