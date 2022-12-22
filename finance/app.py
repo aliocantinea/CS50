@@ -116,8 +116,12 @@ def quote():
     if request.method == "GET":
         return render_template("quote.html")
 
-
+    # User reached route via POST (by submitting a quote request)
     else:
+
+        
+
+        # Adds table to of requests
         return render_template("quotes.html")
 
 
