@@ -148,7 +148,7 @@ def register():
             return render_template("login.html")
 
         username = request.form.get("username")
-        hash = generate_password_hash(request.form.get("password")
+        hash = generate_password_hash(request.form.get("password"))
 
         # Register user
         db.execute("INSERT INTO users (username, hash)", (username, hash))
