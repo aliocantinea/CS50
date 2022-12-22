@@ -11,8 +11,8 @@
         <tbody>
             {% For quote in quotes %}
                 <tr>
-                    <td>{{  }}</td>
-                    <td></td>
+                    <td>{{ quote["symbol"] }}</td> <!-- change name based on returned JSON file -->
+                    <td>{{ quote["cost"] }}</td> <!-- change name based on returned JSON file -->
                     <td>
                         <form action="/buy" method="post">
                             <div class="mb-3">
