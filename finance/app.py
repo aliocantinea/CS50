@@ -147,8 +147,11 @@ def register():
         if len(rows) > 0:
             return render_template("login.html")
 
+        username = request.form.get("username")
+        hash = generate_password_hash(request.form.get("password")
+
         # Register user
-        db.execute("INSERT INTO users (username, hash)", (request.form.get("username") ,generate_password_hash(request.form.get("password"))))
+        db.execute("INSERT INTO users (username, hash)", (username, hash))
 
         # Remember which user has registered
         session["user_id"] = rows[0]["id"]
