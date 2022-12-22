@@ -119,7 +119,7 @@ def quote():
     # User reached route via POST (by submitting a quote request)
     else:
 
-        
+
 
         # Adds table to of requests
         return render_template("quotes.html")
