@@ -10,16 +10,24 @@
         </thead>
         <tbody>
             {% For quote in quotes %}
-                <form action="/buy" method="post">
-                    <div class="mb-3">
-                        <button class="btn btn-primary" type="submit">Buy</button>
-                    </div>
-                </form>
-                <form action="/quote" method="post">
-                    <div class="mb-3">
-                        <button class="btn btn-primary" type="submit">Delete</button>
-                    </div>
-                </form>
+                <tr>
+                    <td>{{  }}</td>
+                    <td></td>
+                    <td>
+                        <form action="/buy" method="post">
+                            <div class="mb-3">
+                                <button class="btn btn-primary" type="submit">Buy</button>
+                            </div>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/quote" method="post">
+                            <div class="mb-3">
+                                <button class="btn btn-primary" type="submit">Delete</button>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
