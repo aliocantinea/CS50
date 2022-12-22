@@ -141,7 +141,7 @@ def register():
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username doesn't exist, redirect to login if it does
-        if len(rows) >= 1:
+        if len(rows) > 0:
             return render_template("login.html")
 
         # Register user
