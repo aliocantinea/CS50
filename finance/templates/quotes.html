@@ -1,18 +1,7 @@
-{% extends "layout.html" %}
+{% extends "quote.html" %}
 
-{% block title %}
-    Quotes
-{% endblock %}
-
-{% block main %}
-    <form action="/quote" method="post">
-        <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
-            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password">
-        </div>
-        <button class="btn btn-primary" type="submit">Get quote</button>
+{% block lookup %}
+    <form action="/quotes" method="post">
+        <button class="btn btn-primary" type="submit">Buy</button>
     </form>
 {% endblock %}
