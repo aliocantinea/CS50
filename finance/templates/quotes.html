@@ -5,20 +5,22 @@
         <thead>
             <tr>
                 <th>Symbol</th>
-                <th></th>
+                <th>Cost</th>
             </tr>
         </thead>
         <tbody>
-            <form action="/buy" method="post">
-                <div class="mb-3">
-                    <button class="btn btn-primary" type="submit">Buy</button>
-                </div>
-            </form>
-            <form action="/quote" method="post">
-                <div class="mb-3">
-                    <button class="btn btn-primary" type="submit">Delete</button>
-                </div>
-            </form>
+            {% For quote in quotes %}
+                <form action="/buy" method="post">
+                    <div class="mb-3">
+                        <button class="btn btn-primary" type="submit">Buy</button>
+                    </div>
+                </form>
+                <form action="/quote" method="post">
+                    <div class="mb-3">
+                        <button class="btn btn-primary" type="submit">Delete</button>
+                    </div>
+                </form>
+            {% endfor %}
         </tbody>
     </table>
 
