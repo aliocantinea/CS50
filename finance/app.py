@@ -111,7 +111,13 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    return render_template("quote.html")
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    if request.method == "GET":
+        return render_template("quote.html")
+
+    
+
 
 
 @app.route("/register", methods=["GET", "POST"])
