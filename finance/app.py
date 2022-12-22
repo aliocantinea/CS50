@@ -147,7 +147,7 @@ def register():
         hash = generate_password_hash(request.form.get("password"))
 
         # Register user
-        db.execute("INSERT username INTO users WHERE ")
+        db.execute("INSERT INTO users () VALUES ()")
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
