@@ -152,7 +152,8 @@ def register():
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(request.form.get("password"),method='pbkdf2:sha256', salt_length=8))
 
         # Remember which user has registered
-        session["user_id"] = rows[0]["id"]
+        user = db.execute("SELECT * FROM users WHERE username = ?", username)
+        session["user_id"] = user[0]["id"]
 
         # Redirect user to home page
         return redirect("/")
