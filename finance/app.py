@@ -140,14 +140,14 @@ def register():
         # Query database for username for existing user
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
-        # Ensure username doesn't exist, redirect if it does
+        # Ensure username doesn't exist, redirect to login if it does
         if len(rows) >= 1:
             return render_template("login.html")
 
         # Register user
         db.execute("INSERT INTO users (username, hash)", (request.form.get("username") ,generate_password_hash(request.form.get("password"))))
 
-        # Remember which user has logged in
+        # Remember which user has registered
         session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
