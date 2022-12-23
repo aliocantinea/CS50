@@ -146,11 +146,11 @@ def register():
 
         # Ensure confirmation of password was submitted
         elif not request.form.get("confirmation"):
-            return apology("please provide confirmation of password", 404)
+            return apology("please provide confirmation of password", 511)
 
         # Ensure password and confirmation match
         elif not request.form.get("password") == request.form.get("confirmation"):
-            return apology("passwords must match", 405)
+            return apology("passwords must match", 511)
 
         username = request.form.get("username")
         # Query database for username for existing user
