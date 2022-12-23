@@ -13,12 +13,11 @@
         <tbody>
             {% For quote in quotes %}
                 <tr>
-                    <td>{{ quote["symbol"] }}</td> <!-- change [column] based on returned JSON file -->
-                    <td>{{ quote["name"]) }}</td> <!-- change [column] based on returned JSON file -->
-                    <td>{{ quote["price"] }}</td> <!-- change [column] based on returned JSON file -->
+                    <td name="symbol">{{ quote["symbol"] }}</td>
+                    <td>{{ quote["name"]) }}</td>
+                    <td>{{ quote["price"] }}</td>
                     <td>
                         <form action="/buy" method="post">
-                            <input name="symbol" hidden>
                             <div class="mb-3">
                                 <button class="btn btn-primary" type="submit">Buy</button>
                             </div>
