@@ -122,6 +122,9 @@ def quote():
         # Use lookup function on symbol to get information
         quote = Lookup(requst.form.get("symbol"))
 
+        # Check for invalid stock symbols
+        if quote >5 or not 
+
         # Check for NULL return
         if quote == None
             return apology("symbol not found", 404):
