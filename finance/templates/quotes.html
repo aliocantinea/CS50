@@ -12,7 +12,7 @@
             {% For quote in quotes %}
                 <tr>
                     <td>{{ quote["symbol"] }}</td> <!-- change [column] based on returned JSON file -->
-                    <td>{{ quote["companyName"] }}</td> <!-- change [column] based on returned JSON file -->
+                    <td>{{ float(quote["latestPrice"]) }}</td> <!-- change [column] based on returned JSON file -->
                     <td>{{ quote["price"] }}</td> <!-- change [column] based on returned JSON file -->
                     <td>
                         <form action="/buy" method="post">
