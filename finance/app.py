@@ -119,10 +119,16 @@ def quote():
     # User reached route via POST (by submitting a quote request)
     else:
 
+        # Use lookup function on symbol to get information
+        quote = Lookup(requst.form.get("symbol"))
 
+        # Check for NULL return
+        if quote == None
+            return apology("symbol not found", 404):
 
-        # Adds table to of requests
-        return render_template("quotes.html")
+        # Successful lookup
+        else:
+            return render_template("quotes.html", quote="quote")
 
 
 
