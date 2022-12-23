@@ -150,7 +150,7 @@ def register():
 
         # Ensure password and confirmation match
         elif not request.form.get("password") == request.form.get("confirmation"):
-            return apology("passwords must match", 511)
+            return apology("passwords must match", 406)
 
         username = request.form.get("username")
         # Query database for username for existing user
@@ -158,7 +158,7 @@ def register():
 
         # Ensure username doesn't exist, redirect to login if it does
         if len(rows) > 0:
-            return apology("usename already taken", 406)
+            return apology("usename already taken", 418)
 
         # Register user
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(request.form.get("password"),method='pbkdf2:sha256', salt_length=8))
