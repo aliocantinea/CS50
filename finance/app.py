@@ -138,11 +138,11 @@ def register():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 404)
+            return apology("must provide username", 204)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 404)
+            return apology("must provide password", 204)
 
         # Ensure confirmation of password was submitted
         elif not request.form.get("confirmation"):
