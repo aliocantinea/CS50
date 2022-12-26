@@ -123,7 +123,7 @@ def quote():
         quote = lookup(request.form.get("symbol"))
 
         # Check for invalid stock symbols
-        if len(quote) > 5 or not quote.isalpha():
+        if len(quote) > 5 or not quote[0].isalpha():
             return apology("Invalid stock symbol", 400)
 
         # Check for NULL return
@@ -132,7 +132,7 @@ def quote():
 
         # Successful lookup
         else:
-            return render_template("quotes.html", quote="quote")
+            return render_template("quotes.html", quote=quote)
 
 
 
