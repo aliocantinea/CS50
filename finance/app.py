@@ -73,7 +73,7 @@ def buy():
             return apology("Insufficient funds", 507)
 
         # Record transaction
-        
+        db.execute("UPDATE ")
 
 
         # Redirect user to home page
