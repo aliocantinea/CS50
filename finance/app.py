@@ -73,13 +73,13 @@ def buy():
         if (cash[0] - cost) < 0:
             return apology("Insufficient funds", 507)
         else:
-             = cash[0] - cost
+           wallet  = cash[0] - cost
 
         # Record transaction
         # Updates users cash
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", wallet, session["user_id"])
         # adds transaction regisry
-        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "buy",  cost, shares, session["user_id"])
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "buy",  wallet, shares, session["user_id"])
         # updates holdings
         update = db.execute("SELECT amount FROM holdings WHERE user = ? and symbol = ?", session["user_id"], symbol)
         if update == NONE:
