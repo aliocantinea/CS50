@@ -80,7 +80,8 @@ def buy():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
         # adds transaction regisry
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, "Buy", ?, ?, ?)", symbol, cost, shares, session["user_id"])
-        # updates
+        # updates holdings
+        db.execute("")
 
 
         # Redirect user to home page
