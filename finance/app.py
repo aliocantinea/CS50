@@ -70,6 +70,7 @@ def buy():
         # Check sufficient funds to buy
         cost = (query["price"] * shares)
         cash = db.execute("SELECT cash FROM users WHERE username = ?", session["user_id"])
+        wallet = cash["cash"]
         if (cash[0] - cost) < 0:
             return apology("Insufficient funds", 507)
         else:
