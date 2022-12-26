@@ -10,14 +10,14 @@
             </tr>
         </thead>
         <tbody>
-            {% For quote in quotes %}
+            {% for quote in quotes %}
                 <tr>
                     <td class="text-start">{{ quote["symbol"] }}</td>
-                    <td class="text-start">{{ quote["name"]) }}</td>
+                    <td class="text-start">{{ quote["name"] }}</td>
                     <td class="text-end">{{ quote["price"] }}</td>
                 </tr>
             {% endfor %}
-            <p>Quotes are in real time, and may change when requesting to purchase</p>
         </tbody>
     </table>
+    <p>Quotes are in real time, and may change when requesting to purchase</p>
 {% endblock %}

@@ -123,8 +123,9 @@ def quote():
         quote = lookup(request.form.get("symbol"))
 
         # Check for invalid stock symbols
-        if len(quote) > 5 or not quote[0].isalpha():
+        if len(quote) > 5 :
             return apology("Invalid stock symbol", 400)
+            # Only checking legnth, need to check for more
 
         # Check for NULL return
         if quote == None:
