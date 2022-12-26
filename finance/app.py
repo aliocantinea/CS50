@@ -86,7 +86,7 @@ def buy():
             # No holdings recoded
             db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, session["user_id"])
         else:
-            db.execute("UPDATE holdings SET amount = ? WHERE user = ? AND symbol =?", (shares + update), session["user_id"], symbol)
+            db.execute("UPDATE holdings SET amount = ? WHERE user = ? AND symbol =?", (shares + amount), session["user_id"], symbol)
 
 
         # Redirect user to home page
