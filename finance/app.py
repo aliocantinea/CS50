@@ -57,6 +57,11 @@ def buy():
 
     # User reached route via POST
     else:
+
+        # Check for shares to be a possitive interger
+        shares = request.form.get("shares")
+        if shares not
+
         return apology("TODO")
 
 
