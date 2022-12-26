@@ -50,7 +50,14 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+
+    # User gets to route via GET (as by redirect or link)
+    if request.method == "GET":
+        
+
+    # User reached route via POST
+    else:
+        return apology("TODO")
 
 
 @app.route("/history")
