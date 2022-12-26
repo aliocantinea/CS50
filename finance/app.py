@@ -65,7 +65,9 @@ def buy():
 
         query = lookup(request.form.get("symbol"))
 
-        cost = query
+        cost = (query["price"] * shares)
+
+        
 
         # Redirect user to home page
         return redirect("/")
