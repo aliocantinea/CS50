@@ -10,13 +10,11 @@
             </tr>
         </thead>
         <tbody>
-            {% for quote in quotes %}
                 <tr>
                     <td class="text-start">{{ symbol }}</td>
                     <td class="text-start">{{ name }}</td>
                     <td class="text-end">{{ price }}</td>
                 </tr>
-            {% endfor %}
         </tbody>
     </table>
     <p>Quotes are in real time, and may change when requesting to purchase</p>
