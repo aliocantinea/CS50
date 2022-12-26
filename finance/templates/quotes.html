@@ -7,7 +7,6 @@
                 <th>Symbol</th>
                 <th>Name</th>
                 <th>Cost</th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -16,13 +15,6 @@
                     <td name="symbol">{{ quote["symbol"] }}</td>
                     <td>{{ quote["name"]) }}</td>
                     <td>{{ quote["price"] }}</td>
-                    <td>
-                        <form action="/buy" method="post">
-                            <div class="mb-3">
-                                <button class="btn btn-primary" type="submit">Go to Buy</button>
-                            </div>
-                        </form>
-                    </td>
                 </tr>
             {% endfor %}
             <p>Quotes are in real time, and may change when requesting to buy</p>
