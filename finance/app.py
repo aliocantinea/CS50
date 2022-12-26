@@ -78,7 +78,7 @@ def buy():
         # Updates users cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
         # adds transaction regisry
-        db.execute("INSERT ")
+        db.execute("INSERT INTO ")
         # updates
 
 
