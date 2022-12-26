@@ -81,8 +81,10 @@ def buy():
         # adds transaction regisry
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, "Buy", ?, ?, ?)", symbol, cost, shares, session["user_id"])
         # updates holdings
-        update = db.execute("SELECT amount FROM holdings WHERE user = ? and symbol = ?", )
-
+        update = db.execute("SELECT amount FROM holdings WHERE user = ? and symbol = ?", session["user_id"], symbol)
+        if update = NONE
+            # No holdings recoded
+            db.execute("INSERT INTO holdings (symbol, amount, user) VALUES ()")
 
 
         # Redirect user to home page
