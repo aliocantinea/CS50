@@ -81,7 +81,7 @@ def buy():
         # adds transaction regisry
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "buy",  wallet, shares, session["user_id"])
         # updates holdings
-        amount = db.execute("SELECT amount FROM holdings WHERE user = ? AND symbol = ?", session["user_id"], symbol)
+        amount = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?)", symbol, session["user_id"])
         if amount[0]["amount"] == NULL:
             # No holdings recoded
             db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, session["user_id"])
