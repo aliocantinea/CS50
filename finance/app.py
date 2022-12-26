@@ -79,12 +79,14 @@ def buy():
         # Updates users cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
         # adds transaction regisry
-        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, "Buy", ?, ?, ?)", symbol, cost, shares, session["user_id"])
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "buy",  cost, shares, session["user_id"])
         # updates holdings
         update = db.execute("SELECT amount FROM holdings WHERE user = ? and symbol = ?", session["user_id"], symbol)
         if update = NONE
             # No holdings recoded
-            db.execute("INSERT INTO holdings (symbol, amount, user) VALUES ()")
+            db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, session["user_id"])
+        else:
+            db.execute("UPDATE holdings SET amount = ? WHERE user = ? AND symbol =?", (shares + update), session["user_id"], symbol)
 
 
         # Redirect user to home page
