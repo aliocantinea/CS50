@@ -53,7 +53,7 @@ def buy():
 
     # User gets to route via GET (as by redirect or link)
     if request.method == "GET":
-        
+        return apology("TODO")
 
     # User reached route via POST
     else:
