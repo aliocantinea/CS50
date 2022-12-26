@@ -76,6 +76,7 @@ def buy():
 
         # Record transaction
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
+        db.execute("")
 
 
         # Redirect user to home page
