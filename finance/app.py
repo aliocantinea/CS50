@@ -81,7 +81,7 @@ def buy():
         # adds transaction regisry
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "buy",  wallet, shares, session["user_id"])
         # updates holdings
-        amount = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?)", symbol, session["user_id"])
+        amount = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, session["user_id"])
         try:
             db.execute("UPDATE holdings SET amount = ? WHERE user = ? AND symbol =?", (shares + int(amount[0])), session["user_id"], symbol)
         except:
