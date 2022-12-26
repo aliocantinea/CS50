@@ -60,7 +60,10 @@ def buy():
 
         # Check for shares to be a possitive interger
         shares = request.form.get("shares")
-        if shares not
+        if shares not > 0:
+            return apology("Shares must be a positive interger", 406)
+
+        
 
         return apology("TODO")
 
