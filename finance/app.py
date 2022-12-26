@@ -60,7 +60,7 @@ def buy():
 
         # Check for shares to be a possitive interger
         shares = int(request.form.get("shares"))
-        if shares < 0:
+        if shares <= 1:
             return apology("Shares must be a positive interger", 406)
 
         # Get information about stock to buy
