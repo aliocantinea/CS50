@@ -71,9 +71,11 @@ def buy():
         cash = db.execute("SELECT cash FROM users WHERE username = ?", session["user_id"])
         if (cash - cost) < 0:
             return apology("Insufficient funds", 507)
+        elif:
+            cash = cash - cost
 
         # Record transaction
-        db.execute("UPDATE ")
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
 
 
         # Redirect user to home page
