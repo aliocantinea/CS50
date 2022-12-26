@@ -60,7 +60,7 @@ def buy():
 
         # Check for shares to be a possitive interger
         shares = request.form.get("shares")
-        if shares not > 0:
+        if shares < 0:
             return apology("Shares must be a positive interger", 406)
 
         # Get information about stock to buy
@@ -72,7 +72,7 @@ def buy():
         cash = db.execute("SELECT cash FROM users WHERE username = ?", session["user_id"])
         if (cash - cost) < 0:
             return apology("Insufficient funds", 507)
-        elif:
+        else:
             cash = cash - cost
 
         # Record transaction
