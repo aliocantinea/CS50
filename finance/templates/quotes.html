@@ -13,7 +13,7 @@
             {% for quote in quotes %}
                 <tr>
                     <td class="text-start">{{ quote[symbol] }}</td>
-                    <td class="text-start">{{ quote["companyName"] }}</td>
+                    <td class="text-start">{{ quote[companyName] }}</td>
                     <td class="text-end">{{ quote["price"] }}</td>
                 </tr>
             {% endfor %}
