@@ -55,7 +55,7 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
-    # User reached route via POST
+    # User reached route via POST (as by submitting a buy request)
     else:
 
         # Check for shares to be a possitive interger
@@ -65,8 +65,8 @@ def buy():
 
         
 
-        return apology("TODO")
-
+        # Redirect user to home page
+        return redirect("/")
 
 @app.route("/history")
 @login_required
