@@ -63,8 +63,9 @@ def buy():
         if shares not > 0:
             return apology("Shares must be a positive interger", 406)
 
-        symbol = request.form.get("symbol")
-        cost = 
+        query = lookup(request.form.get("symbol"))
+
+        cost = query
 
         # Redirect user to home page
         return redirect("/")
