@@ -120,20 +120,20 @@ def quote():
     else:
 
         # Use lookup function on symbol to get information
-        quote = lookup(request.form.get("symbol"))
+        quotes = lookup(request.form.get("symbol"))
 
         # Check for invalid stock symbols
-        if len(quote) > 5 :
+        if len(quotes) > 5 :
             return apology("Invalid stock symbol", 400)
             # Only checking legnth, need to check for more
 
         # Check for NULL return
-        if quote == None:
+        if quotes == None:
             return apology("Stock symbol not found", 404)
 
         # Successful lookup
         else:
-            return render_template("quotes.html", quotes="quote")
+            return render_template("quotes.html", quotes="quotes")
 
 
 
