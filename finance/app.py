@@ -83,8 +83,9 @@ def buy():
         # updates holdings
         amount = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?)", symbol, session["user_id"])
         try:
-            db.execute("UPDATE holdings SET amount = ? WHERE user = ? AND symbol =?", (shares + amount), session["user_id"], symbol)
-
+            db.execute("UPDATE holdings SET amount = ? WHERE user = ? AND symbol =?", (shares + int(amount[0])), session["user_id"], symbol)
+        except:
+            db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, session["user_id"])
 
         # Redirect user to home page
         return redirect("/")
