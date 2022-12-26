@@ -63,12 +63,17 @@ def buy():
         if shares not > 0:
             return apology("Shares must be a positive interger", 406)
 
+        # Get information about stock to buy
         query = lookup(request.form.get("symbol"))
+
+        # Check sufficient funds to buy
         cost = (query["price"] * shares)
         cash = db.execute("SELECT cash FROM users WHERE username = ?", request.form.get("username"))
-
         if cash - cost < 0:
-            return apology("Insufficient funds", )
+            return apology("Insufficient funds", 507)
+
+        
+
 
         # Redirect user to home page
         return redirect("/")
