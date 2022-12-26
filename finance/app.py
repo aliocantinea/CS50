@@ -123,12 +123,12 @@ def quote():
         quote = Lookup(requst.form.get("symbol"))
 
         # Check for invalid stock symbols
-        if quote > 5 or not Isalpha(quote)
-            return apology("Invalid stock symbol", 400):
+        if quote > 5 or not Isalpha(quote):
+            return apology("Invalid stock symbol", 400)
 
         # Check for NULL return
-        if quote == None
-            return apology("Stock symbol not found", 404):
+        if quote == None:
+            return apology("Stock symbol not found", 404)
 
         # Successful lookup
         else:
