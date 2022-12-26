@@ -120,16 +120,19 @@ def quote():
     else:
 
         # Use lookup function on symbol to get information
-        quotes = lookup(request.form.get("symbol"))
+        quote = request.form.get("symbol")
+
+        # Check for invalid stock symbols before api call
+        if len(quote) > 5 :
+            return apology("Invalid stock symbol", 400)
+            # Only checking legnth, need to check for more
+
+        # API call to check quote
+        quotes = lookup(quote)
 
         # Check for NULL return
         if quotes == None:
             return apology("No stock symbol found", 404)
-
-        # Check for invalid stock symbols
-        elif len(quotes) > 5 :
-            return apology("Invalid stock symbol", 400)
-            # Only checking legnth, need to check for more
 
         # Successful lookup
         else:
