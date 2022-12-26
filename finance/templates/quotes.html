@@ -12,12 +12,12 @@
         <tbody>
             {% For quote in quotes %}
                 <tr>
-                    <td name="symbol">{{ quote["symbol"] }}</td>
-                    <td>{{ quote["name"]) }}</td>
-                    <td>{{ quote["price"] }}</td>
+                    <td class="text-start">{{ quote["symbol"] }}</td>
+                    <td class="text-start">{{ quote["name"]) }}</td>
+                    <td class="text-end">{{ quote["price"] }}</td>
                 </tr>
             {% endfor %}
-            <p>Quotes are in real time, and may change when requesting to buy</p>
+            <p>Quotes are in real time, and may change when requesting to purchase</p>
         </tbody>
     </table>
 
