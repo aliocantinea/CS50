@@ -9,13 +9,19 @@
                     <th class="text-start">Symbol</th>
                     <th class="text-start">Name</th>
                     <th class="text-end">Cost</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                     <tr>
-                        <td name="symbol" class="text-start">{{ symbol }}</td>
-                        <td class="text-start">{{ name }}</td>
-                        <td class="text-end">{{ price }}</td>
+                        <form action="/buy" method="post">
+                            <td name="symbol" class="text-start">{{ symbol }}</td>
+                            <td class="text-start">{{ name }}</td>
+                            <td class="text-end">{{ price }}</td>
+                            <td>
+                                <button class="btn btn-primary" type="submit">Buy</button>
+                            </td>
+                        </form>
                     </tr>
             </tbody>
         </table>
