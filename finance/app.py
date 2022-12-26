@@ -64,7 +64,8 @@ def buy():
             return apology("Shares must be a positive interger", 406)
 
         # Get information about stock to buy
-        query = lookup(request.form.get("symbol"))
+        symbol = request.form.get("symbol")
+        query = lookup(symbol)
 
         # Check sufficient funds to buy
         cost = (query["price"] * shares)
@@ -78,7 +79,7 @@ def buy():
         # Updates users cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
         # adds transaction regisry
-        db.execute("INSERT INTO history (symbol, type, cost, amount, user)")
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, "Buy", ?, ?, ?)", symbol, )
         # updates
 
 
