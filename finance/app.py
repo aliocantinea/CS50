@@ -124,7 +124,7 @@ def quote():
 
         # Check for NULL return
         if quotes == None:
-            return apology("Please enter a stock symbol", 404)
+            return apology("No stock symbol found", 404)
 
         # Check for invalid stock symbols
         if len(quotes) > 5 :
