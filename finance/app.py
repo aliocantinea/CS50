@@ -75,8 +75,11 @@ def buy():
             cash = cash - cost
 
         # Record transaction
+        # Updates users cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, session["user_id"])
+        # adds transaction regisry
         db.execute("")
+        # updates 
 
 
         # Redirect user to home page
