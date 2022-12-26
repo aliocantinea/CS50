@@ -133,7 +133,7 @@ def quote():
 
         # Successful lookup
         else:
-            return render_template("quotes.html", quotes=quotes)
+            return render_template("quotes.html", symbol=quotes["symbol"], name=quotes["name"], price=quotes["price"])
 
 
 
