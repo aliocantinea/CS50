@@ -120,10 +120,10 @@ def quote():
     else:
 
         # Use lookup function on symbol to get information
-        quote = Lookup(requst.form.get("symbol"))
+        quote = lookup(request.form.get("symbol"))
 
         # Check for invalid stock symbols
-        if quote > 5 or not Isalpha(quote):
+        if len(quote) > 5 or not isalpha(quote):
             return apology("Invalid stock symbol", 400)
 
         # Check for NULL return
