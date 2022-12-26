@@ -127,13 +127,13 @@ def quote():
             return apology("No stock symbol found", 404)
 
         # Check for invalid stock symbols
-        if len(quotes) > 5 :
+        elif len(quotes) > 5 :
             return apology("Invalid stock symbol", 400)
             # Only checking legnth, need to check for more
 
         # Successful lookup
         else:
-            return render_template("quotes.html", symbol=quotes["symbol"], name=quotes["name"], price=quotes["price"])
+            return render_template("quotes.html", symbol=quotes["symbol"], name=quotes["name"], price=usd(quotes["price"]))
 
 
 
