@@ -122,14 +122,14 @@ def quote():
         # Use lookup function on symbol to get information
         quotes = lookup(request.form.get("symbol"))
 
+        # Check for NULL return
+        if quotes == None:
+            return apology("Please enter a stock symbol", 404)
+
         # Check for invalid stock symbols
         if len(quotes) > 5 :
             return apology("Invalid stock symbol", 400)
             # Only checking legnth, need to check for more
-
-        # Check for NULL return
-        if quotes == None:
-            return apology("Stock symbol not found", 404)
 
         # Successful lookup
         else:
