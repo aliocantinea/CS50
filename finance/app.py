@@ -98,7 +98,7 @@ def buy():
             return apology("stock not found", 400)
         symbol = symbol.upper()
         query = lookup(symbol)
-        if not bool(query["name"]):
+        if not bool(query):
             return apology("stock not found", 400)
         else:
             name = query["name"]
