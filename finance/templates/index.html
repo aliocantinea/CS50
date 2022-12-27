@@ -12,24 +12,29 @@
                 <th class="text-start">Symbol</th>
                 <th class="text-start">Name</th>
                 <th class="text-end">Shares</th>
-                <th class="text-end">Price</th>
+                <th class="text-end" colspan="2">Price</th>
                 <th class="text-end">TOTAL</th>
             </tr>
         </thead>
         <tbody>
             {% for row in portfolio %}
                 <tr>
-                    <td class="text-start">{{ row["symbol"] }}</td>
-                    <td class="text-start">{{ row["name"] }}</td>
-                    <td class="text-end">{{ row["amount"] }}</td>
-                    <td class="text-end">{{ row["price"] }}</td>
-                    <td class="text-end">{{ row["sum"] }}</td>
+                    <form action="/buy" method="post">
+                        <td class="text-start" name="symbol">{{ row["symbol"] }}</td>
+                        <td class="text-start">{{ row["name"] }}</td>
+                        <td class="text-end">{{ row["amount"] }}</td>
+                        <td>
+                            <button class="btn btn-primary" type="submit">Buy more</button>
+                        </td>
+                        <td class="text-end">{{ row["price"] }}</td>
+                        <td class="text-end">{{ row["sum"] }}</td>
+                    </form>
                 </tr>
             {% endfor %}
         </tbody>
         <tfoot>
             <tr>
-                <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                <td class="border-0 fw-bold text-end" colspan="5">Cash</td>
                 <td class="border-0 text-end">{{ cash }}</td>
             </tr>
             <tr>
