@@ -55,11 +55,11 @@ def index():
         name = stock["name"]
         assets += sum
 
-    cash = usd(db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"])
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
     total = assets + float(cash)
 
-    return render_template("index.html", portfolio=portfolio, cash=cash, price=usd(price), total=usd(total), name=name)
+    return render_template("index.html", portfolio=portfolio, cash=usd(cash), price=usd(price), total=usd(total))
 
 
 @app.route("/buy", methods=["GET", "POST"])
