@@ -89,9 +89,11 @@ def buy():
 
         # Check for shares to be a possitive interger
         shares = request.form.get("shares")
-        if shares < 1 and not shares.isdigit():
+        try:
+            if shares > 0 and shares.isdigit():
+                continue
+        except (AttributeError, ValueError, TypeError):
             return apology("Shares must be a positive interger", 400)
-
         # Get information about stock to buy
         symbol = request.form.get("symbol").upper()
         query = lookup(symbol)
