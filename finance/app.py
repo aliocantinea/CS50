@@ -53,7 +53,7 @@ def index():
         holding["name"] = lookup(holding["symbol"])["name"]
         holding["price"] = lookup(holding["symbol"])["price"]
         holding["sum"] = (holding["price"] * holding["amount"])
-        holding["symbol"] = upper(holding["symbol"])
+        holding["symbol"] = holding["symbol"].upper()
         assets += holding["sum"]
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
@@ -192,7 +192,7 @@ def quote():
 
         # Successful lookup
         else:
-            return render_template("quotes.html", symbol=quotes["symbol"], name=quotes["name"], price=usd(quotes["price"]))
+            return render_template("quotes.html", symbol=quotes["symbol"].upper(), name=quotes["name"], price=usd(quotes["price"]))
 
 
 
