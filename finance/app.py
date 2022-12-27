@@ -53,6 +53,7 @@ def index():
         holding["name"] = lookup(holding["symbol"])["name"]
         holding["price"] = lookup(holding["symbol"])["price"]
         holding["sum"] = (holding["price"] * holding["amount"])
+        holding["symbol"] = upper(holding["symbol"])
         assets += holding["sum"]
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
