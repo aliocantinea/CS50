@@ -12,7 +12,7 @@
                 <th class="text-start">Symbol</th>
                 <th class="text-start">Name</th>
                 <th class="text-end">Shares</th>
-                <th class="text-end">Purchase</th>
+                <th class="text-start">Purchase</th>
                 <th class="text-end">Price</th>
                 <th class="text-end">TOTAL</th>
             </tr>
@@ -25,7 +25,7 @@
                         <td class="text-start">{{ row["name"] }}</td>
                         <td class="text-end">{{ row["amount"] }}</td>
                         <td>
-                            <div>
+                            <div class="btn-toolbar">
                                 <input autocomplete="off" class="form-control w-auto" min="1" name="shares" placeholder="Shares" type="number">
                                 <button class="btn btn-primary" type="submit">Buy</button>
                             </div>
