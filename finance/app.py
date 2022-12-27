@@ -51,7 +51,7 @@ def index():
     for holding in portfolio:
         stock = lookup(holding["symbol"])
         price =int(stock["price"])
-        total = price * holding["amount"]
+        sum = price * holding["amount"]
         name = stock["name"]
         assets.append(int(total))
 

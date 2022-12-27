@@ -4,7 +4,7 @@
     Portfolio
 {% endblock %}
 
-{% block lookup %}
+{% block main %}
 
     <div class="container-fluid text-center">
         <table class="table table-striped">
@@ -20,11 +20,11 @@
            <tbody>
                 {% for row in portfolio %}
                     <tr>
-                        <td class="text-start">{{ symbol }}</td>
-                        <td class="text-start">{{ name }}</td>
-                        <td class="text-end">{{ shares }}</td>
+                        <td class="text-start">{{ row["symbol"] }}</td>
+                        <td class="text-start">{{ row["name"] }}</td>
+                        <td class="text-end">{{ row["shares"] }}</td>
                         <td class="text-end">{{ row["price"] }}</td>
-                        <td class="text-end">{{ total }}</td>
+                        <td class="text-end">{{ row["sum"] }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
