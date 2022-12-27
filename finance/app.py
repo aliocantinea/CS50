@@ -112,7 +112,7 @@ def buy():
         if (cash - cost) < 0:
             return apology("Insufficient funds", 400)
         else:
-           wallet  = cash - cost
+            wallet = cash - cost
 
         """ Record transaction"""
         # Updates users cash
@@ -136,6 +136,7 @@ def buy():
         flash(message)
         # Redirect user to home page
         return redirect("/")
+
 
 @app.route("/history")
 @login_required
@@ -208,7 +209,7 @@ def quote():
         quote = request.form.get("symbol").upper()
 
         # Check for invalid stock symbols before api call
-        if len(quote) > 5 :
+        if len(quote) > 5:
             return apology("Invalid stock symbol", 400)
             # Only checking legnth, need to check for more
 
@@ -222,7 +223,6 @@ def quote():
         # Successful lookup
         else:
             return render_template("quotes.html", symbol=quotes["symbol"], name=quotes["name"], price=usd(quotes["price"]))
-
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -260,7 +260,8 @@ def register():
             return apology("usename already taken", 400)
 
         # Register user
-        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(request.form.get("password"),method='pbkdf2:sha256', salt_length=8))
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(
+            request.form.get("password"), method='pbkdf2:sha256', salt_length=8))
 
         # Remember which user has registered
         user = db.execute("SELECT * FROM users WHERE username = ?", username)
