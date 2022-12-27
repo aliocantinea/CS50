@@ -44,6 +44,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
+    # Set function variables
     assets = 0
     user = session["user_id"]
 
@@ -76,6 +77,7 @@ def index():
 def buy():
     """Buy shares of stock"""
 
+    # Set function variable
     user = session["user_id"]
 
     # User gets to route via GET (as by redirect or link)
@@ -261,8 +263,12 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+
+    # Set function variable
+    user = session["user_id"]
+
     if request.method == "GET":
-        stocks = db.execute("SELECT symbol FROM holdings WHERE username = ?", )
+        stocks = db.execute("SELECT symbol FROM holdings WHERE user = ?", user)
 
         return render_template("sell.html", stocks=stocks)
 
