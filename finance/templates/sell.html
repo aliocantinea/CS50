@@ -6,16 +6,20 @@
 
 {% block main %}
 
-    <div class="container-fluid text-center">
-        <form action="/buy" method="post">
-            <div class="mb-3">
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text" required>
-            </div>
-            <div class="mb-3">
-                <input autocomplete="off" class="form-control mx-auto w-auto" min="1" name="shares" placeholder="Shares" type="number">
-            </div>
-            <button class="btn btn-primary" type="submit">Buy</button>
-        </form>
-    </div>
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" name="symbol">
+                <option disabled="" selected="">Symbol</option>
 
+                    <option value="NFLX">NFLX</option>
+
+                    <option value="SCL">SCL</option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" min="0" name="shares" placeholder="Shares" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
 {% endblock %}
