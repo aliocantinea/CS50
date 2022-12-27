@@ -120,7 +120,8 @@ def buy():
         else:
             db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, user)
 
-        flash("Bought!")
+        message = f"{shares} of {name}({symbol}) sold"
+        flash(message)
         # Redirect user to home page
         return redirect("/")
 
@@ -294,8 +295,8 @@ def sell():
         if not bool(query["name"]):
             return apology("stock not found", 404)
         else:
-            price = query["price"]
-            credit = price * shares
+            credit = query["price"] * shares
+            name = query["name"]
 
         # Checks for stocks still present within holdings
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
@@ -304,11 +305,11 @@ def sell():
 
 
         # adds transaction regisry
-        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  cost, shares, user)
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  credit, shares, user)
 
         # Updates users cash
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",credit , user)
 
-        message = f"{shares} of {symbol} sold"
+        message = f"{shares} of {name}({symbol}) sold"
         flash(message)
         return redirect("/")
