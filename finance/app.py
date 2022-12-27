@@ -95,6 +95,8 @@ def buy():
         except (ValueError, TypeError):
             return apology("Shares must be a positive interger", 400)
 
+        shares = int(shares)
+
         # Get information about stock to buy
         symbol = request.form.get("symbol")
         if not type(symbol) is str:
