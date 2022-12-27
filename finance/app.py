@@ -49,17 +49,16 @@ def index():
     # Get all holdings from db
     portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", session["user_id"])
     for holding in portfolio:
-        stock = lookup(holding["symbol"])
-        price =stock["price"]
-        sum = price * holding["amount"]
-        name = stock["name"]
+        holding["name"] = lookup(holding["symbol"])["name"]
+        holding["price"] = lookup(holding["symbol"])["price"]
+        sum = (holding["price"] * holding["amount"])
         assets += sum
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
     total = assets + float(cash)
 
-    return render_template("index.html", portfolio=portfolio, cash=usd(cash), price=usd(price), total=usd(total))
+    return render_template("index.html", portfolio=portfolio, cash=usd(cash), price=usd(holding["price"]), total=usd(total), sum=usd(sum))
 
 
 @app.route("/buy", methods=["GET", "POST"])
