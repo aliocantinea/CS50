@@ -45,12 +45,15 @@ def index():
     """Show portfolio of stocks"""
     # Get all holdings from db
     portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", session["user_id"])
-    for symbol in portfolio:
-        price = lookup(portfolio["symbol"])
+    for holding in portfolio:
+        price = lookup(holding["symbol"])
+        total = price * holding["amount"]
+        name = lookup(holding["name"])
+
 
     cash = usd(db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"])
 
-    return render_template("index.html", portfolio=portfolio, cash=cash)
+    return render_template("index.html", portfolio=portfolio, cash=cash, price=price, total=total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
