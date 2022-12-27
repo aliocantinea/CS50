@@ -257,4 +257,8 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return render_template("sell")
+    if request.method == "GET":
+        return render_template("sell.html", )
+
+    else:
+        return apology("TODO")
