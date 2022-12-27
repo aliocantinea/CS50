@@ -21,7 +21,7 @@
             {% for row in portfolio %}
                 <tr>
                     <form action="/buy" method="post">
-                        <td class="text-start" name="symbol">{{ row["symbol"] }}</td>
+                        <td class="text-start" id="symbol" name="symbol" type="text">{{ row["symbol"] }}</td>
                         <td class="text-start">{{ row["name"] }}</td>
                         <td class="text-end">{{ row["amount"] }}</td>
                         <td>
