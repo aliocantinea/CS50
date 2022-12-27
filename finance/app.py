@@ -279,6 +279,6 @@ def sell():
     # User reached route via POST (as by submitting sell reuqest within form)
     else:
         symbol = request.form.get("symbol").upper()
-        
 
-        return apology("TODO")
+        if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
+            return apology("No shares found", )
