@@ -53,11 +53,12 @@ def index():
     for holding in portfolio:
         # In the future including name in db to save on api calls in lookup
         holding["name"] = lookup(holding["symbol"])["name"]
-        holding["price"] = lookup(holding["symbol"])["price"]
-        sum = (holding["price"] * holding["amount"])
+        price = lookup(holding["symbol"])["price"]
+        sum = (price * holding["amount"])
         # Add each rows value together
         assets += sum
-        # Format each rows sum to USD
+        # Format each row to USD where applicable
+        holding["price"] = usd(price)
         holding["sum"] = usd(sum)
 
     # Get cash from user database for total assets
@@ -66,7 +67,7 @@ def index():
     # Add together both cash and each rows assets
     total = assets + float(cash)
 
-    return render_template("index.html", portfolio=portfolio, cash=usd(cash), price=usd(holding["price"]), total=usd(total))
+    return render_template("index.html", portfolio=portfolio, cash=usd(cash), total=usd(total))
 
 
 @app.route("/buy", methods=["GET", "POST"])
