@@ -291,7 +291,7 @@ def sell():
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
             return apology("No shares found", 204)
 
-        """Sells stocks"""
+        """Record transaction"""
         
 
         flash("Stock(s) sold successfully")
