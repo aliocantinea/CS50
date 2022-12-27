@@ -46,9 +46,10 @@ def index():
     # Get all holdings from db
     portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", session["user_id"])
     for symbol in portfolio:
-        
 
-    return render_template("index.html", portfolio=portfolio)
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+
+    return render_template("index.html", portfolio=portfolio, cash=cash)
 
 
 @app.route("/buy", methods=["GET", "POST"])
