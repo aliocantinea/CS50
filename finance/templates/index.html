@@ -13,17 +13,31 @@
                     <th class="text-start">Symbol</th>
                     <th class="text-start">Name</th>
                     <th class="text-end">Shares</th>
+                    <th class="text-end">Price</th>
+                    <th class="text-end">TOTAL</th>
                 </tr>
             </thead>
-            <tbody>
+           <tbody>
                 {% for row in portfolio %}
-                        <tr>
-                            <td class="text-start">{{ portfolio[symbol] }}</td>
-                            <td class="text-start">{{ portfolio[amount] }}</td>
-                            <td class="text-end">{{  }}</td>
-                        </tr>
+                    <tr>
+                        <td class="text-start">{{ symbol }}</td>
+                        <td class="text-start">{{ name }}</td>
+                        <td class="text-end">{{ shares }}</td>
+                        <td class="text-end">{{ price }}</td>
+                        <td class="text-end">{{ total }}</td>
+                    </tr>
                 {% endfor %}
             </tbody>
+            <tfoot>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                    <td class="border-0 text-end">$9,891.54</td>
+                </tr>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+                    <td class="border-0 w-bold text-end">$10,000.00</td>
+                </tr>
+            </tfoot>
         </table>
         <p class="small text-center text-muted">Quotes are in real time, and may change when requesting to purchase</p>
     </div>
