@@ -281,6 +281,8 @@ def sell():
         # Check against no stock or quantity selected
         if int(request.form.get("shares")) < 1:
             return apology("Missing shares quantity", 411)
+        else:
+            shares = request.form.get("shares")
 
         if not bool(request.form.get("symbol")):
             return apology("Missing a seleced stock", 416)
@@ -291,6 +293,9 @@ def sell():
         query = lookup(symbol)
         if not bool(query["name"]):
             return apology("stock not found", 404)
+        else:
+            price = query["price"]
+
 
         # Checks for stocks still present within holdings
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
@@ -310,7 +315,6 @@ def sell():
         else:
             db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, user)
 
-        flash("Bought!")
-
-        flash("Stock(s) sold successfully")
+        message = f"{shares} of {symbol} sold"
+        flash(message)
         return redirect("/")
