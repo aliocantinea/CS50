@@ -89,7 +89,7 @@ def buy():
 
         # Check for shares to be a possitive interger
         shares = request.form.get("shares")
-        if shares < 1:
+        if shares < 1 and not shares.isdigit():
             return apology("Shares must be a positive interger", 400)
 
         # Get information about stock to buy
