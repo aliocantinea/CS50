@@ -88,7 +88,7 @@ def buy():
     else:
 
         # Check for shares to be a possitive interger
-        shares = int(request.form.get("shares"))
+        shares = request.form.get("shares")
         if shares < 1:
             return apology("Shares must be a positive interger", 400)
 
