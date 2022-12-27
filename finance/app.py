@@ -290,7 +290,7 @@ def sell():
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
             return apology("No shares found", 204)
 
-        # Check against no stock or quantity selected
+        # Check against quantity selected
         if int(request.form.get("shares")) < 1:
             return apology("Missing shares quantity", 411)
         else:
