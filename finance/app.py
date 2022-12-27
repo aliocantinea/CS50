@@ -80,7 +80,7 @@ def buy():
             return apology("Shares must be a positive interger", 406)
 
         # Get information about stock to buy
-        symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol").upper()
         query = lookup(symbol)
         if not bool(query["name"]):
             return apology("stock not found", 404)
@@ -101,8 +101,7 @@ def buy():
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "buy",  cost, shares, session["user_id"])
 
         # updates holdings if they exist
-        amount = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, session["user_id"])[0]["amount"]
-        if bool(amount) == True:
+        if bool(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, session["user_id"])) == True:
             db.execute("UPDATE holdings SET amount = ? WHERE user = ? AND symbol =?", shares + amount, session["user_id"], symbol)
         # adds holdings if new
         else:
@@ -178,7 +177,7 @@ def quote():
     else:
 
         # Use lookup function on symbol to get information
-        quote = request.form.get("symbol")
+        quote = request.form.get("symbol").upper()
 
         # Check for invalid stock symbols before api call
         if len(quote) > 5 :
