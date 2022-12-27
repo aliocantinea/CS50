@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-start">Name</th>
+                <th class="text-end">Shares</th>
+                <th class="text-center">Date</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in portfolio %}
+                <tr>
+                    <form action="/buy" method="post">
+                        <td class="text-start">
+                            <input type="hidden" id="symbol" name="symbol" type="text" value="{{ row["symbol"] }}">
+                            {{ row["symbol"] }}
+                        </td>
+                        <td class="text-start">{{ row["name"] }}</td>
+                        <td class="text-end">{{ row["amount"] }}</td>
+                        <td>
+                            <div class="btn-group" >
+                                <input autocomplete="off" class="form-control" min="1" name="shares" placeholder="Shares" type="number">
+                                <button class="btn btn-primary" type="submit">Buy</button>
+                            </div>
+                        </td>
+                        <td class="text-end">{{ row["price"] }}</td>
+                        <td class="text-end">{{ row["sum"] }}</td>
+                    </form>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="5">Cash</td>
+                <td class="border-0 text-end">{{ cash }}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="5">TOTAL</td>
+                <td class="border-0 w-bold text-end">{{ total }}</td>
+            </tr>
+        </tfoot>
+    </table>
+
+{% endblock %}
