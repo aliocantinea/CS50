@@ -44,24 +44,22 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
-    assets = []
+    assets
 
     # Get all holdings from db
     portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", session["user_id"])
     for holding in portfolio:
         stock = lookup(holding["symbol"])
-        price =int(stock["price"])
-        sum = price * holding["amount"]
+        price =float(stock["price"])
+        sum = float(price * holding["amount"])
         name = stock["name"]
-        assets.append(int(total))
-
-    for asset in assets:
-        asset = usd(asset)
-
+        assets = assets + sum
 
     cash = usd(db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"])
 
-    return render_template("index.html", portfolio=portfolio, cash=cash, price=usd(price), total=assets, name=name)
+    total = assets + cash
+
+    return render_template("index.html", portfolio=portfolio, cash=cash, price=usd(price), total=usd(total), name=name)
 
 
 @app.route("/buy", methods=["GET", "POST"])
