@@ -120,6 +120,7 @@ def buy():
         else:
             db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, user)
 
+        flash("Bought!")
         # Redirect user to home page
         return redirect("/")
 
@@ -159,6 +160,7 @@ def login():
         session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
+        flash("Logged in")
         return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
@@ -252,6 +254,7 @@ def register():
         session["user_id"] = user[0]["id"]
 
         # Redirect user to home page
+        flash("Successfully registered")
         return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
