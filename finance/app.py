@@ -119,7 +119,7 @@ def buy():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", wallet, user)
 
         # adds transaction regisry
-        db.execute("INSERT INTO history (symbol, type, cost, amount, user, datetime) VALUES (?, ?, ?, ?, ?, ?)", symbol, "buy",  cost, shares, user, CURRENT_TIMESTAMP)
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user, datetime) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)", symbol, "buy",  cost, shares, user)
 
         # updates holdings if they exist
         if bool(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)):
@@ -333,7 +333,7 @@ def sell():
         name = query["name"]
 
         # adds transaction regisry
-        db.execute("INSERT INTO history (symbol, type, cost, amount, user, datetime) VALUES (?, ?, ?, ?, ?, ?)", symbol, "sell",  credit, sell, user, CURRENT_TIMESTAMP)
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user, datetime) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)", symbol, "sell",  credit, sell, user)
 
         # Updates users holdings
         if wallet == sell:
