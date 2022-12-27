@@ -45,9 +45,10 @@ def index():
     """Show portfolio of stocks"""
 
     assets = 0
+    user = session["user_id"]
 
     # Get all holdings from db
-    portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", session["user_id"])
+    portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", user)
 
     # Loop over each row in holdings and add name, price, and sum of holdings
     for holding in portfolio:
@@ -62,7 +63,7 @@ def index():
         holding["sum"] = usd(sum)
 
     # Get cash from user database for total assets
-    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", user)[0]["cash"]
 
     # Add together both cash and each rows assets
     total = assets + float(cash)
@@ -258,7 +259,9 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "GET":
-        return render_template("sell.html", )
+        stocks = db.execute("SELECT symbol FROM holdings WHERE username = ?", )
+
+        return render_template("sell.html", stocks=stocks)
 
     else:
         return apology("TODO")
