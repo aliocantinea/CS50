@@ -287,12 +287,18 @@ def sell():
 
         symbol = request.form.get("symbol").upper()
 
+        # Checks stock still sellable
+        query = lookup(symbol)
+        if not bool(query["name"]):
+            return apology("stock not found", 404)
+
+
         # Checks for stocks still present within holdings
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
             return apology("No shares found", 204)
 
         """Record transaction"""
-        
+
 
         flash("Stock(s) sold successfully")
         return redirect("/")
