@@ -46,7 +46,7 @@ def index():
     # Get all holdings from db
     portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", session["user_id"])
     for symbol in portfolio:
-        price = lookup()
+        price = lookup(portfolio["symbol"])
 
     cash = usd(db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"])
 
