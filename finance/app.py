@@ -89,11 +89,13 @@ def buy():
 
         # Check for shares to be a possitive interger
         shares = request.form.get("shares")
-        if not type(shares) is int and not shares > 0:
+        if not type(shares) is int and not int(shares) > 0:
             return apology("Shares must be a positive interger", 400)
 
         # Get information about stock to buy
-        symbol = request.form.get("symbol").upper()
+        symbol = request.form.get("symbol")
+        if not type(symbol) is str:
+            return apology("stock not found", 400)
         query = lookup(symbol)
         if not bool(query["name"]):
             return apology("stock not found", 400)
