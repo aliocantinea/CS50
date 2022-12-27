@@ -90,12 +90,10 @@ def buy():
         # Check for shares to be a possitive interger
         try:
             shares = request.form.get("shares")
-            if not type(shares) is int and not int(shares) > 0:
+            if not shares.isdigit() or not int(shares) > 0:
                 return apology("Shares must be a positive interger", 400)
         except (ValueError, TypeError):
             return apology("Shares must be a positive interger", 400)
-
-        shares = int(shares)
 
         # Get information about stock to buy
         symbol = request.form.get("symbol")
@@ -109,7 +107,7 @@ def buy():
             name = query["name"]
 
         # Check sufficient funds to buy
-        cost = (query["price"] * shares)
+        cost = (query["price"] * int(shares))
         cash = float(db.execute("SELECT cash FROM users WHERE id = ?", user)[0]["cash"])
         if (cash - cost) < 0:
             return apology("Insufficient funds", 400)
