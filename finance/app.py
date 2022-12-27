@@ -142,13 +142,15 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    # TOTALLY SKIPPED THIS AT FIRST!! OOPS
+
+    
     return apology("TODO")
 
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
-
     # Forget any user_id
     session.clear()
 
