@@ -281,16 +281,17 @@ def sell():
 
     # User reached route via POST (as by submitting sell reuqest within form)
     else:
+        if not bool(request.form.get("symbol")):
+            return apology("Missing a seleced stock", 416)
+
+        symbol = request.form.get("symbol").upper()
+
         # Check against no stock or quantity selected
         if int(request.form.get("shares")) < 1:
             return apology("Missing shares quantity", 411)
         else:
             shares = request.form.get("shares")
-
-        if not bool(request.form.get("symbol")):
-            return apology("Missing a seleced stock", 416)
-
-        symbol = request.form.get("symbol").upper()
+            wallet = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)
 
         # Checks stock still sellable
         query = lookup(symbol)
@@ -300,14 +301,15 @@ def sell():
             credit = query["price"] * shares
             name = query["name"]
 
+        # adds transaction regisry
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  credit, shares, user)
+
         # Checks for stocks still present within holdings
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
             return apology("No shares found", 204)
         else:
-            
 
-        # adds transaction regisry
-        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  credit, shares, user)
+
 
         # Updates users cash
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",credit , user)
