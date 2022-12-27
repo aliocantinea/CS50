@@ -80,7 +80,7 @@ def buy():
             return apology("Shares must be a positive interger", 406)
 
         # Get information about stock to buy
-        symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol").upper()
         query = lookup(symbol)
 
         # Check sufficient funds to buy
