@@ -48,19 +48,25 @@ def index():
 
     # Get all holdings from db
     portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", session["user_id"])
+
+    # Loop over each row in holdings and add name, price, and sum of holdings
     for holding in portfolio:
         # In the future including name in db to save on api calls in lookup
         holding["name"] = lookup(holding["symbol"])["name"]
         holding["price"] = lookup(holding["symbol"])["price"]
-        holding["sum"] = (holding["price"] * holding["amount"])
-        holding["symbol"] = holding["symbol"]
-        assets += holding["sum"]
+        sum = (holding["price"] * holding["amount"])
+        # Add each rows value together
+        assets += sum
+        # Format each rows sum to USD
+        holding["sum"] = usd(sum)
 
+    # Get cash from user database for total assets
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
+    # Add together both cash and each rows assets
     total = assets + float(cash)
 
-    return render_template("index.html", portfolio=portfolio, cash=usd(cash), price=usd(holding["price"]), total=usd(total), sum=usd(holding["sum"]))
+    return render_template("index.html", portfolio=portfolio, cash=usd(cash), price=usd(holding["price"]), total=usd(total))
 
 
 @app.route("/buy", methods=["GET", "POST"])
