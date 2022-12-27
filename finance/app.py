@@ -90,13 +90,13 @@ def buy():
         # Check for shares to be a possitive interger
         shares = int(request.form.get("shares"))
         if shares < 1:
-            return apology("Shares must be a positive interger", 406)
+            return apology("Shares must be a positive interger", 400)
 
         # Get information about stock to buy
         symbol = request.form.get("symbol").upper()
         query = lookup(symbol)
         if not bool(query["name"]):
-            return apology("stock not found", 404)
+            return apology("stock not found", 400)
         else:
             name = query["name"]
 
@@ -104,7 +104,7 @@ def buy():
         cost = (query["price"] * shares)
         cash = float(db.execute("SELECT cash FROM users WHERE id = ?", user)[0]["cash"])
         if (cash - cost) < 0:
-            return apology("Insufficient funds", 507)
+            return apology("Insufficient funds", 400)
         else:
            wallet  = cash - cost
 
@@ -146,18 +146,18 @@ def login():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
-            return apology("invalid username and/or password", 403)
+            return apology("invalid username and/or password", 400)
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
@@ -207,7 +207,7 @@ def quote():
 
         # Check for NULL return
         if quotes == None:
-            return apology("No stock symbol found", 404)
+            return apology("No stock symbol found", 400)
 
         # Successful lookup
         else:
