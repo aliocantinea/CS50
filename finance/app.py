@@ -306,19 +306,21 @@ def sell():
         if not bool(query["name"]):
             return apology("stock not found", 404)
         else:
-            credit = query["price"] * shares
+            credit = query["price"] * request
             name = query["name"]
 
         # adds transaction regisry
-        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  credit, shares, user)
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  credit, request, user)
 
-
-
-
+        # Updates users holdings
+        if wallet == request:
+            db.execute()
+        else:
+            db.exceute("UPDATE holdings SET amount = ")
 
         # Updates users cash
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",credit , user)
 
-        message = f"{shares} of {name}({symbol}) sold"
+        message = f"{request} of {name}({symbol}) sold"
         flash(message)
         return redirect("/")
