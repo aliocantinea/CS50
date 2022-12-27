@@ -282,29 +282,29 @@ def sell():
     # User reached route via POST (as by submitting sell reuqest within form)
     else:
         if not bool(request.form.get("symbol")):
-            return apology("Missing a seleced stock", 416)
+            return apology("Missing a seleced stock", 400)
 
         symbol = request.form.get("symbol").upper()
 
         # Checks for stocks still present within holdings
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
-            return apology("No shares found", 204)
+            return apology("No shares found", 400)
 
         # Check against quantity selected
         if int(request.form.get("shares")) < 1:
-            return apology("Missing shares quantity", 411)
+            return apology("Missing shares quantity", 400)
 
         sell = int(request.form.get("shares"))
         wallet = int(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)[0]["amount"])
 
         # Check user has enough stocks to sell
         if wallet < sell:
-            return apology("Not enough shares to sell", 507)
+            return apology("Not enough shares to sell", 400)
 
         # Checks stock still sellable
         query = lookup(symbol)
         if not bool(query["name"]):
-            return apology("stock not found", 404)
+            return apology("stock not found", 400)
 
         credit = query["price"] * sell
         name = query["name"]
