@@ -122,7 +122,7 @@ def buy():
         else:
             db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, user)
 
-        message = f"{shares} of {name}({symbol}) bought!"
+        message = f"{shares} share of {name}({symbol}) bought!"
         flash(message)
         # Redirect user to home page
         return redirect("/")
@@ -294,11 +294,11 @@ def sell():
         if int(request.form.get("shares")) < 1:
             return apology("Missing shares quantity", 411)
 
-        request = request.form.get("shares")
-        wallet = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)
+        sell = int(request.form.get("shares"))
+        wallet = int(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)[0]["amount"])
 
         # Check user has enough stocks to sell
-        if wallet < request:
+        if wallet < sell:
             return apology("Not enough shares to sell", 507)
 
         # Checks stock still sellable
@@ -306,21 +306,21 @@ def sell():
         if not bool(query["name"]):
             return apology("stock not found", 404)
 
-        credit = query["price"] * request
+        credit = query["price"] * sell
         name = query["name"]
 
         # adds transaction regisry
-        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  credit, request, user)
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  credit, sell, user)
 
         # Updates users holdings
-        if wallet == request:
-            db.execute("DELETE FROM holdings WHERE symbol = ? AND amount = ? AND user = ?", symbol, request, user)
+        if wallet == sell:
+            db.execute("DELETE FROM holdings WHERE symbol = ? AND amount = ? AND user = ?", symbol, sell, user)
         else:
-            db.exceute("UPDATE holdings SET amount = amount - ? WHERE symbol = ? AND user = ?", request, symbol, user)
+            db.execute("UPDATE holdings SET amount = amount - ? WHERE symbol = ? AND user = ?", sell, symbol, user)
 
         # Updates users cash
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",credit , user)
 
-        message = f"{request} of {name}({symbol}) sold"
+        message = f"{sell} share of {name}({symbol}) sold"
         flash(message)
         return redirect("/")
