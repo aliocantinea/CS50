@@ -43,8 +43,11 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-
+    # Get all holdings from db
     portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", session["user_id"])
+    for symbol in portfolio:
+        
+
     return render_template("index.html", portfolio=portfolio)
 
 
