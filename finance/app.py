@@ -75,6 +75,9 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+
+    user = session["user_id"]
+
     # User gets to route via GET (as by redirect or link)
     if request.method == "GET":
         return render_template("buy.html")
@@ -95,7 +98,7 @@ def buy():
 
         # Check sufficient funds to buy
         cost = (query["price"] * shares)
-        cash = float(db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"])
+        cash = float(db.execute("SELECT cash FROM users WHERE id = ?", user)[0]["cash"])
         if (cash - cost) < 0:
             return apology("Insufficient funds", 507)
         else:
@@ -103,17 +106,17 @@ def buy():
 
         """ Record transaction"""
         # Updates users cash
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", wallet, session["user_id"])
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", wallet, user)
 
         # adds transaction regisry
-        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "buy",  cost, shares, session["user_id"])
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "buy",  cost, shares, user)
 
         # updates holdings if they exist
-        if bool(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, session["user_id"])):
-            db.execute("UPDATE holdings SET amount = amount + ? WHERE user = ? AND symbol =?", shares, session["user_id"], symbol)
+        if bool(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)):
+            db.execute("UPDATE holdings SET amount = amount + ? WHERE user = ? AND symbol =?", shares, user, symbol)
         # adds holdings if new
         else:
-            db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, session["user_id"])
+            db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, user)
 
         # Redirect user to home page
         return redirect("/")
