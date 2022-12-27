@@ -286,12 +286,20 @@ def sell():
 
         symbol = request.form.get("symbol").upper()
 
+        # Checks for stocks still present within holdings
+        if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
+            return apology("No shares found", 204)
+
         # Check against no stock or quantity selected
         if int(request.form.get("shares")) < 1:
             return apology("Missing shares quantity", 411)
         else:
-            shares = request.form.get("shares")
+            request = request.form.get("shares")
             wallet = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)
+
+        # Check user has enough stocks to sell
+        if wallet < request:
+            return apology("Not enough shares to sell", 507)
 
         # Checks stock still sellable
         query = lookup(symbol)
@@ -304,10 +312,7 @@ def sell():
         # adds transaction regisry
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  credit, shares, user)
 
-        # Checks for stocks still present within holdings
-        if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
-            return apology("No shares found", 204)
-        else:
+
 
 
 
