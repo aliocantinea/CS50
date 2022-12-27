@@ -270,11 +270,15 @@ def sell():
     # Set function variable
     user = session["user_id"]
 
-    # 
+    # User reached route via GET (as by clicking a link or via redirect)
     if request.method == "GET":
         stocks = db.execute("SELECT symbol FROM holdings WHERE user = ?", user)
 
         return render_template("sell.html", stocks=stocks)
 
+    # User reached route via POST (as by submitting sell reuqest within form)
     else:
+        symbol = request.form.get("symbol").upper()
+        
+
         return apology("TODO")
