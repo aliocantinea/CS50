@@ -281,4 +281,8 @@ def sell():
         symbol = request.form.get("symbol").upper()
 
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
-            return apology("No shares found", )
+            return apology("No shares found", 204)
+            
+
+        flash("Stock(s) sold successfully")
+        return redirect("/")
