@@ -293,9 +293,9 @@ def sell():
         # Check against quantity selected
         if int(request.form.get("shares")) < 1:
             return apology("Missing shares quantity", 411)
-        else:
-            request = request.form.get("shares")
-            wallet = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)
+
+        request = request.form.get("shares")
+        wallet = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)
 
         # Check user has enough stocks to sell
         if wallet < request:
@@ -305,18 +305,18 @@ def sell():
         query = lookup(symbol)
         if not bool(query["name"]):
             return apology("stock not found", 404)
-        else:
-            credit = query["price"] * request
-            name = query["name"]
+
+        credit = query["price"] * request
+        name = query["name"]
 
         # adds transaction regisry
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  credit, request, user)
 
         # Updates users holdings
         if wallet == request:
-            db.execute()
+            db.execute("DELETE FROM holdings WHERE symbol = ? AND amount = ? AND user = ?", symbol, request, user)
         else:
-            db.exceute("UPDATE holdings SET amount = ")
+            db.exceute("UPDATE holdings SET amount = amount - ? WHERE symbol = ? AND user = ?", request, symbol, user)
 
         # Updates users cash
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",credit , user)
