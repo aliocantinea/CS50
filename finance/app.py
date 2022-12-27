@@ -176,7 +176,7 @@ def quote():
     else:
 
         # Use lookup function on symbol to get information
-        quote = request.form.get("symbol")
+        quote = request.form.get("symbol").upper()
 
         # Check for invalid stock symbols before api call
         if len(quote) > 5 :
