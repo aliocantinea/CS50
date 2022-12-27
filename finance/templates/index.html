@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block lookup %}
+
+    <div class="container-fluid text-center">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">Symbol</th>
+                    <th class="text-start">Name</th>
+                    <th class="text-end">Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td class="text-start">{{ symbol }}</td>
+                        <td class="text-start">{{ name }}</td>
+                        <td class="text-end">{{ price }}</td>
+                    </tr>
+            </tbody>
+        </table>
+        <p class="small text-center text-muted">Quotes are in real time, and may change when requesting to purchase</p>
+    </div>
+
+{% endblock %}
