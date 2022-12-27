@@ -329,8 +329,7 @@ def sell():
             db.execute("UPDATE holdings SET amount = amount - ? WHERE symbol = ? AND user = ?", sell, symbol, user)
 
         # Updates users cash
-        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",credit , user)
-
+        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", credit, user)
 
         if int(sell) > 1:
             qty = "shares"
