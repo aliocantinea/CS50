@@ -50,7 +50,6 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-
     # User gets to route via GET (as by redirect or link)
     if request.method == "GET":
         return render_template("buy.html")
@@ -76,7 +75,6 @@ def buy():
            wallet  = cash - cost
 
         """ Record transaction"""
-
         # Updates users cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", wallet, session["user_id"])
 
