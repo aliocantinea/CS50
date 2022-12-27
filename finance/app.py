@@ -88,8 +88,8 @@ def buy():
     else:
 
         # Check for shares to be a possitive interger
-        shares = request.form.get("shares")
         try:
+            shares = request.form.get("shares")
             if shares > 0 and shares.isdigit():
                 continue
         except (AttributeError, ValueError, TypeError):
