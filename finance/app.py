@@ -297,14 +297,17 @@ def sell():
             price = query["price"]
             credit = price * shares
 
-
         # Checks for stocks still present within holdings
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
             return apology("No shares found", 204)
+        else:
+            
 
-        """Record transaction"""
         # adds transaction regisry
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  cost, shares, user)
+
+        # Updates users cash
+        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",credit , user)
 
         # updates holdings if they exist
         if bool(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)):
