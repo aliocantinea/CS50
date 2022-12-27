@@ -145,7 +145,6 @@ def history():
     # TOTALLY SKIPPED THIS AT FIRST!! OOPS
 
     user = session["user_id"]
-    assets
 
     transactions = db.execute("SELECT * FROM history WHERE user = ?", user)
     for transaction in transactions:
@@ -155,12 +154,6 @@ def history():
         # Format each row to USD where applicable
         transaction["price"] = usd(price)
         transaction["sum"] = usd(sum)
-
-    # Get cash from user database for total assets
-    cash = db.execute("SELECT cash FROM users WHERE id = ?", user)[0]["cash"]
-
-    # Add together both cash and each rows assets
-    total = assets + float(cash)
 
     return render_template("history.html", transactions=transactions)
 

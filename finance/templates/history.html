@@ -12,23 +12,23 @@
                 <th class="text-start">Symbol</th>
                 <th class="text-start">Name</th>
                 <th class="text-end">Date</th>
-                <td class="text-end">Type</td>
+                <th class="text-end">Type</th>
                 <th class="text-center">Shares</th>
                 <th class="text-end">Price</th>
                 <th class="text-end">Total</th>
             </tr>
         </thead>
         <tbody>
-            {% for transaction in transaction %}
+            {% for transaction in transactions %}
                 <tr>
                     <form action="/buy" method="post">
-                        <td class="text-start">{{ row["symbol"] }}</td>
-                        <td class="text-start">{{ row["name"] }}</td>
-                        <td class="text-start">{{ row["datetime"] }}</td>
-                        <td class="text-start">{{ row["type"] }}</td>
-                        <td class="text-end">{{ row["amount"] }}</td>
-                        <td class="text-end">{{ row["price"] }}</td>
-                        <td class="text-end">{{ row["sum"] }}</td>
+                        <td class="text-start">{{ transaction["symbol"] }}</td>
+                        <td class="text-start">{{ transaction["name"] }}</td>
+                        <td class="text-start">{{ transaction["datetime"] }}</td>
+                        <td class="text-start">{{ transaction["type"] }}</td>
+                        <td class="text-end">{{ transaction["amount"] }}</td>
+                        <td class="text-end">{{ transaction["price"] }}</td>
+                        <td class="text-end">{{ transaction["sum"] }}</td>
                     </form>
                 </tr>
             {% endfor %}
