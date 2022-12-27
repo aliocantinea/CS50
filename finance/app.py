@@ -75,15 +75,19 @@ def buy():
         else:
            wallet  = cash - cost
 
-        # Record transaction
+        """ Record transaction"""
+
         # Updates users cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", wallet, session["user_id"])
+
         # adds transaction regisry
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "buy",  wallet, shares, session["user_id"])
-        # updates holdings
+
+        # updates holdings if they exist
         amount = db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, session["user_id"])[0]["amount"]
         if bool(amount) == True:
             db.execute("UPDATE holdings SET amount = ? WHERE user = ? AND symbol =?", shares + amount, session["user_id"], symbol)
+        # adds holdings if new
         else:
             db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, session["user_id"])
 
