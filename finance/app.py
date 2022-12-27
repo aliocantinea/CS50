@@ -278,8 +278,11 @@ def sell():
 
     # User reached route via POST (as by submitting sell reuqest within form)
     else:
+        if int(request.form.get("shares")) < 1:
+            return apology("Missing shares quantity", 411)
+
         if not bool(request.form.get("symbol")):
-            return apology("Missing a seleced stock", 204)
+            return apology("Missing a seleced stock", 416)
         else:
             symbol = request.form.get("symbol").upper()
 
