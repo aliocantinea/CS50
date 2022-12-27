@@ -270,6 +270,7 @@ def sell():
     # Set function variable
     user = session["user_id"]
 
+    # 
     if request.method == "GET":
         stocks = db.execute("SELECT symbol FROM holdings WHERE user = ?", user)
 
