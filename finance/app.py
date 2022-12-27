@@ -278,11 +278,14 @@ def sell():
 
     # User reached route via POST (as by submitting sell reuqest within form)
     else:
-        symbol = request.form.get("symbol").upper()
+        if not bool(request.form.get("symbol")):
+            return apology("Missing a seleced stock", 204)
+        else:
+            symbol = request.form.get("symbol").upper()
 
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
             return apology("No shares found", 204)
-            
+
 
         flash("Stock(s) sold successfully")
         return redirect("/")
