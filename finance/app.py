@@ -128,7 +128,11 @@ def buy():
         else:
             db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, user)
 
-        message = f"{shares} share of {name}({symbol}) bought!"
+        if int(shares) > 1:
+            qty = "shares"
+        else:
+            qty = "share"
+        message = f"{shares} {qty} of {name}({symbol}) bought!"
         flash(message)
         # Redirect user to home page
         return redirect("/")
@@ -327,6 +331,11 @@ def sell():
         # Updates users cash
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",credit , user)
 
-        message = f"{sell} share of {name}({symbol}) sold"
+
+        if int(sell) > 1:
+            qty = "shares"
+        else:
+            qty = "share"
+        message = f"{sell} {qty} of {name}({symbol}) sold"
         flash(message)
         return redirect("/")
