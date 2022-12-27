@@ -50,8 +50,8 @@ def index():
     portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", session["user_id"])
     for holding in portfolio:
         stock = lookup(holding["symbol"])
-        price =float(stock["price"])
-        sum = float(price * holding["amount"])
+        price =stock["price"]
+        sum = price * holding["amount"]
         name = stock["name"]
         assets += sum
 
