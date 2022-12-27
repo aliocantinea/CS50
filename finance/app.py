@@ -298,6 +298,7 @@ def sell():
             return apology("No shares found", 204)
 
         """Record transaction"""
+        
 
 
         flash("Stock(s) sold successfully")
