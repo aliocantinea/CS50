@@ -301,20 +301,13 @@ def sell():
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
             return apology("No shares found", 204)
         else:
-            
+
 
         # adds transaction regisry
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  cost, shares, user)
 
         # Updates users cash
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",credit , user)
-
-        # updates holdings if they exist
-        if bool(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)):
-            db.execute("UPDATE holdings SET amount = amount + ? WHERE user = ? AND symbol =?", shares, user, symbol)
-        # adds holdings if new
-        else:
-            db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, user)
 
         message = f"{shares} of {symbol} sold"
         flash(message)
