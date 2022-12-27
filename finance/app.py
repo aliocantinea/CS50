@@ -101,7 +101,7 @@ def buy():
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "buy",  cost, shares, session["user_id"])
 
         # updates holdings if they exist
-        if bool(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, session["user_id"])) == True:
+        if bool(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, session["user_id"])):
             db.execute("UPDATE holdings SET amount = amount + ? WHERE user = ? AND symbol =?", shares, session["user_id"], symbol)
         # adds holdings if new
         else:
