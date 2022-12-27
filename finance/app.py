@@ -53,7 +53,7 @@ def index():
         holding["name"] = lookup(holding["symbol"])["name"]
         holding["price"] = lookup(holding["symbol"])["price"]
         holding["sum"] = (holding["price"] * holding["amount"])
-        holding["symbol"] = holding["symbol"].upper()
+        holding["symbol"] = holding["symbol"]
         assets += holding["sum"]
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
@@ -80,7 +80,7 @@ def buy():
             return apology("Shares must be a positive interger", 406)
 
         # Get information about stock to buy
-        symbol = request.form.get("symbol").upper()
+        symbol = request.form.get("symbol")
         query = lookup(symbol)
 
         # Check sufficient funds to buy
@@ -176,7 +176,7 @@ def quote():
     else:
 
         # Use lookup function on symbol to get information
-        quote = request.form.get("symbol").upper()
+        quote = request.form.get("symbol")
 
         # Check for invalid stock symbols before api call
         if len(quote) > 5 :
@@ -192,7 +192,7 @@ def quote():
 
         # Successful lookup
         else:
-            return render_template("quotes.html", symbol=quotes["symbol"].upper(), name=quotes["name"], price=usd(quotes["price"]))
+            return render_template("quotes.html", symbol=quotes["symbol"], name=quotes["name"], price=usd(quotes["price"]))
 
 
 
