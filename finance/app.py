@@ -297,9 +297,20 @@ def sell():
             return apology("No shares found", 204)
 
         """Record transaction"""
-        sell = db.execute("SELECT * FROM holdings WHERE symbol = ? AND user = ?", symbol, user)
-        
+        # Updates users cash
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", wallet, user)
 
+        # adds transaction regisry
+        db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  cost, shares, user)
+
+        # updates holdings if they exist
+        if bool(db.execute("SELECT amount FROM holdings WHERE symbol = ? AND user = ?", symbol, user)):
+            db.execute("UPDATE holdings SET amount = amount + ? WHERE user = ? AND symbol =?", shares, user, symbol)
+        # adds holdings if new
+        else:
+            db.execute("INSERT INTO holdings (symbol, amount, user) VALUES (?, ?, ?)", symbol, shares, user)
+
+        flash("Bought!")
 
         flash("Stock(s) sold successfully")
         return redirect("/")
