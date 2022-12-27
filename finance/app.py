@@ -82,6 +82,8 @@ def buy():
         # Get information about stock to buy
         symbol = request.form.get("symbol")
         query = lookup(symbol)
+        if not bool(query["name"]):
+            return apology("stock not found", 404)
 
         # Check sufficient funds to buy
         cost = (query["price"] * shares)
