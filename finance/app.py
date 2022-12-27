@@ -295,6 +295,7 @@ def sell():
             return apology("stock not found", 404)
         else:
             price = query["price"]
+            credit = price * shares
 
 
         # Checks for stocks still present within holdings
@@ -302,9 +303,6 @@ def sell():
             return apology("No shares found", 204)
 
         """Record transaction"""
-        # Updates users cash
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", wallet, user)
-
         # adds transaction regisry
         db.execute("INSERT INTO history (symbol, type, cost, amount, user) VALUES (?, ?, ?, ?, ?)", symbol, "sell",  cost, shares, user)
 
