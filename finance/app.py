@@ -96,6 +96,7 @@ def buy():
         symbol = request.form.get("symbol")
         if not type(symbol) is str:
             return apology("stock not found", 400)
+        symbol = symbol.upper()
         query = lookup(symbol)
         if not bool(query["name"]):
             return apology("stock not found", 400)
