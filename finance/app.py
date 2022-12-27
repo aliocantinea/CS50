@@ -49,6 +49,7 @@ def index():
     # Get all holdings from db
     portfolio = db.execute("SELECT * FROM holdings WHERE user = ?", session["user_id"])
     for holding in portfolio:
+        # In the future including name in db to save on api calls in lookup
         holding["name"] = lookup(holding["symbol"])["name"]
         holding["price"] = lookup(holding["symbol"])["price"]
         holding["sum"] = (holding["price"] * holding["amount"])
