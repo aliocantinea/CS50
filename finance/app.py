@@ -278,17 +278,21 @@ def sell():
 
     # User reached route via POST (as by submitting sell reuqest within form)
     else:
+        # Check against no stock or quantity selected
         if int(request.form.get("shares")) < 1:
             return apology("Missing shares quantity", 411)
 
         if not bool(request.form.get("symbol")):
             return apology("Missing a seleced stock", 416)
-        else:
-            symbol = request.form.get("symbol").upper()
 
+        symbol = request.form.get("symbol").upper()
+
+        # Checks for stocks still present within holdings
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
             return apology("No shares found", 204)
 
+        """Sells stocks"""
+        
 
         flash("Stock(s) sold successfully")
         return redirect("/")
