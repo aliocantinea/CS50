@@ -292,12 +292,12 @@ def sell():
         if not bool(query["name"]):
             return apology("stock not found", 404)
 
-
         # Checks for stocks still present within holdings
         if not bool(db.execute("SELECT * FROM holdings WHERE symbol = ?", symbol)):
             return apology("No shares found", 204)
 
         """Record transaction"""
+        sell = db.execute("SELECT * FROM holdings WHERE symbol = ? AND user = ?", symbol, user)
         
 
 
