@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "valid_triangle": "c"
-    }
+    },
+    "gitdoc.enabled": true
 }
